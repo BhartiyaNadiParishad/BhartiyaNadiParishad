@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import img from './assets/background4.1.jpg'
+import img from './assets/background9.png'
 import './App.css'
 import DrawerAppBar from './component/drawer'
 import Vision from './component/vision'
@@ -7,6 +7,11 @@ import { Box, Typography } from '@mui/material'
 import Footer from './component/footer'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { Testimonials } from './component/testimonial'
+import Video from './component/video'
+import Programs from './component/programs'
+import WorkImpact from './component/workImpact'
+import GetInvolved from './component/getInvolved'
+import Founder from './component/founder'
 
 
 
@@ -37,7 +42,7 @@ function App() {
                   height: '93vh', 
                   backgroundSize: 'cover'
                   }}>
-          <Typography variant='h3' 
+          <Typography mb={1} variant='h4' 
                       style={{fontWeight: 'bold', color: 'white' ,fontFamily: 'Comfortaa'}}>
             Riviving Rivers, Reviving Hopes
           </Typography>
@@ -47,7 +52,12 @@ function App() {
           </Typography>
         </Box>
         <Vision />
+        <Founder />
+        <Video />
         <Testimonials />
+        <Programs />
+        <WorkImpact />
+        <GetInvolved />
         <Footer />
       </ThemeProvider>
     </>

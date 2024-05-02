@@ -19,11 +19,21 @@ const CustomTypography = styled(Typography)(()=>({
 export default function Footer() {
     return (
         <>
-            <Grid container p={2} m={4} justifyContent={'space-around'} rowGap={4} sx={{borderBottom:  "1px solid grey"}}>
-                <Grid sx={{paddingRight: 8}}>
-                    <Typography variant='h6'> Bharitya Nadi Parishad</Typography>
+            <Grid container p={2} m={4} justifyContent={'space-between'} rowGap={4} sx={{borderBottom:  "1px solid grey"}}>
+                <Grid display="flex" flexDirection="column" alignItems={"center"}  rowGap={2} sx={{paddingRight: 6}}>
+                    <img src='src\assets\logo1.png' height="125px" width="125px" alt="Logo" />
+                    <Typography
+                        variant="h6"
+                        component="div"
+                            sx={{ fontSize: 24, 
+                                fontFamily: 'yatra', 
+                                fontWeight: "bold",
+                                }}
+                    >
+                    भारतीय नदी परिषद
+                    </Typography>
                 </Grid>
-                <Grid container spacing={7}>
+                <Grid container>
                     <Grid display="flex" flexDirection="column" rowGap={3} xs={12} md={3}>
                         <Typography sx={{fontWeight: "bold", fontSize: "18px"}}>Useful Links</Typography>
                         <Box>
@@ -52,6 +62,19 @@ export default function Footer() {
 
                         </Box>
                     </Grid>
+                </Grid>
+                <Grid display="flex" flexDirection="column" alignItems={"center"} rowGap={2}>
+                        <img src='src\assets\logo1.png' height="125px" width="125px" alt="Logo" />
+                        <Typography
+                            variant="h6"
+                            component="div"
+                                sx={{ fontSize: 24, 
+                                    fontFamily: 'yatra', 
+                                    fontWeight: "bold",
+                                    }}
+                        >
+                        Indian River Council
+                        </Typography>
                 </Grid>
             </Grid>
             <Grid m={4} container justifyContent={'center'}>
