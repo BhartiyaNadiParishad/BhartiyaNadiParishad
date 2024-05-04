@@ -3,11 +3,11 @@ import React from 'react'
 
 export default function Vision() {
     return (
-        <Box p={5} sx={{ width: '100%' , display: 'flex', justifyContent: 'center', flexDirection: 'column' , alignItems: 'center'}}>
-            <Typography variant="h3" gutterBottom style={{fontWeight: 'bold' ,fontFamily: 'Comfortaa'}}> 
+        <Box pt={4} pb={3} sx={{color:"rgb(19 100 173)", width: '100%' , display: 'flex', justifyContent: 'center', flexDirection: 'column' , alignItems: 'center'}}>
+            <Typography variant="h4" gutterBottom style={{fontWeight: 'bold'}}> 
                 Vision
             </Typography>
-            <Typography variant="h6" gutterBottom  style={{fontSize: '18px', fontFamily: 'Comfortaa'}}>
+            <Typography variant="h6"  style={{color:"rgb(19 100 173)",fontSize: '18px' , textAlign: "justify"}}>
                 BNP aims to coordinate society and government efforts for river rejuvenation in India, promoting clean, uninterrupted rivers.
             </Typography>
         </Box>

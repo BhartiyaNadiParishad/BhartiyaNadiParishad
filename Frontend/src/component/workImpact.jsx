@@ -13,24 +13,20 @@ const CustomGrid2 = styled(Grid2)({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    width: 200,
+    width: 225,
     height: 200,
     gap: 8,
-    borderRadius: "100%",
-
+    boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
+    transition: "0.3s",
+    '&:hover': {
+        backgroundImage: "none",
+        backgroundColor: "rgb(0 38 65)"
+    },
 })
 
 export default function WorkImpact() {
     return (
-        <Box sx={{padding: "60px 10%"}}>
-            <Box sx={{ marginBottom: "60px", width: '100%' , display: 'flex', justifyContent: 'center', flexDirection: 'column' , alignItems: 'center'}}>
-                <Typography variant="h3" gutterBottom style={{fontWeight: 'bold'}}> 
-                    Our work Impact
-                </Typography>
-                <Typography variant="h6" gutterBottom  style={{fontSize: '18px', textAlign: "center"}}>
-                    Here, we aim to provide you with valuable insights and information about the council's activities, initiatives, and achievements.
-                </Typography>
-            </Box>
+        <Box sx={{padding: "70px 10%"}}>
             <Grid2 container justifyContent={'space-around'} columnGap={2} rowGap={2} >
                 <CustomGrid2  sx={{
                             backgroundImage: `url(${img1})`,
