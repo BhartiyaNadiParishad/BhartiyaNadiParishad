@@ -13,7 +13,7 @@ import WorkImpact from './component/workImpact'
 import GetInvolved from './component/getInvolved'
 import Founder from './component/founder'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import video from "./assets/bgvideo.mp4"
 
 
 
@@ -55,7 +55,7 @@ function App() {
                     zIndex: '-1' // Ensure the video is behind the content
                 }}
             >
-                <source src="src\assets\bgvideo.mp4" type="video/mp4" />
+                <source src={video} type="video/mp4" />
                 {/* Add additional source elements for different video formats if needed */}
             </video>
             <div style={{ 

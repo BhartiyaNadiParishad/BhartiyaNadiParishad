@@ -2,7 +2,8 @@ import React from 'react'
 import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography, styled } from '@mui/material'
 import Grid from '@mui/material/Unstable_Grid2'
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
-
+import img from "../assets/logo.png"
+import img1 from "../assets/IRC ENG LOGO.png"
 
 const DotIcon = styled(FiberManualRecordIcon)(() => ({
     marginRight: 8,
@@ -47,7 +48,7 @@ export default function Footer() {
                         </a>
                 </Grid>
                 <Grid display="flex" flexDirection="column" alignItems={"center"} rowGap={2} sx={{ paddingRight: 6 }}>
-                    <img src='src\assets\logo.png' height="auto" width="235px" alt="Logo" />
+                    <img src={img} height="auto" width="235px" alt="Logo" />
                 </Grid>
                 <Grid display="flex" flexDirection="column" rowGap={1}>
                     <Typography sx={{ fontWeight: "bold", fontSize: "20px" }}>Useful Links</Typography>
@@ -77,7 +78,7 @@ export default function Footer() {
                     </Box>
                 </Grid>
                 <Grid display="flex" flexDirection="column" alignItems={"center"} rowGap={1}>
-                    <img src='src\assets\IRC ENG LOGO.png' height="auto" width="235px" alt="Logo" className='mr-9' />
+                    <img src={img1} height="auto" width="235px" alt="Logo" className='mr-9' />
                 </Grid>
             </Grid>
             <Grid my={2} container justifyContent={'center'}>

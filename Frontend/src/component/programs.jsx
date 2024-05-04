@@ -5,6 +5,14 @@ import img from '../assets/partners.jpg';
 import img1 from '../assets/riverDark.jpg'
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 
+import Icon1 from '../assets/Icons/1.png'
+import Icon2 from '../assets/Icons/2.png'
+import Icon3 from '../assets/Icons/3.png'
+import Icon4 from '../assets/Icons/4.png'
+import Icon5 from '../assets/Icons/5.png'
+import Icon6 from '../assets/Icons/6.png'
+
+
 
 
 
@@ -12,17 +20,20 @@ const data1 = [
     {
         awardNumber: "1",
         awardTitle: "River Award",
-        description: "The NADI UPASAK Award will be given to the two best efforts made every year at the government and non-government levels for river revitalisation in the country."
+        description: "The NADI UPASAK Award will be given to the two best efforts made every year at the government and non-government levels for river revitalisation in the country.",
+        img: Icon1
     },
     {
         awardNumber: "2",
         awardTitle: "River Symposium",
-        description: "A one-day 'BHARTIYA NADI SANGAM' is organized every year on 22 March. This river confluence is organised in any one city of BHARAT according to the circumstances."
+        description: "A one-day 'BHARTIYA NADI SANGAM' is organized every year on 22 March. This river confluence is organised in any one city of BHARAT according to the circumstances.",
+        img: Icon2
     },
     {
         awardNumber: "3",
         awardTitle: "River Fellowship",
-        description: "The Forest Award recognizes exceptional contributions to the preservation and restoration of forests."
+        description: "The Forest Award recognizes exceptional contributions to the preservation and restoration of forests.",
+        img: Icon3
     },
 ]
 
@@ -30,17 +41,20 @@ const data2= [
     {
         awardNumber: "4",
         awardTitle: "River Talk",
-        description: "The Forest Award recognizes exceptional contributions to the preservation and restoration of forests."
+        description: "The Forest Award recognizes exceptional contributions to the preservation and restoration of forests.",
+        img: Icon4
     },
     {
         awardNumber: "5",
         awardTitle: "River Research Centre",
-        description: "The Forest Award recognizes exceptional contributions to the preservation and restoration of forests."
+        description: "The Forest Award recognizes exceptional contributions to the preservation and restoration of forests.",
+        img: Icon5
     },
     {
         awardNumber: "6",
         awardTitle: "River Research YATRA",
-        description: "The Forest Award recognizes exceptional contributions to the preservation and restoration of forests."
+        description: "The Forest Award recognizes exceptional contributions to the preservation and restoration of forests.",
+        img: Icon6
     },
 ];
 
@@ -154,7 +168,7 @@ export default function Programs() {
                                     textAlign: "center"
                                 }}
                             >
-                                <img src={`src/assets/Icons/${item.awardNumber}.png`} alt="members icon" height={45} width={45} />
+                                <img src={item.img} alt="members icon" height={45} width={45} />
                                 <Typography variant='h6' sx={{ fontSize: "24px", fontWeight: "bold", color: "#fe9e3d" }}>{item.awardNumber}</Typography>
                                 <Typography variant='h6' sx={{ fontSize: "24px", fontWeight: "bold", color: "#fe9e3d" }}>{item.awardTitle}</Typography>
                                 <Typography variant='h6' sx={{fontSize: "18px" , textAlign: "justify"}}>{item.description}</Typography>

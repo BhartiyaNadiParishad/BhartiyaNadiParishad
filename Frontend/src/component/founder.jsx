@@ -1,6 +1,12 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
 import img from '../assets/partners.jpg'
+import img1 from '../assets/team/Raman Kant 1.jpg'
+
+
+
+
+
 export default function Founder() {
     return (
 
@@ -12,7 +18,7 @@ export default function Founder() {
                     padding: "70px 5%"}} 
                     display={'flex'} flexDirection={"row"} flexWrap={'wrap'} justifyContent={"space-between"}>
                 <Box>
-                    <img src="src\assets\team\Raman Kant 1.jpg" width={"350px"} height={"350px"} style={{ borderRadius: "50%" }} />
+                    <img src={img1} width={"350px"} height={"350px"} style={{ borderRadius: "50%" }} />
                 </Box>
                 <Box display= "flex" flexDirection={"column"} justifyContent={"center"} sx={{color: "white", maxWidth: { xs: "100%", md: "calc(100% - 400px)" } }}>
                     <Typography sx={{fontSize: "20px" ,fontWeight: "bold" , textAlign: "justify" , marginBottom: "10px"}}>

@@ -17,6 +17,10 @@ import Button from '@mui/material/Button';
 import { styled } from '@mui/material';
 import { useScrollTrigger } from '@mui/material';
 
+import img from '../assets/logo.png'
+import img1 from '../assets/logo1.png'
+
+
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Programmes', 'Nadi Darshan', 'Get Involved', 'Resources', 'Contact'];
 
@@ -80,7 +84,7 @@ function DrawerAppBar(props) {
               <MenuIcon />
               <Box
                 sx={{ display: { xs: 'flex' }, justifyContent: "center", alignItems: "center", columnGap: "8px", ml: 1 }}>
-                <img src='src\assets\logo1.png' height="30px" width="30px" alt="Logo" />
+                <img src={img1} height="30px" width="30px" alt="Logo" />
                 <Typography>भारतीय नदी परिषद</Typography>
               </Box>
             </IconButton>
@@ -88,7 +92,7 @@ function DrawerAppBar(props) {
 
           <Box
             sx={{  backgroundColor: trigger ? 'white' : 'transparent' ,  padding: '10px 0 !important', width: "100%" , display: { xs: 'none', md: 'flex' }, justifyContent: "center", alignItems: "center", columnGap: "20px" }}>
-            <img src='src\assets\logo.png' height="225px" width="225px" alt="Logo" />
+            <img src={img} height="225px" width="225px" alt="Logo" />
           </Box>
           {/* rgba(6, 58, 94, 0.5) */}
           <Box sx={{backgroundColor:'#1d4e6e', 
