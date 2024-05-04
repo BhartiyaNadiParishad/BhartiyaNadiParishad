@@ -190,7 +190,7 @@ export default function Programs() {
                                     textAlign: "center"
                                 }}
                             >
-                                <img src={`src/assets/Icons/${item.awardNumber}.png`} alt="members icon" height={45} width={45} />
+                                <img src={item.img} alt="members icon" height={45} width={45} />
                                 <Typography variant='h6' sx={{fontSize: "24px", fontWeight: "bold", color: "#fe9e3d" }}>{item.awardNumber}</Typography>
                                 <Typography variant='h6' sx={{ fontSize: "24px", fontWeight: "bold", color: "#fe9e3d" }}>{item.awardTitle}</Typography>
                                 <Typography variant='h6' sx={{fontSize: "18px", textAlign: "justify"}}>{item.description}</Typography>
