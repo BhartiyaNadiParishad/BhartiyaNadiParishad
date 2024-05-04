@@ -2,8 +2,7 @@ import React from 'react'
 import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography, styled } from '@mui/material'
 import Grid from '@mui/material/Unstable_Grid2'
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
-import img from "../assets/logo.png"
-import img1 from "../assets/IRC ENG LOGO.png"
+import Logo from '../assets/logo.svg'
 
 const DotIcon = styled(FiberManualRecordIcon)(() => ({
     marginRight: 5,
@@ -50,7 +49,7 @@ export default function Footer() {
                 </Grid>
 
                 <Grid xs="12" md={2} display="flex" flexDirection="column" alignItems={"center"} rowGap={0}>
-                    <img src={img} height="auto" width="235px" alt="Logo" />
+                    <img src={Logo} height="auto" width="235px" alt="Logo" />
                 </Grid>
                 <Grid xs="12" md={2.4} display="flex" flexDirection="column" rowGap={1}>
                     <Typography sx={{ fontWeight: "bold", fontSize: "20px" }}>

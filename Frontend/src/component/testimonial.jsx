@@ -10,6 +10,16 @@ import img6 from "../assets/team/6.jpg"
 import img7 from "../assets/team/2.jpg"
 import img8 from "../assets/team/8.jpg"
 import img9 from "../assets/team/1.jpg"
+import img10 from "../assets/team/Mr Manu Gaur.jpg"
+import img11 from "../assets/team/Mr Shekhar Vijendra.jpg"
+import img12 from "../assets/team/Dr Chinmay Pandya.jpg"
+import img13 from "../assets/team/3.jpg"
+
+
+
+
+
+
 
 const data = [
     {
@@ -34,19 +44,19 @@ const data = [
         authorContent: "River rejuvenation work in the country will be strengthened through the BHARTIYA NADI PARISHAD. The need for such an effort was felt for a long time.",
         authorName: "Mr. Manu Gaur",
         designation: "Founder – Taxpayers Association of India (TAXAB)",
-        image: img1
+        image: img10
     },
     {
         authorContent: "BHARTIYA NADI PARISHAD plays a crucial role in advancing the significant mission of river rejuvenation in the country. Its efforts in improving and conserving the condition of rivers will not only maintain ecological balance but also lay the foundation for a green and prosperous environment for future generations.",
         authorName: "Mr. Kunwar Shekhar Vijendra",
         designation: "Co-founder & Chancellor of Shobhit University",
-        image: img1
+        image: img11
     },
     {
         authorContent: "यह जानकर अन्तर्मन अत्यंत हर्ष, गौरव एवं अभिनंदन से भर उठा है कि भारतीय नदी परिषद् भारत में नदी पुनर्जीवन के कार्य को े के साथ ही सर्वसामान्य में इसकी स्वीकार्यता बनाने की दिशा में सकारात्मक परिवर्तन का वाहक बनेगा। धन्य है भारतीय नदी परिषद् का आदर्श जिसने सदउद्देश्य के लिए कमद बढ़ाने का शौर्य और साहस दिखाया। यह सौभाग्य जो आप पर बरसा है, भगवान करे इसमें सम्पूर्ण देश जुड़े। इसकी प्रेरणा एवं परम्परा अक्षय बनी रहे ऐसी कामना करता हूं। ",
         authorName: "डाॅ चिन्मय पाण्डया",
         designation: "प्रति कुलपति - देव संस्कृति विश्वविधालय, हरिद्वार",
-        image: img1
+        image: img12
     },
     {
         authorContent: "भारतीय नदी परिषद् द्वारा देश में प्रारम्भ किए गए नदी पुनर्जीवन के प्रयास सराहनीय हैं। देव भूमि उत्तराखंड़ भी इसमें अहम भूमिका निभाने के लिए उत्साहित है। मैं भारतीय नदी परिषद् के इन प्रयासों हेतु शुभकामनाएं प्रेषित करता हूं। ",
@@ -70,7 +80,7 @@ const data = [
         authorContent: "यह सभी के लिए गर्व का विषय है कि भारतीय नदी परिषद् द्वारा भारत की नदियों के पुनर्जीवन हेतु गंभीरता से नवीन प्रयास हेतु अपने कदम आगे बढ़ाए जा रहे हैं। अपने जन कल्याणकारी दायित्वों का निर्वहन करते हुए मेवाड़ के राजाओं ने भी राज्य की नदियों के हित में अनेक स्थाई कार्य किए हैं। भारतीय नदी परिषद् के संस्थापक श्रीमान रमन कांत जी, ऐसी ही जनकल्याणकारी एवं पर्यावरणीय योजनाओं के साथ नदियों के कायाकल्प हेतु लगे हैं। मैं ईश्वर से भारतीय नदी परिषद् की सफलता की कामना करता हूं।",
         authorName: "लक्ष्यराज सिंह मेवाड़",
         designation: "राजा मेवाड़",
-        image: img1
+        image: img13
     },
     {
         authorContent: "मेरा मानना है कि भारतीय नदी परिषद् एवं सरकार के सामूहिक प्रयासों द्वारा स्थानीय नदियों को निर्मल व अविरल बनाने का कार्य किया जा सकेगा। इससे जनमानस में सकारात्मक उर्जा का संचार भी होगा। मैं आशा करता हूं कि भारतीय नदी परिषद् अपने उद्देश्यों में सफल होगी।",
