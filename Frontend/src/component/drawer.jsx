@@ -40,7 +40,7 @@ function DrawerAppBar(props) {
     borderRadius: 24,
     padding: "6px 15px",
     '&:hover': {  // Corrected: '&' before ':hover'
-      backgroundColor: 'white',
+      backgroundColor: '#daf0fd',
       color: '#1d4e6e',
     },
   });
@@ -71,9 +71,9 @@ function DrawerAppBar(props) {
       <CssBaseline />
       <AppBar
         component="nav"
-        sx={{backgroundColor: "transparent", boxShadow: 'none' }}>
-        <Toolbar sx={{ display: 'flex', flexWrap: "wrap" , padding: '0 !important'}}>
-          <Box sx={{padding: "10px", width: "100%" , backgroundColor: "#1d4e6e", display: { md: 'none' }}}>
+        sx={{ backgroundColor: "transparent", boxShadow: 'none' }}>
+        <Toolbar sx={{ display: 'flex', flexWrap: "wrap", padding: '0 !important' }}>
+          <Box sx={{ padding: "10px", width: "100%", backgroundColor: "#1d4e6e", display: { md: 'none' } }}>
             <IconButton
               color="inherit"
               aria-label="open drawer"
@@ -91,21 +91,23 @@ function DrawerAppBar(props) {
           </Box>
 
           <Box
-            sx={{  backgroundColor: trigger ? 'white' : 'transparent' ,  padding: '10px 0 !important', width: "100%" , display: { xs: 'none', md: 'flex' }, justifyContent: "center", alignItems: "center", columnGap: "20px" }}>
+            sx={{ backgroundColor: trigger ? 'white' : 'transparent', padding: '10px 0 !important', width: "100%", display: { xs: 'none', md: 'flex' }, justifyContent: "center", alignItems: "center", columnGap: "20px" }}>
             <img src={img} height="225px" width="225px" alt="Logo" />
           </Box>
           {/* rgba(6, 58, 94, 0.5) */}
-          <Box sx={{backgroundColor:'#1d4e6e', 
-                    width:"100%", 
-                    display: { xs: 'none', md: 'flex' }, 
-                    flexDirection: 'row', 
-                    columnGap: '10px' , 
-                    justifyContent: "center",
-                    padding: "6px 10px" }}>
+          <Box sx={{
+            backgroundColor: '#1d4e6e',
+            width: "100%",
+            display: { xs: 'none', md: 'flex' },
+            flexDirection: 'row',
+            columnGap: '10px',
+            justifyContent: "center",
+            padding: "6px 10px"
+          }}>
             {navItems.map((item) => (
               <CustomButton
                 key={item}
-                sx={{color:'white'}}
+                sx={{ color: 'white' }}
               >
                 <div className='pt-[2px]font-bold'>
                   {item}
