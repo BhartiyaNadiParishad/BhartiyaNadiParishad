@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Box, Button, styled } from '@mui/material';
 import img from '../assets/riverDarkbg.jpg'
+import { Link } from 'react-router-dom';
 
 
 const CustomAccordion = styled(Accordion)({
@@ -37,24 +38,26 @@ export default function GetInvolved() {
                 A river-loving organization or individual can join the BHARTIYA NADI PARISHAD in all three forms - associate, member, and volunteer.
                 For this, they will have to complete the formalities of the prescribed procedure of the BHARTIYA NADI PARISHAD.
             </Typography>
-            <Button 
-                sx={{
-                    backgroundColor: "white",
-                    border: "none",
-                    color: "rgb(19 100 173)",
-                    padding: "10px 80px 10px 80px",
-                    borderRadius: "20px",
-                    fontWeight: "bold",
-                    fontSize: "16px",
-                    '&:hover': {  // Corrected: '&' before ':hover'
-                        backgroundColor: "rgb(19 100 173)",
-                        color: 'white',
-                        border: "none"
-                    }
-                }}
-                variant="outlined">
-                Get Involved
-            </Button>
+            <Link to="/getInvolved" style={{ textDecoration: 'none' }}>
+                <Button 
+                    sx={{
+                        backgroundColor: "white",
+                        border: "none",
+                        color: "rgb(19 100 173)",
+                        padding: "10px 80px 10px 80px",
+                        borderRadius: "20px",
+                        fontWeight: "bold",
+                        fontSize: "16px",
+                        '&:hover': {  // Corrected: '&' before ':hover'
+                            backgroundColor: "rgb(19 100 173)",
+                            color: 'white',
+                            border: "none"
+                        }
+                    }}
+                    variant="outlined">
+                    Get Involved
+                </Button>
+            </Link>
         </Box>
     );
 }
