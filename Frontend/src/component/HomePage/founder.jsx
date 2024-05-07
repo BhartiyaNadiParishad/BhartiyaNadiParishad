@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
-import img from '../assets/partners.jpg'
-import img1 from '../assets/team/Raman Kant 1.jpg'
+import img from '../../assets/partners.jpg'
+import img1 from '../../assets/team/Raman Kant 1.jpg'
 
 
 

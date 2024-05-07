@@ -1,14 +1,14 @@
 import { Box, Typography, styled } from '@mui/material'
 import Grid2 from '@mui/material/Unstable_Grid2/Grid2'
 import React from 'react'
-import img4 from '../assets/riverDark.jpg'
-import img3 from '../assets/projects.jpg'
-import img2 from '../assets/partners.jpg'
-import img1 from '../assets/members.jpg'
-import logo1 from '../assets/Icons/members.png'
-import logo2 from '../assets/Icons/partners.png'
-import logo3 from '../assets/Icons/projects.png'
-import logo4 from '../assets/Icons/river.png'
+import img4 from '../../assets/riverDark.jpg'
+import img3 from '../../assets/projects.jpg'
+import img2 from '../../assets/partners.jpg'
+import img1 from '../../assets/members.jpg'
+import logo1 from '../../assets/Icons/members.png'
+import logo2 from '../../assets/Icons/partners.png'
+import logo3 from '../../assets/Icons/projects.png'
+import logo4 from '../../assets/Icons/river.png'
 
 const CustomGrid2 = styled(Grid2)({
     display: "flex",

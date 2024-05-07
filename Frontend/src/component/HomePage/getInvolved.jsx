@@ -5,7 +5,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Box, Button, styled } from '@mui/material';
-import img from '../assets/riverDarkbg.jpg'
+import img from '../../assets/riverDarkbg.jpg'
 import { Link } from 'react-router-dom';
 
 

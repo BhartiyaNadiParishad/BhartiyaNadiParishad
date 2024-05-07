@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
-import video from "../assets/bgvideo.mp4"
+import video from "../../assets/bgvideo.mp4"
 
 export default function FrontDisplay() {
     return (

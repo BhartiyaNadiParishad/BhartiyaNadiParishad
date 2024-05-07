@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Box, TextField, Button, Typography, styled } from '@mui/material';
+import { Box, TextField, Button, Typography, styled, Snackbar, Alert } from '@mui/material';
 import axios from 'axios';
+// import ReCAPTCHA from "react-google-recaptcha";
 
 
 const CustomContainer = styled(Box)(() => ({
@@ -12,6 +13,10 @@ const CustomContainer = styled(Box)(() => ({
 }));
 
 function MembershipForm() {
+
+    function onChange(value) {
+        console.log("Captcha value:", value);
+    }
 
     const [formData, setFormData] = useState({
         title: "",
@@ -33,6 +38,10 @@ function MembershipForm() {
         population: "",
     });
 
+    const [snackbarOpen, setSnackbarOpen] = useState(false);
+    const [snackbarMessage, setSnackbarMessage] = useState('');
+    const [snackbarSeverity, setSnackbarSeverity] = useState('success');
+
     const handleInputChange = (e) => {
         const { id, value } = e.target;
         setFormData({
@@ -45,15 +54,14 @@ function MembershipForm() {
         e.preventDefault();
         console.log(formData);
 
+    const requestBody = {
+        service_id: 'service_d52ztbs', 
+        template_id: 'template_35dd4mv', 
+        user_id: 'Z4wj3OTthLutaIT_z',
+        template_params: formData,
+    }
 
-        const requestBody = {
-            service_id: 'service_d52ztbs', 
-            template_id: 'template_35dd4mv', 
-            user_id: 'Z4wj3OTthLutaIT_z',
-            template_params: formData,
-        }
-
-        axios.post('https://api.emailjs.com/api/v1.0/email/send', requestBody)
+    axios.post('https://api.emailjs.com/api/v1.0/email/send', requestBody)
         .then(response => {
             console.log('Email sent successfully:', response.data);
             setFormData({
@@ -75,14 +83,21 @@ function MembershipForm() {
                 waterQuality: "",
                 population: "",
             })
-
+            setSnackbarMessage('Form submitted successfully');
+            setSnackbarSeverity('success');
+            setSnackbarOpen(true);
         })
         .catch(error => {
             console.error('Error sending email:', error);
+            setSnackbarMessage('Failed to submit form');
+            setSnackbarSeverity('error');
+            setSnackbarOpen(true);
         });
 
     };
-
+    const handleCloseSnackbar = () => {
+        setSnackbarOpen(false);
+    };
 
     return (
         <CustomContainer>
@@ -112,12 +127,26 @@ function MembershipForm() {
                         <TextField fullWidth id="presentSituation" label="Present Situation" variant="standard" multiline rows={2} value={formData.presentSituation} onChange={handleInputChange} />
                         <TextField fullWidth id="waterQuality" label="Water Quality" variant="standard" value={formData.waterQuality} onChange={handleInputChange} />
                         <TextField fullWidth id="population" label="Population" variant="standard" value={formData.population} onChange={handleInputChange} />
+                        {/* <ReCAPTCHA
+                        sitekey="6LejMdUpAAAAAPqjslFAKBmlKPtcAbjkdtwf91J1"
+                        onChange={onChange}
+                        /> */}
                     </CustomContainer>
                     <Button type="submit" variant="contained" color="primary" sx={{marginTop: "20px"}}>
                         Submit
                     </Button>
                 </form>
             </Box>
+            <Snackbar open={snackbarOpen} autoHideDuration={6000} onClose={handleCloseSnackbar}>
+                <Alert
+                    onClose={handleCloseSnackbar}
+                    severity={snackbarSeverity}
+                    variant="filled"
+                    sx={{ width: '100%' }}
+                >
+                    {snackbarMessage}
+                </Alert>
+            </Snackbar>
         </CustomContainer>
     );
 }

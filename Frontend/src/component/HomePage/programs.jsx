@@ -1,15 +1,15 @@
 import React from "react";
 import { Carousel, IconButton, collapse } from "@material-tailwind/react";
 import { Box, Typography, styled } from "@mui/material";
-import img from '../assets/partners.jpg';
-import img1 from '../assets/riverDark.jpg'
+import img from '../../assets/partners.jpg';
+import img1 from '../../assets/riverDark.jpg'
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
-import Icon1 from '../assets/Icons/1.png'
-import Icon2 from '../assets/Icons/2.png'
-import Icon3 from '../assets/Icons/3.png'
-import Icon4 from '../assets/Icons/4.png'
-import Icon5 from '../assets/Icons/5.png'
-import Icon6 from '../assets/Icons/6.png'
+import Icon1 from '../../assets/Icons/1.png'
+import Icon2 from '../../assets/Icons/2.png'
+import Icon3 from '../../assets/Icons/3.png'
+import Icon4 from '../../assets/Icons/4.png'
+import Icon5 from '../../assets/Icons/5.png'
+import Icon6 from '../../assets/Icons/6.png'
 
 const data1 = [
     {

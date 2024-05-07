@@ -2,12 +2,13 @@ import { useState } from 'react'
 import img from './assets/background9.png'
 import './App.css'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import HomePage from './component/HomePage'
+import HomePage from './component/HomePage/HomePage'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import GetInvolvedPage from './component/GetInvolved/getInvolvedPage';
 import Internship from './component/GetInvolved/internship';
 import Membership from './component/GetInvolved/membership';
 import Volunteer from './component/GetInvolved/volunteer';
+import Contact from './component/contactUs/contact';
 
 
 const theme = createTheme({
@@ -30,6 +31,7 @@ function App() {
             <Route exact path="/membership" element={ <Membership /> } />
             <Route exact path="/internship" element={ <Internship />} />
             <Route exact path="/volunteer" element={ <Volunteer />} />
+            <Route exact path="/Contact" element={ <Contact /> } />
           </Routes>
         </Router>
       </ThemeProvider>

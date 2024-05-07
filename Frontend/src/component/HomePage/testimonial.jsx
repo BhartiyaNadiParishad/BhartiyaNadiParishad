@@ -1,19 +1,19 @@
 import React from "react";
 import { Carousel, Typography, Button } from "@material-tailwind/react";
 import { Box } from "@mui/material";
-import img from '../assets/partners.jpg';
-import img1 from '../assets/team/Swami Chidanand Ji.jpeg'
-import img2 from "../assets/team/4.jpg"
-import img3 from "../assets/team/7.jpg"
-import img5 from "../assets/team/5.jpg"
-import img6 from "../assets/team/6.jpg"
-import img7 from "../assets/team/2.jpg"
-import img8 from "../assets/team/8.jpg"
-import img9 from "../assets/team/1.jpg"
-import img10 from "../assets/team/Mr Manu Gaur.jpg"
-import img11 from "../assets/team/Mr Shekhar Vijendra.jpg"
-import img12 from "../assets/team/Dr Chinmay Pandya.jpg"
-import img13 from "../assets/team/3.jpg"
+import img from '../../assets/partners.jpg';
+import img1 from '../../assets/team/Swami Chidanand Ji.jpeg'
+import img2 from "../../assets/team/4.jpg"
+import img3 from "../../assets/team/7.jpg"
+import img5 from "../../assets/team/5.jpg"
+import img6 from "../../assets/team/6.jpg"
+import img7 from "../../assets/team/2.jpg"
+import img8 from "../../assets/team/8.jpg"
+import img9 from "../../assets/team/1.jpg"
+import img10 from "../../assets/team/Mr Manu Gaur.jpg"
+import img11 from "../../assets/team/Mr Shekhar Vijendra.jpg"
+import img12 from "../../assets/team/Dr Chinmay Pandya.jpg"
+import img13 from "../../assets/team/3.jpg"
 
 
 

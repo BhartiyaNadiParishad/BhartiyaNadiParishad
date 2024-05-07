@@ -17,6 +17,7 @@ import Button from '@mui/material/Button';
 import { styled } from '@mui/material';
 import { useScrollTrigger } from '@mui/material';
 import Logo from '../assets/logo.svg'
+import { Link } from 'react-router-dom';
 
 
 const drawerWidth = 240;
@@ -32,11 +33,11 @@ function DrawerAppBar(props) {
 
 
   const CustomButton = styled(Button)({
-    color: '#1d4e6e',
+    color: 'white',
     fontSize: 15,
     fontWeight: "bold",
     borderRadius: 24,
-    padding: "6px 15px",
+    padding: "7px 15px 6px 15px",
     '&:hover': {  // Corrected: '&' before ':hover'
       backgroundColor: '#daf0fd',
       color: '#1d4e6e',
@@ -102,16 +103,13 @@ function DrawerAppBar(props) {
             justifyContent: "center",
             padding: "6px 10px"
           }}>
-            {navItems.map((item) => (
-              <CustomButton
-                key={item}
-                sx={{ color: 'white' }}
-              >
-                <div className='pt-[2px]font-bold'>
-                  {item}
-                </div>
-              </CustomButton>
-            ))}
+              <Link to={"/"} ><CustomButton>Home</CustomButton></Link>
+              <Link to={"/"} ><CustomButton>About</CustomButton></Link>
+              <Link to={"/"} ><CustomButton>Programmes</CustomButton></Link>
+              <Link to={"/"} ><CustomButton>Nadi Darshan</CustomButton></Link>
+              <Link to={"/GetInvolved"} ><CustomButton>Get Involved</CustomButton></Link>
+              <Link to={"/"} ><CustomButton>Resources</CustomButton></Link>
+              <Link to={"/Contact"} ><CustomButton>Contact</CustomButton></Link>
           </Box>
         </Toolbar>
       </AppBar>
