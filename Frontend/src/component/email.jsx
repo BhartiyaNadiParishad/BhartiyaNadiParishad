@@ -8,17 +8,17 @@ export const Email = () => {
         e.preventDefault();
         console.log(form.current);
         emailjs
-        .sendForm('service_d52ztbs', 'template_35dd4mv', form.current, {
-            publicKey: 'Z4wj3OTthLutaIT_z',
-        })
-        .then(
-            () => {
-            console.log('SUCCESS!');
-            },
-            (error) => {
-            console.log('FAILED...', error.text);
-            },
-        );
+            .sendForm('service_d52ztbs', 'template_35dd4mv', form.current, {
+                publicKey: 'Z4wj3OTthLutaIT_z',
+            })
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                },
+            );
     };
 
     return (

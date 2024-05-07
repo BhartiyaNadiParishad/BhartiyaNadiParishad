@@ -12,7 +12,7 @@ const CustomContainer = styled(Box)(() => ({
 
 function VolunteerForm() {
     const [formData, setFormData] = useState({
-        service : "Volunteer form",
+        service: "Volunteer form",
         title: "",
         firstName: "",
         lastName: "",
@@ -45,23 +45,23 @@ function VolunteerForm() {
         }
 
         axios.post('https://api.emailjs.com/api/v1.0/email/send', requestBody)
-        .then(response => {
-            console.log('Email sent successfully:', response.data);
-            setFormData({
-                title: '',
-                firstName: '',
-                lastName: "",
-                designation: "",
-                organization: "",
-                email: "",
-                contactNumber: "",
-                address: "",
-                interest: "",
+            .then(response => {
+                console.log('Email sent successfully:', response.data);
+                setFormData({
+                    title: '',
+                    firstName: '',
+                    lastName: "",
+                    designation: "",
+                    organization: "",
+                    email: "",
+                    contactNumber: "",
+                    address: "",
+                    interest: "",
+                })
             })
-        })
-        .catch(error => {
-            console.error('Error sending email:', error);
-        });
+            .catch(error => {
+                console.error('Error sending email:', error);
+            });
 
     };
 
@@ -76,18 +76,20 @@ function VolunteerForm() {
                 <form onSubmit={handleSubmit}>
                     <CustomContainer>
                         <TextField fullWidth id="title" label="Title" variant="standard" value={formData.title} onChange={handleInputChange} />
-                        <TextField fullWidth id="firstName" label="First Name" variant="standard" value={formData.firstName} onChange={handleInputChange}/>
+                        <TextField fullWidth id="firstName" label="First Name" variant="standard" value={formData.firstName} onChange={handleInputChange} />
                         <TextField fullWidth id="lastName" label="Last Name" variant="standard" value={formData.lastName} onChange={handleInputChange} />
                         <TextField fullWidth id="designation" label="Designation" variant="standard" value={formData.designation} onChange={handleInputChange} />
                         <TextField fullWidth id="organization" label="Organization" variant="standard" value={formData.organization} onChange={handleInputChange} />
                         <TextField fullWidth id="email" label="Email" variant="standard" value={formData.email} onChange={handleInputChange} />
-                        <TextField fullWidth id="contactNumber" label="Contact Number" variant="standard" value={formData.contactNumber} onChange={handleInputChange}/>
-                        <TextField fullWidth id="address" label="Address" variant="standard" value={formData.address} onChange={handleInputChange}/>
-                        <TextField fullWidth id="interest" label="About Your Interest (100 to 500 words)" variant="standard" multiline rows={6} value={formData.interest} onChange={handleInputChange}/>
+                        <TextField fullWidth id="contactNumber" label="Contact Number" variant="standard" value={formData.contactNumber} onChange={handleInputChange} />
+                        <TextField fullWidth id="address" label="Address" variant="standard" value={formData.address} onChange={handleInputChange} />
+                        <TextField fullWidth id="interest" label="About Your Interest (100 to 500 words)" variant="standard" multiline rows={6} value={formData.interest} onChange={handleInputChange} />
                     </CustomContainer>
-                    <Button type="submit" sx={{marginTop: "20px"}} variant="contained" color="primary">
-                        Submit
-                    </Button>
+                    <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+                        <Button type="submit" variant="contained" color="primary">
+                            Submit
+                        </Button>
+                    </Box>
                 </form>
             </Box>
         </CustomContainer>
