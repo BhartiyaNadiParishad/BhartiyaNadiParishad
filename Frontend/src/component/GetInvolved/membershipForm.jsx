@@ -61,7 +61,6 @@ function MembershipForm() {
         template_params: formData,
     }
 
-<<<<<<< HEAD
     axios.post('https://api.emailjs.com/api/v1.0/email/send', requestBody)
         .then(response => {
             console.log('Email sent successfully:', response.data);
@@ -94,42 +93,6 @@ function MembershipForm() {
             setSnackbarSeverity('error');
             setSnackbarOpen(true);
         });
-=======
-        const requestBody = {
-            service_id: 'service_d52ztbs',
-            template_id: 'template_35dd4mv',
-            user_id: 'Z4wj3OTthLutaIT_z',
-            template_params: formData,
-        }
-
-        axios.post('https://api.emailjs.com/api/v1.0/email/send', requestBody)
-            .then(response => {
-                console.log('Email sent successfully:', response.data);
-                setFormData({
-                    title: "",
-                    firstName: "",
-                    lastName: "",
-                    designation: "",
-                    organization: "",
-                    email: "",
-                    contactNumber: "",
-                    address: "",
-                    workDescription: "",
-                    riverLength: "",
-                    riverName: "",
-                    originSite: "",
-                    mergingPlace: "",
-                    discharge: "",
-                    presentSituation: "",
-                    waterQuality: "",
-                    population: "",
-                })
-
-            })
-            .catch(error => {
-                console.error('Error sending email:', error);
-            });
->>>>>>> 59c0f88f967d81fd083f9fade930e0044ba1ac24
 
     };
     const handleCloseSnackbar = () => {

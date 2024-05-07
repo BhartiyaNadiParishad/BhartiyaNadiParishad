@@ -49,7 +49,6 @@ function InternshipForm() {
         }
 
         axios.post('https://api.emailjs.com/api/v1.0/email/send', requestBody)
-<<<<<<< HEAD
         .then(response => {
             console.log('Email sent successfully:', response.data);
             setFormData({
@@ -74,26 +73,6 @@ function InternshipForm() {
             setSnackbarOpen(true);
         });
     };
-=======
-            .then(response => {
-                console.log('Email sent successfully:', response.data);
-                setFormData({
-                    title: '',
-                    firstName: '',
-                    lastName: "",
-                    designation: "",
-                    organization: "",
-                    email: "",
-                    contactNumber: "",
-                    address: "",
-                    interest: "",
-                })
-
-            })
-            .catch(error => {
-                console.error('Error sending email:', error);
-            });
->>>>>>> 59c0f88f967d81fd083f9fade930e0044ba1ac24
 
     const handleCloseSnackbar = () => {
         setSnackbarOpen(false);
