@@ -13,7 +13,7 @@ const CustomContainer = styled(Box)(() => ({
 function InternshipForm() {
 
     const [formData, setFormData] = useState({
-        service : "Internship form",
+        service: "Internship form",
         title: "",
         firstName: "",
         lastName: "",
@@ -49,6 +49,7 @@ function InternshipForm() {
         }
 
         axios.post('https://api.emailjs.com/api/v1.0/email/send', requestBody)
+<<<<<<< HEAD
         .then(response => {
             console.log('Email sent successfully:', response.data);
             setFormData({
@@ -73,6 +74,26 @@ function InternshipForm() {
             setSnackbarOpen(true);
         });
     };
+=======
+            .then(response => {
+                console.log('Email sent successfully:', response.data);
+                setFormData({
+                    title: '',
+                    firstName: '',
+                    lastName: "",
+                    designation: "",
+                    organization: "",
+                    email: "",
+                    contactNumber: "",
+                    address: "",
+                    interest: "",
+                })
+
+            })
+            .catch(error => {
+                console.error('Error sending email:', error);
+            });
+>>>>>>> 59c0f88f967d81fd083f9fade930e0044ba1ac24
 
     const handleCloseSnackbar = () => {
         setSnackbarOpen(false);
@@ -87,18 +108,21 @@ function InternshipForm() {
                 <form onSubmit={handleSubmit} >
                     <CustomContainer>
                         <TextField fullWidth id="title" label="Title" variant="standard" value={formData.title} onChange={handleInputChange} />
-                        <TextField fullWidth id="firstName" label="First Name" variant="standard" value={formData.firstName} onChange={handleInputChange}/>
+                        <TextField fullWidth id="firstName" label="First Name" variant="standard" value={formData.firstName} onChange={handleInputChange} />
                         <TextField fullWidth id="lastName" label="Last Name" variant="standard" value={formData.lastName} onChange={handleInputChange} />
                         <TextField fullWidth id="designation" label="Designation" variant="standard" value={formData.designation} onChange={handleInputChange} />
                         <TextField fullWidth id="organization" label="Organization" variant="standard" value={formData.organization} onChange={handleInputChange} />
                         <TextField fullWidth id="email" label="Email" variant="standard" value={formData.email} onChange={handleInputChange} />
-                        <TextField fullWidth id="contactNumber" label="Contact Number" variant="standard" value={formData.contactNumber} onChange={handleInputChange}/>
-                        <TextField fullWidth id="address" label="Address" variant="standard" value={formData.address} onChange={handleInputChange}/>
-                        <TextField fullWidth id="interest" label="About Your Interest (100 to 500 words)" variant="standard" multiline rows={6} value={formData.interest} onChange={handleInputChange}/>
+                        <TextField fullWidth id="contactNumber" label="Contact Number" variant="standard" value={formData.contactNumber} onChange={handleInputChange} />
+                        <TextField fullWidth id="address" label="Address" variant="standard" value={formData.address} onChange={handleInputChange} />
+                        <TextField fullWidth id="interest" label="About Your Interest (100 to 500 words)" variant="standard" multiline rows={6} value={formData.interest} onChange={handleInputChange} />
                     </CustomContainer>
-                    <Button type="submit" sx={{marginTop: "20px"}} variant="contained" color="primary">
-                        Submit
-                    </Button>
+                    <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+                        <Button type="submit" variant="contained" color="primary">
+                            Submit
+                        </Button>
+                    </Box>
+
                 </form>
             </Box>
             {/* <Snackbar
