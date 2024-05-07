@@ -9,6 +9,7 @@ import WorkImpact from './workImpact'
 import Footer from './footer'
 import FrontDisplay from './frontDisplay'
 import Video from './video'
+import { Email } from './email'
 
 export default function HomePage() {
     return (
