@@ -1,27 +1,34 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
-import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
-import MenuIcon from '@mui/icons-material/Menu';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import { styled } from '@mui/material';
-import { useScrollTrigger } from '@mui/material';
-import Logo from '../assets/logo.svg'
-import { Link } from 'react-router-dom';
-
+import * as React from "react";
+import PropTypes from "prop-types";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import CssBaseline from "@mui/material/CssBaseline";
+import Divider from "@mui/material/Divider";
+import Drawer from "@mui/material/Drawer";
+import IconButton from "@mui/material/IconButton";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
+import MenuIcon from "@mui/icons-material/Menu";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import { styled } from "@mui/material";
+import { useScrollTrigger } from "@mui/material";
+import Logo from "../assets/logo.svg";
+import { Link } from "react-router-dom";
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Programmes', 'Nadi Darshan', 'Get Involved', 'Resources', 'Contact'];
+const navItems = [
+  "Home",
+  "About",
+  "Programmes",
+  "Nadi Darshan",
+  "Get Involved",
+  "Resources",
+  "Contact",
+];
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -31,21 +38,20 @@ function DrawerAppBar(props) {
     setMobileOpen((prevState) => !prevState);
   };
 
-
   const CustomButton = styled(Button)({
-    color: 'white',
+    color: "white",
     fontSize: 15,
     fontWeight: "bold",
     borderRadius: 24,
     padding: "7px 15px 6px 15px",
-    '&:hover': {  // Corrected: '&' before ':hover'
-      backgroundColor: '#daf0fd',
-      color: '#1d4e6e',
+    "&:hover": {
+      backgroundColor: "#daf0fd",
+      color: "#1d4e6e",
     },
   });
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
         MUI
       </Typography>
@@ -53,7 +59,7 @@ function DrawerAppBar(props) {
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center', }}>
+            <ListItemButton sx={{ textAlign: "center" }}>
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
@@ -62,54 +68,98 @@ function DrawerAppBar(props) {
     </Box>
   );
 
-  const container = window !== undefined ? () => window().document.body : undefined;
-  const trigger = useScrollTrigger({ disableHysteresis: true, });
+  const container =
+    window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar
         component="nav"
-        sx={{ backgroundColor: "transparent", boxShadow: 'none' }}>
-        <Toolbar sx={{ display: 'flex', flexWrap: "wrap", padding: '0 !important' }}>
-          <Box sx={{ padding: "10px", width: "100%", backgroundColor: "#1d4e6e", display: { md: 'none' } }}>
+        sx={{
+          position: "unset !important",
+        }}
+      >
+        <Toolbar
+          sx={{ display: "flex", flexWrap: "wrap", padding: "0 !important" }}
+        >
+          <Box
+            sx={{
+              paddingLeft: "10px",
+              width: "100%",
+              backgroundColor: "#a9e0ff",
+              display: { md: "none" },
+            }}
+          >
             <IconButton
               color="inherit"
               aria-label="open drawer"
               edge="start"
               onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { md: 'none' } }}
+              sx={{ mr: 2, display: { md: "none" } }}
             >
               <MenuIcon />
               <Box
-                sx={{ display: { xs: 'flex' }, justifyContent: "center", alignItems: "center", columnGap: "8px", ml: 1 }}>
-                <img src={Logo} height="30px" width="30px" alt="Logo" />
-                <Typography>भारतीय नदी परिषद</Typography>
+                sx={{
+                  display: { xs: "flex" },
+                  justifyContent: "center",
+                  alignItems: "center",
+                  columnGap: "8px",
+                  ml: 1,
+                }}
+              >
+                <img src={Logo} height="auto" width="75px" alt="Logo" />
               </Box>
             </IconButton>
           </Box>
-
           <Box
-            sx={{ backgroundColor: trigger ? 'white' : 'transparent', padding: '10px 0 !important', width: "100%", display: { xs: 'none', md: 'flex' }, justifyContent: "center", alignItems: "center", columnGap: "20px" }}>
+            sx={{
+              backgroundColor: "#051a36",
+              padding: "10px 0 !important",
+              width: "100%",
+              display: {
+                xs: "none",
+                md: "flex",
+              },
+              justifyContent: "center",
+              alignItems: "center",
+              columnGap: "20px",
+            }}
+          >
             <img src={Logo} height="225px" width="225px" alt="Logo" />
           </Box>
-          {/* rgba(6, 58, 94, 0.5) */}
-          <Box sx={{
-            backgroundColor: '#1d4e6e',
-            width: "100%",
-            display: { xs: 'none', md: 'flex' },
-            flexDirection: 'row',
-            columnGap: '10px',
-            justifyContent: "center",
-            padding: "6px 10px"
-          }}>
-              <Link to={"/"} ><CustomButton>Home</CustomButton></Link>
-              <Link to={"/"} ><CustomButton>About</CustomButton></Link>
-              <Link to={"/"} ><CustomButton>Programmes</CustomButton></Link>
-              <Link to={"/"} ><CustomButton>Nadi Darshan</CustomButton></Link>
-              <Link to={"/GetInvolved"} ><CustomButton>Get Involved</CustomButton></Link>
-              <Link to={"/"} ><CustomButton>Resources</CustomButton></Link>
-              <Link to={"/Contact"} ><CustomButton>Contact</CustomButton></Link>
+          <Box
+            sx={{
+              backgroundColor: "#051a36",
+              width: "100%",
+              display: { xs: "none", md: "flex" },
+              flexDirection: "row",
+              columnGap: "10px",
+              justifyContent: "center",
+              padding: "6px 10px",
+            }}
+          >
+            <Link to={"/"}>
+              <CustomButton>Home</CustomButton>
+            </Link>
+            <Link to={"/"}>
+              <CustomButton>About</CustomButton>
+            </Link>
+            <Link to={"/"}>
+              <CustomButton>Programmes</CustomButton>
+            </Link>
+            <Link to={"/"}>
+              <CustomButton>Nadi Darshan</CustomButton>
+            </Link>
+            <Link to={"/GetInvolved"}>
+              <CustomButton>Get Involved</CustomButton>
+            </Link>
+            <Link to={"/"}>
+              <CustomButton>Resources</CustomButton>
+            </Link>
+            <Link to={"/Contact"}>
+              <CustomButton>Contact</CustomButton>
+            </Link>
           </Box>
         </Toolbar>
       </AppBar>
@@ -123,8 +173,11 @@ function DrawerAppBar(props) {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: 'block', md: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            display: { xs: "block", md: "none" },
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: drawerWidth,
+            },
           }}
         >
           {drawer}
