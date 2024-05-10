@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Box, TextField, Button, Typography, styled, Snackbar, Alert } from '@mui/material';
 import axios from 'axios';
+import ReCAPTCHA from 'react-google-recaptcha';
 // import ReCAPTCHA from "react-google-recaptcha";
 
 
@@ -13,6 +14,7 @@ const CustomContainer = styled(Box)(() => ({
 }));
 
 function MembershipForm() {
+    const recaptchaRef = useRef(null);
 
     function onChange(value) {
         console.log("Captcha value:", value);
@@ -37,7 +39,7 @@ function MembershipForm() {
         waterQuality: "",
         population: "",
     });
-
+    const [CaptchaValue , setCaptchaValue] = useState("")
     const [snackbarOpen, setSnackbarOpen] = useState(false);
     const [snackbarMessage, setSnackbarMessage] = useState('');
     const [snackbarSeverity, setSnackbarSeverity] = useState('success');
@@ -50,54 +52,65 @@ function MembershipForm() {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async(e) => {
         e.preventDefault();
         console.log(formData);
 
-    const requestBody = {
-        service_id: 'service_d52ztbs', 
-        template_id: 'template_35dd4mv', 
-        user_id: 'Z4wj3OTthLutaIT_z',
-        template_params: formData,
-    }
+        const requestBody = {
+            service_id: 'service_d52ztbs', 
+            template_id: 'template_35dd4mv', 
+            user_id: 'Z4wj3OTthLutaIT_z',
+            template_params: formData,
+        }
 
-    axios.post('https://api.emailjs.com/api/v1.0/email/send', requestBody)
-        .then(response => {
-            console.log('Email sent successfully:', response.data);
-            setFormData({
-                title: "",
-                firstName: "",
-                lastName: "",
-                designation: "",
-                organization: "",
-                email: "",
-                contactNumber: "",
-                address: "",
-                workDescription: "",
-                riverLength: "",
-                riverName: "",
-                originSite: "",
-                mergingPlace: "",
-                discharge: "",
-                presentSituation: "",
-                waterQuality: "",
-                population: "",
+
+        try{
+            const res = await axios.post('http://localhost:3000/submit-form/', {
+                ...formData,
+                CaptchaValue
             })
-            setSnackbarMessage('Form submitted successfully');
-            setSnackbarSeverity('success');
-            setSnackbarOpen(true);
-        })
-        .catch(error => {
-            console.error('Error sending email:', error);
+            if(res.data.success){
+                    const response = await axios.post('https://api.emailjs.com/api/v1.0/email/send', requestBody)
+                    console.log('Email sent successfully:', response.data);
+                    setFormData({
+                        title: "",
+                        firstName: "",
+                        lastName: "",
+                        designation: "",
+                        organization: "",
+                        email: "",
+                        contactNumber: "",
+                        address: "",
+                        workDescription: "",
+                        riverLength: "",
+                        riverName: "",
+                        originSite: "",
+                        mergingPlace: "",
+                        discharge: "",
+                        presentSituation: "",
+                        waterQuality: "",
+                        population: "",
+                    });
+                    setSnackbarMessage('Form submitted successfully');
+                    setSnackbarSeverity('success');
+                    setSnackbarOpen(true);
+                    setCaptchaValue('');
+                    recaptchaRef.current.reset();
+        }}
+        catch(err){
+            console.log(err);
             setSnackbarMessage('Failed to submit form');
             setSnackbarSeverity('error');
             setSnackbarOpen(true);
-        });
-
-    };
+        }
+    }
     const handleCloseSnackbar = () => {
         setSnackbarOpen(false);
     };
+
+    function onChange(value) {
+        setCaptchaValue(value);
+    }
 
     return (
         <CustomContainer>
@@ -127,10 +140,11 @@ function MembershipForm() {
                         <TextField fullWidth id="presentSituation" label="Present Situation" variant="standard" multiline rows={2} value={formData.presentSituation} onChange={handleInputChange} />
                         <TextField fullWidth id="waterQuality" label="Water Quality" variant="standard" value={formData.waterQuality} onChange={handleInputChange} />
                         <TextField fullWidth id="population" label="Population" variant="standard" value={formData.population} onChange={handleInputChange} />
-                        {/* <ReCAPTCHA
-                        sitekey="6LejMdUpAAAAAPqjslFAKBmlKPtcAbjkdtwf91J1"
-                        onChange={onChange}
-                        /> */}
+                        <ReCAPTCHA
+                            ref={recaptchaRef}
+                            sitekey="6LdEM9YpAAAAAKv2j7jJ0azIsOR88gW97FUo_OkR"
+                            onChange={onChange}
+                        />
                     </CustomContainer>
                     <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
                         <Button type="submit" variant="contained" color="primary">

@@ -9,6 +9,8 @@ import Internship from './component/GetInvolved/internship';
 import Membership from './component/GetInvolved/membership';
 import Volunteer from './component/GetInvolved/volunteer';
 import Contact from './component/contactUs/contact';
+import Testing from './component/testing';
+import Team from './component/Team/teamPage';
 
 
 const theme = createTheme({
@@ -32,6 +34,8 @@ function App() {
             <Route exact path="/internship" element={ <Internship />} />
             <Route exact path="/volunteer" element={ <Volunteer />} />
             <Route exact path="/Contact" element={ <Contact /> } />
+            <Route exact path="/testing" element={ <Testing /> } />
+            <Route exact path="/team" element={ <Team /> } />
           </Routes>
         </Router>
       </ThemeProvider>
