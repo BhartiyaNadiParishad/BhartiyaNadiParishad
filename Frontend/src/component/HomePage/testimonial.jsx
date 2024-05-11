@@ -1,5 +1,5 @@
 import React from "react";
-import { Carousel, Typography, Button } from "@material-tailwind/react";
+import { Carousel} from "@material-tailwind/react";
 import { Box } from "@mui/material";
 import img from '../../assets/partners.jpg';
 import img1 from '../../assets/team/Swami Chidanand Ji.jpeg'

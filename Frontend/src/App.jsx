@@ -11,6 +11,7 @@ import Volunteer from './component/GetInvolved/volunteer';
 import Contact from './component/contactUs/contact';
 import Testing from './component/testing';
 import Team from './component/Team/teamPage';
+import AboutBNP from './component/about';
 
 
 const theme = createTheme({
@@ -36,6 +37,7 @@ function App() {
             <Route exact path="/Contact" element={ <Contact /> } />
             <Route exact path="/testing" element={ <Testing /> } />
             <Route exact path="/team" element={ <Team /> } />
+            <Route exact path="/aboutBNP" element={ <AboutBNP /> } />
           </Routes>
         </Router>
       </ThemeProvider>

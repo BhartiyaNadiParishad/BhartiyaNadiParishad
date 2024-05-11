@@ -8,7 +8,9 @@ export default function MainLayout({ children }) {
   return (
     <Box sx={{ background: "linear-gradient(to bottom, #a9e0ff, #80aaf5)" }}>
       <DrawerAppBar />
-      <Box sx={{ marginTop: { xs: "62px", md: "25px" } }}>{children}</Box>
+      <Box sx={{ marginTop: { xs: "62px", md: "25px" } }}>
+        {children}
+      </Box>
       {/* <Box
         display="flex"
         flexDirection={"column"}

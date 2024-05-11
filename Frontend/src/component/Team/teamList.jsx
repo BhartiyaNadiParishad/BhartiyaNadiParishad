@@ -15,6 +15,7 @@ export default function TeamList({title, data}) {
                             alignItems={"center"}
                             rowGap={"6px"}
                             md={3}
+                            sm={6}
                             xs={12}
                         >   
                             <Box
