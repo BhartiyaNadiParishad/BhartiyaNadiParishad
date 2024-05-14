@@ -6,7 +6,8 @@ import img from "../../assets/partners.jpg";
 
 export default function MainLayout({ children }) {
   return (
-    <Box sx={{ background: "linear-gradient(to bottom, #a9e0ff, #80aaf5)" }}>
+      <Box>
+      {/* <Box sx={{ background: "linear-gradient(to bottom, #a9e0ff, #80aaf5)" }}> */}
       <DrawerAppBar />
       <Box sx={{ marginTop: { xs: "62px", md: "25px" } }}>
         {children}

@@ -13,6 +13,7 @@ import Testing from './component/testing';
 import Team from './component/Team/teamPage';
 import AboutBNP from './component/about';
 import Gallery from './component/gallery';
+import ProgramPage from './component/ourProgramPage';
 
 
 const theme = createTheme({
@@ -40,6 +41,8 @@ function App() {
             <Route exact path="/team" element={ <Team /> } />
             <Route exact path="/aboutBNP" element={ <AboutBNP /> } />
             <Route exact path="/gallery" element={ <Gallery />} />
+            <Route exact path="/program" element={ <ProgramPage /> } />
+
           </Routes>
         </Router>
       </ThemeProvider>

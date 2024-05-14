@@ -142,10 +142,10 @@ function DrawerAppBar(props) {
             <Link to={"/"}>
               <CustomButton>Home</CustomButton>
             </Link>
-            <Link to={"/"}>
+            <Link to={"/aboutBNP"}>
               <CustomButton>About</CustomButton>
             </Link>
-            <Link to={"/"}>
+            <Link to={"/program"}>
               <CustomButton>Programmes</CustomButton>
             </Link>
             <Link to={"/"}>
