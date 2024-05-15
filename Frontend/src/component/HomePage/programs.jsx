@@ -1,8 +1,5 @@
-import React from "react";
-import { Carousel, IconButton, collapse } from "@material-tailwind/react";
+import { Carousel, IconButton } from "@material-tailwind/react";
 import { Box, Typography, styled } from "@mui/material";
-import img from '../../assets/partners.jpg';
-import img1 from '../../assets/riverDark.jpg'
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import Icon1 from '../../assets/Icons/1.png'
 import Icon2 from '../../assets/Icons/2.png'
@@ -10,6 +7,7 @@ import Icon3 from '../../assets/Icons/3.png'
 import Icon4 from '../../assets/Icons/4.png'
 import Icon5 from '../../assets/Icons/5.png'
 import Icon6 from '../../assets/Icons/6.png'
+import { Link } from "react-router-dom";
 
 const data1 = [
     {
@@ -147,21 +145,23 @@ export default function Programs() {
                     columnGap={6}
                     rowGap={4} >
                     {data1.map((item, index) => (
-                        <CustomGrid2
-                            key={index}
-                            sx={{
-                                padding: "25px",
-                                marginBottom: "20px",
-                                boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)",
-                                color: "white",
-                                textAlign: "center"
-                            }}
-                        >
-                            <img src={item.img} alt="members icon" height={45} width={45} />
-                            <Typography variant='h6' sx={{ fontSize: "24px", fontWeight: "bold", color: "#fe9e3d" }}>{item.awardNumber}</Typography>
-                            <Typography variant='h6' sx={{ fontSize: "24px", fontWeight: "bold", color: "#fe9e3d" }}>{item.awardTitle}</Typography>
-                            <Typography variant='h6' sx={{ fontSize: "18px", textAlign: "justify" }}>{item.description}</Typography>
-                        </CustomGrid2>
+                        <Link to={"/program"} key={index}>
+                            <CustomGrid2
+                                sx={{
+                                    padding: "25px",
+                                    marginBottom: "20px",
+                                    boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)",
+                                    color: "white",
+                                    textAlign: "center",
+                                    textDecoration: "none"
+                                }}
+                            >
+                                <img src={item.img} alt="members icon" height={45} width={45} />
+                                <Typography variant='h6' sx={{ fontSize: "24px", fontWeight: "bold", color: "#fe9e3d" }}>{item.awardNumber}</Typography>
+                                <Typography variant='h6' sx={{ fontSize: "24px", fontWeight: "bold", color: "#fe9e3d" }}>{item.awardTitle}</Typography>
+                                <Typography variant='h6' sx={{ fontSize: "18px", textAlign: "justify" }}>{item.description}</Typography>
+                            </CustomGrid2>
+                        </Link>
                     ))}
                 </Grid2>
                 <Grid2 container

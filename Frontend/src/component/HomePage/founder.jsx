@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material'
-import React from 'react'
+import { forwardRef} from 'react'
 import img from '../../assets/partners.jpg'
 import img1 from '../../assets/team/Raman Kant 1.jpg'
 
@@ -7,11 +7,13 @@ import img1 from '../../assets/team/Raman Kant 1.jpg'
 
 
 
-export default function Founder() {
-    return (
+const Founder = forwardRef((props,ref) =>  {
 
+    return (
         <>
-            <Box sx={{
+            <Box 
+                ref={ref}
+                sx={{
                     backgroundImage: `url(${img})`,                    
                     backgroundSize: "cover",
                     backgroundPosition: "center",
@@ -41,4 +43,6 @@ export default function Founder() {
             </Box>
         </>
     )
-}
+});
+
+export default Founder;

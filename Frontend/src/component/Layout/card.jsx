@@ -1,5 +1,4 @@
 import { Box, Paper, Typography } from "@mui/material";
-import React from "react";
 
 export default function Card({ title, description, icon, bgColor, number }) {
 	return (
@@ -22,7 +21,7 @@ export default function Card({ title, description, icon, bgColor, number }) {
                         height: "100%"
 					}}
 				>
-					<img src={icon} alt="members icon" height={60} width={60} />
+					{icon && <img src={icon} alt="members icon" height={60} width={60} />}
 					<Typography
 						variant="h5"
 						sx={{

@@ -1,6 +1,5 @@
-import React from "react";
+import  { useRef } from "react";
 import DrawerAppBar from "../drawer";
-import Vision from "./vision";
 import Founder from "./founder";
 import { Testimonials } from "./testimonial";
 import Programs from "./programs";
@@ -9,15 +8,23 @@ import WorkImpact from "./workImpact";
 import Footer from "../footer";
 import FrontDisplay from "./frontDisplay";
 import Video from "./video";
-import { Email } from "../email";
+
 
 export default function HomePage() {
+
+  const founder = useRef(null);
+  const scrollToSection = () => {
+    if (founder.current) {
+        founder.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
-      <DrawerAppBar />
+      <DrawerAppBar founderScroll={scrollToSection} />
       <FrontDisplay />
       {/* <Vision /> */}
-      <Founder />
+      <Founder ref={founder}/>
       <Video />
       <Testimonials />
       <Programs />
