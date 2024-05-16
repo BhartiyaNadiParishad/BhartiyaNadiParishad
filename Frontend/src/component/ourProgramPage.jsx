@@ -63,12 +63,13 @@ export default function ProgramPage() {
 				<Box
 					display={"flex"}
 					justifyContent={"center"}
-					alignItems={"center"}
+					paddingBottom={25}
+					alignItems={"flex-end"}
 					sx={{
 						backgroundImage: `url(${img})`,
 						backgroundSize: "cover",
 						backgroundPosition: "center",
-						height: "70vh",
+						height: "75vh",
 						width: "100%",
 					}}
 				>

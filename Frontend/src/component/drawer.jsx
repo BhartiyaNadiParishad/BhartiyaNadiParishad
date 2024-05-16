@@ -177,7 +177,8 @@ function DrawerAppBar(props) {
 			<AppBar
 				component="nav"
 				sx={{
-					position: "unset !important",
+					background: "none",
+					padding: "0px !important",
 				}}
 			>
 				<Toolbar
@@ -189,6 +190,7 @@ function DrawerAppBar(props) {
 				>
 					<Box
 						sx={{
+							backgroundColor: "white",
 							paddingLeft: "10px",
 							width: "100%",
 							display: { md: "none" },
@@ -222,6 +224,7 @@ function DrawerAppBar(props) {
 					</Box>
 					<Box
 						sx={{
+							backgroundColor: "#ffffffbf",
 							padding: "10px 0 !important",
 							width: "100%",
 							display: {
@@ -251,13 +254,8 @@ function DrawerAppBar(props) {
 							padding: "6px 10px",
 						}}
 					>
-						{/* <Link to={"/"}>
-							<CustomButton >
-								Home
-							</CustomButton>
-						</Link> */}
 						<Link to={"/"}>
-							<Button onClick={props.founderScroll}>Home</Button>
+							<Button sx={{color: "white", fontWeight: "bold"}} onClick={props.founderScroll}>Home</Button>
 						</Link>
 						{menuData.map((menu, index) => (
 							<div
@@ -270,8 +268,8 @@ function DrawerAppBar(props) {
 								<Link to={`/${menu.menuName}`}>
 									<Button
 										aria-describedby={`${menu.menuName}-popover`}
-										sx={{ mx: 1 }}
-										// endIcon={<KeyboardArrowDownIcon />}
+										sx={{ mx: 1 , color: "white", fontWeight: "bold"}}
+										endIcon={<KeyboardArrowDownIcon />}
 									>
 										{menu.buttonLabel}
 									</Button>
@@ -291,12 +289,14 @@ function DrawerAppBar(props) {
 											<Link key={index} to={item.path}>
 												<MenuItem
 													sx={{
-														borderTop: "1px solid white",
+														borderTop:
+															"1px solid white",
 														color: "white",
-														'&:hover':{
-															backgroundColor: "white",
-															color: "#051a36"
-														}
+														"&:hover": {
+															backgroundColor:
+																"white",
+															color: "#051a36",
+														},
 													}}
 												>
 													{item.label}

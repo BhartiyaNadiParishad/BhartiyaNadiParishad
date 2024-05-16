@@ -42,8 +42,9 @@ export default function AboutBNP() {
 				<Box
 					display="flex"
 					flexDirection={"column"}
-					justifyContent={"center"}
+					justifyContent={"flex-end"}
 					rowGap={3}
+					height={"85vh"}
 					sx={{
 						backgroundColor: "#f2f2f2",
 						backgroundImage: `url(${bg})`,

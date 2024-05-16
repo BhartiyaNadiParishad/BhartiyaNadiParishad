@@ -43,7 +43,7 @@ export default function History() {
 				<Grid
 					container
 					sx={{
-						padding: "60px 100px",
+						padding: "240px 100px 60px 100px",
 						backgroundColor: "#f2f2f2",
 						// backgroundImage: `url(${bg1})`,
 						backgroundSize: "cover",

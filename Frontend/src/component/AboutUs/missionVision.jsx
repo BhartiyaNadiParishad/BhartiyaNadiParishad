@@ -47,7 +47,7 @@ export default function MissionVision() {
 						backgroundImage: `url(${img})`,
 						backgroundSize: "cover",
 						backgroundPosition: "center",
-						padding: "80px 10%",
+						padding: "220px 10%",
 					}}
 				>
 					<Typography

@@ -60,7 +60,7 @@ export default function Partners() {
 	return (
 		<>
 			<MainLayout>
-				<Box padding={4}>
+				<Box padding={4} paddingTop={"220px"}>
 					<Typography
 						variant="h4"
 						fontWeight={"bold"}
