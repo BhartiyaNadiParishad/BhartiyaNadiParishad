@@ -87,7 +87,7 @@ export default function Programs() {
         }}
       >
         {data.map((item, index) => (
-          <Link to={"/program"} key={index} style={{ width: "30%" }}>
+          <Link to={"/programmesMenu"} key={index} style={{ width: "30%" }}>
             <CustomGrid2
               sx={{
                 padding: "20px",

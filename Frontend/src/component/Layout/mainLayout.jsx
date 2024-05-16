@@ -1,17 +1,15 @@
 import React from "react";
-import DrawerAppBar from "../drawer";
+import DrawerAppBar from "../HomePage/drawer";
 import { Box, Typography } from "@mui/material";
 import Footer from "../footer";
 import img from "../../assets/partners.jpg";
 
 export default function MainLayout({ children }) {
   return (
-      <Box>
+    <Box>
       {/* <Box sx={{ background: "linear-gradient(to bottom, #a9e0ff, #80aaf5)" }}> */}
       <DrawerAppBar />
-      <Box >
-        {children}
-      </Box>
+      <Box>{children}</Box>
       {/* <Box
         display="flex"
         flexDirection={"column"}

@@ -1,4 +1,4 @@
-import DrawerAppBar from "../drawer";
+import DrawerAppBar from "./drawer";
 import Founder from "./founder";
 import { Testimonials } from "./testimonial";
 import Programs from "./programs";

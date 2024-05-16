@@ -1,5 +1,5 @@
 import React from "react";
-import DrawerAppBar from "../drawer";
+import DrawerAppBar from "../HomePage/drawer";
 import Footer from "../footer";
 import { Box, Button, Typography, styled } from "@mui/material";
 import img from "../../assets/partners.jpg";

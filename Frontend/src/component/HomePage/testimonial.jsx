@@ -105,12 +105,12 @@ const data = [
 ];
 
 export function Testimonials() {
-  const [autoplayInterval, setAutoplayInterval] = useState(4000); // Initial autoplay interval
+  const [autoplayInterval, setAutoplayInterval] = useState(500); // Initial autoplay interval
   const [isPaused, setIsPaused] = useState(false); // State to track hover pause
 
   const handleHover = (isHovering) => {
     setIsPaused(isHovering);
-    setAutoplayInterval(isHovering ? null : 4000); // Pause autoplay on hover
+    setAutoplayInterval(isHovering ? null : 500); // Pause autoplay on hover
   };
 
   return (
@@ -132,7 +132,7 @@ export function Testimonials() {
           <div
             key={index}
             style={{
-              padding: "80px",
+              padding: "30px 80px",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
@@ -142,16 +142,15 @@ export function Testimonials() {
           >
             <div>
               <Box
-              style={{
+                style={{
                   height: "300px",
                   width: "300px",
                   borderRadius: "50%",
                   backgroundSize: "cover",
                   backgroundPosition: "top",
-                  backgroundImage: `url(${testimonial.image})`
-                }}>
-
-              </Box>
+                  backgroundImage: `url(${testimonial.image})`,
+                }}
+              ></Box>
             </div>
             <div
               style={{
