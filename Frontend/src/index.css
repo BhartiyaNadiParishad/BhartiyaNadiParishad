@@ -5,19 +5,3 @@
 body {
   margin: 0;
 }
-
-/* .wave {
-  animation: wave 1s infinite;
-} */
-
-@keyframes wave {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(50px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-};

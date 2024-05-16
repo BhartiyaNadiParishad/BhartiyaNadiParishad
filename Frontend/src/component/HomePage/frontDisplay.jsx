@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
-import video from "../../assets/bgvideo.mp4";
+import video from "../../assets/bg6.mp4";
 
 export default function FrontDisplay() {
   return (
@@ -11,7 +11,10 @@ export default function FrontDisplay() {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        height: "60vh",
+        width: "100vw",
+        height: "95vh",
+        top: "0",
+        left: "0",
         overflow: "hidden", // Ensure the video doesn't overflow its container
       }}
     >
@@ -29,14 +32,8 @@ export default function FrontDisplay() {
         }}
       >
         <source src={video} type="video/mp4" />
-        {/* Add additional source elements for different video formats if needed */}
       </video>
-      <div
-        style={{
-          padding: "20px",
-          borderRadius: "10px",
-        }}
-      >
+      <div style={{ paddingTop: "120px" }}>
         <Typography
           mb={1}
           variant="h5"
@@ -53,13 +50,40 @@ export default function FrontDisplay() {
           variant="h5"
           style={{
             fontSize: "28px",
-            color: "#ffc500",
+            color: "white",
             textAlign: "center",
             fontWeight: "bold",
           }}
         >
           <q>Clean and uninterrupted rivers for prosperous India</q>
         </Typography>
+        {/* <Box
+          sx={{
+            color: "black",
+            position: "absolute",
+            bottom: "0",
+            left: "0",
+            right: "0",
+          }}
+        >
+          <ul
+            style={{
+              fontSize: "25px",
+              display: "flex",
+              justifyContent: "space-between",
+              width: "100vw",
+              padding: "50px 8%",
+              textAlign: "center",
+            }}
+          >
+            "Preserving, Nurturing, Sustaining, and Innovating: BHARTIYA NADI
+            PARISHAD's Vision for India's Rivers"
+            <li>Preserving</li>
+            <li>Nurturing</li>
+            <li>Sustaining</li>
+            <li>Innovating</li>
+          </ul>
+        </Box> */}
       </div>
     </Box>
   );
