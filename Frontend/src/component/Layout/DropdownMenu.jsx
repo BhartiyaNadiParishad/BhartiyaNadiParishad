@@ -55,29 +55,33 @@ const DropdownMenu = ({
 	open,
 }) => {
 	return (
-		<div>
-			<Button
-				id={`${menuName}-button`}
-				aria-controls={open ? `${menuName}-menu` : undefined}
-				aria-haspopup="true"
-				aria-expanded={open ? "true" : undefined}
-				onClick={(event) => handleClick(menuName, event)}
-				endIcon={<KeyboardArrowDownIcon />}
-				disableElevation
-				sx={{
-					color: "white",
-					fontSize: 15,
-					fontWeight: "bold",
-					borderRadius: 10,
-					padding: "7px 15px 6px 15px",
-					"&:hover": {
-						backgroundColor: "#daf0fd",
-						color: "#051a36",
-					},
-				}}
-			>
-				{buttonLabel}
-			</Button>
+		<div onMouseLeave={() => handleClose(menuName)}	>
+			<Link to={`${menuName}`}>
+				<Button
+					id={`${menuName}-button`}
+					aria-controls={open ? `${menuName}-menu` : undefined}
+					aria-haspopup="true"
+					aria-expanded={open ? "true" : undefined}
+					// onClick={(event) => handleClick(menuName, event)}
+					endIcon={<KeyboardArrowDownIcon />}
+					disableElevation
+					onMouseEnter={(event) => handleClick(menuName, event)}
+					// onMouseLeave={() => handleClose(menuName)}
+					sx={{
+						color: "white",
+						fontSize: 15,
+						fontWeight: "bold",
+						borderRadius: 10,
+						padding: "7px 15px 6px 15px",
+						"&:hover": {
+							backgroundColor: "#daf0fd",
+							color: "#051a36",
+						},
+					}}
+				>
+					{buttonLabel}
+				</Button>
+			</Link>
 			<StyledMenu
 				id={`${menuName}-menu`}
 				anchorEl={anchorEl}
@@ -89,9 +93,7 @@ const DropdownMenu = ({
 			>
 				{menuItems.map((item, index) => (
 					<Link key={index} to={item.path}>
-						<MenuItem onClick={() => handleClose(menuName)}>
-							{item.label}
-						</MenuItem>
+						<MenuItem>{item.label}</MenuItem>
 					</Link>
 				))}
 			</StyledMenu>

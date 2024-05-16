@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
-import video from "../../assets/bgvideo.mp4";
+import video from "../../assets/hero-bg.mp4";
 
 export default function FrontDisplay() {
   return (
@@ -27,8 +27,9 @@ export default function FrontDisplay() {
           objectFit: "cover", // Similar to background-size: cover
           zIndex: "-1", // Ensure the video is behind the content
         }}
+        preload="auto"
       >
-        <source src={video} type="video/mp4" />
+        <source src={video} type="video/mp4" />        
         {/* Add additional source elements for different video formats if needed */}
       </video>
       <div

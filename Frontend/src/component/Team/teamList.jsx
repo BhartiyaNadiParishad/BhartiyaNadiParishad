@@ -27,7 +27,8 @@ export default function TeamList({title, data}) {
                                     backgroundImage: `url(${item.img})`, 
                                     backgroundSize: "cover",
                                     backgroundPosition: "center top", 
-                                    position: "relative"
+                                    position: "relative",
+                                    color: "#264e79"
                                 }}
                             >
                             </Box>

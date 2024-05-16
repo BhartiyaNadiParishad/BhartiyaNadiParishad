@@ -15,7 +15,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import { Menu, MenuItem, styled } from "@mui/material";
+import { Menu, MenuItem, Popper, styled } from "@mui/material";
 import Logo from "../assets/logo.svg";
 import { Link } from "react-router-dom";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
@@ -39,26 +39,25 @@ const menuData = [
 		menuName: "about",
 		buttonLabel: "About",
 		menuItems: [
-			{ label: "Why BNP", path: "/about" },
-			{ label: "About BNP", path: "/about" },
-			{ label: "Meet the Team", path: "/about" },
-			{ label: "Mission and Vision", path: "/about" },
-			{ label: "Our Values", path: "/about" },
+			{ label: "Mission, Vision and Values", path: "/mission" },
+			{ label: "History and Success", path: "/history" },
+			{ label: "Meet the Team", path: "/team" },
+			{ label: "Partners & Supporters", path: "/partners" },
+			{ label: "Jobs", path: "/jobs" },
+			{ label: "Press Center", path: "/press" },
 		],
 	},
 	{
 		menuName: "programmesMenu",
 		buttonLabel: "Programmes",
 		menuItems: [
-			{ label: "Our Focus", path: "/program" },
-			{ label: "Award", path: "/program" },
-			{ label: "Fellowship", path: "/program" },
-      { label: "Symposium", path: "/program" },
-			{ label: "River Talk", path: "/program" },
-			{ label: "River Research Center", path: "/program" },
-      { label: "River Research Yatra", path: "/program" },
-
-
+			{ label: "Our Focus", path: "/programmesMenu" },
+			{ label: "Award", path: "/programmesMenu" },
+			{ label: "Fellowship", path: "/programmesMenu" },
+			{ label: "Symposium", path: "/programmesMenu" },
+			{ label: "River Talk", path: "/programmesMenu" },
+			{ label: "River Research Center", path: "/programmesMenu" },
+			{ label: "River Research Yatra", path: "/programmesMenu" },
 		],
 	},
 	{
@@ -68,19 +67,18 @@ const menuData = [
 			{ label: "Indian River System", path: "/" },
 			{ label: "River Basin Maps", path: "/" },
 			{ label: "River Videos", path: "/" },
-      { label: "Factsheet", path: "/" },
+			{ label: "Factsheet", path: "/" },
 		],
 	},
 	{
 		menuName: "getInvolvedMenu",
 		buttonLabel: "Get Involved",
 		menuItems: [
-			{ label: "Become a member", path: "/getInvolved" },
-			{ label: "Internship", path: "/getInvolved" },
-			{ label: "Carrer", path: "/getInvolved" },
-      { label: "Our Partners", path: "/getInvolved" },
-      { label: "Our Supporters", path: "/getInvolved" },
-
+			{ label: "Become a member", path: "/getInvolvedMenu" },
+			{ label: "Internship", path: "/getInvolvedMenu" },
+			{ label: "Carrer", path: "/getInvolvedMenu" },
+			{ label: "Our Partners", path: "/getInvolvedMenu" },
+			{ label: "Our Supporters", path: "/getInvolvedMenu" },
 		],
 	},
 	{
@@ -90,18 +88,17 @@ const menuData = [
 			{ label: "Gallery", path: "/gallery" },
 			{ label: "Documents", path: "/" },
 			{ label: "Newsletter", path: "/" },
-      { label: "Publication", path: "/" },
+			{ label: "Publication", path: "/" },
 			{ label: "Capacity Building Tools", path: "/" },
-      { label: "Success Stories", path: "/" },
-
+			{ label: "Success Stories", path: "/" },
 		],
 	},
 	{
 		menuName: "contactMenu",
 		buttonLabel: "Contact",
 		menuItems: [
-			{ label: "Contact Us", path: "/contact" },
-			{ label: "FAQ's", path: "/contact" },
+			{ label: "Contact Us", path: "/contactMenu" },
+			{ label: "FAQ's", path: "/contactMenu" },
 		],
 	},
 ];
@@ -148,7 +145,6 @@ function DrawerAppBar(props) {
 		window !== undefined ? () => window().document.body : undefined;
 
 	const [anchorEls, setAnchorEls] = React.useState({
-		home: null,
 		about: null,
 		programmesMenu: null,
 		nadiDarshanMenu: null,
@@ -158,14 +154,22 @@ function DrawerAppBar(props) {
 	});
 
 	const handleClick = (menuName, event) => {
-		setAnchorEls({ ...anchorEls, [menuName]: event.currentTarget });
+		setAnchorEls({
+			about: null,
+			programmesMenu: null,
+			nadiDarshanMenu: null,
+			getInvolvedMenu: null,
+			resourcesMenu: null,
+			contactMenu: null,
+			[menuName]: event.currentTarget,
+		});
 	};
 
 	const handleClose = (menuName) => {
 		setAnchorEls({ ...anchorEls, [menuName]: null });
 	};
 
-	const open = (menuName) => Boolean(anchorEls[menuName]);
+	const isPopperOpen = (menuName) => Boolean(anchorEls[menuName]);
 
 	return (
 		<Box sx={{ display: "flex" }}>
@@ -187,7 +191,6 @@ function DrawerAppBar(props) {
 						sx={{
 							paddingLeft: "10px",
 							width: "100%",
-							backgroundColor: "#a9e0ff",
 							display: { md: "none" },
 						}}
 					>
@@ -219,7 +222,6 @@ function DrawerAppBar(props) {
 					</Box>
 					<Box
 						sx={{
-							backgroundColor: "#051a36",
 							padding: "10px 0 !important",
 							width: "100%",
 							display: {
@@ -249,99 +251,62 @@ function DrawerAppBar(props) {
 							padding: "6px 10px",
 						}}
 					>
-						<Link to={"/"}>
-							<CustomButton onClick={props.founderScroll}>
+						{/* <Link to={"/"}>
+							<CustomButton >
 								Home
 							</CustomButton>
-						</Link>
-
-						{menuData.map((menu) => (
-							<DropdownMenu
-								key={menu.menuName}
-								id={menu.menuName}
-								menuName={menu.menuName}
-								buttonLabel={menu.buttonLabel}
-								menuItems={menu.menuItems}
-								anchorEl={anchorEls[menu.menuName]}
-								handleClick={handleClick}
-								handleClose={handleClose}
-								open={open(menu.menuName)}
-							/>
-						))}
-
-						{/* <Button
-							id="about-button"
-							aria-controls={open("about") ? "about" : undefined}
-							aria-haspopup="true"
-							aria-expanded={open("about") ? "true" : undefined}
-							onClick={(event) => handleClick("about", event)}
-							endIcon={<KeyboardArrowDownIcon />}
-							disableElevation
-							sx={{
-								color: "white",
-								fontSize: 15,
-								fontWeight: "bold",
-								borderRadius: 10,
-								padding: "7px 15px 6px 15px",
-								"&:hover": {
-									backgroundColor: "#daf0fd",
-									color: "#051a36",
-								},
-							}}
-						>
-							About
-						</Button>
-						<StyledMenu
-							id="about-menu"
-							anchorEl={anchorEls.about}
-							open={open("about")}
-							onClose={() => handleClose("about")}
-							MenuListProps={{
-								"aria-labelledby": "about-button",
-							}}
-						>
-							<Link to={"/about"}>
-								<MenuItem onClick={() => handleClose("about")}>
-									Why BNP
-								</MenuItem>
-							</Link>
-							<Link to={"/about"}>
-								<MenuItem onClick={() => handleClose("about")}>
-									About BNP
-								</MenuItem>
-							</Link>
-							<Link to={"/about"}>
-								<MenuItem onClick={() => handleClose("about")}>
-									Meet the Team
-								</MenuItem>
-							</Link>
-							<Link to={"/about"}>
-								<MenuItem onClick={() => handleClose("about")}>
-									Mission and Vision
-								</MenuItem>
-							</Link>
-							<Link to={"/about"}>
-								<MenuItem onClick={() => handleClose("about")}>
-									Our Values
-								</MenuItem>
-							</Link>
-						</StyledMenu>
-
-						<Link to={"/"}>
-							<CustomButton>Programmes</CustomButton>
-						</Link>
-						<Link to={"/"}>
-							<CustomButton>Nadi Darshan</CustomButton>
-						</Link>
-						<Link to={"/GetInvolved"}>
-							<CustomButton>Get Involved</CustomButton>
-						</Link>
-						<Link to={"/"}>
-							<CustomButton>Resources</CustomButton>
-						</Link>
-						<Link to={"/Contact"}>
-							<CustomButton>Contact</CustomButton>
 						</Link> */}
+						<Link to={"/"}>
+							<Button onClick={props.founderScroll}>Home</Button>
+						</Link>
+						{menuData.map((menu, index) => (
+							<div
+								key={index}
+								onMouseEnter={(event) =>
+									handleClick(menu.menuName, event)
+								}
+								onMouseLeave={() => handleClose(menu.menuName)}
+							>
+								<Link to={`/${menu.menuName}`}>
+									<Button
+										aria-describedby={`${menu.menuName}-popover`}
+										sx={{ mx: 1 }}
+										// endIcon={<KeyboardArrowDownIcon />}
+									>
+										{menu.buttonLabel}
+									</Button>
+								</Link>
+								<Popper
+									id={`${menu.menuName}-popover`}
+									open={isPopperOpen(menu.menuName)}
+									anchorEl={anchorEls[menu.menuName]}
+									sx={{ zIndex: 1200 }}
+								>
+									<Box
+										sx={{
+											backgroundColor: "#051a36",
+										}}
+									>
+										{menu.menuItems.map((item, index) => (
+											<Link key={index} to={item.path}>
+												<MenuItem
+													sx={{
+														borderTop: "1px solid white",
+														color: "white",
+														'&:hover':{
+															backgroundColor: "white",
+															color: "#051a36"
+														}
+													}}
+												>
+													{item.label}
+												</MenuItem>
+											</Link>
+										))}
+									</Box>
+								</Popper>
+							</div>
+						))}
 					</Box>
 				</Toolbar>
 			</AppBar>

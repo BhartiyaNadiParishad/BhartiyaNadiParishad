@@ -15,6 +15,9 @@ import AboutBNP from './component/about';
 import Gallery from './component/gallery';
 import ProgramPage from './component/ourProgramPage';
 import OurValues from './component/ourValues';
+import Partners from './component/AboutUs/Partners';
+import MissionVision from './component/AboutUs/missionVision';
+import History from './component/AboutUs/history';
 
 
 const theme = createTheme({
@@ -26,24 +29,26 @@ const theme = createTheme({
 });
 
 function App() {
-
   return (
     <>
       <ThemeProvider theme={theme}>
         <Router>
           <Routes >
             <Route exact path="/" element={ <HomePage />} />
-            <Route exact path="/getInvolved" element={ <GetInvolvedPage />} />
+            <Route exact path="/getInvolvedMenu" element={ <GetInvolvedPage />} />
             <Route exact path="/membership" element={ <Membership /> } />
             <Route exact path="/internship" element={ <Internship />} />
             <Route exact path="/volunteer" element={ <Volunteer />} />
-            <Route exact path="/Contact" element={ <Contact /> } />
+            <Route exact path="/contactMenu" element={ <Contact /> } />
             <Route exact path="/testing" element={ <Testing /> } />
             <Route exact path="/team" element={ <Team /> } />
             <Route exact path="/about" element={ <AboutBNP /> } />
             <Route exact path="/gallery" element={ <Gallery />} />
-            <Route exact path="/program" element={ <ProgramPage /> } />
+            <Route exact path="/programmesMenu" element={ <ProgramPage /> } />
             <Route exact path="/values" element={ <OurValues /> } />
+            <Route exact path="/partners" element={ <Partners /> } />
+            <Route exact path="/mission" element={ <MissionVision /> } />
+            <Route exact path="/history" element={ <History /> } />
           </Routes>
         </Router>
       </ThemeProvider>

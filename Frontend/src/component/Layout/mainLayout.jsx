@@ -9,7 +9,7 @@ export default function MainLayout({ children }) {
       <Box>
       {/* <Box sx={{ background: "linear-gradient(to bottom, #a9e0ff, #80aaf5)" }}> */}
       <DrawerAppBar />
-      <Box sx={{ marginTop: { xs: "62px", md: "25px" } }}>
+      <Box >
         {children}
       </Box>
       {/* <Box

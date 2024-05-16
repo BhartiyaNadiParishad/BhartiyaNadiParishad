@@ -7,7 +7,7 @@ import { coreTeamData, advisoryCouncilData , technicalCouncilData } from './cons
 export default function Team() {
     return (
         <MainLayout>
-            <Box padding={"0 5% 20px 5%"} display={"flex"} rowGap={"40px"} flexDirection={"column"}>
+            <Box padding={"50px 5%"} display={"flex"} rowGap={"40px"} flexDirection={"column"} sx={{backgroundColor: "#f2f2f2",color: "#264e79"}}>
                 <Typography variant='h4' fontWeight={"bold"} textAlign={"center"} >Our Team</Typography>
                 <Typography variant='h6' textAlign={"justify"} gutterBottom>
                     We are a group of water and river experts who come with years of ground experience in river development.
