@@ -72,12 +72,10 @@ const menuData = [
     menuName: "getInvolvedMenu",
     buttonLabel: "Get Involved",
     menuItems: [
-      { label: "Become a member", path: "/getInvolvedMenu" },
-      { label: "Internship", path: "/getInvolvedMenu" },
-      { label: "Carrer", path: "/getInvolvedMenu" },
-      { label: "Our Partners", path: "/getInvolvedMenu" },
-      { label: "Our Supporters", path: "/getInvolvedMenu" },
-    ],
+      { label: "Become a member", path: "/membership" },
+      { label: "Internship", path: "/internship" },
+      { label: "Become a Volunteer", path: "/volunteer" },
+    ]
   },
   {
     menuName: "resourcesMenu",

@@ -27,145 +27,162 @@ import supporter3 from "../../assets/supporter/3.png";
 import img from "../../assets/bg18.jpg";
 
 const partners = [
-  { image: partner1 },
-  { image: partner2 },
-  { image: partner3 },
-  { image: partner4 },
-  { image: partner5 },
-  { image: partner6 },
-  { image: partner7 },
-  { image: partner8 },
-  { image: partner9 },
-  { image: partner10 },
-  { image: partner11 },
-  { image: partner12 },
-  { image: partner13 },
-  { image: partner14 },
-  { image: partner15 },
-  { image: partner16 },
-  { image: partner17 },
-  { image: partner18 },
-  { image: partner19 },
-  { image: partner20 },
+	{ image: partner1 },
+	{ image: partner2 },
+	{ image: partner3 },
+	{ image: partner4 },
+	{ image: partner5 },
+	{ image: partner6 },
+	{ image: partner7 },
+	{ image: partner8 },
+	{ image: partner9 },
+	{ image: partner10 },
+	{ image: partner11 },
+	{ image: partner12 },
+	{ image: partner13 },
+	{ image: partner14 },
+	{ image: partner15 },
+	{ image: partner16 },
+	{ image: partner17 },
+	{ image: partner18 },
+	{ image: partner19 },
+	{ image: partner20 },
 ];
 const supporters = [
-  { image: supporter1 },
-  { image: supporter2 },
-  { image: supporter3 },
+	{ image: supporter1 },
+	{ image: supporter2 },
+	{ image: supporter3 },
 ];
 
 export default function Partners() {
-  return (
-    <>
-      <MainLayout>
-        <Box padding={2} paddingTop={"220px"}>
-          <Typography
-            variant="h4"
-            fontWeight={"bold"}
-            textAlign={"center"}
-            mb={4}
-            color="#264e79"
-          >
-            Partners
-          </Typography>
-          <Paper sx={{ padding: "50px 10px", backgroundColor: "#f2f2f2" }}>
-            <Box
-              display={"flex"}
-              justifyContent={"center"}
-              alignItems={"center"}
-              flexWrap={"wrap"}
-              gap={3}
-            >
-              {partners.map((item, index) => (
-                <Box
-                  padding={2}
-                  height={{ xs: "100px", md: "200px" }}
-                  display={"flex"}
-                  justifyContent={"center"}
-                  alignItems={"center"}
-                  width={{ xs: "100px", md: "200px" }}
-                  boxShadow="0px 4px 20px rgba(0, 0, 0, 0.1)"
-                  borderRadius="4px"
-                  key={index}
-                  backgroundColor="white"
-                >
-                  <img src={item.image} style={{ maxHeight: "100%" }} />
-                </Box>
-              ))}
-            </Box>
-          </Paper>
-        </Box>
-        <Box padding={4}>
-          <Typography
-            variant="h4"
-            fontWeight={"bold"}
-            textAlign={"center"}
-            color="#264e79"
-            mb={5}
-          >
-            Supporters
-          </Typography>
-          <Paper sx={{ padding: "40px 30px", backgroundColor: "#f2f2f2" }}>
-            <Box
-              display={"flex"}
-              justifyContent={"center"}
-              alignItems={"center"}
-              flexWrap={"wrap"}
-              gap={"30px"}
-            >
-              {supporters.map((item, index) => (
-                <Box
-                  boxShadow="0px 4px 20px rgba(0, 0, 0, 0.1)"
-                  padding={8}
-                  height={{ xs: "100px", md: "290px" }}
-                  display={"flex"}
-                  justifyContent={"center"}
-                  alignItems={"center"}
-                  backgroundColor="white"
-                  key={index}
-                >
-                  <img src={item.image} style={{ maxHeight: "100%" }} />
-                </Box>
-              ))}
-            </Box>
-          </Paper>
-        </Box>
-        <Box
-          display="flex"
-          flexDirection={"column"}
-          justifyContent={"center"}
-          rowGap={3}
-          sx={{
-            padding: "40px 10% 80px 10%",
-            color: "#264e79",
-          }}
-        >
-          <Typography
-            gutterBottom
-            textAlign={"center"}
-            variant="h4"
-            sx={{ fontWeight: "bold", fontSize: "26px" }}
-            color={"#ffc500"}
-          >
-            "जन्मजन्मार्जितं पापं स्वल्पं वा यदि वा बहु। <br />
-            गंगा देवी प्रसादेन सर्वं मे यास्यति क्षयम्॥"
-          </Typography>
-          <Typography
-            variant="h6"
-            sx={{ fontSize: "18px" }}
-            textAlign={"justify"}
-          >
-            Just as rivers do not drink their own water, trees do not eat their
-            own fruit, and clouds do not consume the crops nourished by their
-            rain, in the same way, the wealth of the virtuous is meant for
-            benevolence. Clean and uninterrupted rivers are essential for rich
-            biodiversity. Only in rich biodiversity can human society lead a
-            healthy life. The remains and stories of the Indus Valley
-            Civilization prove that India's prosperity grew along the banks of
-            rivers.
-          </Typography>
-        </Box>
-      </MainLayout>
-    </>
-  );
+	return (
+		<>
+			<MainLayout>
+				<Box padding={2} paddingTop={"220px"}>
+					<Typography
+						variant="h4"
+						fontWeight={"bold"}
+						textAlign={"center"}
+						mb={4}
+						color="#264e79"
+					>
+						Partners
+					</Typography>
+					<Paper
+						sx={{
+							padding: "50px 10px",
+							backgroundColor: "#f2f2f2",
+						}}
+					>
+						<Box
+							display={"flex"}
+							justifyContent={"center"}
+							alignItems={"center"}
+							flexWrap={"wrap"}
+							gap={3}
+						>
+							{partners.map((item, index) => (
+								<Box
+									padding={2}
+									height={{ xs: "100px", md: "200px" }}
+									display={"flex"}
+									justifyContent={"center"}
+									alignItems={"center"}
+									width={{ xs: "100px", md: "200px" }}
+									boxShadow="0px 4px 20px rgba(0, 0, 0, 0.1)"
+									borderRadius="4px"
+									key={index}
+									backgroundColor="white"
+								>
+									<img
+										src={item.image}
+										style={{ maxHeight: "100%" }}
+									/>
+								</Box>
+							))}
+						</Box>
+					</Paper>
+				</Box>
+				<Box padding={4}>
+					<Typography
+						variant="h4"
+						fontWeight={"bold"}
+						textAlign={"center"}
+						color="#264e79"
+						mb={5}
+					>
+						Supporters
+					</Typography>
+					<Paper
+						sx={{
+							padding: "40px 30px",
+							backgroundColor: "#f2f2f2",
+						}}
+					>
+						<Box
+							display={"flex"}
+							justifyContent={"center"}
+							alignItems={"center"}
+							flexWrap={"wrap"}
+							gap={"30px"}
+						>
+							{supporters.map((item, index) => (
+								<Box
+									boxShadow="0px 4px 20px rgba(0, 0, 0, 0.1)"
+									padding={8}
+									height={{ xs: "100px", md: "290px" }}
+									display={"flex"}
+									justifyContent={"center"}
+									alignItems={"center"}
+									backgroundColor="white"
+									key={index}
+								>
+									<img
+										src={item.image}
+										style={{ maxHeight: "100%" }}
+									/>
+								</Box>
+							))}
+						</Box>
+					</Paper>
+				</Box>
+				<Box
+					display="flex"
+					flexDirection={"column"}
+					justifyContent={"center"}
+					rowGap={3}
+					sx={{
+						padding: "40px 10% 80px 10%",
+						color: "#264e79",
+					}}
+				>
+					<Typography
+						gutterBottom
+						textAlign={"center"}
+						variant="h4"
+						sx={{ fontWeight: "bold", fontSize: "26px" }}
+						color={"#ffc500"}
+					>
+						"जन्मजन्मार्जितं पापं स्वल्पं वा यदि वा बहु। <br />
+						गंगा देवी प्रसादेन सर्वं मे यास्यति क्षयम्॥"
+					</Typography>
+					<Typography
+						variant="h6"
+						sx={{ fontSize: "18px" }}
+						textAlign={"justify"}
+					>
+						Just as rivers do not drink their own water, trees do
+						not eat their own fruit, and clouds do not consume the
+						crops nourished by their rain, in the same way, the
+						wealth of the virtuous is meant for benevolence. Clean
+						and uninterrupted rivers are essential for rich
+						biodiversity. Only in rich biodiversity can human
+						society lead a healthy life. The remains and stories of
+						the Indus Valley Civilization prove that India's
+						prosperity grew along the banks of rivers.
+					</Typography>
+				</Box>
+			</MainLayout>
+		</>
+	);
 }

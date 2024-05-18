@@ -21,7 +21,7 @@ const CustomBox = styled(Box)(() => ({
 
 export default function GetInvolvedPage() {
   return (
-    <Box sx={{ background: "linear-gradient(to bottom, #a9e0ff, #80aaf5)" }}>
+    <Box paddingTop={"220px"} sx={{ background: "linear-gradient(to bottom, #a9e0ff, #80aaf5)" }}>
       <DrawerAppBar />
       <Box
         sx={{
