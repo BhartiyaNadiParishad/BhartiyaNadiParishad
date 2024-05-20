@@ -51,7 +51,7 @@ const Founder = () => {
             pure and uninterrupted.
           </Typography>
           <Typography
-            sx={{ color: "#fe9e3d", fontWeight: "bold", fontSize: "20px" }}
+            sx={{ color: "#f5ff00", fontWeight: "bold", fontSize: "20px" }}
           >
             Raman Kant
           </Typography>

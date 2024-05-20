@@ -40,17 +40,17 @@ export default function FrontDisplay() {
           variant="h4"
           style={{
             fontWeight: "bold",
-            color: "white",
+            color: "#f5ff00",
             textAlign: "center",
           }}
         >
-          Riviving Rivers , Reviving Hopes
+          Reviving Rivers, Reviving Hopes
         </Typography>
         <Typography
-          variant="h5"
+          variant="h4"
           style={{
-            fontSize: "28px",
-            color: "white",
+            // fontSize: "30px",
+            color: "#f5ff00",
             textAlign: "center",
             fontWeight: "bold",
           }}

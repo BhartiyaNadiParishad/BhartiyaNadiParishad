@@ -24,8 +24,8 @@ import { useScrollTrigger } from "@mui/material";
 const drawerWidth = 300;
 const navItems = [
   "Home",
-  "About",
   "Programmes",
+  "About",
   "Nadi Darshan",
   "Get Involved",
   "Resources",
@@ -33,6 +33,10 @@ const navItems = [
 ];
 
 const menuData = [
+  {
+    menuName: "programmesMenu",
+    buttonLabel: "Programmes",
+  },
   {
     menuName: "about",
     buttonLabel: "About",
@@ -43,19 +47,6 @@ const menuData = [
       { label: "Partners & Supporters", path: "/partners" },
       { label: "Jobs", path: "/" },
       { label: "Press Center", path: "/" },
-    ],
-  },
-  {
-    menuName: "programmesMenu",
-    buttonLabel: "Programmes",
-    menuItems: [
-      // { label: "Our Focus", path: "/programmesMenu" },
-      // { label: "Award", path: "/programmesMenu" },
-      // { label: "Fellowship", path: "/programmesMenu" },
-      // { label: "Symposium", path: "/programmesMenu" },
-      // { label: "River Talk", path: "/programmesMenu" },
-      // { label: "River Research Center", path: "/programmesMenu" },
-      // { label: "River Research Yatra", path: "/programmesMenu" },
     ],
   },
   {
@@ -75,7 +66,7 @@ const menuData = [
       { label: "Become a member", path: "/membership" },
       { label: "Internship", path: "/internship" },
       { label: "Become a Volunteer", path: "/volunteer" },
-    ]
+    ],
   },
   {
     menuName: "resourcesMenu",
@@ -255,41 +246,43 @@ function DrawerAppBar(props) {
                         ml: 0, // Applying margin-left of 0 to endIcon
                       },
                     }}
-                    endIcon={<KeyboardArrowDownIcon />}
+                    endIcon={menu?.menuItems && <KeyboardArrowDownIcon />}
                   >
                     {menu.buttonLabel}
                   </Button>
                 </Link>
-                <Popper
-                  id={`${menu.menuName}-popover`}
-                  open={isPopperOpen(menu.menuName)}
-                  anchorEl={anchorEls[menu.menuName]}
-                  sx={{ zIndex: 1200 }}
-                >
-                  <Box
-                    sx={{
-                      backgroundColor: "#051a36",
-                    }}
+                {menu?.menuItems && (
+                  <Popper
+                    id={`${menu.menuName}-popover`}
+                    open={isPopperOpen(menu.menuName)}
+                    anchorEl={anchorEls[menu.menuName]}
+                    sx={{ zIndex: 1200 }}
                   >
-                    {menu.menuItems &&
-                      menu.menuItems.map((item, index) => (
-                        <Link key={index} to={item.path}>
-                          <MenuItem
-                            sx={{
-                              borderTop: "1px solid white",
-                              color: "white",
-                              "&:hover": {
-                                backgroundColor: "white",
-                                color: "#051a36",
-                              },
-                            }}
-                          >
-                            {item.label}
-                          </MenuItem>
-                        </Link>
-                      ))}
-                  </Box>
-                </Popper>
+                    <Box
+                      sx={{
+                        backgroundColor: "#051a36",
+                      }}
+                    >
+                      {menu.menuItems &&
+                        menu.menuItems.map((item, index) => (
+                          <Link key={index} to={item.path}>
+                            <MenuItem
+                              sx={{
+                                borderTop: "1px solid white",
+                                color: "white",
+                                "&:hover": {
+                                  backgroundColor: "white",
+                                  color: "#051a36",
+                                },
+                              }}
+                            >
+                              {item.label}
+                            </MenuItem>
+                          </Link>
+                        ))}
+                    </Box>
+                  </Popper>
+                )}
               </div>
             ))}
           </Box>
