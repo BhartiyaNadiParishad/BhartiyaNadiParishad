@@ -3,22 +3,16 @@ import { Box, Paper, Typography } from "@mui/material";
 export default function Card({ title, description, icon, bgColor, number }) {
 	return (
 		<>
-			<Paper
-				elevation={3}
-				sx={{
-					height: "100%",
-				}}
-			>
 				<Box
 					display={"flex"}
 					flexDirection={"column"}
 					justifyContent={"flex-start"}
 					alignItems={"center"}
 					rowGap={2}
-					color={"white"}
 					p={5}
+					color={"white"}
 					sx={{
-						backgroundColor: "#051a36",
+						backgroundColor: "#0000004d",
 						height: "100%",
 					}}
 				>
@@ -47,15 +41,14 @@ export default function Card({ title, description, icon, bgColor, number }) {
 					>
 						{title}
 					</Typography>
-					<Typography
+					{/* <Typography
 						variant="h6"
 						textAlign={"justify"}
 						fontSize={"16px"}
 					>
 						{description}
-					</Typography>
+					</Typography> */}
 				</Box>
-			</Paper>
 		</>
 	);
 }

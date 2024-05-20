@@ -9,27 +9,32 @@ import {
 	ListItemIcon,
 	ListItemText,
 } from "@mui/material";
-import { CloudUpload, InsertDriveFile, Delete, Label } from "@mui/icons-material";
+import {
+	CloudUpload,
+	InsertDriveFile,
+	Delete,
+	Label,
+} from "@mui/icons-material";
 
-const FileUpload = ({ onFilesSelect }) => {
+const FileUpload = ({ content }) => {
 	const [selectedFiles, setSelectedFiles] = useState([]);
 
 	const handleFileChange = (event) => {
 		const files = Array.from(event.target.files);
 		setSelectedFiles((prevFiles) => [...prevFiles, ...files]);
-		onFilesSelect((prevFiles) => [...prevFiles, ...files]);
+		// onFilesSelect((prevFiles) => [...prevFiles, ...files]);
 	};
 
 	const handleRemove = (index) => {
 		const newFiles = selectedFiles.filter((_, i) => i !== index);
 		setSelectedFiles(newFiles);
-		onFilesSelect(newFiles);
+		// onFilesSelect(newFiles);
 	};
 
 	return (
 		<Box
-        htmlFor="file-upload"
-        component="Label"
+			htmlFor="file-upload"
+			component="Label"
 			sx={{
 				display: "flex",
 				flexDirection: "column",
@@ -52,15 +57,15 @@ const FileUpload = ({ onFilesSelect }) => {
 				multiple
 				onChange={handleFileChange}
 			/>
-				<IconButton
-					color="primary"
-					aria-label="upload file"
-					component="span"
-				>
-					<CloudUpload fontSize="large" />
-				</IconButton>
+			<IconButton
+				color="primary"
+				aria-label="upload file"
+				component="span"
+			>
+				<CloudUpload fontSize="large" />
+			</IconButton>
 			<Typography variant="h6" gutterBottom>
-				Upload your River files here
+				{content}
 			</Typography>
 			<Typography variant="body2" color="textSecondary">
 				click to select files
@@ -73,17 +78,22 @@ const FileUpload = ({ onFilesSelect }) => {
 							sx={{
 								display: "flex",
 								alignItems: "center",
-								p: 1,
+								justifyContent: "center",
+								flexWrap: "wrap",
+                                columnGap: 1,
+                                rowGap: 1,
 								border: "1px solid #ccc",
 								borderRadius: "4px",
+								p: 1,
 								mb: 1,
-								justifyContent: "space-between",
 							}}
 						>
-							<ListItemIcon>
+							<ListItemIcon sx={{minWidth: "0"}}>
 								<InsertDriveFile />
 							</ListItemIcon>
-							<ListItemText primary={file.name} />
+                            <Typography variant="h6" fontSize={"16px"} textAlign={"center"}>
+                                {file.name}
+                            </Typography>
 							<Button
 								variant="contained"
 								startIcon={<Delete />}

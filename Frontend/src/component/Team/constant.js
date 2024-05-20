@@ -97,15 +97,15 @@ export const coreTeamData = [
         linkedinLink: "https://www.linkedin.com/",
         gmailLink: "mailto:example@gmail.com",
     },
-    {
-        img: coreTeamImg7,
-        name: "Mr Gaurav Tyagi",
-        title1: "Coordinator (Technology)",
-        title2: "",
-        facebookLink: "https://www.facebook.com/",
-        linkedinLink: "https://www.linkedin.com/",
-        gmailLink: "mailto:example@gmail.com",
-    },
+    // {
+    //     img: coreTeamImg7,
+    //     name: "Mr Gaurav Tyagi",
+    //     title1: "Coordinator (Technology)",
+    //     title2: "",
+    //     facebookLink: "https://www.facebook.com/",
+    //     linkedinLink: "https://www.linkedin.com/",
+    //     gmailLink: "mailto:example@gmail.com",
+    // },
     {
         img: coreTeamImg8,
         name: "Mr Rohit Sangwan",
@@ -175,7 +175,7 @@ export const advisoryCouncilData = [
     },
     {
         img: advisoryTeamImg3,
-        name: "Mr Balbeer Singh Seenchewal(PADAMSHRI)",
+        name: "Mr Balbeer Singh Seenchewal (PADAMSHRI)",
         title1: "President",
         title2: "NIRMAL KUTIYA",
         facebookLink: "https://www.facebook.com/",

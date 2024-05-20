@@ -11,7 +11,6 @@ const Founder = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
           padding: "40px 30px",
-          marginTop: "40px",
         }}
         display={"flex"}
         flexDirection={"row"}

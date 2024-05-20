@@ -5,12 +5,12 @@ import Footer from "../footer";
 import img from "../../assets/partners.jpg";
 
 export default function MainLayout({ children }) {
-  return (
-    <Box>
-      {/* <Box sx={{ background: "linear-gradient(to bottom, #a9e0ff, #80aaf5)" }}> */}
-      <DrawerAppBar />
-      <Box>{children}</Box>
-      {/* <Box
+	return (
+		<Box>
+			{/* <Box sx={{ background: "linear-gradient(to bottom, #a9e0ff, #80aaf5)" }}> */}
+			<DrawerAppBar />
+			<Box>{children}</Box>
+			{/* <Box
         display="flex"
         flexDirection={"column"}
         justifyContent={"center"}
@@ -45,7 +45,7 @@ export default function MainLayout({ children }) {
           Alabama Rivers Alliance
         </Typography>
       </Box> */}
-      <Footer />
-    </Box>
-  );
+			<Footer />
+		</Box>
+	);
 }

@@ -64,13 +64,13 @@ export default function MissionVision() {
                 sx={{ backgroundColor: "#ffffffc2" }}
                 padding={5}
                 height={"100%"}
-                color={"#264e79"}
               >
                 <Typography
                   variant="h5"
                   fontWeight={"bold"}
                   gutterBottom
                   textAlign={"center"}
+                  color={"#051a36"}
                 >
                   Mission
                 </Typography>
@@ -113,13 +113,13 @@ export default function MissionVision() {
                 sx={{ backgroundColor: "#ffffffc2" }}
                 padding={5}
                 height={"100%"}
-                color={"#264e79"}
               >
                 <Typography
                   variant="h5"
                   fontWeight={"bold"}
                   gutterBottom
                   textAlign={"center"}
+                  color={"#051a36"}
                 >
                   Vision
                 </Typography>
@@ -127,6 +127,7 @@ export default function MissionVision() {
                   variant="h6"
                   textAlign={"justify"}
                   fontSize={"16px"}
+
                 >
                   We want to create a river rich India. The main objective of
                   the BNP is to provide a successful and permanent solution to
@@ -168,7 +169,7 @@ export default function MissionVision() {
             fontWeight={"bold"}
             textAlign={"center"}
             gutterBottom
-            color={"#264e79"}
+            color={"#051a36"}
           >
             Our Values
           </Typography>
@@ -177,7 +178,6 @@ export default function MissionVision() {
             mb={2}
             fontSize={"18px"}
             textAlign={"justify"}
-            color={"#264e79"}
           >
             At BNP, our values run as deep as the waters we safeguard. We are
             driven by a commitment to environmental stewardship, teamwork, and
@@ -198,7 +198,6 @@ export default function MissionVision() {
                   }}
                 >
                   <Box
-                    color={"#264e79"}
                     sx={{ backgroundColor: "#ffffffc2" }}
                     height={"100%"}
                     p={4}
@@ -208,6 +207,7 @@ export default function MissionVision() {
                       fontWeight={"bold"}
                       gutterBottom
                       textAlign={"center"}
+                      color={"#051a36"}
                     >
                       {item.heading}
                     </Typography>

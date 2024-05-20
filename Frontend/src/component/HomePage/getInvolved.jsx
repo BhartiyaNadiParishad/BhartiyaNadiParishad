@@ -20,8 +20,8 @@ export default function GetInvolved() {
         alignItems: "center",
       }}
     >
-      <Typography variant="h4" style={{ fontWeight: "bold", color: "white" }}>
-        Get Involved
+      <Typography variant="h4" style={{ fontWeight: "bold", color: "#f5ff00" }}>
+        GET INVOLVED
       </Typography>
       <Typography
         variant="h6"
@@ -43,7 +43,7 @@ export default function GetInvolved() {
         member, and volunteer. For this, they will have to complete the
         formalities of the prescribed procedure of the BHARTIYA NADI PARISHAD.
       </Typography>
-      <Link to="/getInvolved" style={{ textDecoration: "none" }}>
+      <Link to="/getInvolvedMenu" style={{ textDecoration: "none" }}>
         <Button
           sx={{
             backgroundColor: "white",

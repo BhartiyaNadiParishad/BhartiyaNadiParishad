@@ -11,6 +11,7 @@ import {
 	FormControl,
 	InputLabel,
 	Grid,
+	styled,
 } from "@mui/material";
 
 import { Country, State, City } from "country-state-city";
@@ -21,6 +22,13 @@ import ReCAPTCHA from "react-google-recaptcha";
 import "react-country-state-city/dist/react-country-state-city.css";
 import FileUpload from "./Form/upload";
 import ProfilePicUpload from "./Form/profliePicUpload";
+
+const CustomTextField = styled(TextField)({
+	"& .MuiOutlinedInput-root": {
+		borderRadius: "4px",
+		backgroundColor: "#fff",
+	},
+});
 
 function IForm(props) {
 	const [formData, setFormData] = useState({
@@ -147,10 +155,11 @@ function IForm(props) {
 		<Box py={4} display={"flex"} justifyContent={"center"}>
 			<Box width={{ xs: "100%", md: "60%" }}>
 				<Typography
-					variant="h5"
+					variant="h4"
 					fontWeight={"bold"}
 					mb={4}
 					textAlign={"center"}
+					color={"white"}
 				>
 					{props.service} Form
 				</Typography>
@@ -158,7 +167,7 @@ function IForm(props) {
 					<Grid container spacing={3}>
 						<Grid item xs={12} md={4}>
 							<FormControl
-								sx={{ minWidth: "120px", width: "100%" }}
+								sx={{ minWidth: "120px", width: "100%" , backgroundColor: "white", borderRadius: "4px"}}
 							>
 								<InputLabel id="title-label">Title</InputLabel>
 								<Select
@@ -180,7 +189,7 @@ function IForm(props) {
 							</FormControl>
 						</Grid>
 						<Grid item xs={12} md={4}>
-							<TextField
+							<CustomTextField
 								sx={{ width: "100%" }}
 								required
 								id="firstName"
@@ -190,7 +199,7 @@ function IForm(props) {
 							/>
 						</Grid>
 						<Grid item xs={12} md={4}>
-							<TextField
+							<CustomTextField
 								sx={{ width: "100%" }}
 								required
 								id="lastName"
@@ -200,7 +209,7 @@ function IForm(props) {
 							/>
 						</Grid>
 						<Grid item xs={12} md={4}>
-							<TextField
+							<CustomTextField
 								sx={{ width: "100%" }}
 								id="designation"
 								label="Designation"
@@ -209,7 +218,7 @@ function IForm(props) {
 							/>
 						</Grid>
 						<Grid item xs={12} md={8}>
-							<TextField
+							<CustomTextField
 								sx={{ width: "100%" }}
 								id="organization"
 								label="Organization"
@@ -218,7 +227,7 @@ function IForm(props) {
 							/>
 						</Grid>
 						<Grid item xs={12} md={6}>
-							<TextField
+							<CustomTextField
 								sx={{
 									width: "100%",
 									height: "100%",
@@ -253,7 +262,7 @@ function IForm(props) {
 						</Grid>
 						<Grid item xs={12} md={4}>
 							<FormControl
-								sx={{ minWidth: "120px", width: "100%" }}
+								sx={{ minWidth: "120px", width: "100%" , backgroundColor: "white", borderRadius: "4px"}}
 							>
 								<InputLabel id="country-label">
 									Select Country
@@ -306,7 +315,7 @@ function IForm(props) {
 						</Grid>
 						<Grid item xs={12} md={4}>
 							<FormControl
-								sx={{ minWidth: "120px", width: "100%" }}
+								sx={{ minWidth: "120px", width: "100%" ,  backgroundColor: "white", borderRadius: "4px"}}
 							>
 								<InputLabel id="country-label">
 									Select State
@@ -353,7 +362,7 @@ function IForm(props) {
 						</Grid>
 						<Grid item xs={12} md={4}>
 							<FormControl
-								sx={{ minWidth: "120px", width: "100%" }}
+								sx={{ minWidth: "120px", width: "100%" ,  backgroundColor: "white", borderRadius: "4px"}}
 							>
 								<InputLabel id="city-label">
 									Select City
@@ -392,7 +401,7 @@ function IForm(props) {
 						</Grid>
 
 						<Grid item xs={12}>
-							<TextField
+							<CustomTextField
 								sx={{ width: "100%" }}
 								required
 								id="address"
@@ -404,7 +413,7 @@ function IForm(props) {
 						{props.service === "Membership" ? (
 							<>
 								<Grid item xs={12}>
-									<TextField
+									<CustomTextField
 										sx={{ width: "100%" }}
 										id="workDescription"
 										label="About Your Work (100 to 500 words)"
@@ -418,7 +427,7 @@ function IForm(props) {
 						) : (
 							<>
 								<Grid item xs={12}>
-									<TextField
+									<CustomTextField
 										sx={{ width: "100%" }}
 										id="interest"
 										label="About Your Interest (100 to 500 words)"
@@ -430,22 +439,26 @@ function IForm(props) {
 								</Grid>
 							</>
 						)}
-						<Grid item xs={12} display={"flex"} justifyContent={"center"}>
+						<Grid item xs={6}>
 							<ProfilePicUpload />
+						</Grid>
+						<Grid item xs={6}>
+							<FileUpload content={"Upload your Resume here"} />
 						</Grid>
 						{props.service === "Membership" && (
 							<>
 								<Grid item xs={12}>
 									<Typography
-										variant="h5"
+										variant="h4"
 										fontWeight={"bold"}
 										textAlign={"center"}
+										color={"white"}
 									>
 										Your River Details
 									</Typography>
 								</Grid>
 								<Grid item xs={12} md={8}>
-									<TextField
+									<CustomTextField
 										sx={{ width: "100%" }}
 										id="riverName"
 										label="Name of The River"
@@ -454,7 +467,7 @@ function IForm(props) {
 									/>
 								</Grid>
 								<Grid item xs={12} md={4}>
-									<TextField
+									<CustomTextField
 										sx={{ width: "100%" }}
 										id="riverLength"
 										label="Length"
@@ -463,7 +476,7 @@ function IForm(props) {
 									/>
 								</Grid>
 								<Grid item xs={12} md={6}>
-									<TextField
+									<CustomTextField
 										sx={{ width: "100%" }}
 										id="originSite"
 										label="Origin Site, District & State"
@@ -472,7 +485,7 @@ function IForm(props) {
 									/>
 								</Grid>
 								<Grid item xs={12} md={6}>
-									<TextField
+									<CustomTextField
 										sx={{ width: "100%" }}
 										id="mergingPlace"
 										label="Place of Merging"
@@ -481,7 +494,7 @@ function IForm(props) {
 									/>
 								</Grid>
 								<Grid item xs={12}>
-									<TextField
+									<CustomTextField
 										sx={{ width: "100%" }}
 										id="discharge"
 										label="Discharge of the River (mld)"
@@ -490,7 +503,7 @@ function IForm(props) {
 									/>
 								</Grid>
 								<Grid item xs={12}>
-									<TextField
+									<CustomTextField
 										sx={{ width: "100%" }}
 										id="presentSituation"
 										label="Present Situation"
@@ -502,7 +515,7 @@ function IForm(props) {
 								</Grid>
 
 								<Grid item xs={12} md={8}>
-									<TextField
+									<CustomTextField
 										sx={{ width: "100%" }}
 										id="waterQuality"
 										label="Water Quality"
@@ -512,7 +525,7 @@ function IForm(props) {
 								</Grid>
 
 								<Grid item xs={12} md={4}>
-									<TextField
+									<CustomTextField
 										sx={{ width: "100%" }}
 										id="population"
 										label="Population"
@@ -521,7 +534,9 @@ function IForm(props) {
 									/>
 								</Grid>
 								<Grid item xs={12}>
-									<FileUpload />
+									<FileUpload
+										content={"Upload your River files here"}
+									/>
 								</Grid>
 							</>
 						)}

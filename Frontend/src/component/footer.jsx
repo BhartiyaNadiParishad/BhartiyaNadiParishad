@@ -1,6 +1,7 @@
 import React from "react";
 import {
   Box,
+  Grid,
   List,
   ListItem,
   ListItemButton,
@@ -9,7 +10,6 @@ import {
   Typography,
   styled,
 } from "@mui/material";
-import Grid from "@mui/material/Unstable_Grid2";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import Logo from "../assets/logo.svg";
 
@@ -26,19 +26,16 @@ const CustomTypography = styled(Typography)(() => ({
 
 export default function Footer() {
   return (
-    <div className="bg-[#051a36]">
-      {/* <> */}
+    <Box backgroundColor="#051a36" px={4} >
       <Grid
         container
         spacing={4}
-        mb={1}
-        mx={4}
-        pt={1}
         justifyContent={"space-between"}
         rowGap={1}
-        sx={{ color: "rgb(19 100 173)", borderBottom: "1px solid #1d4e6e" }}
+        sx={{ color: "rgb(19 100 173)", borderBottom: "1px solid #1d4e6e" ,}}
       >
         <Grid
+          item
           xs={12}
           display={"flex"}
           justifyContent={"center"}
@@ -207,7 +204,8 @@ export default function Footer() {
         </Grid>
 
         <Grid
-          xs="12"
+          item
+          xs={12}
           md={2}
           display="flex"
           flexDirection="column"
@@ -216,7 +214,7 @@ export default function Footer() {
         >
           <img src={Logo} height="auto" width="235px" alt="Logo" />
         </Grid>
-        <Grid xs="12" md={2.4} display="flex" flexDirection="column" rowGap={1}>
+        <Grid item xs="12" md={2.4} display="flex" flexDirection="column" rowGap={1}>
           <Typography sx={{ fontWeight: "bold", fontSize: "20px" }}>
             Address
           </Typography>
@@ -232,7 +230,7 @@ export default function Footer() {
             </CustomTypography>
           </Box>
         </Grid>
-        <Grid xs="12" md={1.5} display="flex" flexDirection="column" rowGap={1}>
+        <Grid item xs="12" md={1.5} display="flex" flexDirection="column" rowGap={1}>
           <Typography sx={{ fontWeight: "bold", fontSize: "20px" }}>
             Useful Links
           </Typography>
@@ -255,7 +253,7 @@ export default function Footer() {
             </CustomTypography>
           </Box>
         </Grid>
-        <Grid xs="12" md={2.8} display="flex" flexDirection="column" rowGap={1}>
+        <Grid item xs="12" md={2.8} display="flex" flexDirection="column" rowGap={1}>
           <Typography sx={{ fontWeight: "bold", fontSize: "20px" }}>
             Rejuvenation Blueprint
           </Typography>
@@ -274,7 +272,7 @@ export default function Footer() {
             </CustomTypography>
           </Box>
         </Grid>
-        <Grid xs="12" md={2.8} display="flex" flexDirection="column" rowGap={1}>
+        <Grid item xs="12" md={3} display="flex" flexDirection="column" rowGap={1}>
           <Typography sx={{ fontWeight: "bold", fontSize: "20px" }}>
             Rules, Treaty , Acts & Guidelines
           </Typography>
@@ -313,7 +311,6 @@ export default function Footer() {
           © Copyright Bhartiya Nadi Parishad. All Rights Reserved
         </Typography>
       </Grid>
-      {/* </> */}
-    </div>
+    </Box>
   );
 }

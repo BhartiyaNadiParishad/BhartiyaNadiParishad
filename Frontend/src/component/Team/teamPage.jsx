@@ -25,10 +25,10 @@ export default function Team() {
           color: "white",
         }}
       >
-        <Typography variant="h4" fontWeight={"bold"} textAlign={"center"}>
+        <Typography variant="h4" fontWeight={"bold"} textAlign={"center"} color="#f5ff00">
           Our Team
         </Typography>
-        <Typography variant="h6" textAlign={"justify"} gutterBottom>
+        <Typography variant="h6" textAlign={"justify"} gutterBottom >
           We are a group of water and river experts who come with years of
           ground experience in river development. Each of the members has been
           actively engaged in their region with various forces to uplift the
@@ -36,7 +36,7 @@ export default function Team() {
           experiences from national and international exposure is brought
           forward to Bhartiya Nadi Parishad
         </Typography>
-        <TeamList title={"Our Core Team"} data={coreTeamData} />
+        <TeamList title={"Core Team"} data={coreTeamData} />
         <TeamList title={"Advisory Council"} data={advisoryCouncilData} />
         <TeamList title={"Technical Council"} data={technicalCouncilData} />
       </Box>

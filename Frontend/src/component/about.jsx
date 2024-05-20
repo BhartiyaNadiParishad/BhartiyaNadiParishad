@@ -1,14 +1,21 @@
 import React, { useState } from "react";
 import MainLayout from "./Layout/mainLayout";
-import { Box, Button, CssBaseline, IconButton, Paper, Typography, hexToRgb, styled } from "@mui/material";
+import {
+	Box,
+	Button,
+	CssBaseline,
+	IconButton,
+	Paper,
+	Typography,
+	hexToRgb,
+	styled,
+} from "@mui/material";
 import img from "../assets/bg11.jpg";
 import img1 from "../assets/draftImage.png";
 import Grid from "@mui/material/Grid";
 import bg from "../assets/partners.jpg";
 import bg1 from "../assets/riverDark.jpg";
-import video from "../assets/news.mp4"
-
-
+import video from "../assets/news.mp4";
 
 const Programs = [
 	{
@@ -29,12 +36,11 @@ const Programs = [
 ];
 
 export default function AboutBNP() {
+	const [expanded, setExpanded] = useState(false);
 
-    const [expanded, setExpanded] = useState(false);
-
-    const handleToggle = () => {
-        setExpanded(!expanded);
-    };
+	const handleToggle = () => {
+		setExpanded(!expanded);
+	};
 
 	return (
 		<MainLayout>
@@ -67,7 +73,7 @@ export default function AboutBNP() {
 						textAlign={"center"}
 						variant="h4"
 						sx={{ fontWeight: "bold", fontSize: "24px" }}
-						color=  "#f9c208"
+						color="#f9c208"
 					>
 						पिबन्ति नद्यः स्वयमेव नाम्भः, स्वयं न खादन्ति फलानि
 						वृक्षाः। <br />
@@ -91,47 +97,55 @@ export default function AboutBNP() {
 				</Box>
 				<Grid
 					container
-                    spacing={3}
+					spacing={3}
 					sx={{
 						padding: "80px",
 						backgroundColor: "#f2f2f2",
 					}}
 				>
 					<Grid item xs={12} md={6}>
-                        <Box>
-                            <Typography
-                                variant="h4"
-                                gutterBottom
-                                fontWeight={"bold"}
-								color= "#264e79"
-                            >
-                                We believe...
-                            </Typography>
-                            <Typography variant="h6" textAlign={"justify"}>
-                                Rivers are the lifeline of the whole world, but
-                                rivers have special importance in India, because
-                                apart from economic, India's connection with rivers
-                                is also religious, spiritual, and cultural, which is
-                                not seen in any other country in the world. It is
-                                because of this sacred bond with rivers that India
-                                is also called the country of rivers. These are the
-                                rivers on whose banks Indians have settled, grown,
-                                grown, and developed. A holy river like Ganga also
-                                flows on the land of India. Every river in India has
-                                its own story and specialty.
-                            </Typography>
-                        </Box>
+						<Box>
+							<Typography
+								variant="h4"
+								gutterBottom
+								fontWeight={"bold"}
+								color="#264e79"
+							>
+								We believe...
+							</Typography>
+							<Typography variant="h6" textAlign={"justify"}>
+								Rivers are the lifeline of the whole world, but
+								rivers have special importance in India, because
+								apart from economic, India's connection with
+								rivers is also religious, spiritual, and
+								cultural, which is not seen in any other country
+								in the world. It is because of this sacred bond
+								with rivers that India is also called the
+								country of rivers. These are the rivers on whose
+								banks Indians have settled, grown, grown, and
+								developed. A holy river like Ganga also flows on
+								the land of India. Every river in India has its
+								own story and specialty.
+							</Typography>
+						</Box>
 					</Grid>
 					<Grid item xs={12} md={6}>
-                        <Box sx={{ height: "340px" }}>
-                            <video style={{ width: "100%", height: "100%", objectFit: "cover" }} controls>
-                                <source src={video} type="video/mp4" />
-                                Your browser does not support the video tag.
-                            </video>
-                        </Box>
+						<Box sx={{ height: "340px" }}>
+							<video
+								style={{
+									width: "100%",
+									height: "100%",
+									objectFit: "cover",
+								}}
+								controls
+							>
+								<source src={video} type="video/mp4" />
+								Your browser does not support the video tag.
+							</video>
+						</Box>
 					</Grid>
 				</Grid>
-                <Grid
+				<Grid
 					container
 					sx={{
 						padding: "60px 100px 60px 100px",
@@ -151,57 +165,64 @@ export default function AboutBNP() {
 						>
 							Our Focus
 						</Typography>
-                        <Typography
+						<Typography
 							gutterBottom
 							variant="h6"
 							textAlign={"center"}
 						>
-							BNP mainly carries out three types of work for the betterment of rivers: 
-                            groundwork, policy work and public awareness. 
-                            Through these, our priority is to work in accordance with the religious, cultural, and spiritual sentiments of the rivers of India.
+							BNP mainly carries out three types of work for the
+							betterment of rivers: groundwork, policy work and
+							public awareness. Through these, our priority is to
+							work in accordance with the religious, cultural, and
+							spiritual sentiments of the rivers of India.
 						</Typography>
 					</Grid>
 					{Programs.map((d) => (
-						<Grid item xs={12} md={4} >
+						<Grid item xs={12} md={4}>
 							<Box
-                                display={"flex"}
-                                flexDirection={"column"}
+								display={"flex"}
+								flexDirection={"column"}
 								sx={{ backgroundColor: "#ffffffc7" }}
-                                padding={"40px"}
-                                height = {expanded ? "100%" : "400px"}
-							>   
-                                <Typography
-                                        variant="h5"
-                                        fontWeight={"bold"}
-                                        gutterBottom
-                                        textAlign={"center"}
-										color= "#264e79"
-                                    >
-                                        {d.title}
-                                </Typography>
-                                <Box  overflow={"hidden"}>
-                                    <Typography
-                                        variant="h6"
-                                        textAlign={"justify"}
-                                        fontSize={"18px"}
-                                    >
-                                        {d.content}
-                                    </Typography>
-                                </Box>
-                                {!expanded ? (
-                                    <Button onClick={handleToggle} sx={{ mt: 2 ,color: "#264e79"}}>
-                                        Read More
-                                    </Button>
-                                ) : (
-                                    <Button onClick={handleToggle} sx={{ mt: 2,color: "#264e79" }}>
-                                        Read less
-                                    </Button>
-                                )}
+								padding={"40px"}
+								height={expanded ? "100%" : "400px"}
+							>
+								<Typography
+									variant="h5"
+									fontWeight={"bold"}
+									gutterBottom
+									textAlign={"center"}
+									color="#264e79"
+								>
+									{d.title}
+								</Typography>
+								<Box overflow={"hidden"}>
+									<Typography
+										variant="h6"
+										textAlign={"justify"}
+										fontSize={"18px"}
+									>
+										{d.content}
+									</Typography>
+								</Box>
+								{!expanded ? (
+									<Button
+										onClick={handleToggle}
+										sx={{ mt: 2, color: "#264e79" }}
+									>
+										Read More
+									</Button>
+								) : (
+									<Button
+										onClick={handleToggle}
+										sx={{ mt: 2, color: "#264e79" }}
+									>
+										Read less
+									</Button>
+								)}
 							</Box>
 						</Grid>
 					))}
 				</Grid>
-				
 
 				{/* <Grid container sx={{ padding: "30px 60px" }}>
 					{dataArray.map((item) => (
@@ -390,14 +411,17 @@ export default function AboutBNP() {
 					rowGap={3}
 					sx={{
 						padding: "80px 10% 80px 10%",
-						color: "#264e79"
 					}}
 				>
 					<Typography
 						gutterBottom
 						textAlign={"center"}
 						variant="h4"
-						sx={{ fontWeight: "bold", fontSize: "26px" }}
+						sx={{
+							fontWeight: "bold",
+							fontSize: "26px",
+							color: "#264e79",
+						}}
 					>
 						"जन्मजन्मार्जितं पापं स्वल्पं वा यदि वा बहु। <br />
 						गंगा देवी प्रसादेन सर्वं मे यास्यति क्षयम्॥"

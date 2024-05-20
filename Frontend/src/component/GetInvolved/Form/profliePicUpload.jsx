@@ -26,7 +26,6 @@ const ProfilePicUpload = ({ onFileSelect }) => {
 			component="label"
 			htmlFor="profile-pic-upload"
 			sx={{
-                width: {xs: "100%" ,md:"40%"},
 				display: "flex",
 				flexDirection: "column",
 				alignItems: "center",

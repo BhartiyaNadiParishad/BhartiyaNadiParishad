@@ -37,15 +37,14 @@ export default function FrontDisplay() {
       <div style={{ paddingTop: "120px" }}>
         <Typography
           mb={1}
-          variant="h5"
+          variant="h4"
           style={{
-            fontSize: "28px",
             fontWeight: "bold",
-            color: "#ffc500",
+            color: "white",
             textAlign: "center",
           }}
         >
-          <q>समृद्धभारतस्य कृते निर्मलानि निर्बाधानि च नद्यः</q>
+          Riviving Rivers , Reviving Hopes
         </Typography>
         <Typography
           variant="h5"
@@ -56,7 +55,7 @@ export default function FrontDisplay() {
             fontWeight: "bold",
           }}
         >
-          <q>Clean and uninterrupted rivers for prosperous India</q>
+          Ecosystem Revitalization
         </Typography>
         {/* <Box
           sx={{

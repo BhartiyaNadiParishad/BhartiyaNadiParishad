@@ -10,7 +10,7 @@ const data = [
       "Rivers are facing challenges like water shortage, encroachment, and pollution. While the governments are trying their best to deal with these challenges, a large section of society is also engaged in various ways to make their rivers clean and uninterrupted. While Namami Gange was formed by the Prime Minister of India, Shri Narendra Modi for the revival of Ganga and its tributaries, he also mentioned from time to time in his 'Mann Ki Baat' programs the efforts being made for the rivers in India is done.",
   },
   {
-    title: "Formation of BHARTIYA NADI PARISHAD (BNP)",
+    title: "Formation of BHARTIYA NADI PARISHAD ",
     content:
       "In India, the efforts of the society and the government seem to be shared at some places, at some places their coordination seems incomplete and at some places the correct technical knowledge is not available. The BHARTIYA NADI PARISHAD (BNP) has been formed to coordinate the efforts of society and government for the rivers of India and to take forward efforts for the rivers in a better way by learning from each other's experiences. We can also know BHARTIYA NADI PARISHAD in English by the name Indian River Council.",
   },
@@ -67,7 +67,6 @@ export default function History() {
               <Box
                 sx={{
                   backgroundColor: "#ffffffc7",
-                  color: "#264e79",
                   borderRadius: "10px",
                 }}
                 padding={"40px"}
@@ -78,6 +77,7 @@ export default function History() {
                   fontWeight={"bold"}
                   gutterBottom
                   textAlign={"center"}
+                  color={"#051a36"}
                 >
                   {d.title}
                 </Typography>

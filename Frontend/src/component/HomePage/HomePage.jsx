@@ -7,12 +7,14 @@ import WorkImpact from "./workImpact";
 import Footer from "../footer";
 import FrontDisplay from "./frontDisplay";
 import Video from "./video";
+import Quote from "./quote";
 
 export default function HomePage() {
   return (
     <>
       <DrawerAppBar />
       <FrontDisplay />
+      <Quote />
       <Founder />
       <Video />
       <Testimonials />
