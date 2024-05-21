@@ -44,9 +44,9 @@ export default function FrontDisplay() {
             textAlign: "center",
           }}
         >
-          Reviving Rivers, Reviving Hopes
+          Restoring Rivers, Reviving Hopes
         </Typography>
-        <Typography
+        {/* <Typography
           variant="h4"
           style={{
             // fontSize: "30px",
@@ -56,7 +56,7 @@ export default function FrontDisplay() {
           }}
         >
           Ecosystem Revitalization
-        </Typography>
+        </Typography> */}
         {/* <Box
           sx={{
             color: "black",

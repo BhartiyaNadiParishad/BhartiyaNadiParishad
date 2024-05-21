@@ -53,9 +53,9 @@ const menuData = [
     menuName: "nadiDarshanMenu",
     buttonLabel: "Nadi Darshan",
     menuItems: [
-      { label: "Indian River System", path: "/" },
+      { label: "Portal", path: "/" },
       { label: "River Basin Maps", path: "/" },
-      { label: "River Videos", path: "/" },
+      { label: "River Gallery", path: "/" },
       { label: "Factsheet", path: "/" },
     ],
   },

@@ -21,7 +21,10 @@ const CustomBox = styled(Box)(() => ({
 
 export default function GetInvolvedPage() {
   return (
-    <Box paddingTop={"220px"} sx={{ background: "linear-gradient(to bottom, #a9e0ff, #80aaf5)" }}>
+    <Box
+      paddingTop={"220px"}
+      sx={{ background: "linear-gradient(to bottom, #a9e0ff, #80aaf5)" }}
+    >
       <DrawerAppBar />
       <Box
         sx={{
@@ -88,7 +91,7 @@ export default function GetInvolvedPage() {
               sx={{ fontSize: "24px", textTransform: "capitalize" }}
               endIcon={<ArrowForwardIosIcon />}
             >
-              Get Involved
+              More...
             </Button>
           </Link>
         </CustomBox>
@@ -119,7 +122,7 @@ export default function GetInvolvedPage() {
               sx={{ fontSize: "24px", textTransform: "capitalize" }}
               endIcon={<ArrowForwardIosIcon />}
             >
-              Get Involved
+              Join Us
             </Button>
           </Link>
         </CustomBox>
@@ -150,7 +153,7 @@ export default function GetInvolvedPage() {
               sx={{ fontSize: "24px", textTransform: "capitalize" }}
               endIcon={<ArrowForwardIosIcon />}
             >
-              Get Involved
+              Apply
             </Button>
           </Link>
         </CustomBox>

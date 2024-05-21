@@ -26,7 +26,7 @@ const Founder = () => {
           flexDirection={"column"}
           justifyContent={"center"}
           sx={{
-            maxWidth: { xs: "100%", md: "calc(100% - 330px)" },
+            maxWidth: { xs: "100%", md: "calc(100% - 450px)" },
             borderRadius: "10px",
             color: "white",
             padding: "10px",
@@ -40,15 +40,13 @@ const Founder = () => {
               marginBottom: "10px",
             }}
           >
-            The Formation of BHARTIYA NADI PARISHAD is an important step taken
-            after deep brainstorming with the cooperation of society and system
-            for the prosperity of India's rivers. The aim of BNP is to achieve
-            the sustainable development goals related to rivers, water and
-            environment of the United Nations with the cooperation of the
-            society and the government, and under the Water Vision 2047 of the
-            Hon'ble Prime Minister Shri Narendra Modi, the rivers of the country
-            till the completion of 100 years of India's independence. To make it
-            pure and uninterrupted.
+            Formation of Bhartiya Nadi Parishad is an important step taken after
+            brainstorming with stakeholders for rejuvenation of Indian rivers
+            towards prosperous India. The aim of Bhartiya Nadi Parishad is to
+            contribute towards the sustainable development goals (SDG 6, 12, 13,
+            14 & 15) of the United Nations with the cooperation of the society
+            and the government, and under the India's Water Vision 2047
+            announced by the Hon'ble Prime Minister Shri Narendra Modi.
           </Typography>
           <Typography
             sx={{ color: "#f5ff00", fontWeight: "bold", fontSize: "20px" }}

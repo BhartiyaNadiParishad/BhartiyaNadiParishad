@@ -62,7 +62,7 @@ export default function GetInvolved() {
           }}
           variant="outlined"
         >
-          Get Involved
+          Explore More
         </Button>
       </Link>
     </Box>
