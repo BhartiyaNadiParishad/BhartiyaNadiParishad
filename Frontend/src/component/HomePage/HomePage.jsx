@@ -8,6 +8,7 @@ import Footer from "../footer";
 import FrontDisplay from "./frontDisplay";
 import Video from "./video";
 import Quote from "./quote";
+import News from "./news";
 
 export default function HomePage() {
   return (
@@ -17,10 +18,11 @@ export default function HomePage() {
       <Quote />
       <Founder />
       <Video />
+      <News />
       <Testimonials />
       <Programs />
       <GetInvolved />
-      <WorkImpact />
+      {/* <WorkImpact /> */}
       <Footer />
     </>
   );

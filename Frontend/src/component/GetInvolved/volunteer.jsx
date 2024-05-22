@@ -12,8 +12,8 @@ import Grid from "@mui/material/Grid";
 import MainLayout from "../Layout/mainLayout";
 import membership from "../../assets/bg15.jpg";
 import IForm from "./IForm";
-import img from "../../assets/partners.jpg";
-
+import img from "../../assets/bg23.jpg";
+import imgBG from "../../assets/bg15.jpg";
 
 const bnpDetails = [
 	"The river kit of the BNP will be received. This river kit will have a Brochure, T-shirt, Pan, Pad, Water Bottle, Sticker, Mug and other materials of the BNP.",
@@ -29,72 +29,61 @@ export default function Volunteer() {
 	return (
 		<>
 			<MainLayout>
-				<Box padding={"220px 10% 80px 10%"}>
-					<Typography
-						variant="h4"
-						fontWeight={"bold"}
-						textAlign={"center"}
-						mb={4}
-					>
-						Volunteer
+				<Box
+					sx={{
+						backgroundImage: `url(${imgBG})`,
+						backgroundSize: "cover",
+						backgroundPosition: "center ",
+					}}
+				>
+					<Box bgcolor={"#00000059"} padding={"18% 40px 10% 40px"}>
+						<Typography
+							variant="h4"
+							fontWeight={"bold"}
+							textAlign={"center"}
+							color={"white"}
+						>
+							Volunteer
+						</Typography>
+					</Box>
+				</Box>
+				<Box padding={"5%"}>
+					<Typography variant="body1" textAlign={"justify"}>
+						Any river lover can contribute to the work of river
+						revitalization by becoming a BNP volunteer. The person
+						who wants to become a volunteer of BNP should have clean
+						conduct. One can become a volunteer only through the
+						selection process set by BNP. By becoming a volunteer of
+						BNP you will get the following benefits.A letter and an
+						identity card will be made available to the
+						person/organization from the BNP Secretariat.
 					</Typography>
-					<Grid container spacing={10}>
-						<Grid item md={6} xs={12}>
-							<Typography
-								variant="h6"
-								textAlign={"justify"}
-								fontSize={"18px"}
-							>
-								Any river lover can contribute to the work of
-								river revitalization by becoming a BNP
-								volunteer. The person who wants to become a
-								volunteer of BNP should have clean conduct. One
-								can become a volunteer only through the
-								selection process set by BNP. By becoming a
-								volunteer of BNP you will get the following
-								benefits.A letter and an identity card will be
-								made available to the person/organization from
-								the BNP Secretariat.
-							</Typography>
-							<List>
-								{bnpDetails.map((text, index) => (
-									<ListItem key={index}>
-										<ListItemIcon>
-											<CircleIcon
-												sx={{
-													fontSize: "10px",
-													color: "black",
-												}}
-											/>
-										</ListItemIcon>
-										<Typography
-											variant="h6"
-											fontSize="18px"
-											textAlign={"justify"}
-										>
-											{text}
-										</Typography>
-									</ListItem>
-								))}
-							</List>
-						</Grid>
-						<Grid item md={6} xs={12}>
-							<Box>
-								<img
-									src={membership}
-									alt="img3"
-									width={"100%"}
-									style={{ marginBottom: "32px" }}
-								/>
-							</Box>
-						</Grid>
-					</Grid>
+					<List>
+						{bnpDetails.map((text, index) => (
+							<ListItem key={index}>
+								<ListItemIcon>
+									<CircleIcon
+										sx={{
+											fontSize: "10px",
+											color: "black",
+										}}
+									/>
+								</ListItemIcon>
+								<Typography
+									variant="body1"
+									textAlign={"justify"}
+								>
+									{text}
+								</Typography>
+							</ListItem>
+						))}
+					</List>
 				</Box>
 				<Box
 					sx={{
 						backgroundImage: `url(${img})`,
 						backgroundSize: "cover",
-						backgroundPosition: "center",
+						backgroundPosition: "center top",
 					}}
 				>
 					<IForm service={"Volunteer"} />

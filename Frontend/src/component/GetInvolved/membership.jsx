@@ -13,7 +13,8 @@ import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import MainLayout from "../Layout/mainLayout";
 import membership from "../../assets/bg15.jpg";
 import IForm from "./IForm";
-import img from "../../assets/partners.jpg";
+import img from "../../assets/bg23.jpg";
+import imgBG from "../../assets/bg15.jpg";
 
 const bnpDetails = [
 	"A letter and an identity card will be made available to the person/organization from the BNP Secretariat.",
@@ -28,120 +29,98 @@ export default function Membership() {
 	return (
 		<>
 			<MainLayout>
-				<Box padding={"220px 10% 80px 10%"}>
+				<Box
+					sx={{
+						backgroundImage: `url(${imgBG})`,
+						backgroundSize: "cover",
+						backgroundPosition: "center ",
+					}}
+				>
+					<Box bgcolor={"#00000059"} padding={"18% 40px 10% 40px"}>
+						<Typography
+							variant="h4"
+							fontWeight={"bold"}
+							textAlign={"center"}
+							color={"white"}
+						>
+							Membership{" "}
+						</Typography>
+					</Box>
+				</Box>
+				<Box padding={"5%"}>
 					<Typography
-						variant="h4"
-						fontWeight={"bold"}
-						textAlign={"center"}
-						mb={4}
+						variant="h6"
+						textAlign={"justify"}
+						fontSize={"18px"}
 					>
-						Membership
+						Any Indian Civil/Social Organization/University/Research
+						Institute/Company, a member of the BNP, can be
+						contributed in any way, a river lover and its conduct is
+						clean. Such dignitaries or organizations can also become
+						a member of the BNP who want to make some positive
+						efforts/cooperation for the river/rivers in the country
+						in collaboration with the BNP. A member of the BNP can
+						be made only under a selected process fixed. Members of
+						the BNP will get the following benefits.
 					</Typography>
-					<Grid container spacing={10}>
-						<Grid item xs={12} md={6}>
-							<Box>
+					<List>
+						{bnpDetails.map((text, index) => (
+							<ListItem key={index}>
+								<ListItemIcon>
+									<CircleIcon
+										sx={{
+											fontSize: "10px",
+											color: "black",
+										}}
+									/>
+								</ListItemIcon>
 								<Typography
-									variant="h6"
+									variant="body1"
 									textAlign={"justify"}
-									fontSize={"18px"}
 								>
-									Any Indian Civil/Social
-									Organization/University/Research
-									Institute/Company, a member of the BNP, can
-									be contributed in any way, a river lover and
-									its conduct is clean. Such dignitaries or
-									organizations can also become a member of
-									the BNP who want to make some positive
-									efforts/cooperation for the river/rivers in
-									the country in collaboration with the BNP. A
-									member of the BNP can be made only under a
-									selected process fixed. Members of the BNP
-									will get the following benefits.
+									{text}
 								</Typography>
-								<List>
-									{bnpDetails.map((text, index) => (
-										<ListItem key={index}>
-											<ListItemIcon>
-												<CircleIcon
-													sx={{
-														fontSize: "10px",
-														color: "black",
-													}}
-												/>
-											</ListItemIcon>
-											<Typography
-												variant="h6"
-												fontSize="18px"
-												textAlign={"justify"}
-											>
-												{text}
-											</Typography>
-										</ListItem>
-									))}
-								</List>
-							</Box>
-						</Grid>
-						<Grid item xs={12} md={6}>
-							<Box>
-								<img
-									src={membership}
-									alt="img3"
-									width={"100%"}
-									style={{ marginBottom: "32px" }}
-								/>
-								<Box>
-									<Typography
-										gutterBottom
-										variant="h5"
-										fontWeight={"bold"}
-									>
-										Requirements to become members -
-									</Typography>
-									<Typography
-										variant="h6"
-										fontSize={"18px"}
-										mb={2}
-										textAlign={"justify"}
-									>
-										To become a member of the BNP, a form
-										will have to be filled and the annual
-										5000 Indian rupees will have to be
-										deposited in the account of the BNP.
-										This fee will be for lifetime
-										membership.
-									</Typography>
-									<Typography
-										variant="h6"
-										fontWeight={"bold"}
-										gutterBottom
-									>
-										Bank Details
-									</Typography>
-									<Typography variant="h6" fontSize={"18px"}>
-										Bhartiya Nadi Parishad
-									</Typography>
-									<Typography variant="h6" fontSize={"18px"}>
-										A/C -{" "}
-									</Typography>
-									<Typography variant="h6" fontSize={"18px"}>
-										IFSC -{" "}
-									</Typography>
-									<Typography variant="h6" fontSize={"18px"}>
-										Indian Bank
-									</Typography>
-									<Typography variant="h6" fontSize={"18px"}>
-										CCSU Campus, Meerut (UP)
-									</Typography>
-								</Box>
-							</Box>
-						</Grid>
-					</Grid>
+							</ListItem>
+						))}
+					</List>
+					<Typography gutterBottom variant="h6" fontWeight={"bold"}>
+						Requirements to become members -
+					</Typography>
+					<Typography
+						variant="body1"
+						fontSize={"18px"}
+						mb={2}
+						textAlign={"justify"}
+					>
+						To become a member of the BNP, a form will have to be
+						filled and the annual 5000 Indian rupees will have to be
+						deposited in the account of the BNP. This fee will be
+						for lifetime membership.
+					</Typography>
+					<Typography variant="h6" fontWeight={"bold"} gutterBottom>
+						Bank Details
+					</Typography>
+					<Typography variant="body1" fontSize={"18px"}>
+						Bhartiya Nadi Parishad
+					</Typography>
+					<Typography variant="body1" fontSize={"18px"}>
+						A/C -{" "}
+					</Typography>
+					<Typography variant="body1" fontSize={"18px"}>
+						IFSC -{" "}
+					</Typography>
+					<Typography variant="body1" fontSize={"18px"}>
+						Indian Bank
+					</Typography>
+					<Typography variant="body1" fontSize={"18px"}>
+						CCSU Campus, Meerut (UP)
+					</Typography>
 				</Box>
 				<Box
 					sx={{
 						backgroundImage: `url(${img})`,
 						backgroundSize: "cover",
-						backgroundPosition: "center",
+						backgroundPosition: "center top",
 					}}
 				>
 					<IForm service={"Membership"} />

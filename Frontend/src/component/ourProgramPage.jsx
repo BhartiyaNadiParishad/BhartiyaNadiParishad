@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "./Layout/card";
-import imgBG from "../assets/bg12.jpg";
+import imgBG from "../assets/bg15.jpg";
 import Icon1 from "../assets/Icons/1.png";
 import Icon2 from "../assets/Icons/2.png";
 import Icon3 from "../assets/Icons/3.png";
@@ -61,32 +61,24 @@ export default function ProgramPage() {
 		<>
 			<MainLayout>
 				<Box
-					display={"flex"}
-					justifyContent={"center"}
-					paddingBottom={33}
-					alignItems={"flex-end"}
 					sx={{
-						// backgroundImage: `url(${imgBG})`,
-						// backgroundSize: "cover",
-						// backgroundPosition: "center ",
-            backgroundColor: "#daf0fd",
-						height: "80vh",
-						width: "100%",
+						backgroundImage: `url(${imgBG})`,
+						backgroundSize: "cover",
+						backgroundPosition: "center ",
 					}}
 				>
-					<Typography
-						variant="h4"
-						fontWeight={"bold"}
-					>
-						Our Program
-					</Typography>
+					<Box bgcolor={"#00000059"} 	padding= {"18% 40px 15% 40px"}>
+						<Typography variant="h4" fontWeight={"bold"} textAlign={"center"} color={"white"}>
+							Our Program
+						</Typography>
+					</Box>
 				</Box>
 				<Grid
 					container
 					px={4}
 					spacing={4}
 					position={"relative"}
-					top={"-200px"}
+					top={"-100px"}
 				>
 					{data.map((item, index) => (
 						<Grid item md={4} xs={12} key={index}>

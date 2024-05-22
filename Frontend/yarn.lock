@@ -235,6 +235,11 @@
     "@babel/helper-validator-identifier" "^7.22.20"
     to-fast-properties "^2.0.0"
 
+"@coffeebeanslabs/country_state_district@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/@coffeebeanslabs/country_state_district/-/country_state_district-1.0.1.tgz"
+  integrity sha512-5FlCAWA+yyvytMexProPQyb/xn7OMa1/c+HSweGD2l71QLX38wY9bQaNQO3rw6snF4TCiZharlJS+SwTBU4xzA==
+
 "@emailjs/browser@^4.3.3":
   version "4.3.3"
   resolved "https://registry.npmjs.org/@emailjs/browser/-/browser-4.3.3.tgz"

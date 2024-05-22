@@ -12,8 +12,8 @@ import CircleIcon from "@mui/icons-material/Circle";
 import MainLayout from "../Layout/mainLayout";
 import membership from "../../assets/bg15.jpg";
 import IForm from "./IForm";
-import img from "../../assets/partners.jpg";
-
+import img from "../../assets/bg23.jpg";
+import imgBG from "../../assets/bg15.jpg";
 
 const bnpInternDetails = [
 	"The river kit of the BNP will be received. This river kit will have a Brochure, T-shirt, Pan, Pad, Water Bottle, Sticker, Mug and other materials of the BNP.",
@@ -28,67 +28,62 @@ export default function Internship() {
 	return (
 		<>
 			<MainLayout>
-				<Box padding={"220px 10% 80px 10%"}>
+				<Box
+					sx={{
+						backgroundImage: `url(${imgBG})`,
+						backgroundSize: "cover",
+						backgroundPosition: "center ",
+					}}
+				>
+					<Box bgcolor={"#00000059"} padding={"18% 40px 10% 40px"}>
+						<Typography
+							variant="h4"
+							fontWeight={"bold"}
+							textAlign={"center"}
+							color={"white"}
+						>
+							Internship
+						</Typography>
+					</Box>
+				</Box>
+				<Box padding={"5%"}>
 					<Typography
-						variant="h4"
-						fontWeight={"bold"}
-						textAlign={"center"}
-						mb={4}
+						variant="h6"
+						textAlign={"justify"}
+						fontSize={"18px"}
 					>
-						Internship
+						Any student with good conduct can do internship with
+						BNP. For this, the requirements set by BNP will have to
+						be fulfilled. The student must also give a letter from
+						his college/institute/university.
 					</Typography>
-					<Grid container spacing={10}>
-						<Grid item md={6} xs={12}>
-							<Typography
-								variant="h6"
-								textAlign={"justify"}
-								fontSize={"18px"}
-							>
-								Any student with good conduct can do internship
-								with BNP. For this, the requirements set by BNP
-								will have to be fulfilled. The student must also
-								give a letter from his
-								college/institute/university.
-							</Typography>
-							<List>
-								{bnpInternDetails.map((text, index) => (
-									<ListItem key={index}>
-										<ListItemIcon>
-											<CircleIcon
-												sx={{
-													fontSize: "10px",
-													color: "black",
-												}}
-											/>
-										</ListItemIcon>
-										<Typography
-											variant="h6"
-											fontSize="18px"
-											textAlign={"justify"}
-										>
-											{text}
-										</Typography>
-									</ListItem>
-								))}
-							</List>
-						</Grid>
-						<Grid item md={6} xs={12}>
-							<Box>
-								<img
-									src={membership}
-									alt="img3"
-									width={"100%"}
-									style={{ marginBottom: "32px" }}
-								/>
-							</Box>
-						</Grid>
-					</Grid>
+					<List>
+						{bnpInternDetails.map((text, index) => (
+							<ListItem key={index}>
+								<ListItemIcon>
+									<CircleIcon
+										sx={{
+											fontSize: "10px",
+											color: "black",
+										}}
+									/>
+								</ListItemIcon>
+								<Typography
+									variant="h6"
+									fontSize="18px"
+									textAlign={"justify"}
+								>
+									{text}
+								</Typography>
+							</ListItem>
+						))}
+					</List>
 				</Box>
 				<Box
 					sx={{
 						backgroundImage: `url(${img})`,
 						backgroundSize: "cover",
-						backgroundPosition: "center",
+						backgroundPosition: "center top",
 					}}
 				>
 					<IForm service={"Intenship"} />

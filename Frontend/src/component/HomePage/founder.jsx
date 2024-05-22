@@ -16,7 +16,7 @@ const Founder = () => {
         flexDirection={"row"}
         flexWrap={"wrap"}
         columnGap={2}
-        justifyContent={"space-between"}
+        justifyContent={"center"}
       >
         <Box>
           <img src={img1} width={"310px"} style={{ borderRadius: "50%" }} />

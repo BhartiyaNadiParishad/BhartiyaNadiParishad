@@ -15,6 +15,7 @@ export default function Card({ title, description, icon, bgColor, number }) {
 						backgroundColor: "#0000004d",
 						height: "100%",
 					}}
+					border={"1px solid white"}
 				>
 					{icon && (
 						<img

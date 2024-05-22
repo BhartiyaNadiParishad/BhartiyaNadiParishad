@@ -21,7 +21,7 @@ export default function FrontDisplay() {
       <video
         autoPlay
         loop
-        // muted
+        muted
         style={{
           position: "absolute",
           width: "100%",

@@ -15,6 +15,7 @@ import {
 } from "@mui/material";
 
 import { Country, State, City } from "country-state-city";
+import country_state_district from "@coffeebeanslabs/country_state_district";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/material.css";
 import axios from "axios";
@@ -43,6 +44,7 @@ function IForm(props) {
 		country: "",
 		state: "",
 		city: "",
+		district: "",
 		address: "",
 		workDescription: "",
 		interest: "",
@@ -68,11 +70,11 @@ function IForm(props) {
 	const [countryCode, setCountryCode] = useState("");
 
 	const [stateList, setStateList] = useState([]);
-	const [cityList, setCityList] = useState([]);
+	const [districtList, setDistrictList] = useState([]);
 
 	const [countryId, setCountryId] = useState("");
 	const [stateId, setStateId] = useState("");
-	const [cityId, setCityId] = useState("");
+	const [districtId, setDistrictId] = useState("");
 	const countryList = Country.getAllCountries();
 
 	const handleInputChange = (e) => {
@@ -83,7 +85,6 @@ function IForm(props) {
 			[id]: value,
 		});
 	};
-
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 
@@ -117,6 +118,7 @@ function IForm(props) {
 					country: "",
 					state: "",
 					city: "",
+					district: "",
 					address: "",
 					workDescription: "",
 					interest: "",
@@ -154,7 +156,7 @@ function IForm(props) {
 	return (
 		<Box py={4} display={"flex"} justifyContent={"center"}>
 			<Box width={{ xs: "100%", md: "60%" }}>
-				<Typography
+				{/* <Typography
 					variant="h4"
 					fontWeight={"bold"}
 					mb={4}
@@ -162,12 +164,17 @@ function IForm(props) {
 					color={"white"}
 				>
 					{props.service} Form
-				</Typography>
+				</Typography> */}
 				<form onSubmit={handleSubmit}>
 					<Grid container spacing={3}>
 						<Grid item xs={12} md={4}>
 							<FormControl
-								sx={{ minWidth: "120px", width: "100%" , backgroundColor: "white", borderRadius: "4px"}}
+								sx={{
+									minWidth: "120px",
+									width: "100%",
+									backgroundColor: "white",
+									borderRadius: "4px",
+								}}
 							>
 								<InputLabel id="title-label">Title</InputLabel>
 								<Select
@@ -262,7 +269,12 @@ function IForm(props) {
 						</Grid>
 						<Grid item xs={12} md={4}>
 							<FormControl
-								sx={{ minWidth: "120px", width: "100%" , backgroundColor: "white", borderRadius: "4px"}}
+								sx={{
+									minWidth: "120px",
+									width: "100%",
+									backgroundColor: "white",
+									borderRadius: "4px",
+								}}
 							>
 								<InputLabel id="country-label">
 									Select Country
@@ -279,22 +291,30 @@ function IForm(props) {
 										setCountryId(e.target.value);
 										if (stateList.length !== 0)
 											setStateList([]);
-										if (cityList.length !== 0)
-											setCityList([]);
+										if (districtList.length !== 0)
+											setDistrictList([]);
 										setStateId(null);
-										setCityId(null);
+										setDistrictId(null);
 										setFormData({
 											...formData,
 											country: country.name,
 											state: "",
-											city: "",
+											district: "",
 										});
 										setCountryCode(country.isoCode);
-										setStateList(
-											State.getStatesOfCountry(
-												country.isoCode
-											)
-										);
+										if (country.name === "India") {
+											setStateList(
+												country_state_district.getStatesByCountryId(
+													1
+												)
+											);
+										} else {
+											setStateList(
+												State.getStatesOfCountry(
+													country.isoCode
+												)
+											);
+										}
 									}}
 									MenuProps={{
 										PaperProps: {
@@ -315,7 +335,12 @@ function IForm(props) {
 						</Grid>
 						<Grid item xs={12} md={4}>
 							<FormControl
-								sx={{ minWidth: "120px", width: "100%" ,  backgroundColor: "white", borderRadius: "4px"}}
+								sx={{
+									minWidth: "120px",
+									width: "100%",
+									backgroundColor: "white",
+									borderRadius: "4px",
+								}}
 							>
 								<InputLabel id="country-label">
 									Select State
@@ -329,19 +354,28 @@ function IForm(props) {
 									name="state"
 									onChange={(e) => {
 										const state = stateList[e.target.value];
+										console.log(e.target);
 										setStateId(e.target.value);
-										setCityId(null);
+										setDistrictId(null);
 										setFormData({
 											...formData,
 											state: state.name,
-											city: "",
+											district: "",
 										});
-										setCityList(
-											City.getCitiesOfState(
-												countryCode,
-												state.isoCode
-											)
-										);
+										if (formData.country == "India") {
+											setDistrictList(
+												country_state_district.getDistrictsByStateId(
+													e.target.value + 1
+												)
+											);
+										} else {
+											setDistrictList(
+												City.getCitiesOfState(
+													countryCode,
+													state.isoCode
+												)
+											);
+										}
 									}}
 									MenuProps={{
 										PaperProps: {
@@ -362,24 +396,29 @@ function IForm(props) {
 						</Grid>
 						<Grid item xs={12} md={4}>
 							<FormControl
-								sx={{ minWidth: "120px", width: "100%" ,  backgroundColor: "white", borderRadius: "4px"}}
+								sx={{
+									minWidth: "120px",
+									width: "100%",
+									backgroundColor: "white",
+									borderRadius: "4px",
+								}}
 							>
-								<InputLabel id="city-label">
-									Select City
+								<InputLabel id="district-label">
+									Select District
 								</InputLabel>
 								<Select
-									disabled={cityList.length === 0}
-									labelId="city-label"
-									id="city"
-									label="Select City"
-									value={cityId}
-									name="city"
+									disabled={districtList.length === 0}
+									labelId="district-label"
+									id="district"
+									label="Select District"
+									value={districtId}
+									name="district"
 									onChange={(e) => {
-										const city = cityList[e.target.value];
-										setCityId(e.target.value);
+										const district = districtList[e.target.value];
+										setDistrictId(e.target.value);
 										setFormData({
 											...formData,
-											city: city.name,
+											district: district.name,
 										});
 									}}
 									MenuProps={{
@@ -391,7 +430,7 @@ function IForm(props) {
 										},
 									}}
 								>
-									{cityList.map((item, index) => (
+									{districtList.map((item, index) => (
 										<MenuItem key={index} value={index}>
 											{item.name}
 										</MenuItem>
@@ -452,7 +491,6 @@ function IForm(props) {
 										variant="h4"
 										fontWeight={"bold"}
 										textAlign={"center"}
-										color={"white"}
 									>
 										Your River Details
 									</Typography>
