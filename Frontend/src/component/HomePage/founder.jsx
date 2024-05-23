@@ -10,7 +10,7 @@ const Founder = () => {
           backgroundImage: `url(${img})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          padding: "40px 30px",
+          padding: "30px 0px",
         }}
         display={"flex"}
         flexDirection={"row"}
@@ -19,17 +19,17 @@ const Founder = () => {
         justifyContent={"center"}
       >
         <Box>
-          <img src={img1} width={"310px"} style={{ borderRadius: "50%" }} />
+          <img src={img1} width={"250px"} style={{ borderRadius: "50%" }} />
         </Box>
         <Box
           display="flex"
           flexDirection={"column"}
           justifyContent={"center"}
           sx={{
-            maxWidth: { xs: "100%", md: "calc(100% - 450px)" },
+            maxWidth: { xs: "100%", md: "calc(100% - 400px)" },
             borderRadius: "10px",
             color: "white",
-            padding: "10px",
+            marginLeft: { xs: 0, md: 3 },
           }}
         >
           <Typography

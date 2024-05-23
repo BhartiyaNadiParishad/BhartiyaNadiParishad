@@ -40,60 +40,58 @@ const data = [
 export default function History() {
   return (
     <>
-      <MainLayout>
-        <Grid
-          container
-          sx={{
-            padding: "250px 50px 100px 50px",
-            backgroundImage: `url(${bg1})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center top",
-          }}
-          spacing={3}
-        >
-          <Grid item xs={12}>
-            <Typography
-              gutterBottom
-              variant="h4"
-              fontWeight="bold"
-              textAlign="center"
-              color="white"
-              marginBottom={4}
-            >
-              Bhartiya Nadi Parishad
-            </Typography>
-          </Grid>
-          {data.map((d) => (
-            <Grid item sm={12} md={6} key={d.title}>
-              <Box
-                sx={{
-                  backgroundColor: "#ffffffc7",
-                  borderRadius: "10px",
-                }}
-                padding={"40px"}
-                height={"100%"}
-              >
-                <Typography
-                  variant="h5"
-                  fontWeight={"bold"}
-                  gutterBottom
-                  textAlign={"center"}
-                  color={"#051a36"}
-                >
-                  {d.title}
-                </Typography>
-                <Typography
-                  variant="h6"
-                  textAlign={"justify"}
-                  fontSize={"16px"}
-                >
-                  {d.content}
-                </Typography>
-              </Box>
-            </Grid>
-          ))}
+      <Grid
+        container
+        sx={{
+          padding: "10px 30px 30px 30px",
+          backgroundImage: `url(${bg1})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center top",
+        }}
+        spacing={3}
+      >
+        <Grid item xs={12} color={"white"}>
+          <Typography
+            gutterBottom
+            variant="h4"
+            fontWeight={"bold"}
+            textAlign={"center"}
+          >
+            Our Focus
+          </Typography>
+          <Typography gutterBottom variant="h6" textAlign={"center"}>
+            BNP mainly carries out three types of work for the betterment of
+            rivers: groundwork, policy work and public awareness. Through these,
+            our priority is to work in accordance with the religious, cultural,
+            and spiritual sentiments of the rivers of India.
+          </Typography>
         </Grid>
-      </MainLayout>
+        {data.map((d) => (
+          <Grid item sm={12} md={6} key={d.title}>
+            <Box
+              sx={{
+                backgroundColor: "#ffffffc7",
+                borderRadius: "10px",
+              }}
+              padding={"40px"}
+              height={"100%"}
+            >
+              <Typography
+                variant="h5"
+                fontWeight={"bold"}
+                gutterBottom
+                textAlign={"center"}
+                color={"#051a36"}
+              >
+                {d.title}
+              </Typography>
+              <Typography variant="h6" textAlign={"justify"} fontSize={"16px"}>
+                {d.content}
+              </Typography>
+            </Box>
+          </Grid>
+        ))}
+      </Grid>
     </>
   );
 }
