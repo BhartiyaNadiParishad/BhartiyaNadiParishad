@@ -15,10 +15,9 @@ const CustomGrid2 = styled(Grid2)({
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
-  width: 300,
+  width: 250,
   height: 200,
   gap: 4,
-  borderRadius: 20,
   boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
   transition: "0.3s",
   "&:hover": {
@@ -29,8 +28,8 @@ const CustomGrid2 = styled(Grid2)({
 
 export default function WorkImpact() {
   return (
-    <Box sx={{ padding: "70px 10%", backgroundColor: "#daf0fd" }}>
-      <Grid2 container justifyContent={"space-around"} columnGap={2} rowGap={2}>
+    <Box >
+      <Grid2 container justifyContent={"space-around"} columnGap={3} rowGap={2}>
         <CustomGrid2
           sx={{
             backgroundImage: `url(${img1})`,

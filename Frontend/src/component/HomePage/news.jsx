@@ -104,7 +104,8 @@ export default function News() {
 							style={{
 								padding: "40px 80px",
                                 display: "flex",
-                                justifyContent: "space-between",
+                                justifyContent: "center",
+                                columnGap: "40px",
                                 alignItems: "center",
 
 							}}

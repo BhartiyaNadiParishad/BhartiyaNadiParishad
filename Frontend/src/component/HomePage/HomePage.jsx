@@ -3,7 +3,7 @@ import Founder from "./founder";
 import { Testimonials } from "./testimonial";
 import Programs from "./programs";
 import GetInvolved from "./getInvolved";
-import WorkImpact from "./workImpact";
+import WorkImpact from "../AboutUs/workImpact";
 import Footer from "../footer";
 import FrontDisplay from "./frontDisplay";
 import Video from "./video";

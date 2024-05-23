@@ -76,7 +76,7 @@ const menuData = [
       { label: "Documents", path: "/" },
       { label: "Newsletter", path: "/" },
       { label: "Publication", path: "/" },
-      { label: "Capacity Building Tools", path: "/" },
+      { label: "Learning", path: "/" },
       { label: "Success Stories", path: "/" },
     ],
   },
