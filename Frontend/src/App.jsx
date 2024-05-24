@@ -18,6 +18,7 @@ import OurValues from './component/ourValues';
 import Partners from './component/AboutUs/Partners';
 import MissionVision from './component/AboutUs/missionVision';
 import History from './component/AboutUs/history';
+import PdfDocument from './component/Resouces/Documents/document';
 
 
 const theme = createTheme({
@@ -49,6 +50,7 @@ function App() {
             <Route exact path="/partners" element={ <Partners /> } />
             <Route exact path="/mission" element={ <MissionVision /> } />
             <Route exact path="/history" element={ <History /> } />
+            <Route exact path="/document" element={ <PdfDocument /> } />
           </Routes>
         </Router>
       </ThemeProvider>

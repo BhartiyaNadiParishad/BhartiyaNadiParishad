@@ -73,7 +73,7 @@ const menuData = [
     buttonLabel: "Resources",
     menuItems: [
       { label: "Gallery", path: "/gallery" },
-      { label: "Documents", path: "/" },
+      { label: "Documents", path: "/document" },
       { label: "Newsletter", path: "/" },
       { label: "Publication", path: "/" },
       { label: "Learning", path: "/" },
