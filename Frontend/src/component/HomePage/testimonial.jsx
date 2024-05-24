@@ -141,7 +141,7 @@ export function Testimonials() {
           <div
             key={index}
             style={{
-              padding: "30px 80px",
+              padding: "30px",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
@@ -154,8 +154,8 @@ export function Testimonials() {
             <div>
               <Box
                 style={{
-                  height: "300px",
-                  width: "300px",
+                  height: "240px",
+                  width: "240px",
                   borderRadius: "50%",
                   backgroundSize: "cover",
                   backgroundPosition: "top",
@@ -168,7 +168,7 @@ export function Testimonials() {
                 color: "white",
                 maxWidth: {
                   xs: "100%",
-                  md: "900px",
+                  md: "calc(100% - 400px)",
                 },
               }}
             >

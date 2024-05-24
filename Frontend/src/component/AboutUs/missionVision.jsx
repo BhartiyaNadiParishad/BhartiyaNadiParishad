@@ -1,6 +1,7 @@
 import React from "react";
-import img from "../../assets/bg11.jpg";
-import { Box, Grid, Typography } from "@mui/material";
+import img from "../../assets/bg/bgI2.jpeg";
+import img2 from "../../assets/bg/bgI1.jpeg";
+import { Box, Grid, Paper, Typography } from "@mui/material";
 import MainLayout from "../Layout/mainLayout";
 import video from "../../assets/news.mp4";
 
@@ -46,7 +47,7 @@ export default function MissionVision() {
             backgroundImage: `url(${img})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            padding: "220px 10%",
+            padding: "240px 30px 30px 30px",
           }}
         >
           <Typography
@@ -54,16 +55,17 @@ export default function MissionVision() {
             fontWeight={"bold"}
             textAlign={"center"}
             color={"white"}
-            mb={5}
+            mb={6}
           >
             Mission, Vision & Values
           </Typography>
-          <Grid container spacing={4}>
+          <Grid container spacing={6}>
             <Grid item xs={12} md={6}>
               <Box
                 sx={{ backgroundColor: "#ffffffc2" }}
-                padding={5}
+                padding={4}
                 height={"100%"}
+                borderRadius={2}
               >
                 <Typography
                   variant="h5"
@@ -77,7 +79,7 @@ export default function MissionVision() {
                 <Typography
                   variant="h6"
                   textAlign={"justify"}
-                  fontSize={"16px"}
+                  fontSize={"18px"}
                 >
                   The main work of the BNP is to make the rivers of India clean
                   and uninterrupted by creating mutual coordination. It is the
@@ -94,25 +96,11 @@ export default function MissionVision() {
               </Box>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Box height={"100%"}>
-                <video
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                  }}
-                  controls
-                >
-                  <source src={video} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </Box>
-            </Grid>
-            <Grid item xs={12} md={6}>
               <Box
                 sx={{ backgroundColor: "#ffffffc2" }}
-                padding={5}
+                padding={4}
                 height={"100%"}
+                borderRadius={2}
               >
                 <Typography
                   variant="h5"
@@ -126,8 +114,7 @@ export default function MissionVision() {
                 <Typography
                   variant="h6"
                   textAlign={"justify"}
-                  fontSize={"16px"}
-
+                  fontSize={"18px"}
                 >
                   We want to create a river rich India. The main objective of
                   the BNP is to provide a successful and permanent solution to
@@ -141,27 +128,60 @@ export default function MissionVision() {
                   prosperous.
                 </Typography>
               </Box>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <Box height={"100%"}>
+              {/* <Box height={"100%"}>
                 <video
                   style={{
                     width: "100%",
                     height: "100%",
                     objectFit: "cover",
+                    borderRadius: "10px",
                   }}
                   controls
                 >
                   <source src={video} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
-              </Box>
+              </Box> */}
+            </Grid>
+            <Grid item xs={12} md={12}>
+              {/* <Box
+                sx={{ backgroundColor: "#ffffffc2" }}
+                padding={4}
+                height={"100%"}
+                borderRadius={2}
+              >
+                <Typography
+                  variant="h5"
+                  fontWeight={"bold"}
+                  gutterBottom
+                  textAlign={"center"}
+                  color={"#051a36"}
+                >
+                  Vision
+                </Typography>
+                <Typography
+                  variant="h6"
+                  textAlign={"justify"}
+                  fontSize={"18px"}
+                >
+                  We want to create a river rich India. The main objective of
+                  the BNP is to provide a successful and permanent solution to
+                  the pollution, encroachment, and water shortage that India's
+                  rivers have had to face in the last four to five decades due
+                  to man-made distortions and the impact of climate change. To
+                  make the rivers of India clean and uninterrupted, it has been
+                  decided to do every necessary work with cooperation through
+                  the BNP. The BNP is of the opinion that when the rivers of
+                  India are clean and healthy, the Indian society will also be
+                  prosperous.
+                </Typography>
+              </Box> */}
             </Grid>
           </Grid>
         </Box>
         <Box
           sx={{
-            padding: "40px 10% 80px 10%",
+            padding: "50px 40px 40px 40px",
           }}
         >
           <Typography
@@ -173,9 +193,10 @@ export default function MissionVision() {
           >
             Our Values
           </Typography>
+          {/* <Paper sx={{ padding: "30px", backgroundColor: "#ffffffc2" }}> */}
           <Typography
             variant="h6"
-            mb={2}
+            mb={4}
             fontSize={"18px"}
             textAlign={"justify"}
           >
@@ -186,43 +207,39 @@ export default function MissionVision() {
             fuel our relentless dedication to restoring and preserving our
             precious rivers.
           </Typography>
-          <Grid container spacing={4}>
+          <Grid container spacing={6}>
             {values.map((item, index) => (
-              <Grid item xs={12} md={4}>
+              <Grid item xs={12} md={4} key={index}>
                 <Box
                   height={"100%"}
+                  p={4}
                   sx={{
                     backgroundImage: `url(${img})`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                   }}
                 >
-                  <Box
-                    sx={{ backgroundColor: "#ffffffc2" }}
-                    height={"100%"}
-                    p={4}
+                  <Typography
+                    variant="h5"
+                    fontWeight={"bold"}
+                    gutterBottom
+                    textAlign={"center"}
+                    color={"#051a36"}
                   >
-                    <Typography
-                      variant="h5"
-                      fontWeight={"bold"}
-                      gutterBottom
-                      textAlign={"center"}
-                      color={"#051a36"}
-                    >
-                      {item.heading}
-                    </Typography>
-                    <Typography
-                      variant="h6"
-                      textAlign={"justify"}
-                      fontSize={"16px"}
-                    >
-                      {item.description}
-                    </Typography>
-                  </Box>
+                    {item.heading}
+                  </Typography>
+                  <Typography
+                    variant="h6"
+                    textAlign={"justify"}
+                    fontSize={"16px"}
+                  >
+                    {item.description}
+                  </Typography>
                 </Box>
               </Grid>
             ))}
           </Grid>
+          {/* </Paper> */}
         </Box>
       </MainLayout>
     </>

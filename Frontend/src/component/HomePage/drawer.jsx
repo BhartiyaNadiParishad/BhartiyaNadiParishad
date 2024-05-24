@@ -41,8 +41,9 @@ const menuData = [
     menuName: "about",
     buttonLabel: "About",
     menuItems: [
+      { label: "About BNP", path: "/about" },
       { label: "Mission, Vision and Values", path: "/mission" },
-      { label: "History and Success", path: "/history" },
+      // { label: "History and Success", path: "/history" },
       { label: "Meet the Team", path: "/team" },
       { label: "Partners & Supporters", path: "/partners" },
       { label: "Jobs", path: "/" },
