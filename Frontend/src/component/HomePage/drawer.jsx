@@ -24,7 +24,7 @@ import { useScrollTrigger } from "@mui/material";
 const drawerWidth = 300;
 const navItems = [
   "Home",
-  "Programmes",
+  // "Programmes",
   "About",
   "Nadi Darshan",
   "Get Involved",
@@ -34,20 +34,17 @@ const navItems = [
 
 const menuData = [
   {
-    menuName: "programmesMenu",
-    buttonLabel: "Programmes",
-  },
-  {
     menuName: "about",
     buttonLabel: "About",
     menuItems: [
-      { label: "About BNP", path: "/about" },
-      { label: "Mission, Vision and Values", path: "/mission" },
-      // { label: "History and Success", path: "/history" },
-      { label: "Meet the Team", path: "/team" },
-      { label: "Partners & Supporters", path: "/partners" },
-      { label: "Jobs", path: "/" },
-      { label: "Press Center", path: "/" },
+      { label: "About Us", path: "/about" },
+      { label: "Mission, Vision & Values", path: "/mission" },
+      { label: "Patron", path: "/history" },
+      { label: "Team", path: "/team" },
+      { label: "Our Program", path: "/programmesMenu" },
+      { label: "Advisors", path: "/" },
+      { label: "Technical Advisors", path: "/" },
+      { label: "State Heads", path: "/" },
     ],
   },
   {
