@@ -9,6 +9,7 @@ import FrontDisplay from "./frontDisplay";
 import Video from "./video";
 import Quote from "./quote";
 import News from "./news";
+import VerticalScroll from "../news/verticalScroll";
 
 export default function HomePage() {
   return (
