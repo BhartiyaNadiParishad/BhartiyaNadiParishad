@@ -28,8 +28,8 @@ const CustomGrid2 = styled(Grid2)({
 
 export default function WorkImpact() {
   return (
-    <Box >
-      <Grid2 container justifyContent={"space-around"} columnGap={3} rowGap={2}>
+    <Box>
+      <Grid2 container justifyContent={"space-around"} columnGap={8} rowGap={2}>
         <CustomGrid2
           sx={{
             backgroundImage: `url(${img1})`,
@@ -37,7 +37,7 @@ export default function WorkImpact() {
             backgroundPosition: "center",
           }}
         >
-          <img src={logo1} height={45} width={45} />
+          <img src={logo1} height={50} width={50} />
           <Typography variant="h5" sx={{ fontWeight: "bold", color: "white" }}>
             1250
           </Typography>

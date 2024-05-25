@@ -1,20 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import MainLayout from "./Layout/mainLayout";
-import {
-  Box,
-  Button,
-  CssBaseline,
-  IconButton,
-  Paper,
-  Typography,
-  hexToRgb,
-  styled,
-} from "@mui/material";
-import img from "../assets/bg11.jpg";
-import img1 from "../assets/draftImage.png";
+import { Box, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
-import bg from "../assets/partners.jpg";
-import bg1 from "../assets/riverDark.jpg";
+import bg from "../assets/bg/bgI4.jpeg";
 import video from "../assets/news.mp4";
 import WorkImpact from "./AboutUs/workImpact";
 import History from "./AboutUs/history";
@@ -51,14 +39,14 @@ export default function AboutBNP() {
           flexDirection={"column"}
           justifyContent={"flex-end"}
           rowGap={3}
-          height={"85vh"}
+          height={"70vh"}
           sx={{
             backgroundColor: "#f2f2f2",
             backgroundImage: `url(${bg})`,
             backgroundSize: "cover",
             backgroundPosition: "center top",
             color: "white",
-            padding: "80px 10% 80px 10%",
+            padding: "20px 10% 80px 10%",
           }}
         >
           <Typography
@@ -92,10 +80,11 @@ export default function AboutBNP() {
         </Box>
         <Grid
           container
-          spacing={3}
+          spacing={4}
           sx={{
-            padding: "80px",
-            // backgroundColor: "#f2f2f2",
+            padding: "10px 40px 40px 50px",
+            backgroundColor: "#f2f2f2",
+            marginBottom: "20px",
           }}
         >
           <Grid item xs={12} md={6}>
@@ -105,8 +94,10 @@ export default function AboutBNP() {
                 gutterBottom
                 fontWeight={"bold"}
                 color="#264e79"
+                mb={2}
+                textAlign={"center"}
               >
-                We believe...
+                Our believe
               </Typography>
               <Typography variant="h6" textAlign={"justify"}>
                 Rivers are the lifeline of the whole world, but rivers have
@@ -144,9 +135,6 @@ export default function AboutBNP() {
           sx={{
             padding: "60px 100px 60px 100px",
             backgroundColor: "#f2f2f2",
-            // backgroundImage: `url(${bg1})`,
-            // backgroundSize: "cover",
-            // backgroundPosition: "center top",
           }}
           justifyContent={"center"}
         >
@@ -194,7 +182,7 @@ export default function AboutBNP() {
           justifyContent={"center"}
           rowGap={3}
           sx={{
-            padding: "80px 10% 80px 10%",
+            padding: "30px",
           }}
         >
           <Typography
