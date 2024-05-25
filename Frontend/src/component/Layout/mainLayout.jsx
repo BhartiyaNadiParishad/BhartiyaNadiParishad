@@ -4,11 +4,29 @@ import { Box, Typography } from "@mui/material";
 import Footer from "../footer";
 import img from "../../assets/partners.jpg";
 
-export default function MainLayout({ children }) {
+export default function MainLayout({ children , title, bgImg, position}) {
 	return (
 		<Box>
 			{/* <Box sx={{ background: "linear-gradient(to bottom, #a9e0ff, #80aaf5)" }}> */}
 			<DrawerAppBar />
+      <Box
+					sx={{
+						backgroundImage: `url(${bgImg})`,
+						backgroundSize: "cover",
+						backgroundPosition: position !== null ? position : "center bottom" 
+					}}
+				>
+					<Box bgcolor={"#00000059"} padding={"18% 40px 5% 40px"}>
+						<Typography
+							variant="h4"
+							fontWeight={"bold"}
+							textAlign={"center"}
+							color={"white"}
+						>
+							{title}
+						</Typography>
+					</Box>
+				</Box>
 			<Box>{children}</Box>
 			{/* <Box
         display="flex"
