@@ -19,6 +19,7 @@ import Partners from './component/AboutUs/Partners';
 import MissionVision from './component/AboutUs/missionVision';
 import History from './component/AboutUs/history';
 import PdfDocument from './component/Resouces/Documents/document';
+import NadiPortal from './component/Nadi Darshan/nadiPortal';
 
 
 const theme = createTheme({
@@ -51,6 +52,7 @@ function App() {
             <Route exact path="/mission" element={ <MissionVision /> } />
             <Route exact path="/history" element={ <History /> } />
             <Route exact path="/document" element={ <PdfDocument /> } />
+            <Route exact path="/nadiDarshanMenu" element={ <NadiPortal /> } />
           </Routes>
         </Router>
       </ThemeProvider>

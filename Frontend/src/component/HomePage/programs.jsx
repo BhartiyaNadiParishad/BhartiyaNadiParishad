@@ -36,7 +36,8 @@ const data = [
 
 export default function Programs() {
   return (
-    <Box padding={"30px 30px"} backgroundColor={"#daf0fd"}>
+    <Box padding={"30px 30px"} >
+{/* backgroundColor={"#daf0fd"} */}
       <Typography
         variant="h4"
         style={{
@@ -55,7 +56,7 @@ export default function Programs() {
               <Box
                 sx={{
                   padding: "30px",
-                  boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)",
+                  boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
                   color: "white",
                   backgroundColor: "rgb(29 78 110)",
                   height: "100%",
@@ -82,7 +83,8 @@ export default function Programs() {
                     sx={{
                       fontSize: "22px",
                       fontWeight: "bold",
-                      color: "#fe9e3d",
+                      // color: "#fe9e3d",
+                      color: "#f49b0e"
                     }}
                   >
                     {item.awardTitle}

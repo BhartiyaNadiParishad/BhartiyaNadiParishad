@@ -33,7 +33,7 @@ const ProfilePicUpload = ({ onFileSelect }) => {
 				border: "2px dashed #ccc",
 				borderRadius: "8px",
 				textAlign: "center",
-				backgroundColor: "#fafafa",
+				// backgroundColor: "#fafafa",
 				"&:hover": {
 					backgroundColor: "#f1f1f1",
 				},

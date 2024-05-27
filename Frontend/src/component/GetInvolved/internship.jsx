@@ -79,13 +79,7 @@ export default function Internship() {
 						))}
 					</List>
 				</Box>
-				<Box
-					sx={{
-						backgroundImage: `url(${img})`,
-						backgroundSize: "cover",
-						backgroundPosition: "center top",
-					}}
-				>
+				<Box>
 					<IForm service={"Intenship"} />
 				</Box>
 				<Box

@@ -18,7 +18,7 @@ export default function NewsVideo({ video}) {
 				boxShadow={"0px 4px 6px rgba(0, 0, 0, 0.1)"}
 				mb={2}
 				onMouseLeave={handleMouseLeave}
-                width={"70%"}
+                width={"100%"}
                 height={300}
 			>
 				<ReactPlayer

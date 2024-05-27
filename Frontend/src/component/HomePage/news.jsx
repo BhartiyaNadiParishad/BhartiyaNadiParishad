@@ -35,9 +35,9 @@ const videos = [
 export default function news() {
 	return (
 		<>
-			<Grid container sx={{ backgroundColor: "#fff" }} spacing={5} p={5}>
+			<Grid container sx={{ backgroundColor: "#fff" }} spacing={5} px={8} pt={0} pb={5} justifyContent={"space-between"}>
 				<Grid item xs={12} md={3}>
-					<Box display={"flex"} flexDirection={"column"} rowGap={3}>
+					<Box display={"flex"} flexDirection={"column"} rowGap={3} >
 						<Typography variant="h5" fontWeight={"bold"} color={"#3b70b1"}>
 							News & Highlights
 						</Typography>
@@ -55,6 +55,8 @@ export default function news() {
 									height={80}
                                     display={"flex"}
                                     columnGap={2}
+									width={"100%"}
+
 								>
                                 <PlayArrowIcon fontSize="8px" style={{ color: '#3b70b1' }}/>
 									<Typography>{news}</Typography>
@@ -91,7 +93,7 @@ export default function news() {
 						</VerticalScroll>
 					</Box>
 				</Grid>
-				<Grid item xs={12} md={6}>
+				<Grid item xs={12} md={4.5}>
 					<Box
 						display={"flex"}
 						flexDirection={"column"}

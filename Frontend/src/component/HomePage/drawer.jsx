@@ -51,7 +51,7 @@ const menuData = [
     menuName: "nadiDarshanMenu",
     buttonLabel: "Nadi Darshan",
     menuItems: [
-      { label: "Portal", path: "/" },
+      { label: "Portal", path: "/nadiDarshanMenu" },
       { label: "River Basin Maps", path: "/" },
       { label: "River Gallery", path: "/" },
       { label: "Factsheet", path: "/" },

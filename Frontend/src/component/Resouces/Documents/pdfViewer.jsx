@@ -17,121 +17,133 @@ import RRM_ENG from "../../../assets/Documents/RRM_ENG.pdf";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 const PDFPreview = () => {
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
+	const [numPages, setNumPages] = useState(null);
+	const [pageNumber, setPageNumber] = useState(1);
 
-  const onDocumentLoadSuccess = ({ numPages }) => {
-    setNumPages(numPages);
-  };
+	const onDocumentLoadSuccess = ({ numPages }) => {
+		setNumPages(numPages);
+	};
 
-  return (
-    <>
-      <Box sx={{ display: "flex" }}>
-        <div className="pdf-preview">
-          <Document
-            file={RRM_hindi_final}
-            onLoadSuccess={onDocumentLoadSuccess}
-            className="h-[400px] w-full overflow-auto"
-          >
-            {[...Array(numPages).keys()].map((p) => (
-              <Page pageNumber={p + 1} key={p} />
-            ))}
-          </Document>
-          <a href={RRM_hindi_final} download className="download-link">
-            Download PDF
-          </a>
-        </div>
-        <div className="pdf-preview">
-          <Worker
-            workerUrl={`https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`}
-          >
-            <Document
-              file={RRM_ENG}
-              onLoadSuccess={onDocumentLoadSuccess}
-              className="h-[400px] w-full overflow-auto"
-            >
-              {[...Array(numPages).keys()].map((p) => (
-                <Page pageNumber={p + 1} key={p} />
-              ))}
-            </Document>
-          </Worker>
-          <a href={RRM_ENG} download className="download-link">
-            Download PDF
-          </a>
-        </div>
-        <div className="pdf-preview">
-          <Worker
-            workerUrl={`https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`}
-          >
-            <Document
-              file={NEEM_RIVER_FLYER24}
-              onLoadSuccess={onDocumentLoadSuccess}
-              className="h-[400px] w-full overflow-auto"
-            >
-              {[...Array(numPages).keys()].map((p) => (
-                <Page pageNumber={p + 1} key={p} />
-              ))}
-            </Document>
-          </Worker>
-          <a href={NEEM_RIVER_FLYER24} download className="download-link">
-            Download PDF
-          </a>
-        </div>
-      </Box>
-      <Box sx={{ display: "flex" }}>
-        <div className="pdf-preview">
-          <Document
-            file={pond_rev_ENG}
-            onLoadSuccess={onDocumentLoadSuccess}
-            className="h-[400px] w-full overflow-auto"
-          >
-            {[...Array(numPages).keys()].map((p) => (
-              <Page pageNumber={p + 1} key={p} />
-            ))}
-          </Document>
-          <a href={pond_rev_ENG} download className="download-link">
-            Download PDF
-          </a>
-        </div>
-        <div className="pdf-preview">
-          <Worker
-            workerUrl={`https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`}
-          >
-            <Document
-              file={pond_rev_HINDI}
-              onLoadSuccess={onDocumentLoadSuccess}
-              className="h-[400px] w-full overflow-auto"
-            >
-              {[...Array(numPages).keys()].map((p) => (
-                <Page pageNumber={p + 1} key={p} />
-              ))}
-            </Document>
-          </Worker>
-          <a href={pond_rev_HINDI} download className="download-link">
-            Download PDF
-          </a>
-        </div>
-        <div className="pdf-preview">
-          <Worker
-            workerUrl={`https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`}
-          >
-            <Document
-              file={GANGA_RIVER_FLYER}
-              onLoadSuccess={onDocumentLoadSuccess}
-              className="h-[400px] w-full overflow-auto"
-            >
-              {[...Array(numPages).keys()].map((p) => (
-                <Page pageNumber={p + 1} key={p} />
-              ))}
-            </Document>
-          </Worker>
-          <a href={GANGA_RIVER_FLYER} download className="download-link">
-            Download PDF
-          </a>
-        </div>
-      </Box>
-    </>
-  );
+	return (
+		<>
+			<Box sx={{ display: "flex" }}>
+				<div className="pdf-preview">
+					<Document
+						file={RRM_hindi_final}
+						onLoadSuccess={onDocumentLoadSuccess}
+						className="h-[400px] w-full overflow-auto"
+					>
+						{[...Array(numPages).keys()].map((p) => (
+							<Page pageNumber={p + 1} key={p} />
+						))}
+					</Document>
+					<a
+						href={RRM_hindi_final}
+						download
+						className="download-link"
+					>
+						Download PDF
+					</a>
+				</div>
+				<div className="pdf-preview">
+					<Worker
+						workerUrl={`https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`}
+					>
+						<Document
+							file={RRM_ENG}
+							onLoadSuccess={onDocumentLoadSuccess}
+							className="h-[400px] w-full overflow-auto"
+						>
+							{[...Array(numPages).keys()].map((p) => (
+								<Page pageNumber={p + 1} key={p} />
+							))}
+						</Document>
+					</Worker>
+					<a href={RRM_ENG} download className="download-link">
+						Download PDF
+					</a>
+				</div>
+				<div className="pdf-preview">
+					<Worker
+						workerUrl={`https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`}
+					>
+						<Document
+							file={NEEM_RIVER_FLYER24}
+							onLoadSuccess={onDocumentLoadSuccess}
+							className="h-[400px] w-full overflow-auto"
+						>
+							{[...Array(numPages).keys()].map((p) => (
+								<Page pageNumber={p + 1} key={p} />
+							))}
+						</Document>
+					</Worker>
+					<a
+						href={NEEM_RIVER_FLYER24}
+						download
+						className="download-link"
+					>
+						Download PDF
+					</a>
+				</div>
+			</Box>
+			<Box sx={{ display: "flex" }}>
+				<div className="pdf-preview">
+					<Document
+						file={pond_rev_ENG}
+						onLoadSuccess={onDocumentLoadSuccess}
+						className="h-[400px] w-full overflow-auto"
+					>
+						{[...Array(numPages).keys()].map((p) => (
+							<Page pageNumber={p + 1} key={p} />
+						))}
+					</Document>
+					<a href={pond_rev_ENG} download className="download-link">
+						Download PDF
+					</a>
+				</div>
+				<div className="pdf-preview">
+					<Worker
+						workerUrl={`https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`}
+					>
+						<Document
+							file={pond_rev_HINDI}
+							onLoadSuccess={onDocumentLoadSuccess}
+							className="h-[400px] w-full overflow-auto"
+						>
+							{[...Array(numPages).keys()].map((p) => (
+								<Page pageNumber={p + 1} key={p} />
+							))}
+						</Document>
+					</Worker>
+					<a href={pond_rev_HINDI} download className="download-link">
+						Download PDF
+					</a>
+				</div>
+				<div className="pdf-preview">
+					<Worker
+						workerUrl={`https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`}
+					>
+						<Document
+							file={GANGA_RIVER_FLYER}
+							onLoadSuccess={onDocumentLoadSuccess}
+							className="h-[400px] w-full overflow-auto"
+						>
+							{[...Array(numPages).keys()].map((p) => (
+								<Page pageNumber={p + 1} key={p} />
+							))}
+						</Document>
+					</Worker>
+					<a
+						href={GANGA_RIVER_FLYER}
+						download
+						className="download-link"
+					>
+						Download PDF
+					</a>
+				</div>
+			</Box>
+		</>
+	);
 };
 
 export default PDFPreview;

@@ -7,6 +7,7 @@ export default function FrontDisplay() {
     <Box
       px={4}
       style={{
+        // backgroundColor: "#00000082",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -25,7 +26,7 @@ export default function FrontDisplay() {
         style={{
           position: "absolute",
           width: "100%",
-          height: "100%",
+          height: "95vh",
           overflow: "hidden",
           objectFit: "cover", // Similar to background-size: cover
           zIndex: "-1", // Ensure the video is behind the content

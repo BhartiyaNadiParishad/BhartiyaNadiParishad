@@ -116,13 +116,7 @@ export default function Membership() {
 						CCSU Campus, Meerut (UP)
 					</Typography>
 				</Box>
-				<Box
-					sx={{
-						backgroundImage: `url(${img})`,
-						backgroundSize: "cover",
-						backgroundPosition: "center top",
-					}}
-				>
+				<Box>
 					<IForm service={"Membership"} />
 				</Box>
 				<Box
