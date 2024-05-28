@@ -10,7 +10,6 @@ import Membership from './component/GetInvolved/membership';
 import Volunteer from './component/GetInvolved/volunteer';
 import Contact from './component/contactUs/contact';
 import Testing from './component/testing';
-import Team from './component/Team/teamPage';
 import AboutBNP from './component/about';
 import Gallery from './component/gallery';
 import ProgramPage from './component/ourProgramPage';
@@ -20,6 +19,11 @@ import MissionVision from './component/AboutUs/missionVision';
 import History from './component/AboutUs/history';
 import PdfDocument from './component/Resouces/Documents/document';
 import NadiPortal from './component/Nadi Darshan/nadiPortal';
+import CoreTeam from './component/Team/coreTeam';
+import Advisors from './component/Team/advisors';
+import TechAdvisors from './component/Team/techAdvisors';
+import RiverVideo from './component/Nadi Darshan/riverVideo';
+import SuccessStories from './component/Nadi Darshan/sucsess-stories';
 
 
 const theme = createTheme({
@@ -43,7 +47,7 @@ function App() {
             <Route exact path="/volunteer" element={ <Volunteer />} />
             <Route exact path="/contactMenu" element={ <Contact /> } />
             <Route exact path="/testing" element={ <Testing /> } />
-            <Route exact path="/team" element={ <Team /> } />
+            {/* <Route exact path="/team" element={ <Team /> } /> */}
             <Route exact path="/about" element={ <AboutBNP /> } />
             <Route exact path="/gallery" element={ <Gallery />} />
             <Route exact path="/programmesMenu" element={ <ProgramPage /> } />
@@ -53,6 +57,11 @@ function App() {
             <Route exact path="/history" element={ <History /> } />
             <Route exact path="/document" element={ <PdfDocument /> } />
             <Route exact path="/nadiDarshanMenu" element={ <NadiPortal /> } />
+            <Route exact path="/coreteam" element={ <CoreTeam /> } />
+            <Route exact path="/advisors" element={ <Advisors /> } />
+            <Route exact path="/technicaladvisor" element={ <TechAdvisors /> } />
+            <Route exact path="/rivervideo" element={ <RiverVideo /> } />
+            <Route exact path="/success-stories" element={ <SuccessStories /> } />
           </Routes>
         </Router>
       </ThemeProvider>

@@ -16,7 +16,7 @@ import img from "../../assets/bg/bgI1.jpeg";
 export default function TeamList({ title, data }) {
   return (
     <Box>
-      <Typography
+      {/* <Typography
         variant="h4"
         fontWeight={"bold"}
         textAlign={"center"}
@@ -24,7 +24,7 @@ export default function TeamList({ title, data }) {
         m={5}
       >
         {title}
-      </Typography>
+      </Typography> */}
       <Grid2 container rowSpacing={4} columnSpacing={4}>
         {data.map((item, index) => (
           <Grid2 key={index} md={12 / 5} sm={4} xs={12}>

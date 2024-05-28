@@ -2,7 +2,7 @@ import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import VerticalScroll from "../news/verticalScroll";
 import NewsVideo from "./newsVideo";
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 // import { Carousel } from "@material-tailwind/react";
 // import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 // import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
@@ -35,10 +35,22 @@ const videos = [
 export default function news() {
 	return (
 		<>
-			<Grid container sx={{ backgroundColor: "#fff" }} spacing={5} px={8} pt={0} pb={5} justifyContent={"space-between"}>
+			<Grid
+				container
+				sx={{ backgroundColor: "#fff" }}
+				spacing={5}
+				px={8}
+				pt={0}
+				pb={5}
+				justifyContent={"space-between"}
+			>
 				<Grid item xs={12} md={3}>
-					<Box display={"flex"} flexDirection={"column"} rowGap={3} >
-						<Typography variant="h5" fontWeight={"bold"} color={"#3b70b1"}>
+					<Box display={"flex"} flexDirection={"column"} rowGap={3}>
+						<Typography
+							variant="h5"
+							fontWeight={"bold"}
+							color={"#3b70b1"}
+						>
 							News & Highlights
 						</Typography>
 						<VerticalScroll
@@ -53,12 +65,14 @@ export default function news() {
 									borderBottom={"0.5px solid #3b70b1"}
 									py={2}
 									height={80}
-                                    display={"flex"}
-                                    columnGap={2}
+									display={"flex"}
+									columnGap={2}
 									width={"100%"}
-
 								>
-                                <PlayArrowIcon fontSize="8px" style={{ color: '#3b70b1' }}/>
+									<PlayArrowIcon
+										fontSize="8px"
+										style={{ color: "#3b70b1" }}
+									/>
 									<Typography>{news}</Typography>
 								</Box>
 							))}
@@ -66,8 +80,12 @@ export default function news() {
 					</Box>
 				</Grid>
 				<Grid item xs={12} md={3}>
-					<Box display={"flex"} flexDirection={"column"} rowGap={3} >
-						<Typography variant="h5" fontWeight={"bold"} color={"#3b70b1"}>
+					<Box display={"flex"} flexDirection={"column"} rowGap={3}>
+						<Typography
+							variant="h5"
+							fontWeight={"bold"}
+							color={"#3b70b1"}
+						>
 							Success Stories
 						</Typography>
 						<VerticalScroll
@@ -82,11 +100,14 @@ export default function news() {
 									borderBottom={"0.5px solid #3b70b1"}
 									py={2}
 									height={85}
-                                    display={"flex"}
-                                    columnGap={2}
-                                    width={"100%"}
+									display={"flex"}
+									columnGap={2}
+									width={"100%"}
 								>
-									<PlayArrowIcon fontSize="8px" style={{ color: '#3b70b1' }}/>
+									<PlayArrowIcon
+										fontSize="8px"
+										style={{ color: "#3b70b1" }}
+									/>
 									<Typography>{news}</Typography>
 								</Box>
 							))}
@@ -101,7 +122,11 @@ export default function news() {
 						justifyContent={"center"}
 						rowGap={2}
 					>
-						<Typography variant="h5" fontWeight={"bold"} color={"#3b70b1"}>
+						<Typography
+							variant="h5"
+							fontWeight={"bold"}
+							color={"#3b70b1"}
+						>
 							Featured Videos
 						</Typography>
 						<VerticalScroll
@@ -111,7 +136,7 @@ export default function news() {
 							totalItems={2}
 						>
 							{videos.map((video, index) => (
-								<NewsVideo key={index} video={video} />
+									<NewsVideo key={index} video={video} />
 							))}
 						</VerticalScroll>
 					</Box>
