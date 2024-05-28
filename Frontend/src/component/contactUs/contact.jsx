@@ -5,12 +5,14 @@ import Faqs from "./faq";
 import "../../index.css";
 import img from "../../assets/bg21.jpg";
 import FeebackForm from "./feebackForm";
+import bgImg from "../../assets/bg/bgl-9.jpeg";
 export default function Contact() {
 	return (
-		<MainLayout>
+		<MainLayout title={"Contact us"} bgImg={bgImg} position={"center"}>
 			<Box
+				mt={4}
 				sx={{
-					padding: "220px 40px 50px 40px",
+					padding: "50px 40px",
 					overflow: "hidden",
 					backgroundImage: `url(${img})`,
 					backgroundSize: "cover",
@@ -27,8 +29,14 @@ export default function Contact() {
 					Contact Us
 				</Typography> */}
 				<Grid container spacing={3}>
-					<Grid item xs={12} md={4}>
-						<Paper elevation={3} sx={{ height: "100%", backgroundColor: "#ffffffb7" }}>
+					<Grid item xs={12} md={6}>
+						<Paper
+							elevation={3}
+							sx={{
+								height: "100%",
+								backgroundColor: "#ffffffb7",
+							}}
+						>
 							<Box
 								border={"1px solid white"}
 								height={"100%"}
@@ -58,12 +66,20 @@ export default function Contact() {
 							</Box>
 						</Paper>
 					</Grid>
-					<Grid item xs={12} md={8}>
-						<Paper width={"100%"} height={"100%"} overflow={"hidden"} sx={{border: "1px solid white", borderRadius: "0"}}>
+					<Grid item xs={12} md={6}>
+						<Paper
+							width={"100%"}
+							height={"100%"}
+							overflow={"hidden"}
+							sx={{
+								border: "1px solid white",
+								borderRadius: "0",
+							}}
+						>
 							<iframe
 								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111679.9824696052!2d77.61655834975961!3d28.987387246495427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c64f457b66325%3A0x42faa83387a6be5e!2sMeerut%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1716162748445!5m2!1sen!2sin"
 								width="100%"
-								height="300"
+								height="350px"
 								// style="border:0;"
 								allowFullscreen=""
 								loading="lazy"
@@ -73,7 +89,17 @@ export default function Contact() {
 					</Grid>
 				</Grid>
 			</Box>
-			<Box padding={"50px "} display={"flex"} justifyContent={"center"}>
+			<Box
+				padding={"50px "}
+				display={"flex"}
+				justifyContent={"center"}
+				sx={{
+					backgroundColor: "#f2f2f2",
+					// opacity: 0.1,
+				// 	backgroundImage:
+				// 		"repeating-radial-gradient( circle at 0 0, transparent 0, #ffffff 40px ), repeating-linear-gradient( #005b9055, #005b90 )",
+				}}
+			>
 				<FeebackForm />
 			</Box>
 		</MainLayout>

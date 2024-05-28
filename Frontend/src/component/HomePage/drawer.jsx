@@ -41,6 +41,15 @@ const menuData = [
       { label: "Mission, Vision & Values", path: "/mission" },
       { label: "Patron", path: "/history" },
       { label: "Our Program", path: "/programmesMenu" },
+      { label: "About Logo", path: "/about-logo" },
+    ],
+  },
+  {
+    menuName: "Team",
+    buttonLabel: "Our Team",
+    menuItems: [
+      { label: "Patron", path: "/history" },
+      { label: "Blessings", path: "/" },
       { label: "Core Team", path: "/coreteam" },
       { label: "Advisors", path: "/advisors" },
       { label: "Technical Advisors", path: "/technicaladvisor" },
@@ -53,7 +62,7 @@ const menuData = [
     menuItems: [
       { label: "Portal", path: "/nadiDarshanMenu" },
       { label: "River Basin Maps", path: "/" },
-      { label: "River Gallery", path: "/" },
+      { label: "River Gallery", path: "/river-gallery" },
       { label: "River Video", path: "/rivervideo" },
       { label: "Factsheet", path: "/" },
     ],
@@ -73,9 +82,9 @@ const menuData = [
     menuItems: [
       { label: "Gallery", path: "/gallery" },
       { label: "Documents", path: "/document" },
-      { label: "Newsletter", path: "/" },
-      { label: "Publication", path: "/" },
-      { label: "Learning", path: "/" },
+      { label: "Newsletter", path: "/newsletter" },
+      { label: "Publication", path: "/publication" },
+      { label: "Learning", path: "/learning" },
       { label: "Success Stories", path: "/success-stories" },
     ],
   },
@@ -84,7 +93,7 @@ const menuData = [
     buttonLabel: "Contact",
     menuItems: [
       { label: "Contact Us", path: "/contactMenu" },
-      { label: "FAQ's", path: "/contactMenu" },
+      { label: "FAQ's", path: "/faqs" },
     ],
   },
 ];

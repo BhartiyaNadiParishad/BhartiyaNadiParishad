@@ -24,6 +24,12 @@ import Advisors from './component/Team/advisors';
 import TechAdvisors from './component/Team/techAdvisors';
 import RiverVideo from './component/Nadi Darshan/riverVideo';
 import SuccessStories from './component/Nadi Darshan/sucsess-stories';
+import AboutLogo from './component/AboutUs/aboutLogo';
+import Newsletter from './component/Resouces/Newsletter';
+import Publication from './component/Resouces/Publication';
+import Learning from './component/Resouces/learning';
+import RiverGallery from './component/Nadi Darshan/riverGallery';
+import Faqs from './component/contactUs/faq';
 
 
 const theme = createTheme({
@@ -62,6 +68,12 @@ function App() {
             <Route exact path="/technicaladvisor" element={ <TechAdvisors /> } />
             <Route exact path="/rivervideo" element={ <RiverVideo /> } />
             <Route exact path="/success-stories" element={ <SuccessStories /> } />
+            <Route exact path="/about-logo" element={ <AboutLogo /> } />
+            <Route exact path="/newsletter" element={ <Newsletter /> } />
+            <Route exact path="/publication" element={ <Publication /> } />
+            <Route exact path="/learning" element={ <Learning /> } />
+            <Route exact path="/river-gallery" element={ <RiverGallery /> } />
+            <Route exact path="/faqs" element={ <Faqs /> } />
           </Routes>
         </Router>
       </ThemeProvider>

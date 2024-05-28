@@ -3,8 +3,8 @@ import { Box, Grid } from "@mui/material";
 export default function Video() {
 	return (
 		<>
-			<Grid container spacing={5} p={5} justifyContent={"center"}>
-				<Grid item xs={12} md={5}>
+			<Grid container spacing={5} p={5} justifyContent={"center"} sx={{backgroundColor: "#f2f2f2"}} >
+				<Grid item xs={12} md={6}>
 					<Box
 						p={2}
 						border={"0.5px solid white"}
@@ -20,7 +20,7 @@ export default function Video() {
 						</video>
 					</Box>
 				</Grid>
-				<Grid item xs={12} md={5}>
+				<Grid item xs={12} md={6}>
 					<Box
 						p={2}
 						border={"0.5px solid white"}

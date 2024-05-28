@@ -19,9 +19,9 @@ export default function HomePage() {
       <Quote />
       <Founder />
       <Video />
-      <News />
       <Testimonials />
       <Programs />
+      <News />
       <GetInvolved />
       {/* <WorkImpact /> */}
       <Footer />

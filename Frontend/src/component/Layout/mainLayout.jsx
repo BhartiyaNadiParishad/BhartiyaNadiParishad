@@ -19,7 +19,7 @@ export default function MainLayout({ children, title, bgImg, position }) {
 								position !== null ? position : "center bottom",
 						}}
 					>
-						<Box bgcolor={"#00000059"} padding={"18% 40px 5% 40px"}>
+						<Box bgcolor={"#000000ad"} padding={"18% 40px 5% 40px"}>
 							<Typography
 								variant="h4"
 								fontWeight={"bold"}

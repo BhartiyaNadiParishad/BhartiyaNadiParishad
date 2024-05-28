@@ -94,7 +94,7 @@ export default function FeebackForm() {
 						</Grid>
 						<Grid item xs={12} md={4}>
 							<TextField
-								sx={{ width: "100%" }}
+								sx={{ width: "100%" , backgroundColor: "white"}}
 								required
 								id="firstName"
 								label="First Name"
@@ -104,7 +104,7 @@ export default function FeebackForm() {
 						</Grid>
 						<Grid item xs={12} md={4}>
 							<TextField
-								sx={{ width: "100%" }}
+								sx={{ width: "100%" , backgroundColor: "white"}}
 								required
 								id="lastName"
 								label="Last Name"
@@ -116,6 +116,7 @@ export default function FeebackForm() {
 							<TextField
 								sx={{
 									width: "100%",
+									backgroundColor: "white",
 									height: "100%",
 									"& .MuiInputBase-root": {
 										height: "100%",
@@ -319,7 +320,7 @@ export default function FeebackForm() {
 						</Grid>
 						<Grid item xs={12}>
 							<TextField
-								sx={{ width: "100%" }}
+								sx={{ width: "100%" , backgroundColor: "white"}}
 								required
 								id="address"
 								label="Address"
@@ -329,7 +330,7 @@ export default function FeebackForm() {
 						</Grid>
 						<Grid item xs={12}>
 							<TextField
-								sx={{ width: "100%" }}
+								sx={{ width: "100%" , backgroundColor: "white"}}
 								id="query"
 								label="Please tell us about your Feedback/query"
 								multiline
