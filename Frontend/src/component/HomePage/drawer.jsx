@@ -24,7 +24,6 @@ import { useScrollTrigger } from "@mui/material";
 const drawerWidth = 300;
 const navItems = [
   "Home",
-  // "Programmes",
   "About",
   "Nadi Darshan",
   "Get Involved",
@@ -83,7 +82,7 @@ const menuData = [
     menuName: "resourcesMenu",
     buttonLabel: "Resources",
     menuItems: [
-      { label: "Gallery", path: "/gallery" },
+      { label: "Success Stories", path: "/success-stories" },
       { label: "Documents", path: "/document" },
       { label: "Newsletter", path: "/newsletter" },
       { label: "Publication", path: "/publication" },
