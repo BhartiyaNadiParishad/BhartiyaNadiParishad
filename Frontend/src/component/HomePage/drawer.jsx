@@ -24,7 +24,6 @@ import { useScrollTrigger } from "@mui/material";
 const drawerWidth = 300;
 const navItems = [
   "Home",
-  // "Programmes",
   "About",
   "Nadi Darshan",
   "Get Involved",
@@ -39,7 +38,6 @@ const menuData = [
     menuItems: [
       { label: "About Us", path: "/about" },
       { label: "Mission, Vision & Values", path: "/mission" },
-      { label: "Patron", path: "/history" },
       { label: "Our Program", path: "/programmesMenu" },
       { label: "About Logo", path: "/about-logo" },
     ],
@@ -71,16 +69,18 @@ const menuData = [
     menuName: "getInvolvedMenu",
     buttonLabel: "Get Involved",
     menuItems: [
+      { label: "Partner & Supporters", path: "/partners" },
       { label: "Become a member", path: "/membership" },
       { label: "Internship", path: "/internship" },
       { label: "Become a Volunteer", path: "/volunteer" },
+      { label: "Carrier", path: "/carrier" },
     ],
   },
   {
     menuName: "resourcesMenu",
     buttonLabel: "Resources",
     menuItems: [
-      { label: "Gallery", path: "/gallery" },
+      { label: "Success Stories", path: "/success-stories" },
       { label: "Documents", path: "/document" },
       { label: "Newsletter", path: "/newsletter" },
       { label: "Publication", path: "/publication" },
