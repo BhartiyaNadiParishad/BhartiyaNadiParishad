@@ -5,6 +5,9 @@ import Icon3 from "../../assets/Icons/3.png";
 import Icon4 from "../../assets/Icons/4.png";
 import Icon5 from "../../assets/Icons/5.png";
 import Icon6 from "../../assets/Icons/6.png";
+import Icon7 from "../../assets/Icons/partners.png";
+import Icon8 from "../../assets/Icons/8.png";
+import Icon9 from "../../assets/Icons/9.png";
 import { Link } from "react-router-dom";
 
 const data = [
@@ -32,6 +35,18 @@ const data = [
     awardTitle: "Nadi Shoudh Yatra",
     img: Icon6,
   },
+  {
+    awardTitle: "Field Actions",
+    img: Icon7,
+  },
+  {
+    awardTitle: "Research & Development",
+    img: Icon8,
+  },
+  {
+    awardTitle: "Community Engagement",
+    img: Icon9,
+  },
 ];
 
 export default function Programs() {
@@ -49,7 +64,7 @@ export default function Programs() {
       >
         Our Programs
       </Typography>
-      <Grid container spacing={3}>
+      <Grid container spacing={3} p={2}>
         {data.map((item, index) => (
           <Grid item md={4} xs={12} key={index}>
             <Link to={"/programmesMenu"} key={index}>
@@ -85,6 +100,7 @@ export default function Programs() {
                       fontWeight: "bold",
                       // color: "#fe9e3d",
                       color: "#f49b0e"
+                      // color: "rgb(255, 197, 0)",
                     }}
                   >
                     {item.awardTitle}

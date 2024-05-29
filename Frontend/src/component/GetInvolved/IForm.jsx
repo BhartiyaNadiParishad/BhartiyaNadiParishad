@@ -154,17 +154,17 @@ function IForm(props) {
 	}
 
 	return (
-		<Box py={4} display={"flex"} justifyContent={"center"}>
+		<Box display={"flex"} justifyContent={"center"}>
 			<Box width={{ xs: "100%", md: "60%" }}>
-				{/* <Typography
+				<Typography
 					variant="h4"
 					fontWeight={"bold"}
-					mb={4}
+					mb={5}
+					color="#264e79"
 					textAlign={"center"}
-					color={"white"}
 				>
 					{props.service} Form
-				</Typography> */}
+				</Typography>
 				<form onSubmit={handleSubmit}>
 					<Grid container spacing={3}>
 						<Grid item xs={12} md={4}>
@@ -173,6 +173,7 @@ function IForm(props) {
 									minWidth: "120px",
 									width: "100%",
 									borderRadius: "4px",
+									backgroundColor: "white",
 								}}
 							>
 								<InputLabel id="title-label">Title</InputLabel>
@@ -196,7 +197,7 @@ function IForm(props) {
 						</Grid>
 						<Grid item xs={12} md={4}>
 							<TextField
-								sx={{ width: "100%" }}
+								sx={{ width: "100%", backgroundColor: "white" }}
 								required
 								id="firstName"
 								label="First Name"
@@ -206,7 +207,7 @@ function IForm(props) {
 						</Grid>
 						<Grid item xs={12} md={4}>
 							<TextField
-								sx={{ width: "100%" }}
+								sx={{ width: "100%", backgroundColor: "white" }}
 								required
 								id="lastName"
 								label="Last Name"
@@ -216,7 +217,7 @@ function IForm(props) {
 						</Grid>
 						<Grid item xs={12} md={4}>
 							<TextField
-								sx={{ width: "100%" }}
+								sx={{ width: "100%", backgroundColor: "white" }}
 								id="designation"
 								label="Designation"
 								value={formData.designation}
@@ -225,7 +226,7 @@ function IForm(props) {
 						</Grid>
 						<Grid item xs={12} md={8}>
 							<TextField
-								sx={{ width: "100%" }}
+								sx={{ width: "100%", backgroundColor: "white" }}
 								id="organization"
 								label="Organization"
 								value={formData.organization}
@@ -237,6 +238,7 @@ function IForm(props) {
 								sx={{
 									width: "100%",
 									height: "100%",
+									backgroundColor: "white",
 									"& .MuiInputBase-root": {
 										height: "100%",
 									},
@@ -251,6 +253,7 @@ function IForm(props) {
 
 						<Grid item xs={12} md={6}>
 							<PhoneInput
+								sx={{backgroundColor: "white"}}
 								inputProps={{
 									name: "phone",
 									required: true,
@@ -272,6 +275,7 @@ function IForm(props) {
 									minWidth: "120px",
 									width: "100%",
 									borderRadius: "4px",
+									backgroundColor: "white",
 								}}
 							>
 								<InputLabel id="country-label">
@@ -337,6 +341,7 @@ function IForm(props) {
 									minWidth: "120px",
 									width: "100%",
 									borderRadius: "4px",
+									backgroundColor: "white"
 								}}
 							>
 								<InputLabel id="country-label">
@@ -397,6 +402,7 @@ function IForm(props) {
 									minWidth: "120px",
 									width: "100%",
 									borderRadius: "4px",
+									backgroundColor: "white"
 								}}
 							>
 								<InputLabel id="district-label">
@@ -410,7 +416,8 @@ function IForm(props) {
 									value={districtId}
 									name="district"
 									onChange={(e) => {
-										const district = districtList[e.target.value];
+										const district =
+											districtList[e.target.value];
 										setDistrictId(e.target.value);
 										setFormData({
 											...formData,
@@ -437,7 +444,7 @@ function IForm(props) {
 
 						<Grid item xs={12}>
 							<TextField
-								sx={{ width: "100%" }}
+								sx={{ width: "100%", backgroundColor: "white" }}
 								required
 								id="address"
 								label="Address"
@@ -449,7 +456,7 @@ function IForm(props) {
 							<>
 								<Grid item xs={12}>
 									<TextField
-										sx={{ width: "100%" }}
+										sx={{ width: "100%" , backgroundColor: "white"}}
 										id="workDescription"
 										label="About Your Work (100 to 500 words)"
 										multiline
@@ -463,7 +470,7 @@ function IForm(props) {
 							<>
 								<Grid item xs={12}>
 									<TextField
-										sx={{ width: "100%" }}
+										sx={{ width: "100%", backgroundColor: "white" }}
 										id="interest"
 										label="About Your Interest (100 to 500 words)"
 										multiline
@@ -487,13 +494,15 @@ function IForm(props) {
 										variant="h5"
 										fontWeight={"bold"}
 										textAlign={"center"}
+										color="#264e79"
+
 									>
 										Your River Details
 									</Typography>
 								</Grid>
 								<Grid item xs={12} md={8}>
 									<TextField
-										sx={{ width: "100%" }}
+										sx={{ width: "100%" , backgroundColor: "white"}}
 										id="riverName"
 										label="Name of The River"
 										value={formData.riverName}
@@ -502,7 +511,7 @@ function IForm(props) {
 								</Grid>
 								<Grid item xs={12} md={4}>
 									<TextField
-										sx={{ width: "100%" }}
+										sx={{ width: "100%", backgroundColor: "white" }}
 										id="riverLength"
 										label="Length"
 										value={formData.riverLength}
@@ -511,7 +520,7 @@ function IForm(props) {
 								</Grid>
 								<Grid item xs={12} md={6}>
 									<TextField
-										sx={{ width: "100%" }}
+										sx={{ width: "100%" , backgroundColor: "white"}}
 										id="originSite"
 										label="Origin Site, District & State"
 										value={formData.originSite}
@@ -520,7 +529,7 @@ function IForm(props) {
 								</Grid>
 								<Grid item xs={12} md={6}>
 									<TextField
-										sx={{ width: "100%" }}
+										sx={{ width: "100%", backgroundColor: "white" }}
 										id="mergingPlace"
 										label="Place of Merging"
 										value={formData.mergingPlace}
@@ -529,7 +538,7 @@ function IForm(props) {
 								</Grid>
 								<Grid item xs={12}>
 									<TextField
-										sx={{ width: "100%" }}
+										sx={{ width: "100%", backgroundColor: "white" }}
 										id="discharge"
 										label="Discharge of the River (mld)"
 										value={formData.discharge}
@@ -538,7 +547,7 @@ function IForm(props) {
 								</Grid>
 								<Grid item xs={12}>
 									<TextField
-										sx={{ width: "100%" }}
+										sx={{ width: "100%", backgroundColor: "white" }}
 										id="presentSituation"
 										label="Present Situation"
 										multiline
@@ -550,7 +559,7 @@ function IForm(props) {
 
 								<Grid item xs={12} md={8}>
 									<TextField
-										sx={{ width: "100%" }}
+										sx={{ width: "100%", backgroundColor: "white" }}
 										id="waterQuality"
 										label="Water Quality"
 										value={formData.waterQuality}
@@ -560,7 +569,7 @@ function IForm(props) {
 
 								<Grid item xs={12} md={4}>
 									<TextField
-										sx={{ width: "100%" }}
+										sx={{ width: "100%", backgroundColor: "white" }}
 										id="population"
 										label="Population"
 										value={formData.population}

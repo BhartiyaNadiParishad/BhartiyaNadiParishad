@@ -51,7 +51,7 @@ const ProjectTimeline = ({ phases }) => {
 						justifyContent={"space-around"}
 					>
 						<Typography
-							variant="h6"
+							variant="h5"
 							component="span"
 							color="primary"
 						>
@@ -67,7 +67,7 @@ const ProjectTimeline = ({ phases }) => {
 								boxShadow: 1,
 							}}
 						>
-							<Typography variant="h6" color="primary">
+							<Typography variant="h5" color="primary" mb={2}>
 								{phase.title}
 							</Typography>
 							<Typography

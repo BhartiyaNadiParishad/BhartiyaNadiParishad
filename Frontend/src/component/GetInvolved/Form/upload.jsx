@@ -43,7 +43,7 @@ const FileUpload = ({ content }) => {
 				border: "2px dashed #ccc",
 				borderRadius: "8px",
 				textAlign: "center",
-				// backgroundColor: "#fafafa",
+				backgroundColor: "white",
 				"&:hover": {
 					backgroundColor: "#f1f1f1",
 				},
@@ -80,20 +80,24 @@ const FileUpload = ({ content }) => {
 								alignItems: "center",
 								justifyContent: "center",
 								flexWrap: "wrap",
-                                columnGap: 1,
-                                rowGap: 1,
+								columnGap: 1,
+								rowGap: 1,
 								border: "1px solid #ccc",
 								borderRadius: "4px",
 								p: 1,
 								mb: 1,
 							}}
 						>
-							<ListItemIcon sx={{minWidth: "0"}}>
+							<ListItemIcon sx={{ minWidth: "0" }}>
 								<InsertDriveFile />
 							</ListItemIcon>
-                            <Typography variant="h6" fontSize={"16px"} textAlign={"center"}>
-                                {file.name}
-                            </Typography>
+							<Typography
+								variant="h6"
+								fontSize={"16px"}
+								textAlign={"center"}
+							>
+								{file.name}
+							</Typography>
 							<Button
 								variant="contained"
 								startIcon={<Delete />}

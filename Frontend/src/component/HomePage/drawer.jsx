@@ -39,13 +39,12 @@ const menuData = [
     menuItems: [
       { label: "About Us", path: "/about" },
       { label: "Mission, Vision & Values", path: "/mission" },
-      { label: "Patron", path: "/history" },
       { label: "Our Program", path: "/programmesMenu" },
       { label: "About Logo", path: "/about-logo" },
     ],
   },
   {
-    menuName: "Team",
+    menuName: "coreteam",
     buttonLabel: "Our Team",
     menuItems: [
       { label: "Patron", path: "/history" },
@@ -64,16 +63,20 @@ const menuData = [
       { label: "River Basin Maps", path: "/" },
       { label: "River Gallery", path: "/river-gallery" },
       { label: "River Video", path: "/rivervideo" },
-      { label: "Factsheet", path: "/" },
+      { label: "Factsheet", path: "/factsheet" },
     ],
   },
   {
     menuName: "getInvolvedMenu",
     buttonLabel: "Get Involved",
     menuItems: [
+      { label: "Partners & Supporters", path: "/partners" },
       { label: "Become a member", path: "/membership" },
       { label: "Internship", path: "/internship" },
       { label: "Become a Volunteer", path: "/volunteer" },
+      { label: "Career", path: "/career" },
+
+      
     ],
   },
   {
@@ -220,7 +223,7 @@ function DrawerAppBar(props) {
           </Box>
           <Box
             sx={{
-              backgroundColor: "#051a36",
+              backgroundColor: "#05316b",
               width: "100%",
               display: { xs: "none", md: "flex" },
               flexDirection: "row",

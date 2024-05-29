@@ -3,9 +3,12 @@ import React from "react";
 
 export default function Quote() {
 	return (
-		<Box py={7} px={2} 
-    // sx={{ background: "#032f3b" }}
-    >
+		<Box
+			py={7}
+			px={2}
+			sx={{ background: "#032f3b" }}
+			// sx={{ backgroundColor: "#f22f2" }}
+		>
 			<Typography
 				variant="h5"
 				style={{
@@ -23,7 +26,7 @@ export default function Quote() {
 					fontSize: "28px",
 					textAlign: "center",
 					fontWeight: "bold",
-					// color: "#ffc500",
+					color: "#ffc500",
 				}}
 			>
 				<q>Clean and uninterrupted rivers for prosperous India</q>

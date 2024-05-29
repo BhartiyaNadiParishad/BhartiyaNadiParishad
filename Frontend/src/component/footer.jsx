@@ -19,14 +19,14 @@ const DotIcon = styled(FiberManualRecordIcon)(() => ({
 }));
 
 const CustomTypography = styled(Typography)(() => ({
-	color: "#4399c8",
+	color: "whitesmoke",
 	fontSize: 16,
 	marginBottom: 10,
 }));
 
 export default function Footer() {
 	return (
-		<Box backgroundColor="#051a36" px={4}>
+		<Box backgroundColor="#05316b" px={4}>
 			<Box
 				display={"flex"}
 				justifyContent={"center"}
@@ -203,7 +203,7 @@ export default function Footer() {
 				spacing={4}
 				justifyContent={"space-between"}
 				sx={{
-					color: "rgb(19 100 173)",
+					color: "whitesmoke",
 					borderBottom: "1px solid #1d4e6e",
 				}}
 			>
@@ -334,7 +334,7 @@ export default function Footer() {
 					xs={12}
 					sx={{
 						fontSize: "16px",
-						color: "rgb(19 100 173)",
+						color: "whitesmoke",
 						textAlign: "center",
 					}}
 				>

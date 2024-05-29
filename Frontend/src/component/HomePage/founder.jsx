@@ -12,7 +12,7 @@ const Founder = () => {
 					backgroundPosition: "center bottom",
 				}}
 			>
-				<Grid container sx={{ backgroundColor: "#000000a5" }}>
+				<Grid container sx={{ backgroundColor: "#000000a5" }} >
 					<Grid item xs={12} md={3} padding={3}>
 						<Box
 							display={"flex"}

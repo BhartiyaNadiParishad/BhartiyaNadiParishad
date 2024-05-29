@@ -23,13 +23,15 @@ import CoreTeam from './component/Team/coreTeam';
 import Advisors from './component/Team/advisors';
 import TechAdvisors from './component/Team/techAdvisors';
 import RiverVideo from './component/Nadi Darshan/riverVideo';
-import SuccessStories from './component/Nadi Darshan/sucsess-stories';
 import AboutLogo from './component/AboutUs/aboutLogo';
 import Newsletter from './component/Resouces/Newsletter';
 import Publication from './component/Resouces/Publication';
 import Learning from './component/Resouces/learning';
 import RiverGallery from './component/Nadi Darshan/riverGallery';
 import Faqs from './component/contactUs/faq';
+import Career from './component/GetInvolved/career';
+import Factsheet from './component/GetInvolved/factsheet';
+import SuccessStories from './component/Resouces/sucsess-stories';
 
 
 const theme = createTheme({
@@ -74,6 +76,8 @@ function App() {
             <Route exact path="/learning" element={ <Learning /> } />
             <Route exact path="/river-gallery" element={ <RiverGallery /> } />
             <Route exact path="/faqs" element={ <Faqs /> } />
+            <Route exact path="/career" element={ <Career /> } />
+            <Route exact path="/factsheet" element={ <Factsheet /> } />
           </Routes>
         </Router>
       </ThemeProvider>

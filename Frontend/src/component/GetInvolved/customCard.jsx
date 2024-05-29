@@ -3,35 +3,60 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, CardActions } from "@mui/material";
+import { Box, Button, CardActionArea, CardActions } from "@mui/material";
 import { Link } from "react-router-dom";
 
 export default function CustomCard(props) {
 	return (
-		<Card>
-			<CardActionArea>
-				<img src={props.image} style={{ width: "100%" , height: "300px", objectFit: "cover"}} />
-				<CardContent>
-					<Typography
-						gutterBottom
-						variant="h5"
-						component="div"
-						textAlign={"center"}
-					>
-						{props.title}
-					</Typography>
-					<Typography variant="body1" color="text.secondary">
-						{props.content}
-					</Typography>
-				</CardContent>
-			</CardActionArea>
-			<CardActions sx={{display: "flex", justifyContent: "center"}}>
-				<Link to={props.link}>
-					<Button size="small" color="primary">
-						{props.button}
-					</Button>
-				</Link>
-			</CardActions>
-		</Card>
+		<Box sx={{ backgroundColor: "white" }}>
+			<img
+				src={props.image}
+				style={{
+					width: "100%",
+					height: "300px",
+					objectFit: "cover",
+				}}
+			/>
+			<CardContent
+				sx={{
+					display: "flex",
+					justifyContent: "flex-start",
+					alignItems: "center",
+					flexDirection: "column",
+					padding: "20px",
+					rowGap: "16px",
+				}}
+			>
+				<Typography
+					variant="h5"
+					fontSize={"28px"}
+					textAlign={"center"}
+					fontWeight={"bold"}
+					color={"#05316b"}
+				>
+					{props.title}
+				</Typography>
+				<Typography
+					variant="h6"
+					fontSize={"18px"}
+					color="#264e79"
+					textAlign={"justify"}
+				>
+					{props.content}
+				</Typography>
+				<Box width={"100%"} >
+					<Link to={props.link}>
+						<Button
+							color="primary"
+							size="large"
+							variant="contained"
+							sx={{ width: "75%", maxWidth: "none", margin: "auto" }}
+						>
+							{props.button}
+						</Button>
+					</Link>
+				</Box>
+			</CardContent>
+		</Box>
 	);
 }

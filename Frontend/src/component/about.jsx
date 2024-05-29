@@ -13,28 +13,6 @@ import QuoteSection from "./Layout/contentLayout/quoteSection";
 import ImageSection from "./Layout/contentLayout/imageSection";
 import FooterSection from "./Layout/contentLayout/footerSection";
 
-const data = [
-	{
-		title: "Challenges",
-		content:
-			"Rivers are facing challenges like reduced water inflow, encroachments in water courses, and disposal of contaminants ie grey water, solid and liquid waste etc. While the governments are trying their best to deal with these challenges, a large section of society is also engaged in various ways to make their rivers clean and uninterrupted. ",
-	},
-	{
-		title: "Formation ",
-		content:
-			"In India, the efforts of the society and the government seem to be converged at some places, however, their coordination seems incomplete and there is dearth of the technical knowledge. The BHARTIYA NADI PARISHAD has been formed to coordinate the efforts of society and government for the rivers of India and to take forward efforts for the rivers in a better way by learning from each other's experiences.",
-	},
-	{
-		title: "Objectives",
-		content:
-			"The main objective of the BNP is to coordinate the efforts of society and government for river rejuvenation in India and to achieve positive results from their efforts, throug action research and demonstrating innovative solutions. Through the BNP, it will also be ensured that by the year 2047, when India completes 100 years of independence, the rivers of India become completely clean and uninterrupted.",
-	},
-	{
-		title: "Nadi Darshan",
-		content:
-			"A portal designed to offer essential information about Indian River System in Geo-spatial environment. It aims to facilitate communities, implementing agencies, local governence institutions, river researchers, river experts, policy makers and river activists through improved access to relevant information and contribute efficiently in river rejuvenation.",
-	},
-];
 
 export default function AboutBNP() {
 	return (
