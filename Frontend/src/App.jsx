@@ -4,7 +4,6 @@ import "./App.css";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import HomePage from "./component/HomePage/HomePage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import GetInvolvedPage from "./component/GetInvolved/getInvolvedPage";
 import Internship from "./component/GetInvolved/internship";
 import Membership from "./component/GetInvolved/membership";
 import Volunteer from "./component/GetInvolved/volunteer";
@@ -23,41 +22,16 @@ import CoreTeam from "./component/Team/coreTeam";
 import Advisors from "./component/Team/advisors";
 import TechAdvisors from "./component/Team/techAdvisors";
 import RiverVideo from "./component/Nadi Darshan/riverVideo";
-import SuccessStories from "./component/Nadi Darshan/sucsess-stories";
 import AboutLogo from "./component/AboutUs/aboutLogo";
 import Newsletter from "./component/Resouces/Newsletter";
 import Publication from "./component/Resouces/Publication";
 import Learning from "./component/Resouces/learning";
 import RiverGallery from "./component/Nadi Darshan/riverGallery";
 import Faqs from "./component/contactUs/faq";
-import GetInvolvedPage from './component/GetInvolved/getInvolvedPage';
-import Internship from './component/GetInvolved/internship';
-import Membership from './component/GetInvolved/membership';
-import Volunteer from './component/GetInvolved/volunteer';
-import Contact from './component/contactUs/contact';
-import Testing from './component/testing';
-import AboutBNP from './component/about';
-import Gallery from './component/gallery';
-import ProgramPage from './component/ourProgramPage';
-import OurValues from './component/ourValues';
-import Partners from './component/AboutUs/Partners';
-import MissionVision from './component/AboutUs/missionVision';
-import History from './component/AboutUs/history';
-import PdfDocument from './component/Resouces/Documents/document';
-import NadiPortal from './component/Nadi Darshan/nadiPortal';
-import CoreTeam from './component/Team/coreTeam';
-import Advisors from './component/Team/advisors';
-import TechAdvisors from './component/Team/techAdvisors';
-import RiverVideo from './component/Nadi Darshan/riverVideo';
-import AboutLogo from './component/AboutUs/aboutLogo';
-import Newsletter from './component/Resouces/Newsletter';
-import Publication from './component/Resouces/Publication';
-import Learning from './component/Resouces/learning';
-import RiverGallery from './component/Nadi Darshan/riverGallery';
-import Faqs from './component/contactUs/faq';
 import Career from './component/GetInvolved/career';
 import Factsheet from './component/GetInvolved/factsheet';
-import SuccessStories from './component/Resouces/sucsess-stories';
+import SuccessStories from "./component/Resouces/sucsess-stories";
+import GetInvolvedPage from "./component/GetInvolved/getInvolvedPage";
 
 
 const theme = createTheme({
@@ -97,7 +71,7 @@ function App() {
             <Route exact path="/advisors" element={ <Advisors /> } />
             <Route exact path="/technicaladvisor" element={ <TechAdvisors /> } />
             <Route exact path="/rivervideo" element={ <RiverVideo /> } />
-            <Route exact path="/success-stories" element={ <SuccessStories /> } />
+            <Route exact path="/success-stories" element={ <SuccessStories/> } />
             <Route exact path="/about-logo" element={ <AboutLogo /> } />
             <Route exact path="/newsletter" element={ <Newsletter /> } />
             <Route exact path="/publication" element={ <Publication /> } />
