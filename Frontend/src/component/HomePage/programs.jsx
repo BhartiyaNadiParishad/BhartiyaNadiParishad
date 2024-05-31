@@ -9,47 +9,52 @@ import Icon7 from "../../assets/Icons/partners.png";
 import Icon8 from "../../assets/Icons/8.png";
 import Icon9 from "../../assets/Icons/9.png";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
-const data = [
-  {
-    awardTitle: "Award",
-    img: Icon1,
-  },
-  {
-    awardTitle: "Nadi Sangam",
-    img: Icon2,
-  },
-  {
-    awardTitle: "Fellowship",
-    img: Icon3,
-  },
-  {
-    awardTitle: "River Talk",
-    img: Icon4,
-  },
-  {
-    awardTitle: "Nadi Shoudh Kendra",
-    img: Icon5,
-  },
-  {
-    awardTitle: "Nadi Shoudh Yatra",
-    img: Icon6,
-  },
-  {
-    awardTitle: "Field Actions",
-    img: Icon7,
-  },
-  {
-    awardTitle: "Research & Development",
-    img: Icon8,
-  },
-  {
-    awardTitle: "Community Engagement",
-    img: Icon9,
-  },
-];
+
 
 export default function Programs() {
+
+  const {t} = useTranslation();
+  const data = [
+    {
+      awardTitle: t('programs.1'),
+      img: Icon1,
+    },
+    {
+      awardTitle: t('programs.2'),
+      img: Icon2,
+    },
+    {
+      awardTitle: t('programs.3'),
+      img: Icon3,
+    },
+    {
+      awardTitle: t('programs.4'),
+      img: Icon4,
+    },
+    {
+      awardTitle: t('programs.5'),
+      img: Icon5,
+    },
+    {
+      awardTitle: t('programs.6'),
+      img: Icon6,
+    },
+    {
+      awardTitle: t('programs.7'),
+      img: Icon7,
+    },
+    {
+      awardTitle: t('programs.8'),
+      img: Icon8,
+    },
+    {
+      awardTitle: t('programs.9'),
+      img: Icon9,
+    },
+  ];
+
   return (
     <Box padding={"30px 30px"} >
 {/* backgroundColor={"#daf0fd"} */}

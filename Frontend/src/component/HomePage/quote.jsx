@@ -1,7 +1,9 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Quote() {
+	const { t } = useTranslation();
 	return (
 		<Box
 			py={7}
@@ -29,7 +31,7 @@ export default function Quote() {
 					color: "#ffc500",
 				}}
 			>
-				<q>Clean and uninterrupted rivers for prosperous India</q>
+				<q>{t('quote')}</q>
 			</Typography>
 		</Box>
 	);

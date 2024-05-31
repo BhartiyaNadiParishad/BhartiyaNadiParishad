@@ -1,8 +1,10 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import video from "../../assets/bg6.mp4";
+import { useTranslation } from "react-i18next";
 
 export default function FrontDisplay() {
+  const { t } = useTranslation();
   return (
     <Box
       px={4}
@@ -45,7 +47,7 @@ export default function FrontDisplay() {
             textAlign: "center",
           }}
         >
-          Restoring Rivers, Reviving Hopes
+          {t('hero-section')}
         </Typography>
         {/* <Typography
           variant="h4"

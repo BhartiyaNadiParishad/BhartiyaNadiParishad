@@ -1,8 +1,11 @@
 import { Box, Grid, Typography } from "@mui/material";
 import img from "../../assets/bg/bgl7.jpeg";
 import img1 from "../../assets/team/Raman_Kant_2.png";
+import { useTranslation } from "react-i18next";
 
 const Founder = () => {
+
+	const {t} = useTranslation();
 	return (
 		<>
 			<Box
@@ -53,16 +56,7 @@ const Founder = () => {
 									marginBottom: "10px",
 								}}
 							>
-								Formation of Bhartiya Nadi Parishad is an
-								important step taken after brainstorming with
-								stakeholders for rejuvenation of Indian rivers
-								towards prosperous India. The aim of Bhartiya
-								Nadi Parishad is to contribute towards the
-								sustainable development goals (SDG 6, 12, 13, 14
-								& 15) of the United Nations with the cooperation
-								of the society and the government, and under the
-								India's Water Vision 2047 announced by the
-								Hon'ble Prime Minister Shri Narendra Modi.
+								{t('founder.content')}
 							</Typography>
 							<Typography
 								sx={{
@@ -71,17 +65,17 @@ const Founder = () => {
 									fontSize: "20px",
 								}}
 							>
-								Raman Kant
+								{t('founder.name')}
 							</Typography>
 							<Typography
 								sx={{ fontWeight: "bold", fontSize: "20px" }}
 							>
-								Riverman of India
+								{t('founder.title1')}
 							</Typography>
 							<Typography
 								sx={{ fontWeight: "bold", fontSize: "20px" }}
 							>
-								Founder - Bharatiya Nadi Parishad
+								{t('founder.title2')}
 							</Typography>
 						</Box>
 					</Grid>

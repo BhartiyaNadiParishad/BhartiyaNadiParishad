@@ -1,0 +1,21 @@
+{
+    "hero-section": "Restoring Rivers, Reviving Hopes",
+    "quote": "Clean and uninterrupted rivers for prosperous India",
+    "founder": {
+        "content": "Formation of Bhartiya Nadi Parishad is an important step taken after brainstorming with stakeholders for rejuvenation of Indian rivers towards prosperous India. The aim of Bhartiya Nadi Parishad is to contribute towards the sustainable development goals (SDG 6, 12, 13, 14 & 15) of the United Nations with the cooperation of the society and the government, and under the India's Water Vision 2047 announced by the Hon'ble Prime Minister Shri Narendra Modi.",
+        "name": "Raman Kant",
+        "title1": "Riverman of India",
+        "title2": "Founder - Bharatiya Nadi Parishad"
+    },
+    "programs": {
+        "1" : "Award",
+        "2" : "Nadi Sangam",
+        "3" : "Fellowship",
+        "4" : "River Talk",
+        "5" : "Nadi Shoudh Kendra",
+        "6" : "Nadi Shoudh Yatra",
+        "7" : "Field Action",
+        "8" : "Research & development",
+        "9" : "Community Engagement"
+    }
+}
