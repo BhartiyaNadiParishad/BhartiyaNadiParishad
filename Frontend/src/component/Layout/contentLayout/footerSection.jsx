@@ -4,20 +4,19 @@ const FooterSection = ({ backgroundImage, content, textColor, fontFamily }) => {
   return (
     <Box
       minHeight={400}
-      //   sx={{
-      //     backgroundImage: `url(${backgroundImage})`,
-      //     backgroundSize: "cover",
-      //     backgroundPosition: "top",
-      //   }}
+        sx={{
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "top",
+        }}
     >
-      <Box p={"5px 40px 10px 40px"}>
+      <Box p={"0 17%"}>
         <Typography
           variant="h6"
-          fontSize={"22px"}
+          fontSize={"20px"}
           textAlign={"justify"}
           color={textColor}
           fontFamily={fontFamily}
-          fontStyle={"italic"}
         >
           {content}
         </Typography>

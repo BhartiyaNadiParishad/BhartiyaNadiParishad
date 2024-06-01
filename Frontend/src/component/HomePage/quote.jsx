@@ -8,7 +8,7 @@ export default function Quote() {
 		<Box
 			py={7}
 			px={2}
-			sx={{ background: "#032f3b" }}
+			sx={{ background: "#1cabe2" }}
 			// sx={{ backgroundColor: "#f22f2" }}
 		>
 			<Typography
@@ -16,7 +16,7 @@ export default function Quote() {
 				style={{
 					fontSize: "28px",
 					fontWeight: "bold",
-					color: "#ffc500",
+					color: "white",
 					textAlign: "center",
 				}}
 			>
@@ -28,7 +28,7 @@ export default function Quote() {
 					fontSize: "28px",
 					textAlign: "center",
 					fontWeight: "bold",
-					color: "#ffc500",
+					color: "white",
 				}}
 			>
 				<q>{t('quote')}</q>

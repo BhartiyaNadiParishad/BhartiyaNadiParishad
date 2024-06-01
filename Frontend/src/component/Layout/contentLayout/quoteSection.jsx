@@ -10,7 +10,11 @@ const QuoteSection = ({
   quoteColor = "white",
 }) => {
   return (
-    <Box>
+    <Box sx={{
+      backgroundImage: `url(${backgroundImage})`,
+      backgroundSize: "cover",
+      backgroundPosition: "bottom",
+    }}>
       <Box
         sx={{
           background:

@@ -17,6 +17,24 @@ import MainLayout from "./Layout/mainLayout";
 
 const data = [
   {
+    title: "Field Actions",
+    description:
+      "Through the BNP, river rejuvenation models have been developed for the river warriors engaged in the rejuvenation of their rivers in different parts of the country, which is helping them in their river work. Apart from this, a system has also been developed by the BNP in which any river warrior can solve his problems through the technical committee of the BNP. Some models of river rejuvenation have also been developed by the BNP, based on which successful efforts have been made at the origin of some rivers like Eastern Kali and Neem. The efforts of Neem River were told to the entire country by Honorable Prime Minister Shri Narendra Modi in the 102nd episode of his ‘Mann Ki Baat’ program on June 18, 2023. In different states of India, good efforts are being made for river revitalization by river activists in different ways, privately and with government or other collaboration. BNP is providing technical support to such river rejuvenation efforts. This is increasing accuracy and speed in their work. BNP promotes such works which are being done at the grassroots level for the betterment of rivers. The BNP priorities also include conducting and helping in conducting studies on the adverse effects of floods, droughts, and pollution from time to time.",
+    img: Icon7,
+  },
+  {
+    title: "Research & Development",
+    description:
+      "Finding policy solutions to any problem related to rivers is part of the main work of the BNP. In India, thinking about rivers has increased at both the society and government levels. Due to this thinking, efforts are being made continuously through governments at the policy level to find solutions to the problems of rivers. The BNP is collaborating with various state governments in preparing policy documents on river related issues. While India's river system extends outside India to Pakistan, China, and Bangladesh, it also extends to various states within India. In such a situation, there are treaties established with other countries regarding rivers and some rules and regulations regarding the rights of rivers between the states of India. The BNP is ready to play its role in finalizing the agreements.",
+    img: Icon8,
+  },
+  {
+    title: "Community Engagement",
+    description:
+      "While India has a physical relationship with the rivers, India also has a deep spiritual connection with the rivers. There is still a greater need to spread knowledge regarding rivers in India. Efforts are also being made by the BNP to increase the understanding of all aspects of Indian rivers among every person of India and to re-establish their connection with their rivers. For this, a river philosophy has been developed by the BNP, encompassing the Indian river system within its scope. Through river darshan, any person from India and abroad can know and understand the river system of India. New methods have been developed through river philosophy to understand the rivers of India and its related aspects in depth and easily. River researchers can take help in their research work through the river philosophy developed through the BNP. Any river in the country and all the subjects related to it can be easily understood through NADI DARSHAN. River Darshan will prove helpful in the work being done for river rejuvenation in the country by both society and government levels. Various types of public awareness programs are conducted by the BNP to further increase the love and respect for the rivers of the country in society.",
+    img: Icon9,
+  },
+  {
     title: "Award",
     description:
       "The 'Nadh Upasak Award' will be given to the two best efforts made every year at the government and non-government levels for river rejuvenation in the country. In this award, Rs 50 thousand, certificate and memento will be given. For this award, every participant can send information regarding the river rejuvenation efforts made every year between January 1 and December 31 under the prescribed response. Applications for the award can be sent in both institutional and individual categories. Applications for the award can be sent to the Award Committee of the BNP between 1st January to 31st January every year. This award will be given every year on 22 March.",
@@ -52,24 +70,7 @@ const data = [
       "From time to time, river research trips will be organised under the ‘Know Your River’ program to know your rivers. While this will provide an opportunity to know and understand the current scenario of the rivers, we will also get to know the ancient knowledge and legends of the rivers regarding the rivers. Under the River Yatra, stay programs will also be made in the villages, towns and cities along the riverbanks. With this, the communities living on the banks of the river will get various information regarding the river which will be helpful in the work of river revitalization. Through river tours, the society living on the riverbanks will also be made aware of their river. These journeys will also be documented.",
     img: Icon6,
   },
-  {
-    title: "Field Actions",
-    description:
-      "Through the BNP, river rejuvenation models have been developed for the river warriors engaged in the rejuvenation of their rivers in different parts of the country, which is helping them in their river work. Apart from this, a system has also been developed by the BNP in which any river warrior can solve his problems through the technical committee of the BNP. Some models of river rejuvenation have also been developed by the BNP, based on which successful efforts have been made at the origin of some rivers like Eastern Kali and Neem. The efforts of Neem River were told to the entire country by Honorable Prime Minister Shri Narendra Modi in the 102nd episode of his ‘Mann Ki Baat’ program on June 18, 2023. In different states of India, good efforts are being made for river revitalization by river activists in different ways, privately and with government or other collaboration. BNP is providing technical support to such river rejuvenation efforts. This is increasing accuracy and speed in their work. BNP promotes such works which are being done at the grassroots level for the betterment of rivers. The BNP priorities also include conducting and helping in conducting studies on the adverse effects of floods, droughts, and pollution from time to time.",
-    img: Icon7,
-  },
-  {
-    title: "Research & Development",
-    description:
-      "Finding policy solutions to any problem related to rivers is part of the main work of the BNP. In India, thinking about rivers has increased at both the society and government levels. Due to this thinking, efforts are being made continuously through governments at the policy level to find solutions to the problems of rivers. The BNP is collaborating with various state governments in preparing policy documents on river related issues. While India's river system extends outside India to Pakistan, China, and Bangladesh, it also extends to various states within India. In such a situation, there are treaties established with other countries regarding rivers and some rules and regulations regarding the rights of rivers between the states of India. The BNP is ready to play its role in finalizing the agreements.",
-    img: Icon8,
-  },
-  {
-    title: "Community Engagement",
-    description:
-      "While India has a physical relationship with the rivers, India also has a deep spiritual connection with the rivers. There is still a greater need to spread knowledge regarding rivers in India. Efforts are also being made by the BNP to increase the understanding of all aspects of Indian rivers among every person of India and to re-establish their connection with their rivers. For this, a river philosophy has been developed by the BNP, encompassing the Indian river system within its scope. Through river darshan, any person from India and abroad can know and understand the river system of India. New methods have been developed through river philosophy to understand the rivers of India and its related aspects in depth and easily. River researchers can take help in their research work through the river philosophy developed through the BNP. Any river in the country and all the subjects related to it can be easily understood through NADI DARSHAN. River Darshan will prove helpful in the work being done for river rejuvenation in the country by both society and government levels. Various types of public awareness programs are conducted by the BNP to further increase the love and respect for the rivers of the country in society.",
-    img: Icon9,
-  },
+  
 ];
 
 export default function ProgramPage() {

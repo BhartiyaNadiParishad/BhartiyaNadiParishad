@@ -48,11 +48,11 @@ const menuData = [
 		buttonLabel: "Our Team",
 		menuItems: [
 			{ label: "Patron", path: "/history" },
-			{ label: "Blessings", path: "/" },
+			{ label: "Inspiration", path: "/inspiration" },
 			{ label: "Core Team", path: "/coreteam" },
 			{ label: "Advisors", path: "/advisors" },
 			{ label: "Technical Advisors", path: "/technicaladvisor" },
-			{ label: "State Heads", path: "/" },
+			{ label: "State Heads", path: "/state-heads" },
 		],
 	},
 	{
@@ -81,7 +81,6 @@ const menuData = [
 		menuName: "resourcesMenu",
 		buttonLabel: "Resources",
 		menuItems: [
-			{ label: "Success Stories", path: "/success-stories" },
 			{ label: "Documents", path: "/document" },
 			{ label: "Newsletter", path: "/newsletter" },
 			{ label: "Publication", path: "/publication" },
@@ -231,7 +230,7 @@ function DrawerAppBar(props) {
 					</Box>
 					<Box
 						sx={{
-							backgroundColor: "#05316b",
+							backgroundColor: "#1cabe2",
 							width: "100%",
 							display: { xs: "none", md: "flex" },
 							flexDirection: "row",
@@ -240,9 +239,14 @@ function DrawerAppBar(props) {
 							padding: "6px 10px",
 						}}
 					>
-						<Box display={"flex"} justifyContent={"center"} width={"100%"}>
+						<Box
+							display={"flex"}
+							justifyContent={"center"}
+							width={"100%"}
+						>
 							<Link to={"/"}>
 								<Button
+									size="large"
 									sx={{ color: "white", fontWeight: "bold" }}
 									onClick={props.founderScroll}
 								>
@@ -261,6 +265,7 @@ function DrawerAppBar(props) {
 								>
 									<Link to={`/${menu.menuName}`}>
 										<Button
+											size="large"
 											aria-describedby={`${menu.menuName}-popover`}
 											sx={{
 												ml: 3,
@@ -288,7 +293,7 @@ function DrawerAppBar(props) {
 										>
 											<Box
 												sx={{
-													backgroundColor: "#051a36",
+													backgroundColor: "#1cabe2",
 												}}
 											>
 												{menu.menuItems &&
@@ -303,11 +308,12 @@ function DrawerAppBar(props) {
 																		borderTop:
 																			"1px solid white",
 																		color: "white",
+																		fontWeight: "bold",
 																		"&:hover":
 																			{
 																				backgroundColor:
 																					"white",
-																				color: "#051a36",
+																				color: "#1cabe2",
 																			},
 																	}}
 																>

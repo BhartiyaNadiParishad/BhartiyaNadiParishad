@@ -32,6 +32,8 @@ import Career from './component/GetInvolved/career';
 import Factsheet from './component/GetInvolved/factsheet';
 import SuccessStories from "./component/Resouces/sucsess-stories";
 import GetInvolvedPage from "./component/GetInvolved/getInvolvedPage";
+import Inspiration from "./component/Team/inspiration";
+import StateHeads from "./component/Team/stateHeads";
 
 
 const theme = createTheme({
@@ -80,6 +82,8 @@ function App() {
             <Route exact path="/faqs" element={ <Faqs /> } />
             <Route exact path="/career" element={ <Career /> } />
             <Route exact path="/factsheet" element={ <Factsheet /> } />
+            <Route exact path="/inspiration" element={ <Inspiration /> } />
+            <Route exact path="/state-heads" element={ <StateHeads /> } />
           </Routes>
         </Router>
       </ThemeProvider>

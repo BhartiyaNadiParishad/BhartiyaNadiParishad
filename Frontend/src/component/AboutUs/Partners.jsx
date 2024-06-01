@@ -27,24 +27,32 @@ import supporter3 from "../../assets/supporter/3.png";
 import img from "../../assets/bg18.jpg";
 
 const partners = [
-	{ image: partner1 },
-	{ image: partner2 },
 	{ image: partner3 },
+	{ image: partner17 },
+	//water digest
+	//indian waer partnership
 	{ image: partner4 },
+	{ image: partner13 },
+	{ image: partner1 },
 	{ image: partner5 },
-	{ image: partner6 },
-	{ image: partner7 },
-	{ image: partner8 },
-	{ image: partner9 },
 	{ image: partner10 },
+	{ image: partner9 },
+	{ image: partner7 },
+	//narmada
+	//CEE
 	{ image: partner11 },
 	{ image: partner12 },
-	{ image: partner13 },
+	{ image: partner2 },
+	{ image: partner18 },
+	//sant ishwar
+	//sarkatitell
+	//kala chaupal
+
+	{ image: partner6 },
+	{ image: partner8 },
 	{ image: partner14 },
 	{ image: partner15 },
 	{ image: partner16 },
-	{ image: partner17 },
-	{ image: partner18 },
 	{ image: partner19 },
 	{ image: partner20 },
 ];

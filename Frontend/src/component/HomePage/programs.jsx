@@ -18,6 +18,18 @@ export default function Programs() {
   const {t} = useTranslation();
   const data = [
     {
+      awardTitle: t('programs.7'),
+      img: Icon7,
+    },
+    {
+      awardTitle: t('programs.8'),
+      img: Icon8,
+    },
+    {
+      awardTitle: t('programs.9'),
+      img: Icon9,
+    },
+    {
       awardTitle: t('programs.1'),
       img: Icon1,
     },
@@ -41,18 +53,6 @@ export default function Programs() {
       awardTitle: t('programs.6'),
       img: Icon6,
     },
-    {
-      awardTitle: t('programs.7'),
-      img: Icon7,
-    },
-    {
-      awardTitle: t('programs.8'),
-      img: Icon8,
-    },
-    {
-      awardTitle: t('programs.9'),
-      img: Icon9,
-    },
   ];
 
   return (
@@ -64,7 +64,7 @@ export default function Programs() {
           fontWeight: "bold",
           textAlign: "center",
           marginBottom: "30px",
-          color: "rgb(19 100 173)",
+          color: "#1cabe2",
         }}
       >
         Our Programs
@@ -78,10 +78,10 @@ export default function Programs() {
                   padding: "30px",
                   boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
                   color: "white",
-                  backgroundColor: "rgb(29 78 110)",
+                  backgroundColor: "#1cabe2",
                   height: "100%",
                   "&:hover": {
-                    backgroundColor: "#051a36",
+                    backgroundColor: "#0682b2",
                   },
                 }}
               >
@@ -103,9 +103,6 @@ export default function Programs() {
                     sx={{
                       fontSize: "22px",
                       fontWeight: "bold",
-                      // color: "#fe9e3d",
-                      color: "#f49b0e"
-                      // color: "rgb(255, 197, 0)",
                     }}
                   >
                     {item.awardTitle}

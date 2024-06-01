@@ -49,7 +49,7 @@ export default function news() {
 						<Typography
 							variant="h5"
 							fontWeight={"bold"}
-							color={"#3b70b1"}
+							color={"#1cabe2"}
 						>
 							News & Highlights
 						</Typography>
@@ -62,7 +62,7 @@ export default function news() {
 							{newsItems.map((news, index) => (
 								<Box
 									key={index}
-									borderBottom={"0.5px solid #3b70b1"}
+									borderBottom={"0.5px solid #1cabe2"}
 									py={2}
 									height={80}
 									display={"flex"}
@@ -71,7 +71,7 @@ export default function news() {
 								>
 									<PlayArrowIcon
 										fontSize="8px"
-										style={{ color: "#3b70b1" }}
+										style={{ color: "#1cabe2" }}
 									/>
 									<Typography>{news}</Typography>
 								</Box>
@@ -84,7 +84,7 @@ export default function news() {
 						<Typography
 							variant="h5"
 							fontWeight={"bold"}
-							color={"#3b70b1"}
+							color={"#1cabe2"}
 						>
 							Success Stories
 						</Typography>
@@ -97,7 +97,7 @@ export default function news() {
 							{newsItems.map((news, index) => (
 								<Box
 									key={index}
-									borderBottom={"0.5px solid #3b70b1"}
+									borderBottom={"0.5px solid #1cabe2"}
 									py={2}
 									height={85}
 									display={"flex"}
@@ -106,7 +106,7 @@ export default function news() {
 								>
 									<PlayArrowIcon
 										fontSize="8px"
-										style={{ color: "#3b70b1" }}
+										style={{ color: "#1cabe2" }}
 									/>
 									<Typography>{news}</Typography>
 								</Box>
@@ -125,7 +125,7 @@ export default function news() {
 						<Typography
 							variant="h5"
 							fontWeight={"bold"}
-							color={"#3b70b1"}
+							color={"#1cabe2"}
 						>
 							Featured Videos
 						</Typography>

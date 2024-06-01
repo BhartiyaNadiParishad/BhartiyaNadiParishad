@@ -109,7 +109,21 @@ const data = [
 		authorContent:
 			"मुझे प्रसन्नता है कि देश में नदी पुनर्जीवन के कार्यों के लिए भारतीय नदी परिषद् द्वारा सामूहिक प्रयास प्रारम्भ किए जा रहे हैं। मेरा मानना है कि भारतीय नदी परिषद् के माध्यम से सरकार व नदी कार्यकर्ताओं के महीन अंतर को पाटा जा सकेगा। मैं अपनी व संत ईश्वर फाउंडेशन की ओर से भारतीय नदी परिषद् की पूरी टीम को इस प्रयास हेतु बहुत-बहुत शुभकामनाएं देती हूं और आशा करती हूं कि भारतीय नदी परिषद् अपने सभी इच्छित लक्ष्यों को प्राप्त कर अपने उद्देश्यों में सफल होगी।",
 		authorName: "वृंदा खन्ना",
-		designation: "महासचिव - संत ईश्वर फाउंडेश",
+		designation: "महासचिव, संत ईश्वर फाउंडेश",
+		image: img9,
+	},
+	{
+		authorContent:
+			"मुझे अत्यंत प्रसन्नता है कि देष में नदियों के सुधार हेतु भारतीय नदी परिशद् के माध्यम से सामूहिक प्रयास प्रारंभ किया गया है। जब मां गंगा सहित देष की नदियां निर्मल व अविरल बहेंगी तब ही भारत की मानव सभ्यता व संपदा भी खुषहाल होगी। अलौकिक षक्ति इस प्रयास को सफल करे। भारतीय नदी परिशद् की संपूर्ण टोली को अनंत षुभकामनाएं। ओम",
+		authorName: "पूज्य स्वामी कैलाषानंद गिरी जी",
+		designation: "निरंजन पीठाधीष्वर, सिद्धपीट श्री दक्षिण काली मंदिर",
+		image: img9,
+	},
+	{
+		authorContent:
+			"I am happy to learn about the dedicated endeavors of the Bhartiya Nadi Parishad under your leadership toward the noble cause of River Rejuvenation following ecosystem approach. The collective efforts over the years by Bhartiya Nadi Parishad have been instrumental in reviving our cherished river resulting in formulating robust policies for their protection & management is remarkable. ",
+		authorName: "Dr Afroz Ahmad",
+		designation: "Member, National Green Tribunal",
 		image: img9,
 	},
 ];

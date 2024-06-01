@@ -5,15 +5,16 @@ const ContentSection = ({
   content,
   backgroundColor,
   textColor,
-  fontFamily = "sans-serif",
+  fontFamily = "",
   fontSize = "22px",
-  fontStyle = "normal",
+  fontStyle = "",
 }) => {
   return (
     <Box
+      height={"100%"}
       sx={{
         backgroundColor: backgroundColor,
-        padding: "20px",
+        padding: backgroundColor? "30px": "0px",
       }}
       color={textColor}
     >
