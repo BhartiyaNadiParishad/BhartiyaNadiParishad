@@ -6,7 +6,7 @@ const ContentSection = ({
   backgroundColor,
   textColor,
   fontFamily = "",
-  fontSize = "22px",
+  fontSize = "20px",
   fontStyle = "",
 }) => {
   return (
