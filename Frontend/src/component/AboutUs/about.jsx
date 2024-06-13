@@ -1,54 +1,29 @@
 import React from "react";
 import MainLayout from "../Layout/mainLayout";
 import Grid from "@mui/material/Grid";
-import { Box, Button, Link, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 import bg from "../../assets/bg/bgl-9.jpeg";
 import bg1 from "../../assets/bg/bgl-20.jpg";
 import bg2 from "../../assets/bg/bgl-17.jpg";
-import HeroSection from "../Layout/contentLayout/heroSection";
-import ContentSection from "../Layout/contentLayout/contentSection";
 import QuoteSection from "../Layout/contentLayout/quoteSection";
-import ImageSection from "../Layout/contentLayout/imageSection";
-import FooterSection from "../Layout/contentLayout/footerSection";
-
-const content = [
-	{
-		title: "Objective of BNP",
-		text: "To coordinate the efforts of society and government for river rejuvenation in India and achieve positive results from those efforts.",
-	},
-	{
-		title: "Vision for 2047",
-		text: "By the year 2047, when India completes 100 years of independence, ensure that the rivers of India become completely clean and uninterrupted.",
-	},
-	{
-		title: "Coordinated Efforts",
-		text: "BNP aims to carry forward river rejuvenation efforts in a coordinated manner across the country.",
-	},
-	{
-		title: "Contribution of LiFE",
-		text: "Mission LiFE plays a significant role in the betterment of rivers, emphasizing that the entire world is one family and our future is shared.",
-	},
-	{
-		title: "Impact on SDGs",
-		text: "Clean and uninterrupted flow of India's rivers through BNP supports the achievement of the UN's sustainable development goals.",
-	},
-	{
-		title: "Unique Stories",
-		text: "Every river in India has its own unique story and specialty, adding to the cultural and environmental richness of the country.",
-	},
-];
+import { useTranslation } from "react-i18next";
 
 export default function AboutBNP() {
+	const { t } = useTranslation();
 	return (
-		<MainLayout title={"About us"} bgImg={bg} position={"bottom"}>
+		<MainLayout title={t("about.title")} bgImg={bg} position={"bottom"}>
 			<Box padding={"50px 17%"}>
 				<Grid container spacing={4}>
 					<Grid item xs={12}>
-						<ContentSection
-							content="Rivers are the lifeline of the whole world, but rivers have special importance in India, because apart from economic, India's connection with rivers is also religious, spiritual, and cultural, which is not seen in any other country in the world. It is because of this sacred bond with rivers that India is also called the country of rivers. These are the rivers on whose banks Indians have settled, grown, grown, and developed. A holy river like Ganga also flows on the land of India. Every river in India has its own story and specialty."
-							textColor="#1cabe2"
-							fontSize="20px"
-						/>
+						<Typography
+							variant="h6"
+							fontSize={"20px"}
+							textAlign={"justify"}
+							color={"#1cabe2"}
+						>
+							{t("about.sections.0.content")}
+						</Typography>
 					</Grid>
 					<Grid item xs={12}>
 						<QuoteSection
@@ -56,25 +31,37 @@ export default function AboutBNP() {
 							backgroundImage={bg1}
 							quoteLine1="पिबन्ति नद्यः स्वयमेव नाम्भः, स्वयं न खादन्ति फलानि वृक्षाः।"
 							quoteLine2="नादन्ति सस्यं खलु वारिवाहाः, परोपकाराय सतां विभूतयः॥"
-							translationLine1="Just as rivers do not drink their own water, trees do not eat their own fruits,"
-							translationLine2="And clouds do not consume crops nourished by rain; likewise, the virtuous use their wealth for benevolence."
+							translationLine1={t(
+								"about.sections.6.translationLine1"
+							)}
+							translationLine2={t(
+								"about.sections.6.translationLine2"
+							)}
 						/>
 					</Grid>
 					<Grid item xs={6}>
-						<ContentSection
-							content="At present, rivers are facing challenges like water shortage, encroachment, and pollution. While the governments are trying their best to deal with these challenges, a large section of society is also engaged in various ways to make their rivers clean and uninterrupted. While Namami Gange was formed by the Prime Minister of India, Shri Narendra Modi for the revival of Ganga and its tributaries, he also mentioned from time to time in his 'Mann Ki Baat' programs the efforts being made for the rivers in India."
-							textColor="#1cabe2"
-							backgroundColor="#acd3fb24"
-							fontSize="20px"
-						/>
+						<Box backgroundColor={"#acd3fb24"} padding={"30px"}>
+							<Typography
+								variant="h6"
+								fontSize={"20px"}
+								textAlign={"justify"}
+								color={"#1cabe2"}
+							>
+								{t("about.sections.1.content")}
+							</Typography>
+						</Box>
 					</Grid>
 					<Grid item xs={6}>
-						<ContentSection
-							content="In India, the efforts of the society and the government seem to be shared at some places, at some places their coordination seems incomplete and at some places the correct technical knowledge is not available. The BHARTIYA NADI PARISHAD (BNP) has been formed to coordinate the efforts of society and government for the rivers of India and to take forward efforts for the rivers in a better way by learning from each other's experiences. We can also know BHARTIYA NADI PARISHAD in English by the name Indian River Council."
-							backgroundColor="#acd3fb24"
-							textColor="#1cabe2"
-							fontSize="20px"
-						/>
+						<Box backgroundColor={"#acd3fb24"} padding={"30px"}>
+							<Typography
+								variant="h6"
+								fontSize={"20px"}
+								textAlign={"justify"}
+								color={"#1cabe2"}
+							>
+								{t("about.sections.2.content")}
+							</Typography>
+						</Box>
 					</Grid>
 					<Grid item xs={12}>
 						<img
@@ -86,7 +73,9 @@ export default function AboutBNP() {
 					<Grid item xs={12}>
 						<Box>
 							<Grid container spacing={3}>
-								{content.map((item, index) => (
+								{t("about.objective", {
+									returnObjects: true,
+								}).map((item, index) => (
 									<Grid
 										item
 										xs={12}
@@ -119,11 +108,14 @@ export default function AboutBNP() {
 						</Box>
 					</Grid>
 					<Grid item xs={12}>
-						<ContentSection
-							content="Clean and uninterrupted rivers are essential for rich biodiversity. Only in rich biodiversity can human society lead a healthy life. The remains and stories of the Indus Valley Civilization prove that India's prosperity grew along the banks of rivers. There is also solid information available that as soon as those rivers became violent due to any reason, those civilizations also came to an end. It is understood from the ancient knowledge tradition that if friendly behavior is maintained with the rivers, then the rivers provide life, but if they are tampered with or their capacity is challenged, then they also try to end the life."
-							textColor="#1cabe2"
-							fontSize="20px"
-						/>
+						<Typography
+							variant="h6"
+							fontSize={"20px"}
+							textAlign={"justify"}
+							color={"#1cabe2"}
+						>
+							{t("about.sections.3.content")}
+						</Typography>
 					</Grid>
 					<Grid item xs={12}>
 						<Box
@@ -134,30 +126,25 @@ export default function AboutBNP() {
 								border: "1px solid #fff",
 								boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
 								textAlign: "left",
+								display: "flex",
+								flexDirection: "column",
+								alignItems: "center",
 							}}
 						>
 							<Typography
 								variant="h5"
 								gutterBottom
 								fontWeight={"bold"}
+								textAlign={"center"}
 							>
-								Join the BNP
+								{t("about.sections.4.title")}
 							</Typography>
-							<Typography variant="h6" paragraph>
-								Any person or organization concerned about its
-								rivers in India can join the BNP. There is no
-								difference of religion, caste, gender, color,
-								region, and language in this. We all are
-								Indians, and we love the richness of our rivers.
-								Citizens or organizations believing in this idea
-								can associate with the BNP in any way.
+							<Typography variant="h6" paragraph 
+								>
+								{t("about.sections.4.content1")}
 							</Typography>
 							<Typography variant="h6" mb={2}>
-								This organization is of everyone and for
-								everyone. In this, everyone has the freedom to
-								express their ideas and implement them. Through
-								the BNP, we will move forward with a resolve to
-								make our country river rich.
+								{t("about.sections.4.content2")}
 							</Typography>
 							<Button
 								component={Link}
@@ -172,7 +159,7 @@ export default function AboutBNP() {
 									},
 								}}
 							>
-								Get Involved
+								{t("about.sections.4.button")}
 							</Button>
 						</Box>
 					</Grid>
@@ -198,29 +185,15 @@ export default function AboutBNP() {
 								mb={2}
 								fontWeight={"bold"}
 								backgroundColor={"#1cabe2"}
+								textAlign={"center"}
 							>
-								Importance of Rivers in Indian Prosperity
+								{t("about.sections.5.title")}
 							</Typography>
 							<Typography variant="h6" paragraph>
-								Understanding the ancient knowledge of India
-								tells us that clean and uninterrupted rivers are
-								essential for our prosperity. Therefore, society
-								and the system must make appropriate efforts in
-								this direction. In this context, the formation
-								of BNP is an important step taken by the society
-								with the cooperation of the system for the
-								prosperity of the rivers of India.
+								{t("about.sections.5.content1")}
 							</Typography>
 							<Typography variant="h6" paragraph>
-								When all the relevant sections of society and
-								system are involved in this step, then the
-								destination will be achieved by following the
-								path of prosperity of rivers. BNP strongly
-								believes in making joint efforts with society
-								and the government to achieve its goals. In
-								India, we can understand the importance of
-								rivers through this verse said in Van Parva of
-								Mahabharata.
+								{t("about.sections.5.content2")}
 							</Typography>
 							<Typography
 								variant="h6"
@@ -230,11 +203,7 @@ export default function AboutBNP() {
 								वे शृण्वन्ति नदीनां य ऋषभाः
 							</Typography>
 							<Typography variant="h6" paragraph>
-								The essence of which is that people who want to
-								gain knowledge must follow the path of rivers.
-								From this perspective, the prosperity of rivers
-								is also necessary for the prosperity of the
-								society.
+								{t("about.sections.5.content3")}
 							</Typography>
 						</Box>
 					</Grid>

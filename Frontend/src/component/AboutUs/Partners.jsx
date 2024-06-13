@@ -151,6 +151,7 @@ const Partners = () => (
 			<PartnerSection
 				title="Knowledge Partners"
 				partners={knowledgePartner}
+				width={{ xs: "100px", md: "250px" }}
 			/>
 			<PartnerSection title="Supporters" partners={supporters} />
 		</Box>

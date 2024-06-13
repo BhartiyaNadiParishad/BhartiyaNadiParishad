@@ -4,45 +4,14 @@ import bgImg2 from "../../assets/bg/bgl6.jpeg";
 import { Box, Grid, Paper, Typography } from "@mui/material";
 import MainLayout from "../Layout/mainLayout";
 import video from "../../assets/news.mp4";
-
-const values = [
-	{
-		heading: "Strength",
-		description:
-			"BNP is moving towards working for the betterment of rivers by uniting all the river activists, river researchers, river experts, policy makers, concerned government representatives, saints and river lovers of the country.",
-	},
-	{
-		heading: "Respect",
-		description:
-			"BNP respects every person who is thinking positively for the betterment of the rivers of India. The views of every such person are welcome on the platform of Indian River Council.",
-	},
-	{
-		heading: "Integrity",
-		description:
-			"BNP is committed to high ethical values and integrity in its work. We are accountable to every person who is a river lover.",
-	},
-	{
-		heading: "Balance",
-		description:
-			"BNP is in favor of bringing to the ground the vision of a healthy society along with the pure and uninterrupted nature of the rivers.",
-	},
-	{
-		heading: "Development",
-		description:
-			"Some priorities have been set by the BNP for the improvement of rivers. Apart from this, we as an organization believe in adopting new technologies and implementing them on the ground. We are also in favor of changing our approach with time.",
-	},
-	{
-		heading: "Inclusion",
-		description:
-			"There is no discrimination of any kind on the platform of BNP. We do not discriminate based on any kind of color, gender, caste, religion, region, or society. We are in favor of giving equal opportunity to all positive viewpoints.",
-	},
-];
+import { useTranslation } from "react-i18next";
 
 export default function MissionVision() {
+	const { t } = useTranslation();
 	return (
 		<>
 			<MainLayout
-				title={"Mission, Vision & Values"}
+				title={t("MissionVisionValues.mainTitle")}
 				bgImg={bgImg1}
 				position={"center"}
 			>
@@ -64,33 +33,15 @@ export default function MissionVision() {
 										color={"#051a36"}
 										mb={3}
 									>
-										Mission
+										{t("MissionVisionValues.title1")}
 									</Typography>
 									<Typography
 										variant="h6"
 										textAlign={"justify"}
 										color={"#264e79"}
-                    fontSize={"18px"}
-
+										fontSize={"18px"}
 									>
-										The main work of the BNP is to make the
-										rivers of India clean and uninterrupted
-										by creating mutual coordination. It is
-										the priority of the BNP to make
-										successful efforts for the betterment of
-										our rivers by bridging the gap between
-										society and governments. Be it sharing
-										our experiences with each other with
-										positivity or conveying any new topic to
-										the society or government, all this will
-										be done through the BNP. Efforts will be
-										made by the BNP to spread the benefits
-										of government schemes to the workers
-										engaged in the work of river
-										revitalization in the society and to
-										spread the fragrance of the efforts
-										being made in the society to the
-										government.
+										{t("MissionVisionValues.content1")}
 									</Typography>
 								</Box>
 							</Paper>
@@ -110,29 +61,15 @@ export default function MissionVision() {
 										color={"#051a36"}
 										mb={3}
 									>
-										Vision
+										{t("MissionVisionValues.title2")}
 									</Typography>
 									<Typography
 										variant="h6"
-                    fontSize={"18px"}
+										fontSize={"18px"}
 										textAlign={"justify"}
 										color={"#264e79"}
 									>
-										We want to create a river rich India.
-										The main objective of the BNP is to
-										provide a successful and permanent
-										solution to the pollution, encroachment,
-										and water shortage that India's rivers
-										have had to face in the last four to
-										five decades due to man-made distortions
-										and the impact of climate change. To
-										make the rivers of India clean and
-										uninterrupted, it has been decided to do
-										every necessary work with cooperation
-										through the BNP. The BNP is of the
-										opinion that when the rivers of India
-										are clean and healthy, the Indian
-										society will also be prosperous.
+										{t("MissionVisionValues.content2")}
 									</Typography>
 								</Box>
 							</Paper>
@@ -154,24 +91,15 @@ export default function MissionVision() {
 						gutterBottom
 						// color={"white"}
 					>
-						Our Values
+						{t("MissionVisionValues.title3")}
 					</Typography>
-					<Typography
-						variant="h6"
-						mb={4}
-						textAlign={"justify"}
-					>
-						At BNP, our values run as deep as the waters we
-						safeguard. We are driven by a commitment to
-						environmental stewardship, teamwork, and community
-						engagement, ensuring pristine riverways for generations
-						to come. Our core values of sustainability,
-						collaboration, and passion fuel our relentless
-						dedication to restoring and preserving our precious
-						rivers.
+					<Typography variant="h6" mb={4} textAlign={"justify"}>
+						{t("MissionVisionValues.content2")}
 					</Typography>
 					<Grid container spacing={6}>
-						{values.map((item, index) => (
+						{t("MissionVisionValues.values", {
+							returnObjects: true,
+						}).map((item, index) => (
 							<Grid item xs={12} md={4} key={index}>
 								<Box
 									height={350}
@@ -196,7 +124,7 @@ export default function MissionVision() {
 									<Typography
 										variant="h6"
 										textAlign={"justify"}
-                    color={"#264e79"}
+										color={"#264e79"}
 									>
 										{item.description}
 									</Typography>

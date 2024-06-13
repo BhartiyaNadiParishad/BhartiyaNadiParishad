@@ -8,7 +8,13 @@ import { Link } from "react-router-dom";
 
 export default function CustomCard(props) {
 	return (
-		<Box sx={{ backgroundColor: "white" }}>
+		<Box
+			sx={{ backgroundColor: "white" }}
+			border={"1px solid white"}
+			display={"flex"}
+			flexDirection={"column"}
+			alignItems={"center"}
+		>
 			<img
 				src={props.image}
 				style={{
@@ -32,7 +38,7 @@ export default function CustomCard(props) {
 					fontSize={"28px"}
 					textAlign={"center"}
 					fontWeight={"bold"}
-					color={"#05316b"}
+					color={"#1cabe2"}
 				>
 					{props.title}
 				</Typography>
@@ -44,19 +50,23 @@ export default function CustomCard(props) {
 				>
 					{props.content}
 				</Typography>
-				<Box width={"100%"} >
-					<Link to={props.link}>
-						<Button
-							color="primary"
-							size="large"
-							variant="contained"
-							sx={{ width: "75%", maxWidth: "none", margin: "auto" }}
-						>
-							{props.button}
-						</Button>
-					</Link>
-				</Box>
 			</CardContent>
+			<Box width={"50%"} mb={3}>
+				<Link to={props.link}>
+					<Button
+						size="large"
+						variant="contained"
+						sx={{
+							backgroundColor:"#1cabe2",
+							width: "100%",
+							maxWidth: "none",
+							margin: "auto",
+						}}
+					>
+						{props.button}
+					</Button>
+				</Link>
+			</Box>
 		</Box>
 	);
 }

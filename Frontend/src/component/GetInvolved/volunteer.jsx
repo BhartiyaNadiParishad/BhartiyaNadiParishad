@@ -14,6 +14,7 @@ import membership from "../../assets/bg15.jpg";
 import IForm from "./IForm";
 import img from "../../assets/bg23.jpg";
 import imgBG from "../../assets/bg15.jpg";
+import { useTranslation } from "react-i18next";
 
 const bnpDetails = [
 	"The river kit of the BNP will be received. This river kit will have a Brochure, T-shirt, Pan, Pad, Water Bottle, Sticker, Mug and other materials of the BNP.",
@@ -26,6 +27,7 @@ const bnpDetails = [
 ];
 
 export default function Volunteer() {
+	const { t } = useTranslation();
 	return (
 		<>
 			<MainLayout>
@@ -43,23 +45,21 @@ export default function Volunteer() {
 							textAlign={"center"}
 							color={"white"}
 						>
-							Volunteer
+							{t("volunteer.title")}
 						</Typography>
 					</Box>
 				</Box>
 				<Box padding={"5%"} color="#264e79">
-					<Typography variant="body1" textAlign={"justify"}>
-						Any river lover can contribute to the work of river
-						revitalization by becoming a BNP volunteer. The person
-						who wants to become a volunteer of BNP should have clean
-						conduct. One can become a volunteer only through the
-						selection process set by BNP. By becoming a volunteer of
-						BNP you will get the following benefits.A letter and an
-						identity card will be made available to the
-						person/organization from the BNP Secretariat.
+					<Typography 
+						variant="h6" 
+						fontSize={"20px"}
+						textAlign={"justify"}>
+						{t("volunteer.eligibility")}
 					</Typography>
 					<List>
-						{bnpDetails.map((text, index) => (
+						{t("volunteer.benefits", {
+							returnObjects: true,
+						}).map((text, index) => (
 							<ListItem key={index}>
 								<ListItemIcon>
 									<CircleIcon
@@ -70,7 +70,8 @@ export default function Volunteer() {
 									/>
 								</ListItemIcon>
 								<Typography
-									variant="body1"
+									variant="h6"
+									fontSize={"18px"}
 									textAlign={"justify"}
 								>
 									{text}

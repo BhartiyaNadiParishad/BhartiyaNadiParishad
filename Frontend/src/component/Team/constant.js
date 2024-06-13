@@ -12,6 +12,9 @@ import coreTeamImg11 from '../../assets/team/krishan mittal.jpg'
 import coreTeamImg12 from '../../assets/team/Ms Krishna Sharma.jpeg'
 import coreTeamImg13 from '../../assets/team/avadhesh.jpg'
 import coreTeamImg14 from '../../assets/team/aryan jaiswal.jpg'
+import coreTeamImg15 from '../../assets/team/Ms Leenika Jacob.jpg'
+import coreTeamImg16 from '../../assets/team/Mr Naveen Kumar.jpg'
+
 
 import advisoryTeamImg1 from '../../assets/team/Swami Chidanand Ji.jpeg'
 import advisoryTeamImg2 from '../../assets/team/Dr Chinmay Pandya.jpg'
@@ -31,12 +34,19 @@ import advisoryTeamImg15 from '../../assets/team/Kulbhusahan Upmanyu.jpeg'
 import advisoryTeamImg16 from '../../assets/team/ganesh tharot.jpeg'
 import advisoryTeamImg17 from '../../assets/team/Brijendra Singh.jpeg'
 import advisoryTeamImg18 from '../../assets/team/1.jpg'
+import advisoryTeamImg19 from '../../assets/team/Biplab-Paul.jpg'
+import advisoryTeamImg20 from '../../assets/team/Mr Krishan Tyagi.jpeg'
+import advisoryTeamImg21 from '../../assets/team/Kailashanand.jpg'
+import advisoryTeamImg22 from '../../assets/team/Yogrishi Vishvketu.jpg'
+
+
+
 
 import technicalCouncilImg1 from '../../assets/team/Raman Kant 1.jpg' //not available
 import technicalCouncilImg2 from '../../assets/team/Mr Prabhat Kumar Singh.jpeg'
 import technicalCouncilImg3 from '../../assets/team/Dr Anil Mehta.jpeg'
 import technicalCouncilImg4 from '../../assets/team/Ganga Nandini.jpeg'
-import technicalCouncilImg5 from '../../assets/team/Er. Vikas Tyagi.jpeg'
+import technicalCouncilImg5 from '../../assets/team/Shri Vikas Tyagi.jpg'
 import technicalCouncilImg6 from '../../assets/team/Dr V C Goyal.jpeg'
 import technicalCouncilImg7 from '../../assets/team/Dr Dinesh Poswal.jpeg'
 import technicalCouncilImg8 from '../../assets/team/Dr Ravindra Kumar Sinha.jpeg'
@@ -51,6 +61,15 @@ import technicalCouncilImg16 from '../../assets/team/Mr Bharat Bhushan Tyagi.png
 import technicalCouncilImg17 from '../../assets/team/Kanwal Singh Chauhan.jpeg'
 import technicalCouncilImg18 from '../../assets/team/Mr Umashankar Pandey.jpeg'
 import technicalCouncilImg19 from '../../assets/team/Laxman Singh.jpeg'
+import technicalCouncilImg20 from '../../assets/team/Dr Jagdish Purohit.jpg'
+import technicalCouncilImg21 from '../../assets/team/Dr Pankaj Gupta.jpg'
+
+import stateHeadsImg1 from '../../assets/team/Mr Brijendra Singh.jpg'
+import stateHeadsImg2 from '../../assets/team/Mr Ngawang Rinchen Wacher.jpg'
+import stateHeadsImg3 from '../../assets/team/Mr Ajay Sahay.jpg'
+
+
+
 
 export const stateHeads = [
 
@@ -66,7 +85,7 @@ export const stateHeads = [
     },
     {
         state: "Uttar Pradesh",
-        img: advisoryTeamImg1,
+        img: stateHeadsImg1,
         name: "Shri Brijendra Singh",
         title1: "Lokbharti",
         title2: "Lucknow, UP",
@@ -96,7 +115,7 @@ export const stateHeads = [
     },
     {
         state: "Ladhak",
-        img: advisoryTeamImg1,
+        img: stateHeadsImg2,
         name: "Shri Ngawang Rinchen Wacher",
         title1: "Young Drukpa Association",
         title2: "Laddhak",
@@ -106,7 +125,7 @@ export const stateHeads = [
     },
     {
         state: "Bihar",
-        img: advisoryTeamImg1,
+        img: stateHeadsImg3,
         name: "Shri Ajay Sahay",
         title1: "",
         title2: "Patna, Bihar",
@@ -147,7 +166,7 @@ export const Blessings = [
         gmailLink: "mailto:example@gmail.com",
     },
     {
-        img: advisoryTeamImg1,
+        img: advisoryTeamImg21,
         name: "HH Swami Kailashanand Giri",
         title1: "Niranjan Peethadheeshwar",
         title2: "Siddhpeeth Shri Dakshin Kali Mandir",
@@ -165,7 +184,7 @@ export const Blessings = [
         gmailLink: "mailto:example@gmail.com",
     },
     {
-        img: advisoryTeamImg2,
+        img: advisoryTeamImg22,
         name: "Shri Yogrishi Vishvketu ",
         title1: "Spiritual Leader",
         title2: "Anand Prakash Yogashram",
@@ -223,7 +242,7 @@ export const coreTeamData = [
         gmailLink: "mailto:example@gmail.com",
     },
     {
-        img: technicalCouncilImg4,
+        img: coreTeamImg15,
         name: "Ms Leenika Jacob",
         title1: "President, The Kala Chaupal",
         title2: "Bulandshar, UP",
@@ -250,7 +269,7 @@ export const coreTeamData = [
         gmailLink: "mailto:example@gmail.com"
     },
     {   
-        img: coreTeamImg2,
+        img: coreTeamImg16,
         name: "Mr. Naveen kumar",
         title1: "Co-ordinator ",
         title2: "Coordination",
@@ -526,7 +545,7 @@ export const advisoryCouncilData = [
         gmailLink: "mailto:example@gmail.com",
     },
     {
-        img: advisoryTeamImg13,
+        img: advisoryTeamImg19,
         name: "Shri Krishan Tyagi",
         title1: "Project Manager",
         title2: "Natural Resources Management &Agroecology, GIZ India",
@@ -544,7 +563,7 @@ export const advisoryCouncilData = [
         gmailLink: "mailto:example@gmail.com",
     },
     {
-        img: advisoryTeamImg16,
+        img: advisoryTeamImg20,
         name: "Shri Biplab Ketan Paul",
         title1: "innovator of BHUNGROOr",
         title2: "",
@@ -692,7 +711,7 @@ export const technicalCouncilData = [
     //     gmailLink: "mailto:example@gmail.com",
     // },
     {
-        img: advisoryTeamImg12,
+        img: technicalCouncilImg20,
         name: "Dr Jagdish Kumar Purohit",
         title1: "Advisor",
         title2: "GIZ, India",
@@ -746,7 +765,7 @@ export const technicalCouncilData = [
         gmailLink: "mailto:example@gmail.com",
     },
     {
-        img: technicalCouncilImg13,
+        img: technicalCouncilImg21,
         name: "Dr Pankaj Gupta",
         title1: "Ramanujan Faculty",
         title2: "IIT Delhi",

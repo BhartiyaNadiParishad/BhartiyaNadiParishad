@@ -11,7 +11,6 @@ import Contact from "./component/contactUs/contact";
 import Testing from "./component/testing";
 import AboutBNP from "./component/AboutUs/about";
 import Gallery from "./component/gallery";
-import ProgramPage from "./component/ourProgramPage";
 import OurValues from "./component/ourValues";
 import Partners from "./component/AboutUs/Partners";
 import MissionVision from "./component/AboutUs/missionVision";
@@ -34,6 +33,7 @@ import SuccessStories from "./component/Resouces/sucsess-stories";
 import GetInvolvedPage from "./component/GetInvolved/getInvolvedPage";
 import Inspiration from "./component/Team/inspiration";
 import StateHeads from "./component/Team/stateHeads";
+import ProgramPage from "./component/AboutUs/ourProgramPage";
 
 
 const theme = createTheme({

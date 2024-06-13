@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import {
 	Box,
 	TextField,
@@ -11,25 +11,16 @@ import {
 	FormControl,
 	InputLabel,
 	Grid,
-	styled,
 } from "@mui/material";
-
 import { Country, State, City } from "country-state-city";
 import country_state_district from "@coffeebeanslabs/country_state_district";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/material.css";
-import axios from "axios";
+import emailjs from "emailjs-com";
 import ReCAPTCHA from "react-google-recaptcha";
 import "react-country-state-city/dist/react-country-state-city.css";
 import FileUpload from "./Form/upload";
 import ProfilePicUpload from "./Form/profliePicUpload";
-
-// const CustomTextField = styled(TextField)({
-// 	"& .MuiOutlinedInput-root": {
-// 		borderRadius: "4px",
-// 		backgroundColor: "#fff",
-// 	},
-// });
 
 function IForm(props) {
 	const [formData, setFormData] = useState({
@@ -58,10 +49,7 @@ function IForm(props) {
 		population: "",
 	});
 
-	console.log(formData);
-
 	const recaptchaRef = useRef(null);
-
 	const [CaptchaValue, setCaptchaValue] = useState("");
 	const [snackbarOpen, setSnackbarOpen] = useState(false);
 	const [snackbarMessage, setSnackbarMessage] = useState("");
@@ -79,88 +67,84 @@ function IForm(props) {
 
 	const handleInputChange = (e) => {
 		const { id, value } = e.target;
-		console.log(e.target);
 		setFormData({
 			...formData,
 			[id]: value,
 		});
 	};
+
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 
-		const requestBody = {
-			service_id: "service_d52ztbs",
-			template_id: "template_35dd4mv",
-			user_id: "Z4wj3OTthLutaIT_z",
-			template_params: formData,
-		};
+		const recaptchaValue = recaptchaRef.current.getValue();
+		if (!recaptchaValue) {
+			setSnackbarMessage("Please complete the CAPTCHA.");
+			setSnackbarSeverity("error");
+			setSnackbarOpen(true);
+			return;
+		}
 
+		const templateParams = {
+			...formData,
+			"g-recaptcha-response": recaptchaValue,
+		};
 		try {
-			const res = await axios.post("http://localhost:3000/submit-form/", {
-				...formData,
-				CaptchaValue,
+			await emailjs.send(
+				"service_d52ztbs",
+				"template_35dd4mv",
+				templateParams,
+				"Z4wj3OTthLutaIT_z"
+			);
+			setSnackbarMessage("Form submitted successfully");
+			setSnackbarSeverity("success");
+			setFormData({
+				service: "",
+				title: "",
+				firstName: "",
+				lastName: "",
+				designation: "",
+				organization: "",
+				email: "",
+				contactNumber: "",
+				country: "",
+				state: "",
+				city: "",
+				district: "",
+				address: "",
+				workDescription: "",
+				interest: "",
+				riverLength: "",
+				riverName: "",
+				originSite: "",
+				mergingPlace: "",
+				discharge: "",
+				presentSituation: "",
+				waterQuality: "",
+				population: "",
 			});
-			if (res.data.success) {
-				const response = await axios.post(
-					"https://api.emailjs.com/api/v1.0/email/send",
-					requestBody
-				);
-				console.log("Email sent successfully:", response.data);
-				setFormData({
-					service: "",
-					title: "",
-					firstName: "",
-					lastName: "",
-					designation: "",
-					organization: "",
-					email: "",
-					contactNumber: "",
-					country: "",
-					state: "",
-					city: "",
-					district: "",
-					address: "",
-					workDescription: "",
-					interest: "",
-					riverLength: "",
-					riverName: "",
-					originSite: "",
-					mergingPlace: "",
-					discharge: "",
-					presentSituation: "",
-					waterQuality: "",
-					population: "",
-				});
-				setSnackbarMessage("Form submitted successfully");
-				setSnackbarSeverity("success");
-				setSnackbarOpen(true);
-				setCaptchaValue("");
-				recaptchaRef.current.reset();
-			}
+			recaptchaRef.current.reset();
 		} catch (err) {
 			console.log(err);
 			setSnackbarMessage("Failed to submit form");
 			setSnackbarSeverity("error");
+		} finally {
 			setSnackbarOpen(true);
+			
 		}
 	};
+
 	const handleCloseSnackbar = () => {
 		setSnackbarOpen(false);
 	};
 
-	function onChange(value) {
-		console.log("Captcha value:", value);
-		setCaptchaValue(value);
-	}
-
 	return (
-		<Box display={"flex"} justifyContent={"center"}>
+		<Box display={"flex"} justifyContent={"center"} paddingX={"50px"}>
 			<Box width={{ xs: "100%", md: "60%" }}>
 				<Typography
 					variant="h4"
 					fontWeight={"bold"}
 					mb={5}
-					color="#264e79"
+					color="#1cabe2"
 					textAlign={"center"}
 				>
 					{props.service} Form
@@ -253,7 +237,7 @@ function IForm(props) {
 
 						<Grid item xs={12} md={6}>
 							<PhoneInput
-								sx={{backgroundColor: "white"}}
+								sx={{ backgroundColor: "white" }}
 								inputProps={{
 									name: "phone",
 									required: true,
@@ -341,7 +325,7 @@ function IForm(props) {
 									minWidth: "120px",
 									width: "100%",
 									borderRadius: "4px",
-									backgroundColor: "white"
+									backgroundColor: "white",
 								}}
 							>
 								<InputLabel id="country-label">
@@ -402,7 +386,7 @@ function IForm(props) {
 									minWidth: "120px",
 									width: "100%",
 									borderRadius: "4px",
-									backgroundColor: "white"
+									backgroundColor: "white",
 								}}
 							>
 								<InputLabel id="district-label">
@@ -456,7 +440,10 @@ function IForm(props) {
 							<>
 								<Grid item xs={12}>
 									<TextField
-										sx={{ width: "100%" , backgroundColor: "white"}}
+										sx={{
+											width: "100%",
+											backgroundColor: "white",
+										}}
 										id="workDescription"
 										label="About Your Work (100 to 500 words)"
 										multiline
@@ -470,7 +457,10 @@ function IForm(props) {
 							<>
 								<Grid item xs={12}>
 									<TextField
-										sx={{ width: "100%", backgroundColor: "white" }}
+										sx={{
+											width: "100%",
+											backgroundColor: "white",
+										}}
 										id="interest"
 										label="About Your Interest (100 to 500 words)"
 										multiline
@@ -481,12 +471,12 @@ function IForm(props) {
 								</Grid>
 							</>
 						)}
-						<Grid item xs={6}>
+						{/* <Grid item xs={6}>
 							<ProfilePicUpload />
 						</Grid>
 						<Grid item xs={6}>
 							<FileUpload content={"Upload your Resume here"} />
-						</Grid>
+						</Grid> */}
 						{props.service === "Membership" && (
 							<>
 								<Grid item xs={12}>
@@ -494,15 +484,17 @@ function IForm(props) {
 										variant="h5"
 										fontWeight={"bold"}
 										textAlign={"center"}
-										color="#264e79"
-
+										color="#1cabe2"
 									>
 										Your River Details
 									</Typography>
 								</Grid>
 								<Grid item xs={12} md={8}>
 									<TextField
-										sx={{ width: "100%" , backgroundColor: "white"}}
+										sx={{
+											width: "100%",
+											backgroundColor: "white",
+										}}
 										id="riverName"
 										label="Name of The River"
 										value={formData.riverName}
@@ -511,7 +503,10 @@ function IForm(props) {
 								</Grid>
 								<Grid item xs={12} md={4}>
 									<TextField
-										sx={{ width: "100%", backgroundColor: "white" }}
+										sx={{
+											width: "100%",
+											backgroundColor: "white",
+										}}
 										id="riverLength"
 										label="Length"
 										value={formData.riverLength}
@@ -520,7 +515,10 @@ function IForm(props) {
 								</Grid>
 								<Grid item xs={12} md={6}>
 									<TextField
-										sx={{ width: "100%" , backgroundColor: "white"}}
+										sx={{
+											width: "100%",
+											backgroundColor: "white",
+										}}
 										id="originSite"
 										label="Origin Site, District & State"
 										value={formData.originSite}
@@ -529,7 +527,10 @@ function IForm(props) {
 								</Grid>
 								<Grid item xs={12} md={6}>
 									<TextField
-										sx={{ width: "100%", backgroundColor: "white" }}
+										sx={{
+											width: "100%",
+											backgroundColor: "white",
+										}}
 										id="mergingPlace"
 										label="Place of Merging"
 										value={formData.mergingPlace}
@@ -538,7 +539,10 @@ function IForm(props) {
 								</Grid>
 								<Grid item xs={12}>
 									<TextField
-										sx={{ width: "100%", backgroundColor: "white" }}
+										sx={{
+											width: "100%",
+											backgroundColor: "white",
+										}}
 										id="discharge"
 										label="Discharge of the River (mld)"
 										value={formData.discharge}
@@ -547,7 +551,10 @@ function IForm(props) {
 								</Grid>
 								<Grid item xs={12}>
 									<TextField
-										sx={{ width: "100%", backgroundColor: "white" }}
+										sx={{
+											width: "100%",
+											backgroundColor: "white",
+										}}
 										id="presentSituation"
 										label="Present Situation"
 										multiline
@@ -559,7 +566,10 @@ function IForm(props) {
 
 								<Grid item xs={12} md={8}>
 									<TextField
-										sx={{ width: "100%", backgroundColor: "white" }}
+										sx={{
+											width: "100%",
+											backgroundColor: "white",
+										}}
 										id="waterQuality"
 										label="Water Quality"
 										value={formData.waterQuality}
@@ -569,18 +579,21 @@ function IForm(props) {
 
 								<Grid item xs={12} md={4}>
 									<TextField
-										sx={{ width: "100%", backgroundColor: "white" }}
+										sx={{
+											width: "100%",
+											backgroundColor: "white",
+										}}
 										id="population"
 										label="Population"
 										value={formData.population}
 										onChange={handleInputChange}
 									/>
 								</Grid>
-								<Grid item xs={12}>
+								{/* <Grid item xs={12}>
 									<FileUpload
 										content={"Upload your River files here"}
 									/>
-								</Grid>
+								</Grid> */}
 							</>
 						)}
 						<Grid
@@ -592,7 +605,7 @@ function IForm(props) {
 							<ReCAPTCHA
 								ref={recaptchaRef}
 								sitekey="6LdEM9YpAAAAAKv2j7jJ0azIsOR88gW97FUo_OkR"
-								onChange={onChange}
+								onChange={(value)=>{setCaptchaValue(value)}}
 							/>
 						</Grid>
 						<Grid

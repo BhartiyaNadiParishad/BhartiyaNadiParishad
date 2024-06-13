@@ -14,6 +14,7 @@ import membership from "../../assets/bg15.jpg";
 import IForm from "./IForm";
 import img from "../../assets/websitePic/internship.jpg";
 import imgBG from "../../assets/bg15.jpg";
+import { useTranslation } from "react-i18next";
 
 const bnpInternDetails = [
 	"The river kit of the BNP will be received. This river kit will have a Brochure, T-shirt, Pan, Pad, Water Bottle, Sticker, Mug and other materials of the BNP.",
@@ -25,9 +26,11 @@ const bnpInternDetails = [
 ];
 
 export default function Internship() {
+
+	const { t } = useTranslation();
 	return (
 		<>
-			<MainLayout>
+			<MainLayout  >
 				<Box
 					sx={{
 						backgroundImage: `url(${imgBG})`,
@@ -42,23 +45,22 @@ export default function Internship() {
 							textAlign={"center"}
 							color={"white"}
 						>
-							Internship
+							{t('internship.title')}
 						</Typography>
 					</Box>
 				</Box>
 				<Grid container spacing={3} padding={8} color="#264e79">
 					<Grid item xs={12}>
 						<Typography variant="h5" textAlign={"justify"}>
-							Any student with good conduct can do internship with
-							BNP. For this, the requirements set by BNP will have
-							to be fulfilled. The student must also give a letter
-							from his college/institute/university.
+						{t('internship.eligibility')}
 						</Typography>
 					</Grid>
 					<Grid item xs={12} md={6}>
 						<Box>
 							<List>
-								{bnpInternDetails.map((text, index) => (
+								{t('internship.benefits', {
+									returnObjects: true,
+								}).map((text, index) => (
 									<ListItem key={index}>
 										<ListItemIcon>
 											<CircleIcon

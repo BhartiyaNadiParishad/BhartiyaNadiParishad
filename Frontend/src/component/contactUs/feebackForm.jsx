@@ -8,25 +8,26 @@ import {
 	Select,
 	TextField,
 	Typography,
+	Snackbar,
+	Alert,
 } from "@mui/material";
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import { Country, State, City } from "country-state-city";
 import country_state_district from "@coffeebeanslabs/country_state_district";
+import emailjs from "emailjs-com";
 
-export default function FeebackForm() {
-
+export default function FeedbackForm() {
 	const [countryCode, setCountryCode] = useState("");
-
 	const [stateList, setStateList] = useState([]);
 	const [districtList, setDistrictList] = useState([]);
-
 	const [countryId, setCountryId] = useState("");
 	const [stateId, setStateId] = useState("");
 	const [districtId, setDistrictId] = useState("");
 	const countryList = Country.getAllCountries();
-
+	const [snackbarOpen, setSnackbarOpen] = useState(false);
+	const [snackbarMessage, setSnackbarMessage] = useState("");
+	const [snackbarSeverity, setSnackbarSeverity] = useState("success");
 
 	const [formData, setFormData] = useState({
 		title: "",
@@ -43,11 +44,53 @@ export default function FeebackForm() {
 
 	const handleInputChange = (e) => {
 		const { id, value } = e.target;
-		console.log(e.target);
 		setFormData({
 			...formData,
 			[id]: value,
 		});
+	};
+
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		const templateParams = {
+			...formData,
+		};
+
+		try {
+			await emailjs.send(
+				"service_d52ztbs",
+				"template_vuwp6vn",
+				templateParams,
+				"Z4wj3OTthLutaIT_z"
+			);
+			setSnackbarMessage("Form submitted successfully");
+			setSnackbarSeverity("success");
+			setFormData({
+				title: "",
+				firstName: "",
+				lastName: "",
+				email: "",
+				contactNumber: "",
+				country: "",
+				state: "",
+				district: "",
+				address: "",
+				query: "",
+			});
+			setCountryId("");
+			setStateId("");
+			setDistrictId("");
+		} catch (err) {
+			console.log(err);
+			setSnackbarMessage("Failed to submit form");
+			setSnackbarSeverity("error");
+		} finally {
+			setSnackbarOpen(true);
+		}
+	};
+
+	const handleCloseSnackbar = () => {
+		setSnackbarOpen(false);
 	};
 
 	return (
@@ -62,7 +105,7 @@ export default function FeebackForm() {
 				>
 					Feedback/Query Form
 				</Typography>
-				<form>
+				<form onSubmit={handleSubmit}>
 					<Grid container spacing={3}>
 						<Grid item xs={12} md={4}>
 							<FormControl
@@ -94,7 +137,7 @@ export default function FeebackForm() {
 						</Grid>
 						<Grid item xs={12} md={4}>
 							<TextField
-								sx={{ width: "100%" , backgroundColor: "white"}}
+								sx={{ width: "100%", backgroundColor: "white" }}
 								required
 								id="firstName"
 								label="First Name"
@@ -104,7 +147,7 @@ export default function FeebackForm() {
 						</Grid>
 						<Grid item xs={12} md={4}>
 							<TextField
-								sx={{ width: "100%" , backgroundColor: "white"}}
+								sx={{ width: "100%", backgroundColor: "white" }}
 								required
 								id="lastName"
 								label="Last Name"
@@ -138,10 +181,11 @@ export default function FeebackForm() {
 								}}
 								inputStyle={{ width: "100%" }}
 								country={"in"}
-								onChange={(e) => {
+								value={formData.contactNumber}
+								onChange={(value) => {
 									setFormData({
 										...formData,
-										contactNumber: e,
+										contactNumber: value,
 									});
 								}}
 							/>
@@ -233,7 +277,6 @@ export default function FeebackForm() {
 									name="state"
 									onChange={(e) => {
 										const state = stateList[e.target.value];
-										console.log(e.target);
 										setStateId(e.target.value);
 										setDistrictId(null);
 										setFormData({
@@ -241,7 +284,7 @@ export default function FeebackForm() {
 											state: state.name,
 											district: "",
 										});
-										if (formData.country == "India") {
+										if (formData.country === "India") {
 											setDistrictList(
 												country_state_district.getDistrictsByStateId(
 													e.target.value + 1
@@ -320,7 +363,7 @@ export default function FeebackForm() {
 						</Grid>
 						<Grid item xs={12}>
 							<TextField
-								sx={{ width: "100%" , backgroundColor: "white"}}
+								sx={{ width: "100%", backgroundColor: "white" }}
 								required
 								id="address"
 								label="Address"
@@ -330,7 +373,7 @@ export default function FeebackForm() {
 						</Grid>
 						<Grid item xs={12}>
 							<TextField
-								sx={{ width: "100%" , backgroundColor: "white"}}
+								sx={{ width: "100%", backgroundColor: "white" }}
 								id="query"
 								label="Please tell us about your Feedback/query"
 								multiline
@@ -356,6 +399,19 @@ export default function FeebackForm() {
 					</Grid>
 				</form>
 			</Box>
+			<Snackbar
+				open={snackbarOpen}
+				autoHideDuration={6000}
+				onClose={handleCloseSnackbar}
+			>
+				<Alert
+					onClose={handleCloseSnackbar}
+					severity={snackbarSeverity}
+					sx={{ width: "100%" }}
+				>
+					{snackbarMessage}
+				</Alert>
+			</Snackbar>
 		</>
 	);
 }

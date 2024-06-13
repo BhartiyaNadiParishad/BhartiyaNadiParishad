@@ -2,9 +2,12 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import { Description } from "@mui/icons-material";
-import english from './text/en/homePage.json'
-import hindi from './text/hi/homePage.json'
-
+import englishHomePage from "./text/en/homePage.json";
+import hindiHomePage from "./text/hi/homePage.json";
+import englishAboutUsPage from "./text/en/about.json";
+import getInvovled from "./text/en/getInvolved.json"
+import nadiDarshan from "./text/en/nadiDarshan.json"
+// import hindiAboutUsPage from "./text/hi/about.json";
 
 i18n
 	// detect user language
@@ -22,10 +25,15 @@ i18n
 		},
 		resources: {
 			en: {
-				translation: english
+				translation: { 
+					...englishHomePage, 
+					...englishAboutUsPage,
+					...getInvovled,
+					...nadiDarshan
+				},
 			},
-            hi: {
-				translation: hindi
+			hi: {
+				translation: hindiHomePage,
 			},
 		},
 	});

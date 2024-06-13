@@ -41,14 +41,14 @@ export default function FrontDisplay() {
 				to="/getInvolvedMenu"
 				sx={{ ...ButtonStyle, left: 70 }}
 			>
-				Get Involved
+				{t('button1')}
 			</Button>
 			<Button
 				component={Link}
 				to="/getInvolvedMenu"
 				sx={{ ...ButtonStyle, right: 70 }}
 			>
-				Need Help?
+				{t('button2')}
 			</Button>
 			<video
 				autoPlay

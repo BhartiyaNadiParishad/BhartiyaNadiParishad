@@ -3,6 +3,7 @@ import React from "react";
 import VerticalScroll from "../news/verticalScroll";
 import NewsVideo from "./newsVideo";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import { useTranslation } from "react-i18next";
 // import { Carousel } from "@material-tailwind/react";
 // import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 // import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
@@ -27,12 +28,22 @@ const newsItems = [
 	// Add more news items as needed
 ];
 
+const storyItems = [
+	"Breaking News: Market hits an all-time high",
+	"Weather Alert: Heavy rains expected this weekend",
+	"Sports Update: Local team wins championship",
+	"Tech News: New smartphone model released",
+	// Add more news items as needed
+];
+
 const videos = [
 	"https://youtu.be/ZC_l58Fo4Dk?feature=shared",
 	"https://youtu.be/vxkejkEin6Y?feature=shared",
 ];
 
 export default function news() {
+
+	const {t} = useTranslation();
 	return (
 		<>
 			<Grid
@@ -50,8 +61,9 @@ export default function news() {
 							variant="h5"
 							fontWeight={"bold"}
 							color={"#1cabe2"}
+							textAlign={"center"}
 						>
-							News & Highlights
+							{t('News.1.title')}
 						</Typography>
 						<VerticalScroll
 							itemHeight={80}
@@ -85,8 +97,9 @@ export default function news() {
 							variant="h5"
 							fontWeight={"bold"}
 							color={"#1cabe2"}
+							textAlign={"center"}
 						>
-							Success Stories
+							{t('News.2.title')}
 						</Typography>
 						<VerticalScroll
 							itemHeight={85}
@@ -94,7 +107,7 @@ export default function news() {
 							loopCount={6}
 							totalItems={newsItems.length}
 						>
-							{newsItems.map((news, index) => (
+							{storyItems.map((news, index) => (
 								<Box
 									key={index}
 									borderBottom={"0.5px solid #1cabe2"}
@@ -127,7 +140,7 @@ export default function news() {
 							fontWeight={"bold"}
 							color={"#1cabe2"}
 						>
-							Featured Videos
+							{t('News.3.title')}
 						</Typography>
 						<VerticalScroll
 							itemHeight={300}
