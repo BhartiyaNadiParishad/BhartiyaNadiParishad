@@ -14,6 +14,13 @@ import coreTeamImg13 from '../../assets/team/avadhesh.jpg'
 import coreTeamImg14 from '../../assets/team/aryan jaiswal.jpg'
 import coreTeamImg15 from '../../assets/team/Ms Leenika Jacob.jpg'
 import coreTeamImg16 from '../../assets/team/Mr Naveen Kumar.jpg'
+import coreTeamImg17 from '../../assets/team/Rohit Tiwari.jpeg'
+import coreTeamImg18 from '../../assets/team/Sidharth Sharma.jpeg'
+import coreTeamImg19 from '../../assets/team/Chandan Nayal.jpg'
+import coreTeamImg20 from '../../assets/team/Shiv Kumar.jpeg'
+import coreTeamImg21 from '../../assets/team/Kartik Sapre.jpeg'
+
+
 
 
 import advisoryTeamImg1 from '../../assets/team/Swami Chidanand Ji.jpeg'
@@ -38,6 +45,12 @@ import advisoryTeamImg19 from '../../assets/team/Biplab-Paul.jpg'
 import advisoryTeamImg20 from '../../assets/team/Mr Krishan Tyagi.jpeg'
 import advisoryTeamImg21 from '../../assets/team/Kailashanand.jpg'
 import advisoryTeamImg22 from '../../assets/team/Yogrishi Vishvketu.jpg'
+import advisoryTeamImg23 from '../../assets/team/Mr Giriraj Goyal.jpeg'
+import advisoryTeamImg24 from '../../assets/team/Mrs Karuna Singh.jpeg'
+import advisoryTeamImg25 from '../../assets/team/Mrs Anupama Madhok.jpg'
+import advisoryTeamImg26 from '../../assets/team/Shri Laxman Singh.jpg'
+import advisoryTeamImg27 from '../../assets/team/Mrs Veena Khanduri.jpg'
+
 
 
 
@@ -63,11 +76,15 @@ import technicalCouncilImg18 from '../../assets/team/Mr Umashankar Pandey.jpeg'
 import technicalCouncilImg19 from '../../assets/team/Laxman Singh.jpeg'
 import technicalCouncilImg20 from '../../assets/team/Dr Jagdish Purohit.jpg'
 import technicalCouncilImg21 from '../../assets/team/Dr Pankaj Gupta.jpg'
+import technicalCouncilImg22 from '../../assets/team/Dr Vishal Rajput.jpeg'
 
 import stateHeadsImg1 from '../../assets/team/Mr Brijendra Singh.jpg'
 import stateHeadsImg2 from '../../assets/team/Mr Ngawang Rinchen Wacher.jpg'
 import stateHeadsImg3 from '../../assets/team/Mr Ajay Sahay.jpg'
 
+import blessings1 from '../../assets/team/Shri U P Singh.jpeg'
+import blessings2 from '../../assets/team/Shri G Ashok Kumar.jpeg' 
+import blessings3 from '../../assets/team/Smt. Prakashi Tomer.jpg' 
 
 
 
@@ -76,9 +93,9 @@ export const stateHeads = [
     {
         state: "Uttarakhand",
         img: advisoryTeamImg1,
-        name: "Shri Naula Foundation",
-        title1: "",
-        title2: "",
+        name: "Shri Bishan Singh",
+        title1: "Naula Foundation",
+        title2: "Almoda, UK",
         facebookLink: "https://www.facebook.com/",
         linkedinLink: "https://www.linkedin.com/",
         gmailLink: "mailto:example@gmail.com",
@@ -105,7 +122,7 @@ export const stateHeads = [
     },
     {
         state: "Orrissa",
-        img: advisoryTeamImg1,
+        img: advisoryTeamImg11,
         name: "Shri Ranjan Panda",
         title1: "Mahanadi Waterkeeper",
         title2: "Orrissa",
@@ -127,7 +144,7 @@ export const stateHeads = [
         state: "Bihar",
         img: stateHeadsImg3,
         name: "Shri Ajay Sahay",
-        title1: "",
+        title1: "River Conservationist",
         title2: "Patna, Bihar",
         facebookLink: "https://www.facebook.com/",
         linkedinLink: "https://www.linkedin.com/",
@@ -135,9 +152,9 @@ export const stateHeads = [
     },
     {
         state: "Madhya Pradesh",
-        img: advisoryTeamImg1,
-        name: "Shri Kartik Sapre",
-        title1: "Narmada Samagra",
+        img: advisoryTeamImg23,
+        name: "Shri Giriraj Goyal",
+        title1: "Bainsli River",
         title2: "Bhopal, MP",
         facebookLink: "https://www.facebook.com/",
         linkedinLink: "https://www.linkedin.com/",
@@ -149,6 +166,16 @@ export const stateHeads = [
         name: "Shri Ashok Upadhyay",
         title1: "Yamuna Baba",
         title2: "New Delhi",
+        facebookLink: "https://www.facebook.com/",
+        linkedinLink: "https://www.linkedin.com/",
+        gmailLink: "mailto:example@gmail.com",
+    },
+    {
+        state: "Gujarat",
+        img: advisoryTeamImg1,
+        name: "Ms Charu Mishra",
+        title1: "Dholakia Foundation",
+        title2: "Surat, Gujarat",
         facebookLink: "https://www.facebook.com/",
         linkedinLink: "https://www.linkedin.com/",
         gmailLink: "mailto:example@gmail.com",
@@ -165,29 +192,20 @@ export const Blessings = [
         linkedinLink: "https://www.linkedin.com/",
         gmailLink: "mailto:example@gmail.com",
     },
-    {
-        img: advisoryTeamImg21,
-        name: "HH Swami Kailashanand Giri",
-        title1: "Niranjan Peethadheeshwar",
-        title2: "Siddhpeeth Shri Dakshin Kali Mandir",
-        facebookLink: "https://www.facebook.com/",
-        linkedinLink: "https://www.linkedin.com/",
-        gmailLink: "mailto:example@gmail.com",
-    },
+    // {
+    //     img: advisoryTeamImg21,
+    //     name: "HH Swami Kailashanand Giri",
+    //     title1: "Niranjan Peethadheeshwar",
+    //     title2: "Siddhpeeth Shri Dakshin Kali Mandir",
+    //     facebookLink: "https://www.facebook.com/",
+    //     linkedinLink: "https://www.linkedin.com/",
+    //     gmailLink: "mailto:example@gmail.com",
+    // },
     {
         img: advisoryTeamImg2,
         name: "Dr Chinmay Pandey",
         title1: "Pro Vice-Chancellor",
         title2: "Dev Sanskriti Vishwavidyalaya",
-        facebookLink: "https://www.facebook.com/",
-        linkedinLink: "https://www.linkedin.com/",
-        gmailLink: "mailto:example@gmail.com",
-    },
-    {
-        img: advisoryTeamImg22,
-        name: "Shri Yogrishi Vishvketu ",
-        title1: "Spiritual Leader",
-        title2: "Anand Prakash Yogashram",
         facebookLink: "https://www.facebook.com/",
         linkedinLink: "https://www.linkedin.com/",
         gmailLink: "mailto:example@gmail.com",
@@ -210,6 +228,61 @@ export const Blessings = [
         linkedinLink: "https://www.linkedin.com/",
         gmailLink: "mailto:example@gmail.com",
     },
+    {
+        img: advisoryTeamImg22,
+        name: "Shri Yogrishi Vishvketu ",
+        title1: "Spiritual Leader",
+        title2: "Anand Prakash Yogashram",
+        facebookLink: "https://www.facebook.com/",
+        linkedinLink: "https://www.linkedin.com/",
+        gmailLink: "mailto:example@gmail.com",
+    },
+    {
+        img: advisoryTeamImg6,
+        name: "Dr Prabhat Kumar",
+        title1: "Former Chairman",
+        title2: "UPSC",
+        facebookLink: "https://www.facebook.com/",
+        linkedinLink: "https://www.linkedin.com/",
+        gmailLink: "mailto:example@gmail.com",
+    },
+    {
+        img: blessings1,
+        name: "Mr Upendra Prashad Singh",
+        title1: "Former Secretary",
+        title2: "Ministry of JAL SHAKTI, GoI",
+        facebookLink: "https://www.facebook.com/",
+        linkedinLink: "https://www.linkedin.com/",
+        gmailLink: "mailto:example@gmail.com",
+    },
+    {
+        img: advisoryTeamImg8,
+        name: "Mr Rajeev Ranjan Mishra",
+        title1: "Former DG",
+        title2: "NAMAMI GANGE – MoJS GoI",
+        facebookLink: "https://www.facebook.com/",
+        linkedinLink: "https://www.linkedin.com/",
+        gmailLink: "mailto:example@gmail.com",
+    },
+    {
+        img: blessings2,
+        name: "Shri G Ashok Kumar",
+        title1: "Former DG",
+        title2: "NAMAMI GANGE ",
+        facebookLink: "https://www.facebook.com/",
+        linkedinLink: "https://www.linkedin.com/",
+        gmailLink: "mailto:example@gmail.com",
+    },
+    {
+        img: blessings3,
+        name: "Smt. Prakashi Tomer",
+        title1: "Shooter Dadi",
+        title2: " ",
+        facebookLink: "https://www.facebook.com/",
+        linkedinLink: "https://www.linkedin.com/",
+        gmailLink: "mailto:example@gmail.com",
+    },
+    
 ]
 
 
@@ -226,8 +299,8 @@ export const coreTeamData = [
     {
         img: advisoryTeamImg18,
         name: "Ms Vrinda Khanna",
-        title1: "National Secretary",
-        title2: "Sant Ishwar Foundation",
+        title1: "National Coordinator",
+        title2: "Bhartiya Nadi Parishad",
         facebookLink: "https://www.facebook.com/",
         linkedinLink: "https://www.linkedin.com/",
         gmailLink: "mailto:example@gmail.com",
@@ -235,47 +308,11 @@ export const coreTeamData = [
     {
         img: technicalCouncilImg4,
         name: "Ms. Ganga Nandini",
-        title1: "Director (PI&C, GI WASH Alliance)",
-        title2: "Ganga Action Parivar",
+        title1: "Coordinator",
+        title2: "River Spirituality",
         facebookLink: "https://www.facebook.com/",
         linkedinLink: "https://www.linkedin.com/",
         gmailLink: "mailto:example@gmail.com",
-    },
-    {
-        img: coreTeamImg15,
-        name: "Ms Leenika Jacob",
-        title1: "President, The Kala Chaupal",
-        title2: "Bulandshar, UP",
-        facebookLink: "https://www.facebook.com/",
-        linkedinLink: "https://www.linkedin.com/",
-        gmailLink: "mailto:example@gmail.com",
-    },
-    {   
-        img: coreTeamImg2,
-        name: "Dr Jagdish Menon",
-        title1: "River Morphology Expert ",
-        title2: "GIZ, India",
-        facebookLink: "https://www.facebook.com/",
-        linkedinLink: "https://www.linkedin.com/",
-        gmailLink: "mailto:example@gmail.com"
-    },
-    {   
-        img: coreTeamImg2,
-        name: "Mr. Umang Rastogi",
-        title1: "Co-ordinator ",
-        title2: "Documentation",
-        facebookLink: "https://www.facebook.com/",
-        linkedinLink: "https://www.linkedin.com/",
-        gmailLink: "mailto:example@gmail.com"
-    },
-    {   
-        img: coreTeamImg16,
-        name: "Mr. Naveen kumar",
-        title1: "Co-ordinator ",
-        title2: "Coordination",
-        facebookLink: "https://www.facebook.com/",
-        linkedinLink: "https://www.linkedin.com/",
-        gmailLink: "mailto:example@gmail.com"
     },
     {
         img: coreTeamImg3,
@@ -286,11 +323,92 @@ export const coreTeamData = [
         linkedinLink: "https://www.linkedin.com/",
         gmailLink: "mailto:example@gmail.com",
     },
+    // {
+    //     img: coreTeamImg15,
+    //     name: "Ms Leenika Jacob",
+    //     title1: "President, The Kala Chaupal",
+    //     title2: "Bulandshar, UP",
+    //     facebookLink: "https://www.facebook.com/",
+    //     linkedinLink: "https://www.linkedin.com/",
+    //     gmailLink: "mailto:example@gmail.com",
+    // },
+    {   
+        img: coreTeamImg2,
+        name: "Dr Jagdish Menon",
+        title1: "Coordinator",
+        title2: "River Mapping and Development",
+        facebookLink: "https://www.facebook.com/",
+        linkedinLink: "https://www.linkedin.com/",
+        gmailLink: "mailto:example@gmail.com"
+    },
+    {
+        img: coreTeamImg21,
+        name: "Shri Kartik Sapre",
+        title1: "Coordinator",
+        title2: "Community Engagement",
+        facebookLink: "https://www.facebook.com/",
+        linkedinLink: "https://www.linkedin.com/",
+        gmailLink: "mailto:example@gmail.com",
+    },
+    {
+        img: coreTeamImg18,
+        name: "Sidharth Sharma",
+        title1: "Coordinator",
+        title2: "Coordination",
+        facebookLink: "https://www.facebook.com/",
+        linkedinLink: "https://www.linkedin.com/",
+        gmailLink: "mailto:example@gmail.com",
+    },
+    {
+        img: coreTeamImg12,
+        name: "Shri Krishna Sharma",
+        title1: "Coordinator",
+        title2: "Community Water Management",
+        facebookLink: "https://www.facebook.com/",
+        linkedinLink: "https://www.linkedin.com/",
+        gmailLink: "mailto:example@gmail.com",
+    },
+    {   
+        img: coreTeamImg16,
+        name: "Mr. Naveen kumar",
+        title1: "Co-ordinator ",
+        title2: "Public Relation and Media",
+        facebookLink: "https://www.facebook.com/",
+        linkedinLink: "https://www.linkedin.com/",
+        gmailLink: "mailto:example@gmail.com"
+    },
     {
         img: coreTeamImg8,
-        name: "Mr Rohit Sangwan",
+        name: "Mr. Rohit Sangwan",
         title1: "Coordinator ",
         title2: "Field Activities",
+        facebookLink: "https://www.facebook.com/",
+        linkedinLink: "https://www.linkedin.com/",
+        gmailLink: "mailto:example@gmail.com",
+    },
+    {
+        img: coreTeamImg17,
+        name: "Mr. Rohit Tiwari",
+        title1: "Coordinator ",
+        title2: "Human Values",
+        facebookLink: "https://www.facebook.com/",
+        linkedinLink: "https://www.linkedin.com/",
+        gmailLink: "mailto:example@gmail.com",
+    },
+    {
+        img: coreTeamImg20,
+        name: "Mr. Shiv Kumar",
+        title1: "Coordinator ",
+        title2: "Sustainable Farming",
+        facebookLink: "https://www.facebook.com/",
+        linkedinLink: "https://www.linkedin.com/",
+        gmailLink: "mailto:example@gmail.com",
+    },
+    {
+        img: coreTeamImg11,
+        name: "Shri Krishan Mittal",
+        title1: "Sub Coordinator",
+        title2: "Public Relation & Media",
         facebookLink: "https://www.facebook.com/",
         linkedinLink: "https://www.linkedin.com/",
         gmailLink: "mailto:example@gmail.com",
@@ -304,6 +422,36 @@ export const coreTeamData = [
         linkedinLink: "https://www.linkedin.com/",
         gmailLink: "mailto:example@gmail.com",
     },
+    {
+        img: coreTeamImg13,
+        name: "Mr. Avadhesh kumar",
+        title1: "Coordinator",
+        title2: "Digital Communication",
+        facebookLink: "https://www.facebook.com/",
+        linkedinLink: "https://www.linkedin.com/",
+        gmailLink: "mailto:example@gmail.com",
+    },
+    {
+        img: coreTeamImg14,
+        name: "Mr. Aryan Jaiswal",
+        title1: "Intern",
+        title2: "Digital Communication",
+        facebookLink: "https://www.facebook.com/",
+        linkedinLink: "https://www.linkedin.com/",
+        gmailLink: "mailto:example@gmail.com",
+    },
+    {   
+        img: coreTeamImg2,
+        name: "Mr. Umang Rastogi",
+        title1: "Coordinator ",
+        title2: "Documentation",
+        facebookLink: "https://www.facebook.com/",
+        linkedinLink: "https://www.linkedin.com/",
+        gmailLink: "mailto:example@gmail.com"
+    },
+    
+    
+    
     // {
     //     img: coreTeamImg5,
     //     name: "Mr Naveen Pradhan",
@@ -313,28 +461,11 @@ export const coreTeamData = [
     //     linkedinLink: "https://www.linkedin.com/",
     //     gmailLink: "mailto:example@gmail.com",
     // },
-    {
-        img: coreTeamImg13,
-        name: "Mr. Avadhesh kumar",
-        title1: "Coordinator",
-        title2: "Digital Management",
-        facebookLink: "https://www.facebook.com/",
-        linkedinLink: "https://www.linkedin.com/",
-        gmailLink: "mailto:example@gmail.com",
-    },
-    {
-        img: coreTeamImg14,
-        name: "Mr. Aryan Jaiswal",
-        title1: "Intern",
-        title2: "Digital Management",
-        facebookLink: "https://www.facebook.com/",
-        linkedinLink: "https://www.linkedin.com/",
-        gmailLink: "mailto:example@gmail.com",
-    },
+    
     {
         img: coreTeamImg6,
         name: "Mr Vineet Kashyap",
-        title1: "Coordinator",
+        title1: "Sub Coordinator",
         title2: "Coordination",
         facebookLink: "https://www.facebook.com/",
         linkedinLink: "https://www.linkedin.com/",
@@ -369,23 +500,25 @@ export const coreTeamData = [
         gmailLink: "mailto:example@gmail.com",
     },
     {
-        img: coreTeamImg11,
-        name: "Shri Krishan Mittal",
+        img: coreTeamImg19,
+        name: "Chandan Nayal",
         title1: "Coordinator",
-        title2: "Public Relation",
+        title2: "Traditional Water Management",
         facebookLink: "https://www.facebook.com/",
         linkedinLink: "https://www.linkedin.com/",
         gmailLink: "mailto:example@gmail.com",
     },
     {
-        img: coreTeamImg12,
-        name: "Shri Krishna Sharma",
+        img: coreTeamImg10,
+        name: "Bhaskar Tyagi",
         title1: "Coordinator",
-        title2: "Documentation",
+        title2: "Social Media",
         facebookLink: "https://www.facebook.com/",
         linkedinLink: "https://www.linkedin.com/",
         gmailLink: "mailto:example@gmail.com",
     },
+    
+    
 ];
 
 
@@ -393,7 +526,7 @@ export const advisoryCouncilData = [
     {
         img: advisoryTeamImg3,
         name: "Mr Balbeer Singh Seenchewal (PADAMSHRI)",
-        title1: "President",
+        title1: "Padma Shri",
         title2: "NIRMAL KUTIYA",
         facebookLink: "https://www.facebook.com/",
         linkedinLink: "https://www.linkedin.com/",
@@ -418,7 +551,7 @@ export const advisoryCouncilData = [
         gmailLink: "mailto:example@gmail.com",
     },
     {
-        img: technicalCouncilImg19,
+        img: advisoryTeamImg26,
         name: "Shri Laxman Singh",
         title1: "Padma Shri",
         title2: "Water Conservation Expert",
@@ -431,56 +564,65 @@ export const advisoryCouncilData = [
         img: technicalCouncilImg18,
         name: "Shri Uma Shankar Pandey",
         title1: "Padma Shri",
-        title2: "Water Conservation Expert",
+        title2: "Water Activist",
         facebookLink: "https://www.facebook.com/",
         linkedinLink: "https://www.linkedin.com/",
         gmailLink: "mailto:example@gmail.com",
     },
     {
-        img: advisoryTeamImg6,
-        name: "Dr Prabhat Kumar",
-        title1: "Former Chairman",
-        title2: "UPSC",
+        img: coreTeamImg3,
+        name: "Mr Sanjay Gupta",
+        title1: "Coordinator",
+        title2: "River and Water outreach Program",
         facebookLink: "https://www.facebook.com/",
         linkedinLink: "https://www.linkedin.com/",
         gmailLink: "mailto:example@gmail.com",
     },
-    {
-        img: advisoryTeamImg7,
-        name: "Mr Upendra Prashad Singh",
-        title1: "Former Secretary",
-        title2: "Ministry of JAL SHAKTI, GoI",
-        facebookLink: "https://www.facebook.com/",
-        linkedinLink: "https://www.linkedin.com/",
-        gmailLink: "mailto:example@gmail.com",
-    },
-    {
-        img: advisoryTeamImg8,
-        name: "Mr Rajeev Ranjan Mishra",
-        title1: "Former DG",
-        title2: "NAMAMI GANGE – MoJS GoI",
-        facebookLink: "https://www.facebook.com/",
-        linkedinLink: "https://www.linkedin.com/",
-        gmailLink: "mailto:example@gmail.com",
-    },
-    {
-        img: advisoryTeamImg8,
-        name: "Shri G Ashok Kumar",
-        title1: "Former DG",
-        title2: "NAMAMI GANGE ",
-        facebookLink: "https://www.facebook.com/",
-        linkedinLink: "https://www.linkedin.com/",
-        gmailLink: "mailto:example@gmail.com",
-    },
-    {
-        img: advisoryTeamImg14,
-        name: "Mr Kartikey Sarabhai",
-        title1: "Founder",
-        title2: "Centre for Environment Education",
-        facebookLink: "https://www.facebook.com/",
-        linkedinLink: "https://www.linkedin.com/",
-        gmailLink: "mailto:example@gmail.com",
-    },
+    // {
+    //     img: advisoryTeamImg6,
+    //     name: "Dr Prabhat Kumar",
+    //     title1: "Former Chairman",
+    //     title2: "UPSC",
+    //     facebookLink: "https://www.facebook.com/",
+    //     linkedinLink: "https://www.linkedin.com/",
+    //     gmailLink: "mailto:example@gmail.com",
+    // },
+    // {
+    //     img: advisoryTeamImg7,
+    //     name: "Mr Upendra Prashad Singh",
+    //     title1: "Former Secretary",
+    //     title2: "Ministry of JAL SHAKTI, GoI",
+    //     facebookLink: "https://www.facebook.com/",
+    //     linkedinLink: "https://www.linkedin.com/",
+    //     gmailLink: "mailto:example@gmail.com",
+    // },
+    // {
+    //     img: advisoryTeamImg8,
+    //     name: "Mr Rajeev Ranjan Mishra",
+    //     title1: "Former DG",
+    //     title2: "NAMAMI GANGE – MoJS GoI",
+    //     facebookLink: "https://www.facebook.com/",
+    //     linkedinLink: "https://www.linkedin.com/",
+    //     gmailLink: "mailto:example@gmail.com",
+    // },
+    // {
+    //     img: advisoryTeamImg8,
+    //     name: "Shri G Ashok Kumar",
+    //     title1: "Former DG",
+    //     title2: "NAMAMI GANGE ",
+    //     facebookLink: "https://www.facebook.com/",
+    //     linkedinLink: "https://www.linkedin.com/",
+    //     gmailLink: "mailto:example@gmail.com",
+    // },
+    // {
+    //     img: advisoryTeamImg14,
+    //     name: "Mr Kartikey Sarabhai",
+    //     title1: "Founder",
+    //     title2: "Centre for Environment Education",
+    //     facebookLink: "https://www.facebook.com/",
+    //     linkedinLink: "https://www.linkedin.com/",
+    //     gmailLink: "mailto:example@gmail.com",
+    // },
     {
         img: advisoryTeamImg10,
         name: "Mr Rajeev Ahal",
@@ -491,10 +633,55 @@ export const advisoryCouncilData = [
         gmailLink: "mailto:example@gmail.com",
     },
     {
+        img: advisoryTeamImg13,
+        name: "Mr Prabhjot Sodhi",
+        title1: "Project Head",
+        title2: "Centre for Environment Education",
+        facebookLink: "https://www.facebook.com/",
+        linkedinLink: "https://www.linkedin.com/",
+        gmailLink: "mailto:example@gmail.com",
+    },
+    {
         img: advisoryTeamImg17,
         name: "Mr Brijendra Singh",
         title1: "President",
         title2: "LOKBHARTI",
+        facebookLink: "https://www.facebook.com/",
+        linkedinLink: "https://www.linkedin.com/",
+        gmailLink: "mailto:example@gmail.com",
+    },
+    {
+        img: advisoryTeamImg25,
+        name: "Mrs Anupama Madhok",
+        title1: "Director",
+        title2: "Water Digest",
+        facebookLink: "https://www.facebook.com/",
+        linkedinLink: "https://www.linkedin.com/",
+        gmailLink: "mailto:example@gmail.com",
+    },
+    {
+        img: advisoryTeamImg24,
+        name: "Ms Karuna Singh",
+        title1: "Regional Director Asia",
+        title2: "Earth Day Network",
+        facebookLink: "https://www.facebook.com/",
+        linkedinLink: "https://www.linkedin.com/",
+        gmailLink: "mailto:example@gmail.com",
+    },
+    {
+        img: advisoryTeamImg13,
+        name: "Ms Vasuki Sundram",
+        title1: "National Coordinator",
+        title2: "Shri M Foundation",
+        facebookLink: "https://www.facebook.com/",
+        linkedinLink: "https://www.linkedin.com/",
+        gmailLink: "mailto:example@gmail.com",
+    },
+    {
+        img: advisoryTeamImg27,
+        name: "Ms Veena Khanduri",
+        title1: "India Coordinator",
+        title2: "IWP",
         facebookLink: "https://www.facebook.com/",
         linkedinLink: "https://www.linkedin.com/",
         gmailLink: "mailto:example@gmail.com",
@@ -518,34 +705,7 @@ export const advisoryCouncilData = [
         gmailLink: "mailto:example@gmail.com",
     },
     {
-        img: advisoryTeamImg13,
-        name: "Mr Prabhjot Sodhi",
-        title1: "Project Head",
-        title2: "Centre for Environment Education",
-        facebookLink: "https://www.facebook.com/",
-        linkedinLink: "https://www.linkedin.com/",
-        gmailLink: "mailto:example@gmail.com",
-    },
-    {
-        img: advisoryTeamImg13,
-        name: "Ms Vasuki Sundram",
-        title1: "National Coordinator",
-        title2: "Shri M Foundation",
-        facebookLink: "https://www.facebook.com/",
-        linkedinLink: "https://www.linkedin.com/",
-        gmailLink: "mailto:example@gmail.com",
-    },
-    {
-        img: advisoryTeamImg13,
-        name: "Ms Veena Khanduri",
-        title1: "India Coordinator",
-        title2: "IWP",
-        facebookLink: "https://www.facebook.com/",
-        linkedinLink: "https://www.linkedin.com/",
-        gmailLink: "mailto:example@gmail.com",
-    },
-    {
-        img: advisoryTeamImg19,
+        img: advisoryTeamImg20,
         name: "Shri Krishan Tyagi",
         title1: "Project Manager",
         title2: "Natural Resources Management &Agroecology, GIZ India",
@@ -556,17 +716,17 @@ export const advisoryCouncilData = [
     {
         img: advisoryTeamImg16,
         name: "Shri Ganesh Thorat",
-        title1: "Assistant Convenor",
+        title1: "CEO",
         title2: "NAAM Foundation",
         facebookLink: "https://www.facebook.com/",
         linkedinLink: "https://www.linkedin.com/",
         gmailLink: "mailto:example@gmail.com",
     },
     {
-        img: advisoryTeamImg20,
+        img: advisoryTeamImg19,
         name: "Shri Biplab Ketan Paul",
-        title1: "innovator of BHUNGROOr",
-        title2: "",
+        title1: "Innovator of BHUNGROO",
+        title2: "Gujarat",
         facebookLink: "https://www.facebook.com/",
         linkedinLink: "https://www.linkedin.com/",
         gmailLink: "mailto:example@gmail.com",
@@ -676,14 +836,14 @@ export const technicalCouncilData = [
     {
         img: advisoryTeamImg9,
         name: "Dr Vinod Tare",
-        title1: "Emeritus Fellow Professor",
+        title1: "Professor",
         title2: "Department of Civil Engineering, IIT Kanpur",
         facebookLink: "https://www.facebook.com/",
         linkedinLink: "https://www.linkedin.com/",
         gmailLink: "mailto:example@gmail.com",
     },
     {
-        img: advisoryTeamImg9,
+        img: technicalCouncilImg2,
         name: "P K Singh",
         title1: "Professor",
         title2: "DoCE, IIT BHU",
@@ -747,8 +907,26 @@ export const technicalCouncilData = [
         gmailLink: "mailto:example@gmail.com",
     },
     {
+        img: coreTeamImg15,
+        name: "Ms Leenika Jacob",
+        title1: "President",
+        title2: "The Kala Chaupal",
+        facebookLink: "https://www.facebook.com/",
+        linkedinLink: "https://www.linkedin.com/",
+        gmailLink: "mailto:example@gmail.com",
+    },
+    {
+        img: technicalCouncilImg22,
+        name: "Dr Vishal Rajput",
+        title1: "Sr. Scientist",
+        title2: "SRH University",
+        facebookLink: "https://www.facebook.com/",
+        linkedinLink: "https://www.linkedin.com/",
+        gmailLink: "mailto:example@gmail.com",
+    },
+    {
         img: technicalCouncilImg8,
-        name: "Mr Ravindra Swaroop Sinha",
+        name: "Mr Ravindra Kumar Sinha",
         title1: "Senior Hydrologist (Retd.)",
         title2: "Uttar Pradesh Ground Water Department",
         facebookLink: "https://www.facebook.com/",
@@ -784,7 +962,7 @@ export const technicalCouncilData = [
     },
     {
         img: technicalCouncilImg5,
-        name: "Mr Vikas Tyagi",
+        name: "Shri Vikas Tyagi",
         title1: "River and Hydrology Expert",
         title2: "",
         facebookLink: "https://www.facebook.com/",
@@ -801,9 +979,6 @@ export const technicalCouncilData = [
         linkedinLink: "https://www.linkedin.com/",
         gmailLink: "mailto:example@gmail.com",
     },
-    
-    
-    
     {
         img: technicalCouncilImg11,
         name: "Mr Mukesh Tyagi",
