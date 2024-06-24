@@ -17,7 +17,7 @@ import { Country, State, City } from "country-state-city";
 import country_state_district from "@coffeebeanslabs/country_state_district";
 import emailjs from "emailjs-com";
 
-export default function FeedbackForm() {
+export default function NeedHelpForm() {
 	const [countryCode, setCountryCode] = useState("");
 	const [stateList, setStateList] = useState([]);
 	const [districtList, setDistrictList] = useState([]);
@@ -30,7 +30,7 @@ export default function FeedbackForm() {
 	const [snackbarSeverity, setSnackbarSeverity] = useState("success");
 
 	const [formData, setFormData] = useState({
-		service: "feedBack Form",
+		service: "Need help Form",
 		title: "",
 		firstName: "",
 		lastName: "",
@@ -67,6 +67,7 @@ export default function FeedbackForm() {
 			setSnackbarMessage("Form submitted successfully");
 			setSnackbarSeverity("success");
 			setFormData({
+				service: "Need help Form",
 				title: "",
 				firstName: "",
 				lastName: "",
@@ -97,16 +98,6 @@ export default function FeedbackForm() {
 	return (
 		<>
 			<Box width={{ xs: "100%", md: "60%" }} mb={2}>
-				<Typography
-					variant="h5"
-					fontSize={"26px"}
-					fontWeight={"bold"}
-					mb={4}
-					textAlign={"center"}
-					color={"#1cabe2"}
-				>
-					Feedback/Query Form
-				</Typography>
 				<form onSubmit={handleSubmit}>
 					<Grid container spacing={3}>
 						<Grid item xs={12} md={4}>
@@ -377,7 +368,7 @@ export default function FeedbackForm() {
 							<TextField
 								sx={{ width: "100%", backgroundColor: "white" }}
 								id="query"
-								label="Please tell us about your Feedback/query"
+								label="Please tell us name of river and its problem"
 								multiline
 								rows={6}
 								value={formData.query}

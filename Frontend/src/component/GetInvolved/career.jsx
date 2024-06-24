@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import MainLayout from "../Layout/mainLayout";
 import bgImg from "../../assets/bg/bgl-15.jpeg";
 import {
@@ -10,55 +10,43 @@ import {
 	Button,
 	Box,
 	Avatar,
+	Modal,
+	TextField,
+	IconButton,
 } from "@mui/material";
-import CheckIcon from "@mui/icons-material/Check";
-import StarIcon from "@mui/icons-material/Star";
-import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import SearchIcon from "@mui/icons-material/Search";
-import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
-import EmojiPeopleIcon from "@mui/icons-material/EmojiPeople";
-import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
-import GroupIcon from "@mui/icons-material/Group";
+import CloseIcon from "@mui/icons-material/Close";
 import { Link } from "react-router-dom";
+import IForm from "./IForm";
 
 const jobs = [
 	{
-		title: "Software Engineer",
+		title: "Coordinator (Documentation)",
 		description:
-			"Develop and maintain web applications using React and Node.js.",
-		location: "New York, NY",
+			"Minimum one year experience of river and water related work.",
+		salary: "Stipend - 20K per month",
 	},
 	{
-		title: "Product Manager",
+		title: "Coordinator (Field Work)",
 		description:
-			"Lead the product team to deliver excellent user experiences.",
-		location: "San Francisco, CA",
-	},
-	{
-		title: "UX Designer",
-		description: "Design user interfaces with a focus on user experience.",
-		location: "Austin, TX",
-	},
-	{
-		title: "Software Engineer",
-		description:
-			"Develop and maintain web applications using React and Node.js.",
-		location: "New York, NY",
-	},
-	{
-		title: "Product Manager",
-		description:
-			"Lead the product team to deliver excellent user experiences.",
-		location: "San Francisco, CA",
-	},
-	{
-		title: "UX Designer",
-		description: "Design user interfaces with a focus on user experience.",
-		location: "Austin, TX",
+			"Minimum one year experience of river and water related work.",
+		salary: "Stipend - 20K per month",
 	},
 ];
 
 export default function Career() {
+	const [open, setOpen] = useState(false);
+	const [selectedJob, setSelectedJob] = useState(null);
+
+	const handleOpen = (job) => {
+		setSelectedJob(job);
+		setOpen(true);
+	};
+
+	const handleClose = () => {
+		setOpen(false);
+		setSelectedJob(null);
+	};
+
 	return (
 		<MainLayout>
 			<Box
@@ -106,29 +94,28 @@ export default function Career() {
 						you.
 					</Typography>
 				</Box>
-				<Grid container spacing={5} py={6}>
+				<Grid container spacing={5} py={6} justifyContent={"center"}>
 					{jobs.map((job, index) => (
 						<Grid item xs={12} sm={6} md={4} key={index}>
-							<Card>
+							<Card p={5}>
 								<CardContent>
-									<Typography variant="h5" component="h2">
+									<Typography variant="h5" component="h2" mb={1}>
 										{job.title}
 									</Typography>
-									<Typography color="textSecondary">
-										{job.location}
+									<Typography variant="body2" mb={1}>
+										{job.salary}
 									</Typography>
-									<Typography variant="body2" component="p">
+									<Typography color="textSecondary" component="p">
 										{job.description}
 									</Typography>
 									<Box mt={2}>
-										<Link to="/internship">
-											<Button
-												variant="contained"
-												color="primary"
-											>
-												Apply Now
-											</Button>
-										</Link>
+										<Button
+											variant="contained"
+											sx={{backgroundColor: "#1cabe2"}}
+											onClick={() => handleOpen(job)}
+										>
+											Apply Now
+										</Button>
 									</Box>
 								</CardContent>
 							</Card>
@@ -136,6 +123,28 @@ export default function Career() {
 					))}
 				</Grid>
 			</Box>
+			<Modal open={open} onClose={handleClose} sx={{maxWidth: "90%"}}>
+				<Box
+					sx={{
+						position: "absolute",
+						top: "50%",
+						left: "50%",
+						transform: "translate(-50%, -50%)",
+						height: "90vh",
+						overflow: "auto",
+						bgcolor: "background.paper",
+						boxShadow: 24,
+						p: 2,
+					}}
+				>
+					<Box display="flex" justifyContent="flex-end" alignItems="flex-end" flexDirection={"column"}>
+						<IconButton onClick={handleClose}>
+							<CloseIcon />
+						</IconButton>
+						<IForm service={selectedJob?.title} />
+					</Box>
+				</Box>
+			</Modal>
 		</MainLayout>
 	);
 }

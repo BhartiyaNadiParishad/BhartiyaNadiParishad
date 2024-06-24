@@ -21,19 +21,26 @@ import { useTranslation } from "react-i18next";
 // import img12 from "../../assets/NEWS/Screenshot_20230820_211427_Samsung Internet.jpg";
 
 const newsItems = [
-	"Breaking News: Market hits an all-time high",
-	"Weather Alert: Heavy rains expected this weekend",
-	"Sports Update: Local team wins championship",
-	"Tech News: New smartphone model released",
-	// Add more news items as needed
+	"President of BNP Raman Kant has been included in the committee constituted by Hon'ble NGT for the revival of Sonali River.",
+	"Shooter Dadi Smt. Prakashi Tomar has sent her best wishes to Indian Rivers Council.",
+	"The team of BNP inspected the work of Gagadiya River revival being done under the leadership of Dholakia Foundation founder Shri Savji Dholakia and is providing technical support in this work.",
+	"The work of Baya River revival is being taken forward by the coordinator of BNP of Bihar state."
 ];
 
 const storyItems = [
-	"Breaking News: Market hits an all-time high",
-	"Weather Alert: Heavy rains expected this weekend",
-	"Sports Update: Local team wins championship",
-	"Tech News: New smartphone model released",
-	// Add more news items as needed
+	"NAAM Foundation",
+	"Dholakia Foundation",
+	"Baya River",
+	"Bainsli River",
+	"Ravindra Singhal",
+	"Sambhal Janpad",
+	"Noon River",
+	"Neem River",
+	"Kali East River",
+	"Rampur Rivers",
+	"Kanhan River",
+	"Hindon River"
+
 ];
 
 const videos = [
@@ -55,7 +62,7 @@ export default function news() {
 				pb={5}
 				justifyContent={"space-between"}
 			>
-				<Grid item xs={12} md={3}>
+				<Grid item xs={12} md={4}>
 					<Box display={"flex"} flexDirection={"column"} rowGap={3}>
 						<Typography
 							variant="h5"
@@ -76,7 +83,7 @@ export default function news() {
 									key={index}
 									borderBottom={"0.5px solid #1cabe2"}
 									py={2}
-									height={80}
+									height={200}
 									display={"flex"}
 									columnGap={2}
 									width={"100%"}
@@ -91,7 +98,7 @@ export default function news() {
 						</VerticalScroll>
 					</Box>
 				</Grid>
-				<Grid item xs={12} md={3}>
+				<Grid item xs={12} md={2}>
 					<Box display={"flex"} flexDirection={"column"} rowGap={3}>
 						<Typography
 							variant="h5"

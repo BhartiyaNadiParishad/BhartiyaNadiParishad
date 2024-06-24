@@ -34,6 +34,9 @@ import GetInvolvedPage from "./component/GetInvolved/getInvolvedPage";
 import Inspiration from "./component/Team/inspiration";
 import StateHeads from "./component/Team/stateHeads";
 import ProgramPage from "./component/AboutUs/ourProgramPage";
+import NeedHelp from "./NeedHelp/needHelp";
+import Patron from "./component/Team/patron";
+import RiverBasinMap from "./component/Nadi Darshan/riverBasinMap";
 
 
 const theme = createTheme({
@@ -84,6 +87,9 @@ function App() {
             <Route exact path="/factsheet" element={ <Factsheet /> } />
             <Route exact path="/inspiration" element={ <Inspiration /> } />
             <Route exact path="/state-heads" element={ <StateHeads /> } />
+            <Route exact path="/need-help" element={ <NeedHelp /> } />
+            <Route exact path="/patron" element={ <Patron /> } />
+            <Route exact path="/river-basin-map" element={ <RiverBasinMap /> } />
           </Routes>
         </Router>
       </ThemeProvider>

@@ -109,8 +109,10 @@ export default function Membership() {
 						{t("becomeMember.bank_details.branch")}
 					</Typography>
 				</Box>
-				<Box bgcolor={"#f2f2f2"} py={6}>
-					<IForm service={"Membership"} />
+				<Box bgcolor={"#f2f2f2"} py={6} display={"flex"} justifyContent={"center"}>
+					<Box width={{ xs: "100%", md: "60%" }} >
+						<IForm service={"Membership"} />
+					</Box>
 				</Box>
 			</MainLayout>
 		</>

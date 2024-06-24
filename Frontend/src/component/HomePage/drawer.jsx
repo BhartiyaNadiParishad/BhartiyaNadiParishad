@@ -47,7 +47,7 @@ const menuData = [
 		menuName: "coreteam",
 		buttonLabel: "Our Team",
 		menuItems: [
-			{ label: "Patron", path: "/history" },
+			{ label: "Patron", path: "/patron" },
 			{ label: "Inspiration", path: "/inspiration" },
 			{ label: "Core Team", path: "/coreteam" },
 			{ label: "Advisors", path: "/advisors" },
@@ -60,7 +60,7 @@ const menuData = [
 		buttonLabel: "Nadi Darshan",
 		menuItems: [
 			{ label: "Portal", path: "/nadiDarshanMenu" },
-			{ label: "River Basin Maps", path: "/" },
+			{ label: "River Basin Maps", path: "/river-basin-map" },
 			{ label: "River Gallery", path: "/river-gallery" },
 			{ label: "River Video", path: "/rivervideo" },
 			{ label: "Factsheet", path: "/factsheet" },

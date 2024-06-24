@@ -80,8 +80,10 @@ export default function Volunteer() {
 						))}
 					</List>
 				</Box>
-				<Box bgcolor={"#f2f2f2"} py={6}>
-					<IForm service={"Volunteer"} />
+				<Box bgcolor={"#f2f2f2"} py={6} display={"flex"} justifyContent={"center"}>
+					<Box width={{ xs: "100%", md: "60%" }} >
+						<IForm service={"Volunteer"} />
+					</Box>
 				</Box>
 			</MainLayout>
 		</>

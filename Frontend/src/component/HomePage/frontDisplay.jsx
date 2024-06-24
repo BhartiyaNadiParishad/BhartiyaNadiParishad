@@ -23,7 +23,7 @@ export default function FrontDisplay() {
 	return (
 		<Box
 			px={4}
-      position={"relative"}
+      		position={"relative"}
 			style={{
   		  display: "flex",
 				flexDirection: "column",
@@ -45,11 +45,12 @@ export default function FrontDisplay() {
 			</Button>
 			<Button
 				component={Link}
-				to="/getInvolvedMenu"
+				to="/need-help"
 				sx={{ ...ButtonStyle, right: 70 }}
 			>
 				{t('button2')}
 			</Button>
+			
 			<video
 				autoPlay
 				loop

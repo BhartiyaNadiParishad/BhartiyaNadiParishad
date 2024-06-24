@@ -139,7 +139,7 @@ function IForm(props) {
 
 	return (
 		<Box display={"flex"} justifyContent={"center"} paddingX={"50px"}>
-			<Box width={{ xs: "100%", md: "60%" }}>
+			<Box >
 				<Typography
 					variant="h4"
 					fontWeight={"bold"}
@@ -616,8 +616,9 @@ function IForm(props) {
 						>
 							<Button
 								type="submit"
+								size="large"
 								variant="contained"
-								color="primary"
+								sx={{backgroundColor:"#1cabe2"}}
 							>
 								Submit
 							</Button>
