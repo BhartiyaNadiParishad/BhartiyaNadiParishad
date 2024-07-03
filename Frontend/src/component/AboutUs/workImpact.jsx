@@ -24,7 +24,7 @@ const CustomBox = styled(Box)(({ backgroundImg }) => ({
 	backgroundColor: "#1cabe2",
 	"&:hover": {
 		backgroundImage: "none",
-		backgroundColor: "rgb(0 38 65)",
+		backgroundColor: "#0682b2",
 	},
 }));
 
