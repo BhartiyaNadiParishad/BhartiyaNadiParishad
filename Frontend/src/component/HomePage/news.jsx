@@ -74,7 +74,7 @@ export default function news() {
 						</Typography>
 						<VerticalScroll
 							itemHeight={80}
-							scrollIntervalTime={2000}
+							scrollIntervalTime={4000}
 							loopCount={8}
 							totalItems={newsItems.length}
 						>
@@ -110,7 +110,7 @@ export default function news() {
 						</Typography>
 						<VerticalScroll
 							itemHeight={85}
-							scrollIntervalTime={1000}
+							scrollIntervalTime={2000}
 							loopCount={6}
 							totalItems={newsItems.length}
 						>
@@ -151,7 +151,7 @@ export default function news() {
 						</Typography>
 						<VerticalScroll
 							itemHeight={300}
-							scrollIntervalTime={3000}
+							scrollIntervalTime={2500}
 							loopCount={4}
 							totalItems={2}
 						>

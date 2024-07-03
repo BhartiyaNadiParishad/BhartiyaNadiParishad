@@ -26,7 +26,7 @@ const CustomTypography = styled(Typography)(() => ({
 
 export default function Footer() {
 	return (
-		<Box backgroundColor="#1cabe2" px={4}>
+		<Box backgroundColor="#1cabe2" px={6}>
 			<Box
 				display={"flex"}
 				justifyContent={"center"}
@@ -206,7 +206,7 @@ export default function Footer() {
 					color: "whitesmoke",
 				}}
 			>
-				<Grid
+				{/* <Grid
 					item
 					xs={12}
 					md={2}
@@ -216,7 +216,7 @@ export default function Footer() {
 					rowGap={0}
 				>
 					<img src={Logo} height="auto" width="235px" alt="Logo" />
-				</Grid>
+				</Grid> */}
 				<Grid
 					item
 					xs="12"
@@ -329,10 +329,11 @@ export default function Footer() {
 				</Grid>
 			</Grid>
 			<Grid
-				py={3}
+				mt={4}
+				py={4}
 				container
 				justifyContent={"center"}
-				sx={{ borderTop: "1px solid #1d4e6e" }}
+				sx={{ borderTop: "1px solid white" }}
 			>
 				<Typography
 					xs={12}

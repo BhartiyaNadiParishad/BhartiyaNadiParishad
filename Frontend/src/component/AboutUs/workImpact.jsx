@@ -1,5 +1,4 @@
-import { Box, Typography, styled } from "@mui/material";
-import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
+import { Box, Grid, Typography, styled } from "@mui/material";
 import React from "react";
 import img4 from "../../assets/riverDark.jpg";
 import img3 from "../../assets/projects.jpg";
@@ -10,99 +9,76 @@ import logo2 from "../../assets/Icons/partners.png";
 import logo3 from "../../assets/Icons/projects.png";
 import logo4 from "../../assets/Icons/river.png";
 
-const CustomGrid2 = styled(Grid2)({
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  alignItems: "center",
-  width: 250,
-  height: 200,
-  gap: 4,
-  boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
-  transition: "0.3s",
-  "&:hover": {
-    backgroundImage: "none",
-    backgroundColor: "rgb(0 38 65)",
-  },
-});
+const CustomBox = styled(Box)(({ backgroundImg }) => ({
+	display: "flex",
+	flexDirection: "column",
+	justifyContent: "center",
+	alignItems: "center",
+	gap: 4,
+	boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
+	transition: "0.3s",
+	backgroundImage: `url(${backgroundImg})`,
+	backgroundSize: "cover",
+	backgroundPosition: "center",
+  backgroundColor: "#1cabe2",
+	"&:hover": {
+		backgroundImage: "none",
+		backgroundColor: "rgb(0 38 65)",
+	},
+}));
+
+const ImpactCard = ({ backgroundImg, logo, count, label }) => (
+	<Grid
+		item
+		xs={12}
+		sm={6}
+		md={3}
+		backgroundImg={backgroundImg}
+	>
+		<CustomBox p={2}>
+			<img src={logo} height={45} width={45} alt={label} />
+			<Typography
+				variant="h5"
+				sx={{ fontWeight: "bold", color: "white" }}
+			>
+				{count}
+			</Typography>
+			<Typography
+				variant="h6"
+				sx={{ fontSize: "18px", fontWeight: "bold", color: "white" }}
+			>
+				{label}
+			</Typography>
+		</CustomBox>
+	</Grid>
+);
 
 export default function WorkImpact() {
-  return (
-    <Box>
-      <Grid2 container justifyContent={"space-around"} columnGap={8} rowGap={2}>
-        <CustomGrid2
-          sx={{
-            backgroundImage: `url(${img1})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          <img src={logo1} height={50} width={50} />
-          <Typography variant="h5" sx={{ fontWeight: "bold", color: "white" }}>
-            1250
-          </Typography>
-          <Typography
-            variant="h6"
-            sx={{ fontSize: "18px", fontWeight: "bold", color: "white" }}
-          >
-            Members
-          </Typography>
-        </CustomGrid2>
-        <CustomGrid2
-          sx={{
-            backgroundImage: `url(${img2})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          <img src={logo2} height={45} width={45} />
-          <Typography variant="h5" sx={{ fontWeight: "bold", color: "white" }}>
-            531
-          </Typography>
-          <Typography
-            variant="h6"
-            sx={{ fontSize: "18px", fontWeight: "bold", color: "white" }}
-          >
-            Partners
-          </Typography>
-        </CustomGrid2>
-        <CustomGrid2
-          sx={{
-            backgroundImage: `url(${img3})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          <img src={logo3} height={45} width={45} />
-          <Typography variant="h5" sx={{ fontWeight: "bold", color: "white" }}>
-            163
-          </Typography>
-          <Typography
-            variant="h6"
-            sx={{ fontSize: "18px", fontWeight: "bold", color: "white" }}
-          >
-            Projects
-          </Typography>
-        </CustomGrid2>
-        <CustomGrid2
-          sx={{
-            backgroundImage: `url(${img4})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          <img src={logo4} height={45} width={45} />
-          <Typography variant="h5" sx={{ fontWeight: "bold", color: "white" }}>
-            215
-          </Typography>
-          <Typography
-            variant="h6"
-            sx={{ fontSize: "18px", fontWeight: "bold", color: "white" }}
-          >
-            Rivers Covered
-          </Typography>
-        </CustomGrid2>
-      </Grid2>
-    </Box>
-  );
+	const impactData = [
+		{ backgroundImg: img1, logo: logo1, count: 1250, label: "Members" },
+		{ backgroundImg: img2, logo: logo2, count: 531, label: "Partners" },
+		{ backgroundImg: img3, logo: logo3, count: 163, label: "Projects" },
+		{
+			backgroundImg: img4,
+			logo: logo4,
+			count: 215,
+			label: "Rivers Covered",
+		},
+	];
+
+	return (
+		<Box>
+			<Grid container p={6} columnSpacing={3} rowSpacing={3} >
+				{impactData.map((data, index) => (
+					<ImpactCard
+						key={index}
+						// backgroundImg={data.backgroundImg}
+						logo={data.logo}
+						count={data.count}
+						label={data.label}
+					/>
+				))}
+			</Grid>
+		</Box>
+	);
 }

@@ -27,7 +27,7 @@ export default function HomePage() {
 			<Programs />
 			<News />
 			{/* <GetInvolved /> */}
-			{/* <WorkImpact /> */}
+			<WorkImpact />
 			<Footer />
 		</Box>
 	);

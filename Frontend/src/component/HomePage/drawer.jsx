@@ -17,10 +17,12 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { MenuItem, Popper } from "@mui/material";
 import Logo from "../../assets/logo.svg";
+import Logo1 from "../../assets/IRC ENG LOGO.png";
 import { Link } from "react-router-dom";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { useScrollTrigger } from "@mui/material";
 import LanguageSwitchButton from "../translation/languageSwitchButton";
+import { useState } from "react";
 
 const drawerWidth = 300;
 const navItems = [
@@ -137,6 +139,15 @@ function DrawerAppBar(props) {
 		contactMenu: null,
 	});
 
+	const [value, setValue] = useState(0);
+
+	React.useEffect(() => {
+		const intervalId = setInterval(() => {
+			setValue((prevValue) => (prevValue === 1 ? 0 : prevValue + 1));
+		}, 5000);
+		return () => clearInterval(intervalId); 
+	}, []);
+
 	const handleClick = (menuName, event) => {
 		setAnchorEls({
 			about: null,
@@ -221,12 +232,21 @@ function DrawerAppBar(props) {
 							columnGap: "20px",
 						}}
 					>
-						<img
-							src={Logo}
-							height="225px"
-							width="225px"
-							alt="Logo"
-						/>
+						{value ? (
+							<img
+								src={Logo}
+								height="225px"
+								width="225px"
+								alt="Logo"
+							/>
+						) : (
+							<img
+								src={Logo1}
+								height="225px"
+								width="225px"
+								alt="Logo"
+							/>
+						)}
 					</Box>
 					<Box
 						sx={{
@@ -308,7 +328,8 @@ function DrawerAppBar(props) {
 																		borderTop:
 																			"1px solid white",
 																		color: "white",
-																		fontWeight: "bold",
+																		fontWeight:
+																			"bold",
 																		"&:hover":
 																			{
 																				backgroundColor:

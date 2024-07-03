@@ -15,7 +15,7 @@ import img10 from "../../assets/team/Mr Manu Gaur.jpg";
 import img11 from "../../assets/team/Mr Shekhar Vijendra.jpg";
 import img12 from "../../assets/team/Dr Chinmay Pandya.jpg";
 import img13 from "../../assets/team/3.jpg";
-import { Padding } from "@mui/icons-material";
+import img14 from "../../assets/team/Kailashanand.jpg";
 
 const data = [
 	{
@@ -117,7 +117,7 @@ const data = [
 			"मुझे अत्यंत प्रसन्नता है कि देष में नदियों के सुधार हेतु भारतीय नदी परिशद् के माध्यम से सामूहिक प्रयास प्रारंभ किया गया है। जब मां गंगा सहित देष की नदियां निर्मल व अविरल बहेंगी तब ही भारत की मानव सभ्यता व संपदा भी खुषहाल होगी। अलौकिक षक्ति इस प्रयास को सफल करे। भारतीय नदी परिशद् की संपूर्ण टोली को अनंत षुभकामनाएं। ओम",
 		authorName: "पूज्य स्वामी कैलाषानंद गिरी जी",
 		designation: "निरंजन पीठाधीष्वर, सिद्धपीट श्री दक्षिण काली मंदिर",
-		image: img9,
+		image: img14,
 	},
 	{
 		authorContent:
