@@ -28,8 +28,8 @@ export default function Vision() {
           textAlign: "justify",
         }}
       >
-        BNP aims to coordinate society and government efforts for river
-        rejuvenation in India, promoting clean, uninterrupted rivers.
+        Bhartiya Nadi Parishad aims to coordinate society and government efforts
+        for river rejuvenation in India, promoting clean, uninterrupted rivers.
       </Typography>
     </Box>
   );

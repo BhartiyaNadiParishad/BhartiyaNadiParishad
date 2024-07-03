@@ -21,149 +21,137 @@ import { useTranslation } from "react-i18next";
 // import img12 from "../../assets/NEWS/Screenshot_20230820_211427_Samsung Internet.jpg";
 
 const newsItems = [
-	"President of BNP Raman Kant has been included in the committee constituted by Hon'ble NGT for the revival of Sonali River.",
-	"Shooter Dadi Smt. Prakashi Tomar has sent her best wishes to Indian Rivers Council.",
-	"The team of BNP inspected the work of Gagadiya River revival being done under the leadership of Dholakia Foundation founder Shri Savji Dholakia and is providing technical support in this work.",
-	"The work of Baya River revival is being taken forward by the coordinator of BNP of Bihar state."
+  "President of Bhartiya Nadi Parishad Raman Kant has been included in the committee constituted by Hon'ble NGT for the revival of Sonali River.",
+  "Shooter Dadi Smt. Prakashi Tomar has sent her best wishes to Indian Rivers Council.",
+  "The team of Bhartiya Nadi Parishad inspected the work of Gagadiya River revival being done under the leadership of Dholakia Foundation founder Shri Savji Dholakia and is providing technical support in this work.",
+  "The work of Baya River revival is being taken forward by the coordinator of Bhartiya Nadi Parishad of Bihar state.",
 ];
 
 const storyItems = [
-	"NAAM Foundation",
-	"Dholakia Foundation",
-	"Baya River",
-	"Bainsli River",
-	"Ravindra Singhal",
-	"Sambhal Janpad",
-	"Noon River",
-	"Neem River",
-	"Kali East River",
-	"Rampur Rivers",
-	"Kanhan River",
-	"Hindon River"
-
+  "NAAM Foundation",
+  "Dholakia Foundation",
+  "Baya River",
+  "Bainsli River",
+  "Ravindra Singhal",
+  "Sambhal Janpad",
+  "Noon River",
+  "Neem River",
+  "Kali East River",
+  "Rampur Rivers",
+  "Kanhan River",
+  "Hindon River",
 ];
 
 const videos = [
-	"https://youtu.be/ZC_l58Fo4Dk?feature=shared",
-	"https://youtu.be/vxkejkEin6Y?feature=shared",
+  "https://youtu.be/ZC_l58Fo4Dk?feature=shared",
+  "https://youtu.be/vxkejkEin6Y?feature=shared",
 ];
 
-export default function news() {
-
-	const {t} = useTranslation();
-	return (
-		<>
-			<Grid
-				container
-				sx={{ backgroundColor: "#fff" }}
-				spacing={5}
-				px={8}
-				pt={0}
-				pb={5}
-				justifyContent={"space-between"}
-			>
-				<Grid item xs={12} md={4}>
-					<Box display={"flex"} flexDirection={"column"} rowGap={3}>
-						<Typography
-							variant="h5"
-							fontWeight={"bold"}
-							color={"#1cabe2"}
-							textAlign={"center"}
-						>
-							{t('News.1.title')}
-						</Typography>
-						<VerticalScroll
-							itemHeight={80}
-							scrollIntervalTime={4000}
-							loopCount={8}
-							totalItems={newsItems.length}
-						>
-							{newsItems.map((news, index) => (
-								<Box
-									key={index}
-									borderBottom={"0.5px solid #1cabe2"}
-									py={2}
-									height={200}
-									display={"flex"}
-									columnGap={2}
-									width={"100%"}
-								>
-									<PlayArrowIcon
-										fontSize="8px"
-										style={{ color: "#1cabe2" }}
-									/>
-									<Typography>{news}</Typography>
-								</Box>
-							))}
-						</VerticalScroll>
-					</Box>
-				</Grid>
-				<Grid item xs={12} md={2}>
-					<Box display={"flex"} flexDirection={"column"} rowGap={3}>
-						<Typography
-							variant="h5"
-							fontWeight={"bold"}
-							color={"#1cabe2"}
-							textAlign={"center"}
-						>
-							{t('News.2.title')}
-						</Typography>
-						<VerticalScroll
-							itemHeight={85}
-							scrollIntervalTime={2000}
-							loopCount={6}
-							totalItems={newsItems.length}
-						>
-							{storyItems.map((news, index) => (
-								<Box
-									key={index}
-									borderBottom={"0.5px solid #1cabe2"}
-									py={2}
-									height={85}
-									display={"flex"}
-									columnGap={2}
-									width={"100%"}
-								>
-									<PlayArrowIcon
-										fontSize="8px"
-										style={{ color: "#1cabe2" }}
-									/>
-									<Typography>{news}</Typography>
-								</Box>
-							))}
-						</VerticalScroll>
-					</Box>
-				</Grid>
-				<Grid item xs={12} md={4.5}>
-					<Box
-						display={"flex"}
-						flexDirection={"column"}
-						alignItems={"center"}
-						justifyContent={"center"}
-						rowGap={2}
-					>
-						<Typography
-							variant="h5"
-							fontWeight={"bold"}
-							color={"#1cabe2"}
-						>
-							{t('News.3.title')}
-						</Typography>
-						<VerticalScroll
-							itemHeight={300}
-							scrollIntervalTime={2500}
-							loopCount={4}
-							totalItems={2}
-						>
-							{videos.map((video, index) => (
-									<NewsVideo key={index} video={video} />
-							))}
-						</VerticalScroll>
-					</Box>
-				</Grid>
-			</Grid>
-		</>
-	);
+export default function News() {
+  const { t } = useTranslation();
+  return (
+    <>
+      <Grid
+        container
+        sx={{ backgroundColor: "#fff" }}
+        spacing={5}
+        px={8}
+        pt={0}
+        pb={5}
+        justifyContent={"space-between"}
+      >
+        <Grid item xs={12} md={4}>
+          <Box display={"flex"} flexDirection={"column"} rowGap={3}>
+            <Typography
+              variant="h5"
+              fontWeight={"bold"}
+              color={"#1cabe2"}
+              textAlign={"center"}
+            >
+              {t("News.1.title")}
+            </Typography>
+            <VerticalScroll
+              itemHeight={80}
+              scrollIntervalTime={4000}
+              loopCount={8}
+              totalItems={newsItems.length}
+            >
+              {newsItems.map((news, index) => (
+                <Box
+                  key={index}
+                  borderBottom={"0.5px solid #1cabe2"}
+                  py={2}
+                  height={200}
+                  display={"flex"}
+                  columnGap={2}
+                  width={"100%"}
+                >
+                  <PlayArrowIcon fontSize="8px" style={{ color: "#1cabe2" }} />
+                  <Typography>{news}</Typography>
+                </Box>
+              ))}
+            </VerticalScroll>
+          </Box>
+        </Grid>
+        <Grid item xs={12} md={2}>
+          <Box display={"flex"} flexDirection={"column"} rowGap={3}>
+            <Typography
+              variant="h5"
+              fontWeight={"bold"}
+              color={"#1cabe2"}
+              textAlign={"center"}
+            >
+              {t("News.2.title")}
+            </Typography>
+            <VerticalScroll
+              itemHeight={85}
+              scrollIntervalTime={2000}
+              loopCount={6}
+              totalItems={newsItems.length}
+            >
+              {storyItems.map((news, index) => (
+                <Box
+                  key={index}
+                  borderBottom={"0.5px solid #1cabe2"}
+                  py={2}
+                  height={85}
+                  display={"flex"}
+                  columnGap={2}
+                  width={"100%"}
+                >
+                  <PlayArrowIcon fontSize="8px" style={{ color: "#1cabe2" }} />
+                  <Typography>{news}</Typography>
+                </Box>
+              ))}
+            </VerticalScroll>
+          </Box>
+        </Grid>
+        <Grid item xs={12} md={4.5}>
+          <Box
+            display={"flex"}
+            flexDirection={"column"}
+            alignItems={"center"}
+            justifyContent={"center"}
+            rowGap={2}
+          >
+            <Typography variant="h5" fontWeight={"bold"} color={"#1cabe2"}>
+              {t("News.3.title")}
+            </Typography>
+            <VerticalScroll
+              itemHeight={300}
+              scrollIntervalTime={2500}
+              loopCount={4}
+              totalItems={2}
+            >
+              {videos.map((video, index) => (
+                <NewsVideo key={index} video={video} />
+              ))}
+            </VerticalScroll>
+          </Box>
+        </Grid>
+      </Grid>
+    </>
+  );
 }
 
 // const data = [

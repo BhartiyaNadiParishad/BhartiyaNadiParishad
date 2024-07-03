@@ -18,7 +18,7 @@ const data = [
   {
     title: "Objectives",
     content:
-      "The main objective of the BNP is to coordinate the efforts of society and government for river rejuvenation in India and to achieve positive results from their efforts, throug action research and demonstrating innovative solutions. Through the BNP, it will also be ensured that by the year 2047, when India completes 100 years of independence, the rivers of India become completely clean and uninterrupted.",
+      "The main objective of the Bhartiya Nadi Parishad is to coordinate the efforts of society and government for river rejuvenation in India and to achieve positive results from their efforts, throug action research and demonstrating innovative solutions. Through the Bhartiya Nadi Parishad, it will also be ensured that by the year 2047, when India completes 100 years of independence, the rivers of India become completely clean and uninterrupted.",
   },
   {
     title: "Nadi Darshan",
@@ -28,7 +28,7 @@ const data = [
   // {
   //   title: "Join Us",
   //   content:
-  //     "Any person or organization concerned about its rivers in India can join the BNP. There is no difference of religion, caste, gender, color, region, and language in this. We all are Indians, and we love the richness of our rivers, citizens or organizations believing in this idea can associate with the BNP in any way. This organization is of everyone and for everyone. In this, everyone has the freedom to express their ideas and implement them. Through the BNP, we will move forward with a resolve to make our country river rich.",
+  //     "Any person or organization concerned about its rivers in India can join the Bhartiya Nadi Parishad. There is no difference of religion, caste, gender, color, region, and language in this. We all are Indians, and we love the richness of our rivers, citizens or organizations believing in this idea can associate with the Bhartiya Nadi Parishad in any way. This organization is of everyone and for everyone. In this, everyone has the freedom to express their ideas and implement them. Through the Bhartiya Nadi Parishad, we will move forward with a resolve to make our country river rich.",
   // },
   // {
   //   title: "Clean Rivers for Biodiversity and Prosperity",
@@ -60,10 +60,11 @@ export default function History() {
             Our Focus
           </Typography>
           <Typography gutterBottom variant="h6" textAlign={"center"}>
-            BNP mainly carries out three types of work for the betterment of
-            rivers: groundwork, policy work and public awareness. Through these,
-            our priority is to work in accordance with the religious, cultural,
-            and spiritual sentiments of the rivers of India.
+            Bhartiya Nadi Parishad mainly carries out three types of work for
+            the betterment of rivers: groundwork, policy work and public
+            awareness. Through these, our priority is to work in accordance with
+            the religious, cultural, and spiritual sentiments of the rivers of
+            India.
           </Typography>
         </Grid>
         {data.map((d) => (

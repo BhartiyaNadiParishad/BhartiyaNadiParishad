@@ -83,8 +83,8 @@ import stateHeadsImg2 from '../../assets/team/Mr Ngawang Rinchen Wacher.jpg'
 import stateHeadsImg3 from '../../assets/team/Mr Ajay Sahay.jpg'
 
 import blessings1 from '../../assets/team/Shri U P Singh.jpeg'
-import blessings2 from '../../assets/team/Shri G Ashok Kumar.jpeg' 
-import blessings3 from '../../assets/team/Smt. Prakashi Tomer.jpg' 
+import blessings2 from '../../assets/team/Shri G Ashok Kumar.jpeg'
+import blessings3 from '../../assets/team/Smt. Prakashi Tomer.jpg'
 
 
 
@@ -282,7 +282,7 @@ export const Blessings = [
         linkedinLink: "https://www.linkedin.com/",
         gmailLink: "mailto:example@gmail.com",
     },
-    
+
 ]
 
 
@@ -332,7 +332,7 @@ export const coreTeamData = [
     //     linkedinLink: "https://www.linkedin.com/",
     //     gmailLink: "mailto:example@gmail.com",
     // },
-    {   
+    {
         img: coreTeamImg2,
         name: "Jagdish Menon",
         title1: "Coordinator",
@@ -368,7 +368,7 @@ export const coreTeamData = [
         linkedinLink: "https://www.linkedin.com/",
         gmailLink: "mailto:example@gmail.com",
     },
-    {   
+    {
         img: coreTeamImg16,
         name: "Naveen kumar",
         title1: "Co-ordinator ",
@@ -440,7 +440,7 @@ export const coreTeamData = [
         linkedinLink: "https://www.linkedin.com/",
         gmailLink: "mailto:example@gmail.com",
     },
-    {   
+    {
         img: coreTeamImg2,
         name: "Umang Rastogi",
         title1: "Coordinator ",
@@ -449,9 +449,9 @@ export const coreTeamData = [
         linkedinLink: "https://www.linkedin.com/",
         gmailLink: "mailto:example@gmail.com"
     },
-    
-    
-    
+
+
+
     // {
     //     img: coreTeamImg5,
     //     name: "Mr Naveen Pradhan",
@@ -461,7 +461,7 @@ export const coreTeamData = [
     //     linkedinLink: "https://www.linkedin.com/",
     //     gmailLink: "mailto:example@gmail.com",
     // },
-    
+
     {
         img: coreTeamImg6,
         name: "Vineet Kashyap",
@@ -480,7 +480,7 @@ export const coreTeamData = [
     //     linkedinLink: "https://www.linkedin.com/",
     //     gmailLink: "mailto:example@gmail.com",
     // },
-    
+
     {
         img: coreTeamImg9,
         name: "Darpan Vaidh",
@@ -517,8 +517,8 @@ export const coreTeamData = [
         linkedinLink: "https://www.linkedin.com/",
         gmailLink: "mailto:example@gmail.com",
     },
-    
-    
+
+
 ];
 
 
@@ -559,7 +559,7 @@ export const advisoryCouncilData = [
         linkedinLink: "https://www.linkedin.com/",
         gmailLink: "mailto:example@gmail.com",
     },
-    
+
     {
         img: technicalCouncilImg18,
         name: "Uma Shankar Pandey",
@@ -749,7 +749,7 @@ export const advisoryCouncilData = [
     //     linkedinLink: "https://www.linkedin.com/",
     //     gmailLink: "mailto:example@gmail.com",
     // },
-    
+
     // {
     //     img: advisoryTeamImg4,
     //     name: "Mr Manu Gaur",
@@ -777,8 +777,8 @@ export const advisoryCouncilData = [
     //     linkedinLink: "https://www.linkedin.com/",
     //     gmailLink: "mailto:example@gmail.com",
     // },
-    
-    
+
+
     // {
     //     img: advisoryTeamImg12,
     //     name: "Prof. J.S. Rawat",
@@ -797,10 +797,10 @@ export const advisoryCouncilData = [
     //     linkedinLink: "https://www.linkedin.com/",
     //     gmailLink: "mailto:example@gmail.com",
     // },
-    
-    
-    
-    
+
+
+
+
     // {
     //     img: advisoryTeamImg16,
     //     name: "Mr Malhaar Patekar",
@@ -810,8 +810,8 @@ export const advisoryCouncilData = [
     //     linkedinLink: "https://www.linkedin.com/",
     //     gmailLink: "mailto:example@gmail.com",
     // },
-    
-    
+
+
     // {
     //     img: advisoryTeamImg18,
     //     name: "Ms Vrinda Khanna",
@@ -851,7 +851,7 @@ export const technicalCouncilData = [
         linkedinLink: "https://www.linkedin.com/",
         gmailLink: "mailto:example@gmail.com",
     },
-    
+
     {
         img: technicalCouncilImg14,
         name: "J.S. Rawat",
@@ -969,7 +969,7 @@ export const technicalCouncilData = [
         linkedinLink: "https://www.linkedin.com/",
         gmailLink: "mailto:example@gmail.com",
     },
-    
+
     {
         img: technicalCouncilImg7,
         name: "Dinesh Poswal",
@@ -997,7 +997,7 @@ export const technicalCouncilData = [
     //     linkedinLink: "https://www.linkedin.com/",
     //     gmailLink: "mailto:example@gmail.com",
     // },
-    
+
     // {
     //     img: technicalCouncilImg14,
     //     name: "Prof. J.S. Rawat",
