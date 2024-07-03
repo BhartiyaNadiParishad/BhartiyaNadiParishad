@@ -2,8 +2,8 @@ import { useState } from "react";
 import img from "./assets/background9.png";
 import "./App.css";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import HomePage from "./component/HomePage/HomePage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import HomePage from "./component/HomePage/HomePage";
 import Internship from "./component/GetInvolved/internship";
 import Membership from "./component/GetInvolved/membership";
 import Volunteer from "./component/GetInvolved/volunteer";
@@ -37,6 +37,7 @@ import ProgramPage from "./component/AboutUs/ourProgramPage";
 import NeedHelp from "./NeedHelp/needHelp";
 import Patron from "./component/Team/patron";
 import RiverBasinMap from "./component/Nadi Darshan/riverBasinMap";
+import ScrollToTop from "./component/HomePage/ScrollToTop";
 
 
 const theme = createTheme({
@@ -50,13 +51,10 @@ function App() {
     <>
       <ThemeProvider theme={theme}>
         <Router>
+          <ScrollToTop />
           <Routes>
             <Route exact path="/" element={<HomePage />} />
-            <Route
-              exact
-              path="/getInvolvedMenu"
-              element={<GetInvolvedPage />}
-            />
+            <Route exact path="/getInvolvedMenu" element={<GetInvolvedPage />} />
             <Route exact path="/membership" element={<Membership />} />
             <Route exact path="/internship" element={<Internship />} />
             <Route exact path="/volunteer" element={<Volunteer />} />

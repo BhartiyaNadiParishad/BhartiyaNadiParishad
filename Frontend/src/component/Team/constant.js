@@ -19,6 +19,7 @@ import coreTeamImg18 from '../../assets/team/Sidharth Sharma.jpeg'
 import coreTeamImg19 from '../../assets/team/Chandan Nayal.jpg'
 import coreTeamImg20 from '../../assets/team/Shiv Kumar.jpeg'
 import coreTeamImg21 from '../../assets/team/Kartik Sapre.jpeg'
+import coreTeamImg22 from '../../assets/team/B Tyagi.jpg'
 
 
 
@@ -509,7 +510,7 @@ export const coreTeamData = [
         gmailLink: "mailto:example@gmail.com",
     },
     {
-        img: coreTeamImg10,
+        img: coreTeamImg22,
         name: "Bhaskar Tyagi",
         title1: "Coordinator",
         title2: "Social Media",

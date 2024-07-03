@@ -8,6 +8,7 @@ import logo1 from "../../assets/Icons/members.png";
 import logo2 from "../../assets/Icons/partners.png";
 import logo3 from "../../assets/Icons/projects.png";
 import logo4 from "../../assets/Icons/river.png";
+import { Link } from "react-router-dom";
 
 const CustomBox = styled(Box)(({ backgroundImg }) => ({
 	display: "flex",
@@ -20,55 +21,85 @@ const CustomBox = styled(Box)(({ backgroundImg }) => ({
 	backgroundImage: `url(${backgroundImg})`,
 	backgroundSize: "cover",
 	backgroundPosition: "center",
-  backgroundColor: "#1cabe2",
+	backgroundColor: "#1cabe2",
 	"&:hover": {
 		backgroundImage: "none",
 		backgroundColor: "rgb(0 38 65)",
 	},
 }));
 
-const ImpactCard = ({ backgroundImg, logo, count, label }) => (
-	<Grid
-		item
-		xs={12}
-		sm={6}
-		md={3}
-		backgroundImg={backgroundImg}
-	>
-		<CustomBox p={2}>
-			<img src={logo} height={45} width={45} alt={label} />
-			<Typography
-				variant="h5"
-				sx={{ fontWeight: "bold", color: "white" }}
-			>
-				{count}
-			</Typography>
-			<Typography
-				variant="h6"
-				sx={{ fontSize: "18px", fontWeight: "bold", color: "white" }}
-			>
-				{label}
-			</Typography>
-		</CustomBox>
+const ImpactCard = ({ backgroundImg, logo, count, label, link }) => (
+	<Grid item xs={12} sm={6} md={3} backgroundImg={backgroundImg}>
+		<Link to={link}>
+			<CustomBox p={2}>
+				<img src={logo} height={45} width={45} alt={label} />
+				<Typography
+					variant="h5"
+					sx={{ fontWeight: "bold", color: "white" }}
+				>
+					{count}
+				</Typography>
+				<Typography
+					variant="h6"
+					sx={{
+						fontSize: "18px",
+						fontWeight: "bold",
+						color: "white",
+					}}
+				>
+					{label}
+				</Typography>
+			</CustomBox>
+		</Link>
 	</Grid>
 );
 
 export default function WorkImpact() {
 	const impactData = [
-		{ backgroundImg: img1, logo: logo1, count: 1250, label: "Members" },
-		{ backgroundImg: img2, logo: logo2, count: 531, label: "Partners" },
-		{ backgroundImg: img3, logo: logo3, count: 163, label: "Projects" },
+		{
+			backgroundImg: img1,
+			logo: logo1,
+			count: 1250,
+			label: "Members",
+			link: "/coreteam",
+		},
+		{
+			backgroundImg: img2,
+			logo: logo2,
+			count: 531,
+			label: "Partners",
+			link: "/partners",
+		},
+		{
+			backgroundImg: img3,
+			logo: logo3,
+			count: 163,
+			label: "Projects",
+			link: "/nadiDarshanMenu",
+		},
 		{
 			backgroundImg: img4,
 			logo: logo4,
 			count: 215,
 			label: "Rivers Covered",
+			link: "/success-stories",
 		},
 	];
 
 	return (
-		<Box>
-			<Grid container p={6} columnSpacing={3} rowSpacing={3} >
+		<Box p={6}>
+			<Typography
+				variant="h4"
+				style={{
+					fontWeight: "bold",
+					textAlign: "center",
+					marginBottom: "30px",
+					color: "#1cabe2",
+				}}
+			>
+				Our Work Impact
+			</Typography>
+			<Grid container  columnSpacing={3} rowSpacing={3}>
 				{impactData.map((data, index) => (
 					<ImpactCard
 						key={index}
@@ -76,6 +107,7 @@ export default function WorkImpact() {
 						logo={data.logo}
 						count={data.count}
 						label={data.label}
+						link={data.link}
 					/>
 				))}
 			</Grid>

@@ -16,6 +16,7 @@ import img11 from "../../assets/team/Mr Shekhar Vijendra.jpg";
 import img12 from "../../assets/team/Dr Chinmay Pandya.jpg";
 import img13 from "../../assets/team/3.jpg";
 import img14 from "../../assets/team/Kailashanand.jpg";
+import img15 from "../../assets/team/afroz.jpg"
 
 const data = [
   {
@@ -124,7 +125,7 @@ const data = [
       "I am happy to learn about the dedicated endeavors of the Bhartiya Nadi Parishad under your leadership toward the noble cause of River Rejuvenation following ecosystem approach. The collective efforts over the years by Bhartiya Nadi Parishad have been instrumental in reviving our cherished river resulting in formulating robust policies for their protection & management is remarkable. ",
     authorName: "Dr Afroz Ahmad",
     designation: "Member, National Green Tribunal",
-    image: img9,
+    image: img15,
   },
 ];
 
