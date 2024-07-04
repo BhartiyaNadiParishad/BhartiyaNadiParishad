@@ -33,11 +33,7 @@ const phases = [
 
 const SuccessStories = () => {
   return (
-    <MainLayout
-      title={"Innovative Initiatives"}
-      bgImg={img}
-      position={"center"}
-    >
+    <MainLayout title={"Success Stories"} bgImg={img} position={"center"}>
       <Box p={4}>
         <ProjectTimeline phases={phases} />
       </Box>

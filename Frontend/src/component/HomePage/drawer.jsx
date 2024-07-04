@@ -28,6 +28,8 @@ const drawerWidth = 300;
 const navItems = [
   "Home",
   "About",
+  "Our Team",
+  "Programs",
   "Nadi Darshan",
   "Get Involved",
   "Resources",
@@ -41,7 +43,6 @@ const menuData = [
     menuItems: [
       { label: "About Us", path: "/about" },
       { label: "Mission, Vision & Values", path: "/mission" },
-      { label: "Our Program", path: "/programmesMenu" },
       { label: "About Logo", path: "/about-logo" },
     ],
   },
@@ -58,14 +59,29 @@ const menuData = [
     ],
   },
   {
-    menuName: "nadiDarshanMenu",
+    menuName: "field-action",
+    buttonLabel: "Programs",
+    menuItems: [
+      { label: "Field Action", path: "/field-action" },
+      { label: "Research & Innovation", path: "/research" },
+      { label: "Community Engagement", path: "/community-engagement" },
+      { label: "Award", path: "/award" },
+      { label: "Nadi Sangam", path: "/nadi-sangam" },
+      { label: "Fellowship", path: "/fellowship" },
+      { label: "River Talk", path: "/river-talk" },
+      { label: "Nadi Shoudh Kendra", path: "/nadi-shoudh-kendra" },
+      { label: "Nadi Shoudh Yatra", path: "/nadi-yatra" },
+    ],
+  },
+  {
+    menuName: "river-basin-map",
     buttonLabel: "Nadi Darshan",
     menuItems: [
-      { label: "Portal", path: "/nadiDarshanMenu" },
+      { label: "Portal", path: "/" },
       { label: "River Basin", path: "/river-basin-map" },
       { label: "River Gallery", path: "/river-gallery" },
       { label: "River Video", path: "/rivervideo" },
-      { label: "Factsheet", path: "/factsheet" },
+      // { label: "Factsheet", path: "/factsheet" },
     ],
   },
   {
