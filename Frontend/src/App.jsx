@@ -38,6 +38,16 @@ import NeedHelp from "./NeedHelp/needHelp";
 import Patron from "./component/Team/patron";
 import RiverBasinMap from "./component/Nadi Darshan/riverBasinMap";
 import ScrollToTop from "./component/HomePage/ScrollToTop";
+import FieldAction from "./component/AboutUs/Program/fieldAction";
+import RiverYatra from "./component/AboutUs/Program/Rivertalk";
+import Research from "./component/AboutUs/Program/Research";
+import NadiYatra from "./component/AboutUs/Program/NadiYatra";
+import NadiShoudhKendra from "./component/AboutUs/Program/NadiShoudhKendra";
+import NadiSangam from "./component/AboutUs/Program/NadiSangam";
+import Award from "./component/AboutUs/Program/Award";
+import Community from "./component/AboutUs/Program/Community";
+import RiverTalk from "./component/AboutUs/Program/Rivertalk";
+import Fellowships from "./component/AboutUs/Program/fellowship";
 
 
 const theme = createTheme({
@@ -88,6 +98,16 @@ function App() {
             <Route exact path="/need-help" element={ <NeedHelp /> } />
             <Route exact path="/patron" element={ <Patron /> } />
             <Route exact path="/river-basin-map" element={ <RiverBasinMap /> } />
+            <Route exact path="/field-action" element={ <FieldAction /> } />
+            <Route exact path="/nadi-yatra" element={ <NadiYatra /> } />
+            <Route exact path="/research" element={ <Research /> } />
+            <Route exact path="/nadi-shoudh-kendra" element={ <NadiShoudhKendra /> } />
+            <Route exact path="/nadi-sangam" element={ <NadiSangam /> } />
+            <Route exact path="/fellowship" element={ <Fellowships /> } />
+            <Route exact path="/award" element={ <Award /> } />
+            <Route exact path="/community" element={ <Community /> } />
+            <Route exact path="/river-talk" element={ <RiverTalk /> } />
+
           </Routes>
         </Router>
       </ThemeProvider>

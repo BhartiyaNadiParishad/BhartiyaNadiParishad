@@ -11,8 +11,6 @@ import Icon9 from "../../assets/Icons/9.png";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-
-
 export default function Programs() {
 
   const {t} = useTranslation();
@@ -20,38 +18,47 @@ export default function Programs() {
     {
       awardTitle: t('programs.7'),
       img: Icon7,
+      link: "/field-action",
     },
     {
       awardTitle: t('programs.8'),
       img: Icon8,
+      link: "/research",
     },
     {
       awardTitle: t('programs.9'),
       img: Icon9,
+      link: "/community",
     },
     {
       awardTitle: t('programs.1'),
       img: Icon1,
+      link: "/award",
     },
     {
       awardTitle: t('programs.2'),
       img: Icon2,
+      link: "/nadi-sangam",
     },
     {
       awardTitle: t('programs.3'),
       img: Icon3,
+      link: "/fellowship",
     },
     {
       awardTitle: t('programs.4'),
       img: Icon4,
+      link: "/river-talk",
     },
     {
       awardTitle: t('programs.5'),
       img: Icon5,
+      link: "/nadi-shoudh-kendra",
     },
     {
       awardTitle: t('programs.6'),
       img: Icon6,
+      link: "/nadi-yatra",
     },
   ];
 
@@ -72,7 +79,7 @@ export default function Programs() {
       <Grid container spacing={3} p={2}>
         {data.map((item, index) => (
           <Grid item md={4} xs={12} key={index}>
-            <Link to={"/programmesMenu"} key={index}>
+            <Link to={item.link} key={index}>
               <Box
                 sx={{
                   padding: "30px",
