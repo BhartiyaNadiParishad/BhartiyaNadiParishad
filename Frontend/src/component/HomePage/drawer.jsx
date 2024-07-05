@@ -77,7 +77,7 @@ const menuData = [
     menuName: "river-basin-map",
     buttonLabel: "Nadi Darshan",
     menuItems: [
-      { label: "Portal", path: "/" },
+      { label: "Portal", path: "https://nadidarshan.org/" },
       { label: "River Basin", path: "/river-basin-map" },
       { label: "River Gallery", path: "/river-gallery" },
       { label: "River Video", path: "/rivervideo" },
@@ -186,9 +186,10 @@ function DrawerAppBar(props) {
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar
+        position="absolute"
         component="nav"
         sx={{
-          display: { xs: "flex", md: trigger ? "none" : "flex" },
+          // display: { xs: "flex", md: trigger ? "none" : "flex" },
           background: "none",
           padding: "0px !important",
         }}
