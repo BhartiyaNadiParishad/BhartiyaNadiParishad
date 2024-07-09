@@ -15,12 +15,11 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import { MenuItem, Popper } from "@mui/material";
+import { Menu, MenuItem, Popper } from "@mui/material";
 import Logo from "../../assets/logo.svg";
 import Logo1 from "../../assets/IRC ENG LOGO.png";
 import { Link } from "react-router-dom";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import { useScrollTrigger } from "@mui/material";
 import LanguageSwitchButton from "../translation/languageSwitchButton";
 import { useState } from "react";
 
@@ -28,7 +27,6 @@ const drawerWidth = 300;
 const navItems = [
   "Home",
   "About",
-  "Our Team",
   "Programs",
   "Nadi Darshan",
   "Get Involved",
@@ -42,20 +40,19 @@ const menuData = [
     buttonLabel: "About",
     menuItems: [
       { label: "About Us", path: "/about" },
-      { label: "Mission, Vision & Values", path: "/mission" },
+      { label: "Our Values", path: "/mission" },
       { label: "About Logo", path: "/about-logo" },
-    ],
-  },
-  {
-    menuName: "coreteam",
-    buttonLabel: "Our Team",
-    menuItems: [
-      { label: "Patron", path: "/patron" },
-      { label: "Inspiration", path: "/inspiration" },
-      { label: "Core Team", path: "/coreteam" },
-      { label: "Advisors", path: "/advisors" },
-      { label: "Technical Advisors", path: "/technicaladvisor" },
-      { label: "State Heads", path: "/state-heads" },
+      {
+        label: "Our Team",
+        subMenuItems: [
+          { label: "Patron", path: "/patron" },
+          { label: "Inspiration", path: "/inspiration" },
+          { label: "Core Team", path: "/coreteam" },
+          { label: "Advisors", path: "/advisors" },
+          { label: "Technical Advisors", path: "/technicaladvisor" },
+          { label: "State Heads", path: "/state-heads" },
+        ],
+      },
     ],
   },
   {
@@ -109,16 +106,23 @@ const menuData = [
   {
     menuName: "contactMenu",
     buttonLabel: "Contact",
-    menuItems: [
-      { label: "Contact Us", path: "/contactMenu" },
-      { label: "FAQ's", path: "/faqs" },
-    ],
+    menuItems: [{ label: "Contact Us", path: "/contactMenu" }],
   },
 ];
 
 function DrawerAppBar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [value, setValue] = useState(0);
+  const [anchorEls, setAnchorEls] = React.useState({
+    about: null,
+    programmesMenu: null,
+    nadiDarshanMenu: null,
+    getInvolvedMenu: null,
+    resourcesMenu: null,
+    contactMenu: null,
+  });
+  const [subMenuAnchorEl, setSubMenuAnchorEl] = React.useState(null);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -127,7 +131,7 @@ function DrawerAppBar(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        Menu
       </Typography>
       <Divider />
       <List>
@@ -144,25 +148,6 @@ function DrawerAppBar(props) {
 
   const container =
     window !== undefined ? () => window().document.body : undefined;
-  const trigger = useScrollTrigger();
-
-  const [anchorEls, setAnchorEls] = React.useState({
-    about: null,
-    programmesMenu: null,
-    nadiDarshanMenu: null,
-    getInvolvedMenu: null,
-    resourcesMenu: null,
-    contactMenu: null,
-  });
-
-  const [value, setValue] = useState(0);
-
-  React.useEffect(() => {
-    const intervalId = setInterval(() => {
-      setValue((prevValue) => (prevValue === 1 ? 0 : prevValue + 1));
-    }, 5000);
-    return () => clearInterval(intervalId);
-  }, []);
 
   const handleClick = (menuName, event) => {
     setAnchorEls({
@@ -178,7 +163,23 @@ function DrawerAppBar(props) {
 
   const handleClose = (menuName) => {
     setAnchorEls({ ...anchorEls, [menuName]: null });
+    setSubMenuAnchorEl(null); // Close any open submenus
   };
+
+  const handleSubMenuOpen = (event) => {
+    setSubMenuAnchorEl(event.currentTarget);
+  };
+
+  const handleSubMenuClose = () => {
+    setSubMenuAnchorEl(null);
+  };
+
+  React.useEffect(() => {
+    const intervalId = setInterval(() => {
+      setValue((prevValue) => (prevValue === 1 ? 0 : prevValue + 1));
+    }, 2000);
+    return () => clearInterval(intervalId);
+  }, []);
 
   const isPopperOpen = (menuName) => Boolean(anchorEls[menuName]);
 
@@ -189,7 +190,6 @@ function DrawerAppBar(props) {
         position="absolute"
         component="nav"
         sx={{
-          // display: { xs: "flex", md: trigger ? "none" : "flex" },
           background: "none",
           padding: "0px !important",
         }}
@@ -308,21 +308,75 @@ function DrawerAppBar(props) {
                       >
                         {menu.menuItems &&
                           menu.menuItems.map((item, index) => (
-                            <Link key={index} to={item.path}>
-                              <MenuItem
-                                sx={{
-                                  borderTop: "1px solid white",
-                                  color: "white",
-                                  fontWeight: "bold",
-                                  "&:hover": {
-                                    backgroundColor: "white",
-                                    color: "#1cabe2",
-                                  },
-                                }}
-                              >
-                                {item.label}
-                              </MenuItem>
-                            </Link>
+                            <div key={index}>
+                              {item.subMenuItems ? (
+                                <MenuItem
+                                  aria-controls="sub-menu"
+                                  aria-haspopup="true"
+                                  onMouseEnter={handleSubMenuOpen}
+                                  onMouseLeave={handleSubMenuClose}
+                                  // onClick={(event) => event.stopPropagation()}
+                                  sx={{
+                                    borderTop: "1px solid white",
+                                    color: "white",
+                                    fontWeight: "bold",
+                                    "&:hover": {
+                                      backgroundColor: "white",
+                                      color: "#1cabe2",
+                                    },
+                                  }}
+                                >
+                                  {item.label}
+                                  <Menu
+                                    id="sub-menu"
+                                    anchorEl={subMenuAnchorEl}
+                                    open={Boolean(subMenuAnchorEl)}
+                                    onMouseLeave={handleSubMenuClose}
+                                    sx={{ zIndex: 1300 }}
+                                  >
+                                    {item?.subMenuItems?.map(
+                                      (subItem, subIndex) => (
+                                        <Link to={subItem.path} key={subIndex}>
+                                          <MenuItem
+                                            key={subIndex}
+                                            sx={{
+                                              color: "white",
+                                              borderTop: "1px solid white",
+                                              backgroundColor: "#1cabe2",
+                                              fontWeight: "bold",
+                                              "&:hover": {
+                                                backgroundColor: "white",
+                                                color: "#1cabe2",
+                                              },
+                                            }}
+                                            onClick={handleSubMenuClose}
+                                          >
+                                            {subItem.label}
+                                          </MenuItem>
+                                        </Link>
+                                      )
+                                    )}
+                                  </Menu>
+                                </MenuItem>
+                              ) : (
+                                <Link to={item.path}>
+                                  <MenuItem
+                                    sx={{
+                                      borderTop: "1px solid white",
+                                      color: "white",
+                                      fontWeight: "bold",
+                                      "&:hover": {
+                                        backgroundColor: "white",
+                                        color: "#1cabe2",
+                                      },
+                                    }}
+                                    onClick={handleClose}
+                                  >
+                                    {item.label}
+                                  </MenuItem>
+                                </Link>
+                              )}
+                            </div>
                           ))}
                       </Box>
                     </Popper>
@@ -331,9 +385,9 @@ function DrawerAppBar(props) {
               ))}
             </Box>
 
-            <Box>
+            {/* <Box>
               <LanguageSwitchButton />
-            </Box>
+            </Box> */}
           </Box>
         </Toolbar>
       </AppBar>

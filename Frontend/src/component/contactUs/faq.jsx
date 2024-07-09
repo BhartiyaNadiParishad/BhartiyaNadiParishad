@@ -17,7 +17,7 @@ const faqData = [
   {
     summary: "About Bhartiya Nadi Parishad",
     details:
-      "BHARTIYA NADI PARISHAD has been formed by Mr. Raman Kant to bring together the river revitalization efforts being made in different parts of the country.",
+      "Bhartiya Nadi Parishad has been formed by Mr. Raman Kant to bring together the river revitalization efforts being made in different parts of the country.",
   },
   {
     summary: "Objective of Bhartiya Nadi Parishad",

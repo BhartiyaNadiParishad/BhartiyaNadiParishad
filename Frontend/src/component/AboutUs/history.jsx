@@ -13,7 +13,7 @@ const data = [
   {
     title: "Formation ",
     content:
-      "In India, the efforts of the society and the government seem to be converged at some places, however, their coordination seems incomplete and there is dearth of the technical knowledge. The BHARTIYA NADI PARISHAD has been formed to coordinate the efforts of society and government for the rivers of India and to take forward efforts for the rivers in a better way by learning from each other's experiences.",
+      "In India, the efforts of the society and the government seem to be converged at some places, however, their coordination seems incomplete and there is dearth of the technical knowledge. The Bhartiya Nadi Parishad has been formed to coordinate the efforts of society and government for the rivers of India and to take forward efforts for the rivers in a better way by learning from each other's experiences.",
   },
   {
     title: "Objectives",

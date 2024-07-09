@@ -9,9 +9,8 @@ import Contact from "./component/contactUs/contact";
 import Testing from "./component/testing";
 import AboutBNP from "./component/AboutUs/about";
 import Gallery from "./component/gallery";
-import OurValues from "./component/ourValues";
 import Partners from "./component/AboutUs/Partners";
-import MissionVision from "./component/AboutUs/missionVision";
+import OurValues from "./component/AboutUs/OurValues";
 import History from "./component/AboutUs/history";
 import PdfDocument from "./component/Resouces/Documents/document";
 import CoreTeam from "./component/Team/coreTeam";
@@ -74,7 +73,7 @@ function App() {
             <Route exact path="/programmesMenu" element={<ProgramPage />} />
             <Route exact path="/values" element={<OurValues />} />
             <Route exact path="/partners" element={<Partners />} />
-            <Route exact path="/mission" element={<MissionVision />} />
+            <Route exact path="/mission" element={<OurValues />} />
             <Route exact path="/history" element={<History />} />
             <Route exact path="/document" element={<PdfDocument />} />
             <Route exact path="/coreteam" element={<CoreTeam />} />

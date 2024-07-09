@@ -293,7 +293,7 @@ export const coreTeamData = [
         img: coreTeamImg1,
         name: "Raman Kant",
         title1: "Riverman of India",
-        title2: "Founder of BHARTIYA NADI PARISHAD",
+        title2: "Founder of Bhartiya Nadi Parishad",
         facebookLink: "https://www.facebook.com/",
         linkedinLink: "https://www.linkedin.com/",
         gmailLink: "mailto:example@gmail.com",
