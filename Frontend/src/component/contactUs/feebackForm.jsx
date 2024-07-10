@@ -96,7 +96,7 @@ export default function FeedbackForm() {
 
 	return (
 		<>
-			<Box width={{ xs: "100%", md: "60%" }} mb={2}>
+			<Box width={{ xs: "100%"}} mb={2}>
 				<Typography
 					variant="h5"
 					fontSize={"26px"}
