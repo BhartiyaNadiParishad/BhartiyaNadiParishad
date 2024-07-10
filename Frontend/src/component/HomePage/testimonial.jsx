@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Carousel } from "@material-tailwind/react";
 import { Box } from "@mui/material";
-import img from "../../assets/bg/bgl6.jpeg";
+import img from "../../assets/bg/bgI-20.jpeg";
 import img1 from "../../assets/team/Swami Chidanand Ji.jpeg";
 import img2 from "../../assets/team/4.jpg";
 import img_2 from "../../assets/team/Mr Rajeev Ahal.jpg";
@@ -37,7 +37,7 @@ const data = [
   {
     authorContent:
       "The Bhartiya Nadi Parishad marks a pivotal moment in India's efforts to bring together large scale community empowerment and collaborations for river basin restoration and its conservation. With a shared vision and a dedicated platform, this council is set to drive water security, foster growth, and enhance the quality of life for people. Together, we can achieve remarkable outcomes that ripple beyond the boundaries.",
-    authorName: "Mr. Rajeev Ahal",
+    authorName: "Shri Rajeev Ahal",
     designation:
       "Director - Natural Resources Management & Agroecology, GIZ India",
     image: img_2,
@@ -46,27 +46,27 @@ const data = [
     authorContent:
       "I am happy to know about the dedicated endeavors of the Bhartiya Nadi Parishad Meerut, Uttar Pradesh under your leadership, which is progressive towards the noble cause of river rejuvenation and environment conservation. I extend my best wishes for the grand success of your efforts. May your esteemed contributions inspire and unite individuals across the nation to participate in securing the vitality of our rivers for the generations to come.  ",
     authorName: "Dr. Sanjeev Kumar Baliyan",
-    designation: "Former Minister of State for Jal Shakti, Government of India",
+    designation: "Former Union Minister, Government of India",
     image: img3,
   },
   {
     authorContent:
       "River rejuvenation work in the country will be strengthened through the Bhartiya Nadi Parishad. The need for such an effort was felt for a long time.",
-    authorName: "Mr. Manu Gaur",
+    authorName: "Shri Manu Gaur",
     designation: "Founder – Taxpayers Association of Bharat (TAXAB)",
     image: img10,
   },
   {
     authorContent:
       "Bhartiya Nadi Parishad plays a crucial role in advancing the significant mission of river rejuvenation in the country. Its efforts in improving and conserving the condition of rivers will not only maintain ecological balance but also lay the foundation for a green and prosperous environment for future generations.",
-    authorName: "Mr. Kunwar Shekhar Vijendra",
+    authorName: "Shri Kunwar Shekhar Vijendra",
     designation: "Co-founder & Chancellor of Shobhit University",
     image: img11,
   },
   {
     authorContent:
-      "यह जानकर अन्तर्मन अत्यंत हर्ष, गौरव एवं अभिनंदन से भर उठा है कि भारतीय नदी परिषद् भारत में नदी पुनर्जीवन के कार्य के साथ ही सर्वसामान्य में इसकी स्वीकार्यता बनाने की दिशा में सकारात्मक परिवर्तन का वाहक बनेगा। धन्य है भारतीय नदी परिषद् का आदर्श जिसने सदउद्देश्य के लिए कदम बढ़ाने का शौर्य और साहस दिखाया। यह सौभाग्य जो आप पर बरसा है, भगवान करे इसमें सम्पूर्ण देश जुड़े। इसकी प्रेरणा एवं परम्परा अक्षय बनी रहे ऐसी कामना करता हूं। ",
-    authorName: "डाॅ. श्री चिन्मय पाण्डया",
+      "यह जानकर अन्तर्मन अत्यंत हर्ष, गौरव एवं अभिनंदन से भर उठा है कि भारतीय नदी परिषद् भारत में नदी पुनर्जीवन के कार्यों के साथ ही सर्वसामान्य में इसकी स्वीकार्यता बनाने की दिशा में सकारात्मक परिवर्तन का वाहक बनेगा। धन्य है भारतीय नदी परिषद् का आदर्श जिसने सदउद्देश्य के लिए कदम बढ़ाने का शौर्य और साहस दिखाया। यह सौभाग्य जो आप पर बरसा है, भगवान करे इसमें सम्पूर्ण देश जुड़े। इसकी प्रेरणा एवं परम्परा अक्षय बनी रहे ऐसी कामना करता हूं। ",
+    authorName: "डाॅ. चिन्मय पाण्डया",
     designation: "प्रति कुलपति - देव संस्कृति विश्वविधालय, हरिद्वार",
     image: img12,
   },
@@ -96,7 +96,7 @@ const data = [
     authorContent:
       "यह सभी के लिए गर्व का विषय है कि भारतीय नदी परिषद् द्वारा भारत की नदियों के पुनर्जीवन हेतु गंभीरता से नवीन प्रयास हेतु कदम आगे बढ़ाए जा रहे हैं। अपने जन कल्याणकारी दायित्वों का निर्वहन करते हुए मेवाड़ के राजाओं ने भी राज्य की नदियों के हित में अनेक स्थाई कार्य किए हैं। भारतीय नदी परिषद् के संस्थापक श्रीमान रमनकांत जी, ऐसी ही जनकल्याणकारी एवं पर्यावरणीय योजनाओं के साथ नदियों के कायाकल्प हेतु लगे हैं। मैं ईश्वर से भारतीय नदी परिषद् की सफलता की कामना करता हूं।",
     authorName: "राजकुमार लक्ष्यराज सिंह मेवाड़",
-    designation: "उदयपुर",
+    designation: "मेवाड़, उदयपुर",
     image: img13,
   },
   {
@@ -110,12 +110,12 @@ const data = [
     authorContent:
       "मुझे प्रसन्नता है कि देश में नदी पुनर्जीवन के कार्यों के लिए भारतीय नदी परिषद् द्वारा सामूहिक प्रयास प्रारम्भ किए जा रहे हैं। मेरा मानना है कि भारतीय नदी परिषद् के माध्यम से सरकार व नदी कार्यकर्ताओं के महीन अंतर को पाटा जा सकेगा। मैं अपनी व संत ईश्वर फाउंडेशन की ओर से भारतीय नदी परिषद् की पूरी टीम को इस प्रयास हेतु बहुत-बहुत शुभकामनाएं देती हूं और आशा करती हूं कि भारतीय नदी परिषद् अपने सभी इच्छित लक्ष्यों को प्राप्त कर अपने उद्देश्यों में सफल होगी।",
     authorName: "सुश्री वृंदा खन्ना",
-    designation: "महासचिव - संत ईश्वर फाउंडेश",
+    designation: "महासचिव - संत ईश्वर फाउंडेशन",
     image: img9,
   },
   {
     authorContent:
-      "मुझे अत्यंत प्रसन्नता है कि देष में नदियों के सुधार हेतु भारतीय नदी परिशद् के माध्यम से सामूहिक प्रयास प्रारंभ किया गया है। जब मां गंगा सहित देष की नदियां निर्मल व अविरल बहेंगी तब ही भारत की मानव सभ्यता व संपदा भी खुषहाल होगी। अलौकिक षक्ति इस प्रयास को सफल करे। भारतीय नदी परिशद् की संपूर्ण टोली को अनंत षुभकामनाएं। ओम",
+      "मुझे अत्यंत प्रसन्नता है कि देश में नदियों के सुधार हेतु भारतीय नदी परिषद् के माध्यम से सामूहिक प्रयास प्रारंभ किया गया है। जब मां गंगा सहित देश की नदियां निर्मल व अविरल बहेंगी तब ही भारत की मानव सभ्यता व संपदा भी खुशहाल होगी। अलौकिक शक्ति इस प्रयास को सफल करे। भारतीय नदी परिषद् की संपूर्ण टोली को अनंत शुभकामनाएं। ओम",
     authorName: "पूज्य स्वामी श्री कैलाषानंद गिरी जी",
     designation: "निरंजन पीठाधीष्वर - सिद्धपीट श्री दक्षिण काली मंदिर",
     image: img14,
@@ -123,8 +123,8 @@ const data = [
   {
     authorContent:
       "I am happy to learn about the dedicated endeavors of the Bhartiya Nadi Parishad under your leadership toward the noble cause of River Rejuvenation following ecosystem approach. The collective efforts over the years by Bhartiya Nadi Parishad have been instrumental in reviving our cherished river resulting in formulating robust policies for their protection & management is remarkable. ",
-    authorName: "Hon'ble Dr. Afroz Ahmad",
-    designation: "Expert Member - National Green Tribunal",
+    authorName: "Dr. Afroz Ahmad",
+    designation: "Hon'ble Expert Member - National Green Tribunal",
     image: img15,
   },
   {
@@ -150,7 +150,7 @@ export function Testimonials() {
       sx={{
         backgroundImage: `url(${img})`,
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "left bottom",
       }}
     >
       <Box backgroundColor={"#00000082"} py={2}>

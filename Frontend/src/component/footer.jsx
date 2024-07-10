@@ -202,7 +202,9 @@ export default function Footer() {
               <br />
               Pin: 250001
               <br />
-              Phone: 0121-3596749 Email: info@bhartiyanadiparishad.org
+              Phone: 0121-3596749
+              <br />
+              Email: info@bhartiyanadiparishad.org
             </CustomTypography>
           </Box>
         </Grid>

@@ -1,5 +1,5 @@
 import { Box, Grid, Typography } from "@mui/material";
-import img from "../../assets/bg/bgl7.jpeg";
+import img from "../../assets/bg/founder-bg.jpeg";
 import img1 from "../../assets/team/Raman_Kant_2.png";
 import { useTranslation } from "react-i18next";
 
@@ -11,7 +11,7 @@ const Founder = () => {
         sx={{
           backgroundImage: `url(${img})`,
           backgroundSize: "cover",
-          backgroundPosition: "center bottom",
+          backgroundPosition: "bottom",
         }}
       >
         <Grid container sx={{ backgroundColor: "#000000a5" }}>

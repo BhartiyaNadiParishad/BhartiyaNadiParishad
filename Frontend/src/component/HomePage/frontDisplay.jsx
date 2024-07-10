@@ -76,7 +76,7 @@ export default function FrontDisplay() {
             color: "#f5ff00",
             textAlign: "center",
             fontSize: "28px",
-            fontStyle: "italic",
+            // fontStyle: "italic",
           }}
         >
           {t("hero-section")}
