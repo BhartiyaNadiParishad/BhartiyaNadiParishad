@@ -4,6 +4,7 @@ import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import VerticalScroll from "../news/verticalScroll";
 import NewsVideo from "./newsVideo";
 import { useTranslation } from "react-i18next";
+import img from "../../assets/bg/bgl-14.jpeg";
 
 const newsItems = [
   "President of Bhartiya Nadi Parishad Raman Kant has been included in the committee constituted by Hon'ble NGT for the revival of Sonali River.",
@@ -38,14 +39,18 @@ export default function News() {
     <>
       <Grid
         container
-        sx={{ backgroundColor: "#fff" }}
+        sx={{
+          backgroundImage: `url(${img})`,
+          backgroundSize: "cover",
+          backgroundPosition: "bottom",
+        }}
         spacing={5}
         px={8}
-        pt={0}
-        pb={5}
+        mt={2}
+        p={3}
         justifyContent={"space-between"}
       >
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={4} backgroundColor={"#00000082"}>
           <Box display={"flex"} flexDirection={"column"} rowGap={3}>
             <Typography
               variant="h5"
@@ -78,7 +83,7 @@ export default function News() {
             </VerticalScroll>
           </Box>
         </Grid>
-        <Grid item xs={12} md={3}>
+        <Grid item xs={12} md={3} backgroundColor={"#00000082"}>
           <Box display={"flex"} flexDirection={"column"} rowGap={3}>
             <Typography
               variant="h5"
@@ -111,7 +116,7 @@ export default function News() {
             </VerticalScroll>
           </Box>
         </Grid>
-        <Grid item xs={12} md={4.5}>
+        <Grid item xs={12} md={4.5} backgroundColor={"#00000082"}>
           <Box
             display={"flex"}
             flexDirection={"column"}

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Carousel } from "@material-tailwind/react";
 import { Box } from "@mui/material";
-import img from "../../assets/bg/bgI-20.jpeg";
+import img from "../../assets/bg/bgI-21.jpeg";
 import img1 from "../../assets/team/Swami Chidanand Ji.jpeg";
 import img2 from "../../assets/team/4.jpg";
 import img_2 from "../../assets/team/Mr Rajeev Ahal.jpg";

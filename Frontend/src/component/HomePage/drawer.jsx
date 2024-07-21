@@ -17,7 +17,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Menu, MenuItem, Popper } from "@mui/material";
 import Logo from "../../assets/logo.svg";
-import Logo1 from "../../assets/IRC ENG LOGO.png";
+import Logo1 from "../../assets/IRC ENG LOGO.jpeg";
 import { Link } from "react-router-dom";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import LanguageSwitchButton from "../translation/languageSwitchButton";
@@ -235,6 +235,7 @@ function DrawerAppBar(props) {
               backgroundColor: "#ffffffbf",
               padding: "10px 0 !important",
               width: "100%",
+              height: "8.5vw",
               display: {
                 xs: "none",
                 md: "flex",
