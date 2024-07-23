@@ -56,6 +56,7 @@ import advisoryTeamImg27 from '../../assets/team/Mrs Veena Khanduri.jpg'
 import advisoryTeamImg28 from '../../assets/team/sanjay-gupta.jpeg'
 import advisoryTeamImg29 from '../../assets/team/anil-sagar.jpeg'
 import advisoryTeamImg30 from '../../assets/team/ameya-satheya.jpeg'
+import advisoryTeamImg31 from '../../assets/team/Pankaj_Awasthi.jpeg'
 
 import technicalCouncilImg1 from '../../assets/team/Raman Kant 1.jpg' //not available
 import technicalCouncilImg2 from '../../assets/team/Mr Prabhat Kumar Singh.jpeg'
@@ -520,6 +521,12 @@ export const advisoryCouncilData = [
         name: "Ameya Sathaye",
         title1: "Senior Journalist",
         title2: "New Delhi",
+    },
+    {
+        img: advisoryTeamImg31,
+        name: "Pankaj Awasthi",
+        title1: "Water Educator",
+        title2: "Naula Foundation",
     },
 ];
 
