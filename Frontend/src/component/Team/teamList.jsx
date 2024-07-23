@@ -1,97 +1,80 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import {
-	Box,
-	Button,
-	Card,
-	CardActionArea,
-	CardActions,
-	CardContent,
-	CardMedia,
-	Typography,
-} from "@mui/material";
+import { Box, Card, Typography } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
-import img from "../../assets/bg/bgI1.jpeg";
 
 export default function TeamList({ title, data }) {
-	return (
-		<Box>
-			{/* <Typography
-        variant="h4"
-        fontWeight={"bold"}
-        textAlign={"center"}
-        color="#264e79"
-        m={5}
-      >
-        {title}
-      </Typography> */}
-			<Grid2 container rowSpacing={4} columnSpacing={4}>
-				{data.map((item, index) => (
-					<Grid2 key={index} md={12 / 5} sm={4} xs={12}>
-						<Card sx={{ height: "100%", padding: "10px 10px" , display: "flex", flexDirection: "column", rowGap: "8px" }}>
-							<Box sx={{backgroundColor: "#1cabe2"}}>
-								{item.state && (
-									<Typography
-										variant="h6"
-										color="white"
-										textAlign={"center"}
-										fontWeight={"bold"}
-									>
-										{item.state}
-									</Typography>
-								)}
-							</Box>
-							<Box
-								mx={2}
-								display={"flex"}
-								justifyContent={"center"}
-							>
-								<Box
-									borderRadius={"50%"}
-									sx={{
-										backgroundImage: `url(${item.img})`,
-										backgroundSize: "cover",
-										backgroundPosition: "center top",
-										borderRadius: "50%",
-										height: "200px",
-										width: "200px",
-									}}
-								/>
-							</Box>
-              <Box>
-              </Box>
-							<Typography
-								variant="h5"
-								component="div"
-								textAlign={"center"}
-								fontSize={"18px"}
-								fontWeight={"bold"}
-								color="#1cabe2"
-                borderTop="1px solid grey"
-                paddingTop={"10px"}
-							>
-								{item.name}
-							</Typography>
-							<Typography
-								variant="body2"
-								color="text.secondary"
-								textAlign={"center"}
-								paddingX={"5px"}
-							>
-								{item.title1}
-							</Typography>
-							{item.title2 && (
-								<Typography
-									variant="body2"
-									color="text.secondary"
-									textAlign={"center"}
-									paddingX={"5px"}
-								>
-									{item.title2}
-								</Typography>
-							)}
-						</Card>
-						{/* <CardActions sx={{ justifyContent: "center" }}>
+  return (
+    <Grid2 container rowSpacing={4} columnSpacing={4}>
+      {data.map((item, index) => (
+        <Grid2 key={index} md={3} sm={4} xs={12}>
+          <Card
+            sx={{
+              height: "100%",
+              padding: "10px 10px",
+              display: "flex",
+              flexDirection: "column",
+              rowGap: "8px",
+            }}
+          >
+            <Box sx={{ backgroundColor: "#1cabe2" }}>
+              {item.state && (
+                <Typography
+                  variant="h6"
+                  color="white"
+                  textAlign={"center"}
+                  fontWeight={"bold"}
+                >
+                  {item.state}
+                </Typography>
+              )}
+            </Box>
+            <Box mx={2} display={"flex"} justifyContent={"center"}>
+              <Box
+                borderRadius={"50%"}
+                sx={{
+                  backgroundImage: `url(${item.img})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center top",
+                  borderRadius: "50%",
+                  height: "200px",
+                  width: "200px",
+                }}
+              />
+            </Box>
+            <Box></Box>
+            <Typography
+              variant="h5"
+              component="div"
+              textAlign={"center"}
+              fontSize={"18px"}
+              fontWeight={"bold"}
+              color="#1cabe2"
+              borderTop="1px solid grey"
+              paddingTop={"10px"}
+            >
+              {item.name}
+            </Typography>
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              textAlign={"center"}
+              paddingX={"5px"}
+            >
+              {item.title1}
+            </Typography>
+            {item.title2 && (
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                textAlign={"center"}
+                paddingX={"5px"}
+              >
+                {item.title2}
+              </Typography>
+            )}
+          </Card>
+          {/* <CardActions sx={{ justifyContent: "center" }}>
                 {item.facebookLink && (
                   <a target="_blank" href={item.facebookLink}>
                     <svg
@@ -185,10 +168,9 @@ export default function TeamList({ title, data }) {
                   </a>
                 )}
               </CardActions> */}
-						{/* </Card> */}
-					</Grid2>
-				))}
-			</Grid2>
-		</Box>
-	);
+          {/* </Card> */}
+        </Grid2>
+      ))}
+    </Grid2>
+  );
 }

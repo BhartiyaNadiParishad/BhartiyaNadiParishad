@@ -71,9 +71,7 @@ function App() {
             <Route exact path="/about" element={<AboutBNP />} />
             <Route exact path="/gallery" element={<Gallery />} />
             <Route exact path="/programmesMenu" element={<ProgramPage />} />
-            <Route exact path="/values" element={<OurValues />} />
             <Route exact path="/partners" element={<Partners />} />
-            <Route exact path="/mission" element={<OurValues />} />
             <Route exact path="/history" element={<History />} />
             <Route exact path="/document" element={<PdfDocument />} />
             <Route exact path="/coreteam" element={<CoreTeam />} />

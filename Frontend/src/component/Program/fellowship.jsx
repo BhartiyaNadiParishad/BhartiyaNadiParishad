@@ -8,7 +8,7 @@ export default function Fellowships() {
   return (
     <MainLayout title={"Fellowship"} bgImg={bg} position={"bottom"}>
       <Box p={6}>
-        <Typography textAlign={"justify"} color={"#1cabe2"} fontSize={"20px"}>
+        <Typography textAlign={"justify"} fontSize={"20px"}>
           ‘Bhagirath River Fellowship’ is provided by the Bhartiya Nadi Parishad
           for river research in India. In this, this fellowship is provided for
           detailed study of any river of the country. In this fellowship, the

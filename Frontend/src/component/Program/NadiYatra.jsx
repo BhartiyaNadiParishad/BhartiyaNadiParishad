@@ -8,7 +8,7 @@ export default function NadiYatra() {
   return (
     <MainLayout title={"Nadi Shoudh Yatra"} bgImg={bg} position={"bottom"}>
       <Box p={6}>
-        <Typography textAlign={"justify"} color={"#1cabe2"} fontSize={"20px"}>
+        <Typography textAlign={"justify"} fontSize={"20px"}>
           From time to time, river research trips will be organised under the
           ‘Know Your River’ program to know your rivers. While this will provide
           an opportunity to know and understand the current scenario of the

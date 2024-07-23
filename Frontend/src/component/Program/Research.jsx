@@ -9,7 +9,7 @@ export default function Research() {
   return (
     <MainLayout title={"Research & Development"} bgImg={bg} position={"bottom"}>
       <Box p={6}>
-        <Typography textAlign={"justify"} color={"#1cabe2"} fontSize={"20px"}>
+        <Typography textAlign={"justify"} fontSize={"20px"}>
           Finding policy solutions to any problem related to rivers is part of
           the main work of the Bhartiya Nadi Parishad. In India, thinking about
           rivers has increased at both the society and government levels. Due to

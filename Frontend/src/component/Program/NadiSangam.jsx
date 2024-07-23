@@ -8,7 +8,7 @@ export default function NadiSangam() {
   return (
     <MainLayout title={"Nadi Sangam"} bgImg={bg} position={"bottom"}>
       <Box p={6}>
-        <Typography textAlign={"justify"} color={"#1cabe2"} fontSize={"20px"}>
+        <Typography textAlign={"justify"} fontSize={"20px"}>
           A one-day 'Bharatiya Nadi Sangam' is organized every year on 22 March.
           This 'Bharatiya Nadi Sangam' is organized in any one city of India
           according to the circumstances. It includes all the river lovers

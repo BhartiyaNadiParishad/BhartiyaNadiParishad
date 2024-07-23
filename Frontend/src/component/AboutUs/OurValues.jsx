@@ -1,7 +1,7 @@
 import React from "react";
 import bgImg1 from "../../assets/bg/bgl-12.jpeg";
 import bgImg2 from "../../assets/bg/bgl-13.jpeg";
-import { Box, Grid, Paper, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import MainLayout from "../Layout/mainLayout";
 import video from "../../assets/news.mp4";
 import { useTranslation } from "react-i18next";
@@ -59,7 +59,6 @@ export default function OurValues() {
               </Grid>
             ))}
           </Grid>
-          {/* </Paper> */}
         </Box>
       </MainLayout>
     </>

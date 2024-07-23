@@ -3,6 +3,7 @@ import { Box, Typography } from "@mui/material";
 
 const QuoteSection = ({
   backgroundImage,
+  backgroundColor = "#1cabe2",
   quoteLine1,
   quoteLine2,
   translationLine1,
@@ -10,11 +11,14 @@ const QuoteSection = ({
   quoteColor = "white",
 }) => {
   return (
-    <Box sx={{
-      backgroundImage: `url(${backgroundImage})`,
-      backgroundSize: "cover",
-      backgroundPosition: "bottom",
-    }}>
+    <Box
+      sx={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundColor: backgroundColor,
+        backgroundSize: "cover",
+        backgroundPosition: "bottom",
+      }}
+    >
       <Box
         sx={{
           background:

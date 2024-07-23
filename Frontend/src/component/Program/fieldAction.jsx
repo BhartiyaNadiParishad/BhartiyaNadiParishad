@@ -8,7 +8,7 @@ export default function FieldAction() {
   return (
     <MainLayout title={"Field Action"} bgImg={bg} position={"bottom"}>
       <Box p={6}>
-        <Typography textAlign={"justify"} color={"#1cabe2"} fontSize={"20px"}>
+        <Typography textAlign={"justify"} fontSize={"20px"}>
           Through the Bhartiya Nadi Parishad, river rejuvenation models have
           been developed for the river warriors engaged in the rejuvenation of
           their rivers in different parts of the country, which is helping them

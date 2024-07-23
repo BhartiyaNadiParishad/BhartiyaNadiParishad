@@ -8,7 +8,7 @@ export default function Community() {
   return (
     <MainLayout title={"Community Engagement"} bgImg={bg} position={"bottom"}>
       <Box p={6}>
-        <Typography textAlign={"justify"} color={"#1cabe2"} fontSize={"20px"}>
+        <Typography textAlign={"justify"} fontSize={"20px"}>
           While India has a physical relationship with the rivers, India also
           has a deep spiritual connection with the rivers. There is still a
           greater need to spread knowledge regarding rivers in India. Efforts

@@ -9,7 +9,7 @@ export default function RiverTalk() {
   return (
     <MainLayout title={"River Talk"} bgImg={bg} position={"bottom"}>
       <Box p={6}>
-        <Typography textAlign={"justify"} color={"#1cabe2"} fontSize={"20px"}>
+        <Typography textAlign={"justify"} fontSize={"20px"}>
           The Bhartiya Nadi Parishad will organize ‘River Talks’ from time to
           time to maintain momentum in the work of river rejuvenation in India.
           Through this program the aim has been set to discuss every small and

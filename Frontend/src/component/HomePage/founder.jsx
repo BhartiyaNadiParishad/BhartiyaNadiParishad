@@ -15,7 +15,7 @@ const Founder = () => {
         }}
       >
         <Grid container sx={{ backgroundColor: "#000000a5" }}>
-          <Grid item xs={12} md={3} padding={3}>
+          <Grid item xs={12} md={2.65} px={4} py={3}>
             <Box
               display={"flex"}
               justifyContent={"flex-end"}
@@ -23,11 +23,10 @@ const Founder = () => {
                 backgroundColor: "#ffffff38",
                 borderRadius: "50%",
               }}
+              width={"250px"}
             >
               <img
                 src={img1}
-                // width={"250px"}
-                // style={{ borderRadius: "50%" }}
                 style={{
                   height: "auto",
                   width: "100%",
@@ -36,9 +35,8 @@ const Founder = () => {
               />
             </Box>
           </Grid>
-          <Grid item xs={12} md={9}>
+          <Grid item xs={12} md={9.1}>
             <Box
-              p={3}
               height={"100%"}
               display="flex"
               flexDirection={"column"}

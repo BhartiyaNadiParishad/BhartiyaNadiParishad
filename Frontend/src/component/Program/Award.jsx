@@ -8,7 +8,7 @@ export default function Award() {
   return (
     <MainLayout title={"Award"} bgImg={bg} position={"bottom"}>
       <Box p={6}>
-        <Typography textAlign={"justify"} color={"#1cabe2"} fontSize={"20px"}>
+        <Typography textAlign={"justify"} fontSize={"20px"}>
           The 'Nadh Upasak Award' will be given to the two best efforts made
           every year at the government and non-government levels for river
           rejuvenation in the country. In this award, Rs 50 thousand,

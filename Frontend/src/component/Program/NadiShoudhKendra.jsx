@@ -8,7 +8,7 @@ export default function NadiShoudhKendra() {
   return (
     <MainLayout title={"Nadi Shoudh Kendra"} bgImg={bg} position={"bottom"}>
       <Box p={6}>
-        <Typography textAlign={"justify"} color={"#1cabe2"} fontSize={"20px"}>
+        <Typography textAlign={"justify"} fontSize={"20px"}>
           A river research centre (Grassroot Academy of River) is being
           established by the Bhartiya Nadi Parishad. This centre is being
           established on the banks of river Ganga in the historical city of

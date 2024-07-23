@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography, Paper } from "@mui/material";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import VerticalScroll from "../news/verticalScroll";
 import NewsVideo from "./newsVideo";
@@ -37,107 +37,107 @@ export default function News() {
   const { t } = useTranslation();
   return (
     <>
-      <Grid
-        container
-        sx={{
-          backgroundImage: `url(${img})`,
-          backgroundSize: "cover",
-          backgroundPosition: "bottom",
-        }}
-        spacing={5}
-        px={8}
-        mt={2}
-        p={3}
-        justifyContent={"space-between"}
-      >
-        <Grid item xs={12} md={4} backgroundColor={"#00000082"}>
-          <Box display={"flex"} flexDirection={"column"} rowGap={3}>
-            <Typography
-              variant="h5"
-              fontWeight={"bold"}
-              color={"#1cabe2"}
-              textAlign={"center"}
-            >
-              {t("News.1.title")}
-            </Typography>
-            <VerticalScroll
-              itemHeight={80}
-              scrollIntervalTime={4000}
-              loopCount={8}
-              totalItems={newsItems.length}
-            >
-              {newsItems.map((news, index) => (
-                <Box
-                  key={index}
-                  borderBottom={"0.5px solid #1cabe2"}
-                  py={2}
-                  height={200}
-                  display={"flex"}
-                  columnGap={2}
-                  width={"100%"}
-                >
-                  <PlayArrowIcon fontSize="8px" style={{ color: "#1cabe2" }} />
-                  <Typography>{news}</Typography>
-                </Box>
-              ))}
-            </VerticalScroll>
-          </Box>
+      <Grid container spacing={3} px={4} justifyContent={"space-between"}>
+        <Grid item xs={12} md={4}>
+          <Paper elevation={3} sx={{ p: 4 }}>
+            <Box display={"flex"} flexDirection={"column"} rowGap={3}>
+              <Typography
+                variant="h5"
+                fontWeight={"bold"}
+                color={"#1cabe2"}
+                textAlign={"center"}
+              >
+                {t("News.1.title")}
+              </Typography>
+              <VerticalScroll
+                itemHeight={80}
+                scrollIntervalTime={4000}
+                loopCount={8}
+                totalItems={newsItems.length}
+              >
+                {newsItems.map((news, index) => (
+                  <Box
+                    key={index}
+                    borderBottom={"0.5px solid #1cabe2"}
+                    py={2}
+                    height={200}
+                    display={"flex"}
+                    columnGap={2}
+                    width={"100%"}
+                  >
+                    <PlayArrowIcon
+                      fontSize="8px"
+                      style={{ color: "#1cabe2" }}
+                    />
+                    <Typography>{news}</Typography>
+                  </Box>
+                ))}
+              </VerticalScroll>
+            </Box>
+          </Paper>
         </Grid>
-        <Grid item xs={12} md={3} backgroundColor={"#00000082"}>
-          <Box display={"flex"} flexDirection={"column"} rowGap={3}>
-            <Typography
-              variant="h5"
-              fontWeight={"bold"}
-              color={"#1cabe2"}
-              textAlign={"center"}
-            >
-              {t("News.2.title")}
-            </Typography>
-            <VerticalScroll
-              itemHeight={80}
-              scrollIntervalTime={2500}
-              loopCount={8}
-              totalItems={newsItems.length}
-            >
-              {storyItems.map((news, index) => (
-                <Box
-                  key={index}
-                  borderBottom={"0.5px solid #1cabe2"}
-                  py={2}
-                  height={85}
-                  display={"flex"}
-                  columnGap={2}
-                  width={"100%"}
-                >
-                  <PlayArrowIcon fontSize="8px" style={{ color: "#1cabe2" }} />
-                  <Typography>{news}</Typography>
-                </Box>
-              ))}
-            </VerticalScroll>
-          </Box>
+        <Grid item xs={12} md={3}>
+          <Paper elevation={3} sx={{ p: 4 }}>
+            <Box display={"flex"} flexDirection={"column"} rowGap={3}>
+              <Typography
+                variant="h5"
+                fontWeight={"bold"}
+                color={"#1cabe2"}
+                textAlign={"center"}
+              >
+                {t("News.2.title")}
+              </Typography>
+              <VerticalScroll
+                itemHeight={80}
+                scrollIntervalTime={2500}
+                loopCount={8}
+                totalItems={newsItems.length}
+              >
+                {storyItems.map((news, index) => (
+                  <Box
+                    key={index}
+                    borderBottom={"0.5px solid #1cabe2"}
+                    py={2}
+                    height={85}
+                    display={"flex"}
+                    columnGap={2}
+                    width={"100%"}
+                  >
+                    <PlayArrowIcon
+                      fontSize="8px"
+                      style={{ color: "#1cabe2" }}
+                    />
+                    <Typography>{news}</Typography>
+                  </Box>
+                ))}
+              </VerticalScroll>
+            </Box>
+          </Paper>
         </Grid>
-        <Grid item xs={12} md={4.5} backgroundColor={"#00000082"}>
-          <Box
-            display={"flex"}
-            flexDirection={"column"}
-            alignItems={"center"}
-            justifyContent={"center"}
-            rowGap={2}
-          >
-            <Typography variant="h5" fontWeight={"bold"} color={"#1cabe2"}>
-              {t("News.3.title")}
-            </Typography>
-            <VerticalScroll
-              itemHeight={300}
-              scrollIntervalTime={2500}
-              loopCount={4}
-              totalItems={2}
+        <Grid item xs={12} md={4.5}>
+          <Paper elevation={3} sx={{ p: 4 }}>
+            <Box
+              display={"flex"}
+              flexDirection={"column"}
+              alignItems={"center"}
+              justifyContent={"center"}
+              rowGap={2}
             >
-              {videos.map((video, index) => (
-                <NewsVideo key={index} video={video} />
-              ))}
-            </VerticalScroll>
-          </Box>
+              <Typography variant="h5" fontWeight={"bold"} color={"#1cabe2"}>
+                {t("News.3.title")}
+              </Typography>
+              <VerticalScroll
+                itemHeight={300}
+                scrollIntervalTime={2500}
+                loopCount={4}
+                totalItems={2}
+              >
+                {videos.map((video, index) => (
+                  <NewsVideo key={index} video={video} />
+                ))}
+              </VerticalScroll>
+            </Box>
+          </Paper>
         </Grid>
       </Grid>
     </>

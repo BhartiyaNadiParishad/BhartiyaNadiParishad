@@ -40,19 +40,13 @@ const menuData = [
     buttonLabel: "About",
     menuItems: [
       { label: "About Us", path: "/about" },
-      { label: "Our Values", path: "/mission" },
       { label: "About Logo", path: "/about-logo" },
-      {
-        label: "Our Team",
-        subMenuItems: [
-          { label: "Patron", path: "/patron" },
-          { label: "Inspiration", path: "/inspiration" },
-          { label: "Core Team", path: "/coreteam" },
-          { label: "Advisors", path: "/advisors" },
-          { label: "Technical Advisors", path: "/technicaladvisor" },
-          { label: "State Heads", path: "/state-heads" },
-        ],
-      },
+      { label: "Patron", path: "/patron" },
+      { label: "Inspiration", path: "/inspiration" },
+      { label: "Core Team", path: "/coreteam" },
+      { label: "Advisors", path: "/advisors" },
+      { label: "Technical Advisors", path: "/technicaladvisor" },
+      { label: "State Heads", path: "/state-heads" },
     ],
   },
   {
