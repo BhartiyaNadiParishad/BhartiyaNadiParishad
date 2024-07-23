@@ -14,7 +14,7 @@ const CustomTypography = styled(Typography)(() => ({
 
 export default function Footer() {
   return (
-    <Box backgroundColor="#1cabe2" px={6}>
+    <Box backgroundColor="#1cabe2" px={4} pt={4} pb={2}>
       <Grid container spacing={2} justifyContent={"space-between"}>
         <Grid
           item
@@ -271,17 +271,16 @@ export default function Footer() {
         </Grid>
       </Grid>
       <Grid
-        mt={4}
-        py={4}
+        mt={2}
+        pt={2}
         container
         justifyContent={"center"}
-        sx={{ borderTop: "1px solid white" }}
+        sx={{ borderTop: "0.5px solid" }}
       >
         <Typography
           xs={12}
           sx={{
             fontSize: "16px",
-            // color: "whitesmoke",
             textAlign: "center",
           }}
         >
