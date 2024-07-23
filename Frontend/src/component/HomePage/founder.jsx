@@ -1,0 +1,81 @@
+import { Box, Grid, Typography } from "@mui/material";
+import img from "../../assets/bg/founder-bg.jpeg";
+import img1 from "../../assets/team/Raman_Kant_2.png";
+import { useTranslation } from "react-i18next";
+
+const Founder = () => {
+  const { t } = useTranslation();
+  return (
+    <>
+      <Box
+        sx={{
+          backgroundImage: `url(${img})`,
+          backgroundSize: "cover",
+          backgroundPosition: "bottom",
+        }}
+      >
+        <Grid container sx={{ backgroundColor: "#000000a5" }}>
+          <Grid item xs={12} md={2.65} px={4} py={3}>
+            <Box
+              display={"flex"}
+              justifyContent={"flex-end"}
+              sx={{
+                backgroundColor: "#ffffff38",
+                borderRadius: "50%",
+              }}
+              width={"250px"}
+            >
+              <img
+                src={img1}
+                style={{
+                  height: "auto",
+                  width: "100%",
+                  borderRadius: "50%",
+                }}
+              />
+            </Box>
+          </Grid>
+          <Grid item xs={12} md={9.1}>
+            <Box
+              height={"100%"}
+              display="flex"
+              flexDirection={"column"}
+              justifyContent={"center"}
+              sx={{
+                color: "white",
+              }}
+            >
+              <Typography
+                sx={{
+                  fontSize: "20px",
+                  fontWeight: "bold",
+                  textAlign: "justify",
+                  marginBottom: "10px",
+                }}
+              >
+                {t("founder.content")}
+              </Typography>
+              <Typography
+                sx={{
+                  color: "#1cabe2",
+                  fontWeight: "bold",
+                  fontSize: "20px",
+                }}
+              >
+                {t("founder.name")}
+              </Typography>
+              <Typography sx={{ fontWeight: "bold", fontSize: "16px" }}>
+                {t("founder.title1")}
+              </Typography>
+              <Typography sx={{ fontWeight: "bold", fontSize: "16px" }}>
+                {t("founder.title2")}
+              </Typography>
+            </Box>
+          </Grid>
+        </Grid>
+      </Box>
+    </>
+  );
+};
+
+export default Founder;

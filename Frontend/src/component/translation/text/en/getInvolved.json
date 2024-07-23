@@ -1,0 +1,71 @@
+{
+	"getInvolvedPage": {
+		"title": "Explore opportunity",
+		"content": "A person who is concerned about rivers in any way can be a member of the Bhartiya Nadi Parishad family or a participant in it. There will be no difference of religion, caste, gender, color, region, and language in this. We all are Indians, and we love the richness of our rivers, people who believe in this idea can be partners of the Bhartiya Nadi Parishad in any form. This organization is for everyone and for everyone. In this, everyone has the freedom to express their ideas and implement them. By associating with the Bhartiya Nadi Parishad, we have resolved to make our country river rich. A river loving organization or individual can join the Bhartiya Nadi Parishad in all two forms - member and volunteer. For this he will have to complete the formalities of the prescribed procedure of the Bhartiya Nadi Parishad.",
+		"membership": {
+			"title": "Membership",
+			"content": "Bharatiya Nadi Paridhad offers an invaluable opportunity for individuals passionate about conserving India's rivers to join their membership program. Aspiring members gain access to a wealth of resources and networking avenues, fostering a community dedicated to river preservation.",
+			"button": "Join"
+		},
+		"Volunteer": {
+			"title": "Volunteering",
+			"content": "Bharatiya Nadi Paridhad offers an invaluable opportunity for individuals passionate about conserving India's rivers to join their membership program. Aspiring members gain access to a wealth of resources and networking avenues, fostering a community dedicated to river preservation.",
+			"button": "Join Us"
+		},
+		"internship": {
+			"title": "Internship",
+			"content": "Bharatiya Nadi Paridhad offers an invaluable opportunity for individuals passionate about conserving India's rivers to join their membership program. Aspiring members gain access to a wealth of resources and networking avenues, fostering a community dedicated to river preservation.",
+			"button": "Apply"
+		}
+	},
+	"becomeMember": {
+		"title": "Membership",
+		"eligibility": "Any Indian Civil/Social Organization/University/Research Institute/Company, a member of the Bhartiya Nadi Parishad, can be contributed in any way, a river lover and its conduct is clean. Such dignitaries or organizations can also become a member of the Bhartiya Nadi Parishad who want to make some positive efforts/cooperation for the river/rivers in the country in collaboration with the Bhartiya Nadi Parishad. ",
+		"process": " A member of the Bhartiya Nadi Parishad can be made only under a selected process fixed. Members of the Bhartiya Nadi Parishad will get the following benefits.",
+		"benefits": [
+			"A letter and an identity card will be made available to the person/organization from the Bhartiya Nadi Parishad Secretariat.",
+			"The river kit of the Bhartiya Nadi Parishad will be received. This river kit will have a Brochure, T-shirt, Pen, Pad, Water Bottle, Sticker, Mug and other materials of the Bhartiya Nadi Parishad.",
+			"The person working on the river will be made a River Warrior and named according to the river (e.g., Hindon River Warrior). A person or organization can become a Warrior of more than one river.",
+			"The member will be invited to the annual Rashtriya Nadi Sangam (National River Seminar).",
+			"The member will be informed about all the activities of Bhartiya Nadi Parishad from time to time.",
+			"The member will receive every issue of the Bhartiya Nadi Parishad newsletter 'NADI GATHA' (River Saga)."
+		],
+		"requirements": {
+			"title": "Requirements to become members -",
+			"description": "A form must be filled out.An annual fee of 5000 Indian rupees must be deposited in the Bhartiya Nadi Parishad account. This fee will cover lifetime membership."
+		},
+		"bank_details": {
+			"title": "Bank Details",
+			"account_name": "Bhartiya Nadi Parishad",
+			"account_number": "A/C -",
+			"ifsc_code": "IFSC -",
+			"bank_name": "Indian Bank",
+			"branch": "CCSU Campus, Meerut (UP)"
+		}
+	},
+	"internship": {
+        "title": "Internship",
+		"eligibility": "Any student with good conduct can do an internship with Bhartiya Nadi Parishad.Fulfillment of requirements set by Bhartiya Nadi Parishad.A letter from the student's college/institute/university.",
+		"benefits": [
+			"The river kit of the Bhartiya Nadi Parishad will be received. This river kit will have a Brochure, T-shirt, Pen, Pad, Water Bottle, Sticker, Mug and other materials of the Bhartiya Nadi Parishad.",
+			"The intern will be invited to the annual Rashtriya Nadi Sangam (National River Seminar).",
+			"The intern will be informed about all the activities of Bhartiya Nadi Parishad from time to time.",
+			"The intern will receive every issue of the Bhartiya Nadi Parishad newsletter 'NADI GATHA' (River Saga).",
+			"The intern will be given a topic and remuneration as per his/her interest and qualification.",
+			"After completing the internship, the intern who performs his/her work properly will be given a certificate by Bhartiya Nadi Parishad."
+		]
+	},
+    "volunteer": {
+        "title": "Volunteer",
+		"eligibility": "Any river lover can contribute to the work of river revitalization by becoming a Bhartiya Nadi Parishad volunteer. The person who wants to become a volunteer of Bhartiya Nadi Parishad should have clean conduct. One can become a volunteer only through the selection process set by Bhartiya Nadi Parishad. By becoming a volunteer of Bhartiya Nadi Parishad you will get the following benefits.A letter and an identity card will be made available to the person/organization from the Bhartiya Nadi Parishad Secretariat.",
+		"benefits": [
+            "The river kit of the Bhartiya Nadi Parishad will be received. This river kit will have a Brochure, T-shirt, Pen, Pad, Water Bottle, Sticker, Mug and other materials of the Bhartiya Nadi Parishad.",
+            "The person who becomes a volunteer will be known as River Warrior. The word River Warrior will be added to his name.",
+            "The volunteer will be invited to the annual Rashtriya Nadi Sangam (National River Seminar).",
+            "The member will be invited to the annual Rashtriya Nadi Sangam (National River Seminar).",
+            "The volunteer will be informed about all the activities of Bhartiya Nadi Parishad from time to time.",
+            "The newsletter of the Bhartiya Nadi Parishad will get every issue of 'NADI GATHA’ (River Saga).",
+            "Volunteers working with Bhartiya Nadi Parishad will be given a certificate by Bhartiya Nadi Parishad every year."
+        ]
+	}
+}
